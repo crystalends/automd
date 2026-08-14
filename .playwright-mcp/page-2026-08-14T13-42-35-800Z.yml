@@ -1,0 +1,631 @@
+- generic [active] [ref=f13e1]:
+  - banner [ref=f13e2]:
+    - generic [ref=f13e3]:
+      - generic [ref=f13e4]:
+        - generic [ref=f13e5]: ЮАО, метро Пражская
+        - generic [ref=f13e8]: САО, метро Ховрино
+        - generic [ref=f13e11]: "Ежедневно: 9:00–20:00"
+      - link "+7 (495) 477-50-29" [ref=f13e14] [cursor=pointer]:
+        - /url: tel:+74954775029
+    - generic [ref=f13e17]:
+      - generic [ref=f13e18]:
+        - link "AutoMD — на главную" [ref=f13e19] [cursor=pointer]:
+          - /url: "#top"
+        - navigation "Основная навигация" [ref=f13e20]:
+          - link "Автомобили" [ref=f13e21] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Услуги" [ref=f13e22] [cursor=pointer]:
+            - /url: "#services"
+          - link "Запчасти" [ref=f13e23] [cursor=pointer]:
+            - /url: "#services"
+          - link "Цены" [ref=f13e24] [cursor=pointer]:
+            - /url: "#price"
+          - link "Акции" [ref=f13e25] [cursor=pointer]:
+            - /url: "#promo"
+          - link "Для юр.лиц" [ref=f13e26] [cursor=pointer]:
+            - /url: "#business"
+          - link "О компании" [ref=f13e27] [cursor=pointer]:
+            - /url: "#team"
+          - link "Контакты" [ref=f13e28] [cursor=pointer]:
+            - /url: "#locations"
+      - generic [ref=f13e29]:
+        - link "Поиск" [ref=f13e30] [cursor=pointer]:
+          - /url: "#services"
+        - link "Заказать звонок" [ref=f13e31] [cursor=pointer]:
+          - /url: "#booking"
+  - main [ref=f13e32]:
+    - generic [ref=f13e35]:
+      - generic [ref=f13e36]:
+        - heading "Ремонт коммерческого транспорта в Москве за 1 день" [level=1] [ref=f13e37]
+        - paragraph [ref=f13e38]: Профильный автотехцентр для Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant и JAC Sunray.
+      - list [ref=f13e39]:
+        - listitem [ref=f13e40]:
+          - generic [ref=f13e42]: Запчасти в наличии
+        - listitem [ref=f13e43]:
+          - generic [ref=f13e45]: Быстрая диагностика
+        - listitem [ref=f13e46]:
+          - generic [ref=f13e48]: Ремонт, ТО и установка деталей в одном месте
+      - link "Записаться на ремонт" [ref=f13e49] [cursor=pointer]:
+        - /url: "#booking"
+    - generic [ref=f13e50]:
+      - generic [ref=f13e51]:
+        - heading "Найдите услугу для своего автомобиля" [level=2] [ref=f13e52]
+        - paragraph [ref=f13e53]: Выберите марку, модель и задачу — мы покажем подходящие услуги, цены, запчасти и ближайшее время для записи.
+      - generic [ref=f13e54]:
+        - generic [ref=f13e55]:
+          - generic [ref=f13e56]: Марка
+          - combobox "Марка" [ref=f13e57]:
+            - option "Выбрать" [selected]
+            - option "Fiat"
+            - option "Ford"
+            - option "Peugeot"
+            - option "Citroen"
+            - option "Iveco"
+        - generic [ref=f13e58]:
+          - generic [ref=f13e59]: Модель
+          - combobox "Модель" [ref=f13e60]:
+            - option "Выбрать" [selected]
+            - option "Ducato"
+            - option "Transit"
+            - option "Boxer"
+            - option "Jumper"
+            - option "Daily"
+        - generic [ref=f13e61]:
+          - generic [ref=f13e62]: Услуга
+          - combobox "Услуга" [ref=f13e63]:
+            - option "Выбрать" [selected]
+            - option "Плановое ТО"
+            - option "Диагностика"
+            - option "Ремонт"
+            - option "Замена"
+        - button "Показать варианты" [ref=f13e64] [cursor=pointer]
+        - paragraph
+    - generic [ref=f13e65]:
+      - generic [ref=f13e66]:
+        - heading "Популярные автомобили" [level=2] [ref=f13e67]
+        - link "Смотреть все" [ref=f13e68] [cursor=pointer]:
+          - /url: "#cars"
+      - generic [ref=f13e69]:
+        - article [ref=f13e70]:
+          - img "Fiat Ducato" [ref=f13e71]
+          - heading "Fiat Ducato" [level=3] [ref=f13e72]
+          - generic [ref=f13e73]:
+            - link "Ремонт" [ref=f13e74] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e75] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e76] [cursor=pointer]:
+              - /url: "#services"
+        - article [ref=f13e77]:
+          - img "Ford Transit" [ref=f13e78]
+          - heading "Ford Transit" [level=3] [ref=f13e79]
+          - generic [ref=f13e80]:
+            - link "Ремонт" [ref=f13e81] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e82] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e83] [cursor=pointer]:
+              - /url: "#services"
+        - article [ref=f13e84]:
+          - img "Peugeot Boxer" [ref=f13e85]
+          - heading "Peugeot Boxer" [level=3] [ref=f13e86]
+          - generic [ref=f13e87]:
+            - link "Ремонт" [ref=f13e88] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e89] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e90] [cursor=pointer]:
+              - /url: "#services"
+        - article [ref=f13e91]:
+          - img "Citroen Jumper" [ref=f13e92]
+          - heading "Citroen Jumper" [level=3] [ref=f13e93]
+          - generic [ref=f13e94]:
+            - link "Ремонт" [ref=f13e95] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e96] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e97] [cursor=pointer]:
+              - /url: "#services"
+        - article [ref=f13e98]:
+          - img "Iveco Daily" [ref=f13e99]
+          - heading "Iveco Daily" [level=3] [ref=f13e100]
+          - generic [ref=f13e101]:
+            - link "Ремонт" [ref=f13e102] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e103] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e104] [cursor=pointer]:
+              - /url: "#services"
+        - article [ref=f13e105]:
+          - img "Peugeot Partner" [ref=f13e106]
+          - heading "Peugeot Partner" [level=3] [ref=f13e107]
+          - generic [ref=f13e108]:
+            - link "Ремонт" [ref=f13e109] [cursor=pointer]:
+              - /url: "#services"
+            - link "ТО" [ref=f13e110] [cursor=pointer]:
+              - /url: "#services"
+            - link "Запчасти" [ref=f13e111] [cursor=pointer]:
+              - /url: "#services"
+    - generic [ref=f13e112]:
+      - 'img "Акция: шиномонтаж и диагностика ходовой" [ref=f13e113]'
+      - generic "Слайд 1 из 6" [ref=f13e114]
+    - generic [ref=f13e118]:
+      - heading "Услуги" [level=2] [ref=f13e119]
+      - generic [ref=f13e120]:
+        - article [ref=f13e121]:
+          - generic [ref=f13e123]:
+            - heading "Плановое ТО" [level=3] [ref=f13e124]
+            - paragraph [ref=f13e125]: Регламентное обслуживание, замена масла, фильтров, жидкостей и расходников
+        - article [ref=f13e126]:
+          - generic [ref=f13e128]:
+            - heading "Диагностика" [level=3] [ref=f13e129]
+            - paragraph [ref=f13e130]: Компьютерная диагностика, проверка двигателя, ходовой, тормозной системы и электрики
+        - article [ref=f13e131]:
+          - generic [ref=f13e133]:
+            - heading "Ремонт" [level=3] [ref=f13e134]
+            - paragraph [ref=f13e135]: Ремонтируем основные узлы и системы автомобиля после диагностики и согласования работ
+        - article [ref=f13e136]:
+          - generic [ref=f13e138]:
+            - heading "Замена" [level=3] [ref=f13e139]
+            - paragraph [ref=f13e140]: Выполняем замену расходников, узлов и деталей с подбором запчастей под конкретную модель
+        - article [ref=f13e141]:
+          - generic [ref=f13e143]:
+            - heading "Форсунки" [level=3] [ref=f13e144]
+            - paragraph [ref=f13e145]: Диагностика, ремонт и восстановление форсунок для коммерческого транспорта
+        - article [ref=f13e146]:
+          - generic [ref=f13e148]:
+            - heading "Дополнительные услуги" [level=3] [ref=f13e149]
+            - paragraph [ref=f13e150]: Дополнительные сервисы для владельцев автомобилей и юридических лиц
+    - generic [ref=f13e151]:
+      - generic [ref=f13e152]:
+        - heading "Почему выбирают AutoMD" [level=2] [ref=f13e153]
+        - generic [ref=f13e154]:
+          - article [ref=f13e155]:
+            - heading "Запчасти на складе" [level=3] [ref=f13e156]
+            - paragraph [ref=f13e157]: Для популярных моделей многие детали есть в наличии — не нужно ждать поставку неделями
+          - article [ref=f13e158]:
+            - heading "Ремонт за 1 день" [level=3] [ref=f13e159]
+            - paragraph [ref=f13e160]: Большинство типовых работ выполняем в день обращения после диагностики и согласования
+          - article [ref=f13e161]:
+            - heading "Гарантия на работы и запчасти" [level=3] [ref=f13e162]
+            - paragraph [ref=f13e163]: После ремонта объясняем, что было сделано, и фиксируем условия обслуживания.
+          - article [ref=f13e164]:
+            - heading "Профильная экспертиза" [level=3] [ref=f13e165]
+            - paragraph [ref=f13e166]: Основной фокус — Fiat Ducato, Ford Transit, Citroen Jumper, Iveco Daily, Peugeot Boxer, Peugeot Partner, Citroen Berlingo, Sollers Atlant и JAC Sunray
+          - article [ref=f13e167]:
+            - heading "Сервис и запчасти в одном месте" [level=3] [ref=f13e168]
+            - paragraph [ref=f13e169]: Подбираем детали, согласовываем стоимость, выполняем ремонт и выдаем автомобиль с гарантией
+          - article [ref=f13e170]:
+            - heading "Работа с физлицами и бизнесом" [level=3] [ref=f13e171]
+            - paragraph [ref=f13e172]: Обслуживаем личные автомобили, коммерческий транспорт и автопарки компаний
+      - figure [ref=f13e173]:
+        - generic "Преимущества AutoMD" [ref=f13e174]:
+          - generic [ref=f13e175]:
+            - group "1 / 3" [ref=f13e176]:
+              - img "Техцентр AutoMD и коммерческие автомобили"
+              - generic:
+                - strong: 15+
+                - generic: лет опыта
+            - group "2 / 3" [ref=f13e177]:
+              - img "Клиенты техцентра AutoMD"
+              - generic:
+                - strong: 200+
+                - generic: клиентов
+            - group "3 / 3" [ref=f13e178]:
+              - img "География работы AutoMD"
+              - generic:
+                - strong: 50+
+                - generic: городов
+        - generic [ref=f13e179]:
+          - button "Перейти к слайду 1" [ref=f13e180] [cursor=pointer]
+          - button "Перейти к слайду 2" [ref=f13e181] [cursor=pointer]
+          - button "Перейти к слайду 3" [ref=f13e182] [cursor=pointer]
+    - generic [ref=f13e183]:
+      - generic [ref=f13e184]:
+        - heading "Команда AutoMD" [level=2] [ref=f13e185]
+        - generic [ref=f13e186]:
+          - paragraph [ref=f13e187]: "В AutoMD с автомобилем работает не один человек, а команда: менеджер уточняет задачу и помогает с записью, мастер проводит диагностику и ремонт, специалист по запчастям подбирает совместимые детали, а приемщик объясняет клиенту ход работ, сроки и стоимость."
+          - paragraph [ref=f13e188]: Такой подход помогает быстрее находить причину неисправности, точнее подбирать запчасти и понятнее согласовывать ремонт.
+      - generic [ref=f13e189]:
+        - article [ref=f13e190]:
+          - img "Мастер ремонтирует коммерческий автомобиль" [ref=f13e191]
+          - generic [ref=f13e192]:
+            - heading "Мастера и автослесари" [level=3] [ref=f13e193]
+            - paragraph [ref=f13e194]: Выполняют диагностику, ТО, ремонт и замену узлов. Работают с коммерческим транспортом и знают особенности популярных моделей
+        - article [ref=f13e195]:
+          - img "Специалист подбирает автомобильные запчасти" [ref=f13e196]
+          - generic [ref=f13e197]:
+            - heading "Специалисты по запчастям" [level=3] [ref=f13e198]
+            - paragraph [ref=f13e199]: Подбирают новые, оригинальные, аналоговые и б/у детали по марке, модели, году выпуска, VIN или артикулу
+        - article [ref=f13e200]:
+          - img "Диагност проверяет автомобиль" [ref=f13e201]
+          - generic [ref=f13e202]:
+            - heading "Диагносты" [level=3] [ref=f13e203]
+            - paragraph [ref=f13e204]: Проверяют электронные системы, двигатель, ходовую, тормозную систему, электрику и помогают определить реальную причину неисправности
+        - article [ref=f13e205]:
+          - img "Мастер-приемщик AutoMD" [ref=f13e206]
+          - generic [ref=f13e207]:
+            - heading "Мастера-приемщики" [level=3] [ref=f13e208]
+            - paragraph [ref=f13e209]: Принимают автомобиль, фиксируют задачу клиента, согласовывают работы и объясняют, что происходит с машиной на каждом этапе
+        - article [ref=f13e210]:
+          - img "Менеджер AutoMD общается с клиентом" [ref=f13e211]
+          - generic [ref=f13e212]:
+            - heading "Менеджеры по работе с клиентами" [level=3] [ref=f13e213]
+            - paragraph [ref=f13e214]: Помогают выбрать техцентр, записаться на удобное время, уточнить стоимость, наличие запчастей и условия обслуживания
+      - generic [ref=f13e215]:
+        - generic [ref=f13e216]:
+          - heading "Почему это важно" [level=3] [ref=f13e217]
+          - paragraph [ref=f13e218]: Коммерческий транспорт часто используется каждый день, поэтому в ремонте важны не только навыки мастера, но и организация процесса. Когда диагностика, подбор запчастей, согласование и ремонт работают как единая система, автомобиль быстрее возвращается в работу.
+        - link "Посмотреть вакансии" [ref=f13e219] [cursor=pointer]:
+          - /url: "#booking"
+    - generic [ref=f13e220]:
+      - generic [ref=f13e222]:
+        - heading "Узнайте стоимость работ по своей модели" [level=2] [ref=f13e223]
+        - paragraph [ref=f13e224]: Цены зависят от автомобиля, типа работ и необходимых запчастей. Выберите модель — сайт покажет доступные услуги, ориентировочную стоимость и варианты записи.
+      - generic [ref=f13e225]:
+        - generic [ref=f13e226]:
+          - generic [ref=f13e227]: Марка
+          - combobox "Марка" [ref=f13e228]:
+            - option "Выбрать" [selected]
+            - option "Fiat"
+            - option "Ford"
+        - generic [ref=f13e229]:
+          - generic [ref=f13e230]: Модель
+          - combobox "Модель" [ref=f13e231]:
+            - option "Выбрать" [selected]
+            - option "Ducato"
+            - option "Transit"
+        - generic [ref=f13e232]:
+          - generic [ref=f13e233]: Услуга
+          - combobox "Услуга" [ref=f13e234]:
+            - option "Выбрать" [selected]
+            - option "Ремонт"
+            - option "ТО"
+        - button "Посмотреть цены" [ref=f13e235] [cursor=pointer]
+        - paragraph
+    - generic [ref=f13e236]:
+      - generic [ref=f13e237]:
+        - generic [ref=f13e238]:
+          - heading "Для юридических лиц" [level=2] [ref=f13e239]
+          - paragraph [ref=f13e240]:
+            - generic [ref=f13e241]: "AutoMD помогает компаниям быстрее возвращать автомобили в работу: выполняем"
+            - generic [ref=f13e242]: диагностику, ТО, ремонт, подбор и установку запчастей для коммерческого
+            - generic [ref=f13e243]: транспорта
+        - generic [ref=f13e244]:
+          - heading "Подходит для" [level=3] [ref=f13e245]
+          - generic [ref=f13e246]:
+            - list [ref=f13e247]:
+              - listitem [ref=f13e248]:
+                - generic [ref=f13e250]: Служб доставки
+              - listitem [ref=f13e251]:
+                - generic [ref=f13e253]: Курьерских компаний
+              - listitem [ref=f13e254]:
+                - generic [ref=f13e256]: Строительных организаций
+            - list [ref=f13e257]:
+              - listitem [ref=f13e258]:
+                - generic [ref=f13e260]: Сервисных служб
+              - listitem [ref=f13e261]:
+                - generic [ref=f13e263]: Производственных компаний
+              - listitem [ref=f13e264]:
+                - generic [ref=f13e266]: Производственных компаний
+        - list [ref=f13e267]:
+          - listitem [ref=f13e268]:
+            - generic [ref=f13e270]: Подбор запчастей
+          - listitem [ref=f13e271]:
+            - generic [ref=f13e273]: Безналичная оплата
+          - listitem [ref=f13e274]:
+            - generic [ref=f13e276]: Закрывающие документы
+          - listitem [ref=f13e277]:
+            - generic [ref=f13e279]: Приоритетная запись
+          - listitem [ref=f13e280]:
+            - generic [ref=f13e282]: Обслуживание нескольких автомобилей
+          - listitem [ref=f13e283]:
+            - generic [ref=f13e285]: Персональная консультация по автопарку
+        - link "Отправить заявку" [ref=f13e286] [cursor=pointer]:
+          - /url: "#booking"
+      - img "Обсуждение обслуживания корпоративного автопарка" [ref=f13e288]
+    - generic [ref=f13e289]:
+      - heading "Дополнительные сервисы" [level=2] [ref=f13e290]
+      - generic [ref=f13e291]:
+        - article [ref=f13e292]:
+          - generic [ref=f13e294]:
+            - heading "Эвакуатор" [level=3] [ref=f13e295]
+            - paragraph [ref=f13e296]: Поможем доставить автомобиль в техцентр, если он не может доехать самостоятельно.
+        - article [ref=f13e297]:
+          - generic [ref=f13e299]:
+            - heading "Страховка со скидкой" [level=3] [ref=f13e300]
+            - paragraph [ref=f13e301]: Поможем оформить страховой продукт на специальных условиях
+        - article [ref=f13e302]:
+          - generic [ref=f13e304]:
+            - heading "Выкуп аварийных авто" [level=3] [ref=f13e305]
+            - paragraph [ref=f13e306]: Рассмотрим выкуп автомобиля после ДТП или серьезной неисправности
+    - generic [ref=f13e307]:
+      - heading "Отзывы клиентов" [level=2] [ref=f13e308]
+      - generic "Отзывы клиентов" [ref=f13e309]:
+        - generic [ref=f13e310]:
+          - group "1 / 9" [ref=f13e311]:
+            - article [ref=f13e312]:
+              - generic [ref=f13e313]:
+                - img "Евгений Латухов" [ref=f13e314]
+                - generic [ref=f13e315]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e316]
+                  - paragraph [ref=f13e317]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e318]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e319]:
+                - time [ref=f13e320]: 03.08.23
+                - generic [ref=f13e321]: Договор №2983945
+          - group "2 / 9" [ref=f13e322]:
+            - article [ref=f13e323]:
+              - generic [ref=f13e324]:
+                - img "Евгений Латухов" [ref=f13e325]
+                - generic [ref=f13e326]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e327]
+                  - paragraph [ref=f13e328]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e329]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e330]:
+                - time [ref=f13e331]: 03.08.23
+                - generic [ref=f13e332]: Договор №2983945
+          - group "3 / 9" [ref=f13e333]:
+            - article [ref=f13e334]:
+              - generic [ref=f13e335]:
+                - img "Евгений Латухов" [ref=f13e336]
+                - generic [ref=f13e337]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e338]
+                  - paragraph [ref=f13e339]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e340]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e341]:
+                - time [ref=f13e342]: 03.08.23
+                - generic [ref=f13e343]: Договор №2983945
+          - group "4 / 9" [ref=f13e344]:
+            - article [ref=f13e345]:
+              - generic [ref=f13e346]:
+                - img "Евгений Латухов" [ref=f13e347]
+                - generic [ref=f13e348]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e349]
+                  - paragraph [ref=f13e350]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e351]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e352]:
+                - time [ref=f13e353]: 03.08.23
+                - generic [ref=f13e354]: Договор №2983945
+          - group "5 / 9" [ref=f13e355]:
+            - article [ref=f13e356]:
+              - generic [ref=f13e357]:
+                - img "Евгений Латухов" [ref=f13e358]
+                - generic [ref=f13e359]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e360]
+                  - paragraph [ref=f13e361]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e362]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e363]:
+                - time [ref=f13e364]: 03.08.23
+                - generic [ref=f13e365]: Договор №2983945
+          - group "6 / 9" [ref=f13e366]:
+            - article [ref=f13e367]:
+              - generic [ref=f13e368]:
+                - img "Евгений Латухов" [ref=f13e369]
+                - generic [ref=f13e370]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e371]
+                  - paragraph [ref=f13e372]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e373]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e374]:
+                - time [ref=f13e375]: 03.08.23
+                - generic [ref=f13e376]: Договор №2983945
+          - group "7 / 9" [ref=f13e377]:
+            - article [ref=f13e378]:
+              - generic [ref=f13e379]:
+                - img "Евгений Латухов" [ref=f13e380]
+                - generic [ref=f13e381]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e382]
+                  - paragraph [ref=f13e383]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e384]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e385]:
+                - time [ref=f13e386]: 03.08.23
+                - generic [ref=f13e387]: Договор №2983945
+          - group "8 / 9" [ref=f13e388]:
+            - article [ref=f13e389]:
+              - generic [ref=f13e390]:
+                - img "Евгений Латухов" [ref=f13e391]
+                - generic [ref=f13e392]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e393]
+                  - paragraph [ref=f13e394]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e395]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e396]:
+                - time [ref=f13e397]: 03.08.23
+                - generic [ref=f13e398]: Договор №2983945
+          - group "9 / 9" [ref=f13e399]:
+            - article [ref=f13e400]:
+              - generic [ref=f13e401]:
+                - img "Евгений Латухов" [ref=f13e402]
+                - generic [ref=f13e403]:
+                  - heading "Евгений Латухов" [level=3] [ref=f13e404]
+                  - paragraph [ref=f13e405]: "Автомобиль: Ford Transit"
+              - paragraph [ref=f13e406]: После ДТП решил как можно быстрее восстановить автомобиль. По рекомендации коллеги попал в «АвтоМД». Вячаслав Бега осмотрел проблему и в тот же день приступил к работе. Было немного страшно за результат, но готовый вариант меня порадовал, сделал на 5+!
+              - generic [ref=f13e407]:
+                - time [ref=f13e408]: 03.08.23
+                - generic [ref=f13e409]: Договор №2983945
+        - generic [ref=f13e410]:
+          - button "Перейти к слайду 1" [ref=f13e411] [cursor=pointer]
+          - button "Перейти к слайду 2" [ref=f13e412] [cursor=pointer]
+          - button "Перейти к слайду 3" [ref=f13e413] [cursor=pointer]
+          - button "Перейти к слайду 4" [ref=f13e414] [cursor=pointer]
+          - button "Перейти к слайду 5" [ref=f13e415] [cursor=pointer]
+          - button "Перейти к слайду 6" [ref=f13e416] [cursor=pointer]
+          - button "Перейти к слайду 7" [ref=f13e417] [cursor=pointer]
+    - generic [ref=f13e418]:
+      - heading "Выберите удобный техцентр AutoMD" [level=2] [ref=f13e419]
+      - generic [ref=f13e420]:
+        - article [ref=f13e421]:
+          - heading "Южный" [level=3] [ref=f13e422]
+          - generic [ref=f13e423]:
+            - generic [ref=f13e424]:
+              - term [ref=f13e425]: Адрес
+              - definition [ref=f13e426]:
+                - generic [ref=f13e428]: метро Пражская, г. Москва, Красного маяка, 16
+            - generic [ref=f13e429]:
+              - term [ref=f13e430]: Телефон
+              - definition [ref=f13e431]:
+                - link "+7 (495) 477-50-29" [ref=f13e433] [cursor=pointer]:
+                  - /url: tel:+74954775029
+            - generic [ref=f13e434]:
+              - term [ref=f13e435]: Время работы
+              - definition [ref=f13e436]:
+                - generic [ref=f13e438]: Пн-Вс, 08:00-20:00
+          - link "Показать на карте" [ref=f13e439] [cursor=pointer]:
+            - /url: "#locations"
+        - article [ref=f13e440]:
+          - heading "Северный" [level=3] [ref=f13e441]
+          - generic [ref=f13e442]:
+            - generic [ref=f13e443]:
+              - term [ref=f13e444]: Адрес
+              - definition [ref=f13e445]:
+                - generic [ref=f13e447]: метро Ховрино, г. Москва, Ижорская улица, 8с1
+            - generic [ref=f13e448]:
+              - term [ref=f13e449]: Телефон
+              - definition [ref=f13e450]:
+                - link "+7 (495) 477-50-29" [ref=f13e452] [cursor=pointer]:
+                  - /url: tel:+74954775029
+            - generic [ref=f13e453]:
+              - term [ref=f13e454]: Время работы
+              - definition [ref=f13e455]:
+                - generic [ref=f13e457]: Пн-Вс, 08:00-20:00
+          - link "Показать на карте" [ref=f13e458] [cursor=pointer]:
+            - /url: "#locations"
+        - img "Карта расположения техцентров AutoMD в Москве" [ref=f13e459]
+    - generic [ref=f13e460]:
+      - generic [ref=f13e461]:
+        - heading "Запишитесь на ремонт или консультацию" [level=2] [ref=f13e462]
+        - paragraph [ref=f13e463]: Оставьте контакты — мы уточним задачу, подскажем по стоимости и подберем удобное время для визита
+      - generic [ref=f13e464]:
+        - generic [ref=f13e465]:
+          - generic [ref=f13e466]:
+            - generic [ref=f13e467]: Имя
+            - textbox "Имя" [ref=f13e468]:
+              - /placeholder: Напишите
+          - generic [ref=f13e469]:
+            - generic [ref=f13e470]: Телефон
+            - textbox "Телефон" [ref=f13e471]:
+              - /placeholder: Напишите
+          - generic [ref=f13e472]:
+            - generic [ref=f13e473]: Удобное время
+            - combobox "Удобное время" [ref=f13e474]:
+              - option "Выбрать" [selected]
+              - option "Утро"
+              - option "День"
+              - option "Вечер"
+          - generic [ref=f13e475]:
+            - generic [ref=f13e476]: Техцентр
+            - combobox "Техцентр" [ref=f13e477]:
+              - option "Выбрать" [selected]
+              - option "Южный"
+              - option "Северный"
+        - generic [ref=f13e478]:
+          - generic [ref=f13e479]:
+            - checkbox "Я принимаю условия Политики конфиденциальности, Согласием на обработку персональных данных и Пользовательским соглашением" [ref=f13e480]
+            - generic [ref=f13e481]: Я принимаю условия Политики конфиденциальности, Согласием на обработку персональных данных и Пользовательским соглашением
+          - button "Записаться" [ref=f13e482] [cursor=pointer]
+        - paragraph
+  - contentinfo [ref=f13e483]:
+    - generic [ref=f13e484]:
+      - img "AutoMD" [ref=f13e486]
+      - generic [ref=f13e487]:
+        - paragraph [ref=f13e488]: Профессиональный автотехцентр в Москве. Ремонт, ТО, диагностика и запчасти для коммерческого транспорта.
+        - paragraph [ref=f13e489]: Работаем с Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant, JAC Sunray и другими моделями.
+      - link "Получить консультацию" [ref=f13e490] [cursor=pointer]:
+        - /url: "#booking"
+    - generic [ref=f13e491]:
+      - generic [ref=f13e492]:
+        - heading "Автомобили" [level=2] [ref=f13e493]
+        - navigation "Автомобили" [ref=f13e494]:
+          - link "Fiat Ducato" [ref=f13e495] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Ford Transit" [ref=f13e496] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Peugeot Boxer" [ref=f13e497] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Citroen Jumper" [ref=f13e498] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Iveco Daily" [ref=f13e499] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Peugeot Partner" [ref=f13e500] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Citroen Berlingo" [ref=f13e501] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Sollers Atlant" [ref=f13e502] [cursor=pointer]:
+            - /url: "#cars"
+          - link "JAC Sunray" [ref=f13e503] [cursor=pointer]:
+            - /url: "#cars"
+          - link "Все автомобили" [ref=f13e504] [cursor=pointer]:
+            - /url: "#cars"
+      - generic [ref=f13e505]:
+        - heading "Услуги" [level=2] [ref=f13e506]
+        - navigation "Услуги" [ref=f13e507]:
+          - link "Плановое ТО" [ref=f13e508] [cursor=pointer]:
+            - /url: "#services"
+          - link "Диагностика" [ref=f13e509] [cursor=pointer]:
+            - /url: "#services"
+          - link "Ремонт" [ref=f13e510] [cursor=pointer]:
+            - /url: "#services"
+          - link "Замена" [ref=f13e511] [cursor=pointer]:
+            - /url: "#services"
+          - link "Форсунки" [ref=f13e512] [cursor=pointer]:
+            - /url: "#services"
+          - link "Эвакуатор" [ref=f13e513] [cursor=pointer]:
+            - /url: "#services"
+          - link "Заправка кондиционера" [ref=f13e514] [cursor=pointer]:
+            - /url: "#services"
+          - link "Выкуп аварийных авто" [ref=f13e515] [cursor=pointer]:
+            - /url: "#services"
+      - generic [ref=f13e516]:
+        - heading "Клиентам" [level=2] [ref=f13e517]
+        - navigation "Клиентам" [ref=f13e518]:
+          - link "Запчасти" [ref=f13e519] [cursor=pointer]:
+            - /url: "#services"
+          - link "Цены" [ref=f13e520] [cursor=pointer]:
+            - /url: "#price"
+          - link "Акции" [ref=f13e521] [cursor=pointer]:
+            - /url: "#promo"
+          - link "Страховка со скидкой" [ref=f13e522] [cursor=pointer]:
+            - /url: "#services"
+          - link "Контакты" [ref=f13e523] [cursor=pointer]:
+            - /url: "#locations"
+          - link "Статьи" [ref=f13e524] [cursor=pointer]:
+            - /url: "#top"
+          - link "Новости" [ref=f13e525] [cursor=pointer]:
+            - /url: "#top"
+          - link "Для юридических лиц" [ref=f13e526] [cursor=pointer]:
+            - /url: "#business"
+      - generic [ref=f13e527]:
+        - heading "Компания" [level=2] [ref=f13e528]
+        - navigation "Компания" [ref=f13e529]:
+          - link "О AutoMD" [ref=f13e530] [cursor=pointer]:
+            - /url: "#team"
+          - link "3D-тур" [ref=f13e531] [cursor=pointer]:
+            - /url: "#locations"
+          - link "Отзывы" [ref=f13e532] [cursor=pointer]:
+            - /url: "#team"
+          - link "Вакансии" [ref=f13e533] [cursor=pointer]:
+            - /url: "#team"
+          - link "Клиентская зона" [ref=f13e534] [cursor=pointer]:
+            - /url: "#booking"
+          - link "Гарантии и сервис" [ref=f13e535] [cursor=pointer]:
+            - /url: "#services"
+      - generic [ref=f13e536]:
+        - heading "Контакты" [level=2] [ref=f13e537]
+        - generic [ref=f13e538]:
+          - generic [ref=f13e539]: метро Пражская, г. Москва, Красного маяка, 16
+          - generic [ref=f13e542]: метро Ховрино, г. Москва, Ижорская улица, 8с1
+          - link "+7 (495) 477-50-29" [ref=f13e547] [cursor=pointer]:
+            - /url: tel:+74954775029
+          - generic [ref=f13e548]: Пн-Вс, 08:00-20:00
+    - generic [ref=f13e551]:
+      - generic [ref=f13e552]: © AutoMD, 2026 Профессиональный автотехцентр в Москве
+      - link "Политика конфиденциальности" [ref=f13e553] [cursor=pointer]:
+        - /url: "#"
+      - link "Согласие на обработку персональных данных" [ref=f13e554] [cursor=pointer]:
+        - /url: "#"
+      - link "Пользовательское соглашение" [ref=f13e555] [cursor=pointer]:
+        - /url: "#"
+      - link "Реквизиты" [ref=f13e556] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=f13e557]:
+        - text: Разработан
+        - img "IS ART" [ref=f13e558]
