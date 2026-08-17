@@ -11,6 +11,9 @@ const initMobileMenu = () => {
   const setOpen = (open) => {
     header.classList.toggle("site-header--menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
+    navigation.toggleAttribute("inert", !open && !desktopMedia.matches);
+    if (desktopMedia.matches) navigation.removeAttribute("aria-hidden");
+    else navigation.setAttribute("aria-hidden", String(!open));
     if (label) label.textContent = open ? "Закрыть меню" : "Открыть меню";
   };
 
@@ -29,7 +32,7 @@ const initMobileMenu = () => {
   });
 
   desktopMedia.addEventListener("change", (event) => {
-    if (event.matches) setOpen(false);
+    setOpen(false);
   });
 
   setOpen(false);

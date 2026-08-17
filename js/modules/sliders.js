@@ -1,4 +1,15 @@
-const getSpeed = () => (window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 400);
+const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const getSpeed = () => (prefersReducedMotion() ? 0 : 400);
+
+const getBenefitsAutoplay = () =>
+  prefersReducedMotion()
+    ? false
+    : {
+        delay: 4000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      };
 
 const getCommonOptions = () => ({
   speed: getSpeed(),
@@ -22,11 +33,63 @@ const getCommonOptions = () => ({
 });
 
 const bindKeyboardToFocus = (swiper, element) => {
-  element.addEventListener("focusin", () => swiper.keyboard.enable());
+  element.addEventListener("focusin", () => swiper.keyboard?.enable());
   element.addEventListener("focusout", (event) => {
-    if (!element.contains(event.relatedTarget)) swiper.keyboard.disable();
+    if (!element.contains(event.relatedTarget)) swiper.keyboard?.disable();
   });
   return swiper;
+};
+
+const createExtraServicesCarousel = () => {
+  const scroller = document.querySelector(".extra-services__grid");
+  const dots = [...document.querySelectorAll(".extra-services__dot")];
+  const cards = [...document.querySelectorAll(".extra-services .service-card--extra")];
+  if (!scroller || dots.length !== cards.length) return null;
+
+  let animationFrame = 0;
+  const setActiveSlide = (activeIndex) => {
+    dots.forEach((dot, index) => {
+      const isActive = index === activeIndex;
+      dot.classList.toggle("extra-services__dot--active", isActive);
+      if (isActive) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+    cards.forEach((card, index) =>
+      card.classList.toggle("service-card--extra-selected", index === activeIndex),
+    );
+  };
+
+  const updateActiveSlide = () => {
+    const scrollerLeft = scroller.getBoundingClientRect().left;
+    const activeIndex = cards.reduce((closestIndex, card, index) => {
+      const distance = Math.abs(card.getBoundingClientRect().left - scrollerLeft);
+      const closestDistance = Math.abs(
+        cards[closestIndex].getBoundingClientRect().left - scrollerLeft,
+      );
+      return distance < closestDistance ? index : closestIndex;
+    }, 0);
+    setActiveSlide(activeIndex);
+  };
+
+  const handleScroll = () => {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(updateActiveSlide);
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      const scrollerRect = scroller.getBoundingClientRect();
+      const cardRect = cards[index].getBoundingClientRect();
+      scroller.scrollTo({
+        left: scroller.scrollLeft + cardRect.left - scrollerRect.left,
+        behavior: prefersReducedMotion() ? "auto" : "smooth",
+      });
+    });
+  });
+  scroller.addEventListener("scroll", handleScroll, { passive: true });
+  setActiveSlide(0);
+
+  return { update: updateActiveSlide };
 };
 
 const createBenefitsSlider = (Swiper) => {
@@ -38,9 +101,10 @@ const createBenefitsSlider = (Swiper) => {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 0,
-    grabCursor: true,
+    grabCursor: false,
     simulateTouch: true,
     touchStartPreventDefault: true,
+    autoplay: getBenefitsAutoplay(),
     pagination: {
       el: element.parentElement.querySelector(".benefits-slider__pagination"),
       clickable: true,
@@ -49,30 +113,70 @@ const createBenefitsSlider = (Swiper) => {
   return bindKeyboardToFocus(swiper, element);
 };
 
+const bindReviewsPagination = (swiper, element) => {
+  const dots = [...element.querySelectorAll(".reviews__dot")];
+  if (!dots.length) return swiper;
+
+  const updatePagination = () => {
+    const progress = Math.min(1, Math.max(0, swiper.progress || 0));
+    const activeIndex = Math.round(progress * (dots.length - 1));
+    dots.forEach((dot, index) => {
+      const isActive = index === activeIndex;
+      dot.classList.toggle("reviews__dot--active", isActive);
+      if (isActive) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+  };
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      const targetIndex = Math.round(
+        (index * (swiper.slides.length - 1)) / (dots.length - 1),
+      );
+      swiper.slideTo(targetIndex);
+    });
+  });
+  swiper.on("progress", updatePagination);
+  swiper.on("breakpoint", updatePagination);
+  updatePagination();
+  return swiper;
+};
+
 const createReviewsSlider = (Swiper) => {
   const element = document.querySelector(".reviews__slider");
   if (!element) return null;
 
   const swiper = new Swiper(element, {
     ...getCommonOptions(),
-    slidesPerView: 3,
+    slidesPerView: "auto",
     slidesPerGroup: 1,
     spaceBetween: 20,
     grabCursor: true,
-    pagination: {
-      el: element.querySelector(".reviews__pagination"),
-      clickable: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
     },
   });
-  return bindKeyboardToFocus(swiper, element);
+  return bindKeyboardToFocus(bindReviewsPagination(swiper, element), element);
 };
 
 export const initSliders = () => {
+  const extraServicesCarousel = createExtraServicesCarousel();
   const Swiper = window.Swiper;
   if (typeof Swiper !== "function") {
     console.warn("Swiper не загружен: слайдеры оставлены в статичном состоянии.");
-    return [];
+    return [extraServicesCarousel].filter(Boolean);
   }
 
-  return [createBenefitsSlider(Swiper), createReviewsSlider(Swiper)].filter(Boolean);
+  return [
+    extraServicesCarousel,
+    createBenefitsSlider(Swiper),
+    createReviewsSlider(Swiper),
+  ].filter(Boolean);
 };
