@@ -165,7 +165,34 @@
         </div>
       </section>
 
-      <section class="promo-banner page__container" id="promo"><img class="promo-banner__image" src="assets/promo-tires.png" alt="Акция: шиномонтаж и диагностика ходовой" /><div class="carousel-dots" aria-label="Слайд 1 из 6"><span class="carousel-dots__item carousel-dots__item--active"></span><span class="carousel-dots__item"></span><span class="carousel-dots__item"></span></div></section>
+      <section class="promo-banner page__container" id="promo" aria-label="Акции AutoMD">
+        <div class="promo-banner__slider swiper" tabindex="0" aria-label="Акции AutoMD" aria-roledescription="карусель">
+          <div class="swiper-wrapper">
+            <a class="promo-banner__slide swiper-slide" href="#booking" aria-label="Заказать шиномонтаж и получить диагностику ходовой в подарок">
+              <img class="promo-banner__image" src="assets/promo-tires.png" alt="Закажи шиномонтаж — получи диагностику ходовой в подарок" />
+            </a>
+            <a class="promo-banner__slide promo-banner__slide--business swiper-slide" href="#business">
+              <img class="promo-banner__image promo-banner__image--photo" src="assets/business.jpg" alt="Обслуживание коммерческого автопарка" loading="lazy" />
+              <span class="promo-banner__shade" aria-hidden="true"></span>
+              <span class="promo-banner__content">
+                <strong class="promo-banner__title">Сервис для автопарков</strong>
+                <span class="promo-banner__text">ТО, ремонт и запчасти для коммерческого транспорта в одном месте</span>
+                <span class="promo-banner__link">Узнать условия</span>
+              </span>
+            </a>
+            <a class="promo-banner__slide promo-banner__slide--diagnostics swiper-slide" href="#booking">
+              <img class="promo-banner__image promo-banner__image--photo" src="assets/benefits.jpg" alt="Диагностика коммерческого автомобиля в AutoMD" loading="lazy" />
+              <span class="promo-banner__shade" aria-hidden="true"></span>
+              <span class="promo-banner__content">
+                <strong class="promo-banner__title">Начните с диагностики</strong>
+                <span class="promo-banner__text">Найдём причину неисправности и согласуем работы до начала ремонта</span>
+                <span class="promo-banner__link">Записаться</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="promo-banner__pagination swiper-pagination" aria-label="Навигация по акциям"></div>
+      </section>
 
       <section class="service-grid page__container" id="services"><h2 class="section-heading__title">Услуги</h2><div class="service-grid__items">
         <article class="service-card service-card--selected"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--maintenance" src="assets/service-maintenance.png" alt="" /></div><div class="service-card__content"><h3 class="service-card__title">Плановое ТО</h3><p class="service-card__text">Регламентное обслуживание, замена масла, фильтров, жидкостей и расходников</p></div></article>

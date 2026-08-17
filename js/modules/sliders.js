@@ -11,6 +11,15 @@ const getBenefitsAutoplay = () =>
         pauseOnMouseEnter: true,
       };
 
+const getPromoAutoplay = () =>
+  prefersReducedMotion()
+    ? false
+    : {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      };
+
 const getCommonOptions = () => ({
   speed: getSpeed(),
   rewind: true,
@@ -113,6 +122,29 @@ const createBenefitsSlider = (Swiper) => {
   return bindKeyboardToFocus(swiper, element);
 };
 
+const createPromoSlider = (Swiper) => {
+  const element = document.querySelector(".promo-banner__slider");
+  if (!element) return null;
+
+  const pagination = element.parentElement?.querySelector(".promo-banner__pagination");
+  const swiper = new Swiper(element, {
+    ...getCommonOptions(),
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 0,
+    grabCursor: true,
+    simulateTouch: true,
+    touchStartPreventDefault: false,
+    autoplay: getPromoAutoplay(),
+    pagination: {
+      el: pagination,
+      clickable: true,
+    },
+  });
+
+  return bindKeyboardToFocus(swiper, element);
+};
+
 const bindReviewsPagination = (swiper, element) => {
   const dots = [...element.querySelectorAll(".reviews__dot")];
   if (!dots.length) return swiper;
@@ -176,6 +208,7 @@ export const initSliders = () => {
 
   return [
     extraServicesCarousel,
+    createPromoSlider(Swiper),
     createBenefitsSlider(Swiper),
     createReviewsSlider(Swiper),
   ].filter(Boolean);
