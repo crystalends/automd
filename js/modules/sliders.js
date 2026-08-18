@@ -101,6 +101,48 @@ const createExtraServicesCarousel = () => {
   return { update: updateActiveSlide };
 };
 
+const createCarBrandsCarousel = () => {
+  const scroller = document.querySelector(".car-brands__grid");
+  const cards = [...document.querySelectorAll(".car-brands .vehicle-card")];
+  const dots = [...document.querySelectorAll(".car-brands__dot")];
+  if (!scroller || !cards.length || !dots.length) return null;
+
+  let animationFrame = 0;
+  const setActivePage = (activeIndex) => {
+    dots.forEach((dot, index) => {
+      const isActive = index === activeIndex;
+      dot.classList.toggle("car-brands__dot--active", isActive);
+      if (isActive) dot.setAttribute("aria-current", "true");
+      else dot.removeAttribute("aria-current");
+    });
+  };
+
+  const updateActivePage = () => {
+    const maxScroll = scroller.scrollWidth - scroller.clientWidth;
+    const progress = maxScroll > 0 ? scroller.scrollLeft / maxScroll : 0;
+    setActivePage(Math.round(progress * (dots.length - 1)));
+  };
+
+  const handleScroll = () => {
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(updateActivePage);
+  };
+
+  dots.forEach((dot, pageIndex) => {
+    dot.addEventListener("click", () => {
+      const targetCard = cards[Math.min(pageIndex * 2, cards.length - 1)];
+      scroller.scrollTo({
+        left: targetCard.offsetLeft - scroller.offsetLeft,
+        behavior: prefersReducedMotion() ? "auto" : "smooth",
+      });
+    });
+  });
+  scroller.addEventListener("scroll", handleScroll, { passive: true });
+  setActivePage(0);
+
+  return { update: updateActivePage };
+};
+
 const createBenefitsSlider = (Swiper) => {
   const element = document.querySelector(".benefits-slider");
   if (!element) return null;
@@ -200,14 +242,16 @@ const createReviewsSlider = (Swiper) => {
 
 export const initSliders = () => {
   const extraServicesCarousel = createExtraServicesCarousel();
+  const carBrandsCarousel = createCarBrandsCarousel();
   const Swiper = window.Swiper;
   if (typeof Swiper !== "function") {
     console.warn("Swiper не загружен: слайдеры оставлены в статичном состоянии.");
-    return [extraServicesCarousel].filter(Boolean);
+    return [extraServicesCarousel, carBrandsCarousel].filter(Boolean);
   }
 
   return [
     extraServicesCarousel,
+    carBrandsCarousel,
     createPromoSlider(Swiper),
     createBenefitsSlider(Swiper),
     createReviewsSlider(Swiper),
