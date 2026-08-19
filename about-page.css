@@ -1,0 +1,1238 @@
+.about-page {
+  --about-section-gap: clamp(72px, 5.208vw, 100px);
+  background: var(--paper);
+}
+
+.about-page main {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-scene {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.about-hero-scene__pattern,
+.about-hero-scene__vehicle,
+.about-hero-scene__glow {
+  position: absolute;
+  max-width: none;
+}
+
+.about-hero-scene__pattern {
+  inset: 0;
+  width: 100%;
+  height: 820px;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.about-hero-scene__glow {
+  border-radius: 50%;
+  background: var(--paper);
+  filter: blur(100px);
+}
+
+.about-hero-scene__glow--left {
+  top: 228px;
+  left: -25px;
+  width: 53vw;
+  height: 493px;
+}
+
+.about-hero-scene__glow--top {
+  top: -144px;
+  left: -23vw;
+  width: 143vw;
+  height: 488px;
+}
+
+.about-hero-scene__glow--right {
+  top: 420px;
+  right: -19vw;
+  width: 50vw;
+  height: 420px;
+}
+
+.about-hero-scene__vehicle {
+  z-index: 2;
+  top: 280px;
+  right: max(calc((100vw - var(--container)) / 2 - 19px), 20px);
+  width: min(35.104vw, 674px);
+  height: min(20.99vw, 403px);
+  object-fit: contain;
+}
+
+.about-hero__vehicle-mobile {
+  display: none;
+}
+
+.about-breadcrumb {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.about-breadcrumb__link:hover {
+  color: var(--red);
+}
+
+.about-breadcrumb__separator {
+  color: var(--line);
+}
+
+.about-hero {
+  min-height: 653px;
+  padding-top: 80px;
+}
+
+.about-hero__content {
+  display: flex;
+  width: min(925px, 61%);
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-hero__intro,
+.about-hero__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-hero__intro {
+  gap: 20px;
+}
+
+.about-hero__title,
+.about-hero__description p,
+.about-intro p,
+.about-specialization__copy p,
+.about-parts p,
+.about-decision p,
+.about-guarantees p,
+.about-seo p {
+  margin: 0;
+}
+
+.about-hero__title {
+  font-family: Geologica, sans-serif;
+  font-size: clamp(48px, 3.333vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.about-hero__accent {
+  color: var(--red);
+}
+
+.about-hero__description {
+  gap: 5px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.about-hero__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.about-hero__benefit {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.about-hero__benefit::before,
+.about-parts__grid li::before {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background: url("assets/hero-check-mark.svg") center / 7px 9px no-repeat;
+  content: "";
+  transform: rotate(90deg);
+}
+
+.about-hero__actions {
+  display: flex;
+  gap: 20px;
+}
+
+.about-button-secondary {
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  color: var(--blue);
+  font-family: Geologica, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.about-button-secondary:hover {
+  background: var(--blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.about-section-title {
+  margin: 0;
+  font-family: Geologica, sans-serif;
+  font-size: clamp(34px, 2.083vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.about-intro,
+.about-specialization,
+.about-parts,
+.about-process,
+.about-service,
+.faq-request,
+.about-seo {
+  margin-top: var(--about-section-gap);
+}
+
+.about-intro {
+  display: flex;
+  width: min(1060px, var(--container));
+  flex-direction: column;
+  gap: 20px;
+  margin-right: auto;
+}
+
+.about-intro__copy,
+.about-specialization__copy,
+.about-parts__intro,
+.about-seo__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.about-specialization {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-specialization__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.about-specialization__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-specialization .vehicle-card {
+  display: flex;
+  min-width: 0;
+  height: auto;
+  min-height: 350px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 20px 40px;
+  border: 1px solid var(--soft);
+  background: #fff;
+}
+
+.about-specialization .vehicle-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.about-specialization .vehicle-card__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.about-specialization .vehicle-card__links {
+  margin-top: auto;
+}
+
+.about-specialization__copy {
+  width: min(1060px, 100%);
+}
+
+.about-page .team {
+  margin-top: var(--about-section-gap);
+}
+
+.about-page .team-callout__content {
+  width: min(1175px, 78%);
+}
+
+.about-page .team-callout__button {
+  min-width: 260px;
+}
+
+.about-parts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-parts__intro {
+  width: min(1060px, 100%);
+}
+
+.about-parts__grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-parts__grid li {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--soft);
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.about-parts__button {
+  min-height: 46px;
+  padding-block: 15px;
+}
+
+.about-page .benefits {
+  margin-top: var(--about-section-gap);
+}
+
+.about-process {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-process__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-process__item {
+  position: relative;
+  display: flex;
+  height: 84px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #f6f6f6 url("assets/about-process-pattern.png") left top / 195px 84px no-repeat;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.about-process__item span {
+  flex: 0 0 auto;
+  color: var(--red);
+  font-family: Geologica, sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.about-page .business-offer {
+  margin-top: var(--about-section-gap);
+}
+
+.about-page .business-offer__audience-item,
+.about-page .business-offer__feature {
+  position: relative;
+  padding-left: 34px;
+}
+
+.about-page .business-offer__audience-item::before,
+.about-page .business-offer__feature::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.about-page .business-offer__audience-item::before {
+  background-image: url("assets/business-user-body.svg"), url("assets/business-user-head.svg");
+  background-size: 16px 6px, 9px 9px;
+  background-position: center 16px, center 4px;
+}
+
+.about-page .business-offer__feature::before {
+  background-image: url("assets/business-check.svg");
+  background-size: 8px 9px;
+  transform: rotate(90deg);
+}
+
+.about-page .locations {
+  margin-top: var(--about-section-gap);
+}
+
+.about-service {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-decision,
+.about-guarantees {
+  position: relative;
+  min-height: 453px;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.about-decision {
+  padding: 40px;
+  background: radial-gradient(ellipse 700px 700px at 98% 96%, #e21013 0%, #9b0608 100%);
+  color: #fff;
+}
+
+.about-decision__pattern {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.about-decision__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-decision__title {
+  max-width: 690px;
+  margin: 0;
+  font-family: Geologica, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.about-decision__content p {
+  max-width: 690px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.about-decision__nut {
+  position: absolute;
+  z-index: 1;
+  right: -130px;
+  bottom: -350px;
+  width: 520px;
+  height: 520px;
+  max-width: none;
+}
+
+.about-guarantees {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--soft);
+  background: #fff;
+}
+
+.about-guarantees__lead {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.about-guarantees__list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-guarantees__list li {
+  min-height: 59px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--soft);
+}
+
+.about-guarantees__list li:last-child {
+  grid-column: 1 / -1;
+}
+
+.faq-request {
+  display: grid;
+  min-height: 566px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.faq-request__faq {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.faq-request__title,
+.request-card__title {
+  margin: 0;
+  font-family: Geologica, sans-serif;
+  font-size: clamp(34px, 2.083vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.faq-request__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+}
+
+.faq-item__question {
+  position: relative;
+  min-height: 52px;
+  padding: 15px 54px 15px 20px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+}
+
+.faq-item__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__question::after {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background: url("assets/select-arrow.svg") center / 7px 13px no-repeat;
+  content: "";
+  transform: rotate(90deg) scaleX(-1);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-item__question::after {
+  transform: rotate(-90deg) scaleX(-1);
+}
+
+.faq-item__answer {
+  margin: 0;
+  padding: 0 54px 16px 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.request-card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 566px;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  overflow: hidden;
+  border: 1px solid rgba(227, 227, 227, 0.5);
+  border-radius: var(--radius);
+  background: #9b0608;
+  color: #fff;
+}
+
+.request-card__pattern {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  pointer-events: none;
+}
+
+.request-card__pattern-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+}
+
+.request-card__heading,
+.request-card__form {
+  position: relative;
+  z-index: 1;
+}
+
+.request-card__heading,
+.request-card__form,
+.request-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.request-card__heading {
+  gap: 10px;
+}
+
+.request-card__description {
+  margin: 0;
+  color: var(--line);
+  font-size: 16px;
+}
+
+.request-card__form {
+  gap: 40px;
+}
+
+.request-card__fields {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.request-card .form-field--select {
+  position: relative;
+}
+
+.request-card .form-field--select::after {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  width: 24px;
+  height: 24px;
+  background: url("assets/select-arrow.svg") center / 7px 13px no-repeat;
+  content: "";
+  pointer-events: none;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+.request-card .form-field--select .form-field__control {
+  padding-right: 54px;
+  appearance: none;
+}
+
+.request-card .form-field__label {
+  color: var(--line);
+}
+
+.request-card .form-field__control {
+  background: var(--soft);
+}
+
+.request-card__actions {
+  width: 100%;
+  gap: 10px;
+}
+
+.request-card__consent {
+  display: flex;
+  width: min(614px, 100%);
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--line);
+  font-size: 14px;
+}
+
+.request-card__checkbox {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: transparent;
+  appearance: none;
+}
+
+.request-card__checkbox:checked {
+  border-color: #fff;
+  background: #fff url("assets/business-check.svg") center / 10px 10px no-repeat;
+  transform: rotate(90deg);
+}
+
+.request-card__button {
+  min-width: 229px;
+  min-height: 46px;
+  padding: 15px 40px;
+  background: #fff;
+  color: var(--red);
+}
+
+.request-card__button:hover {
+  background: var(--soft);
+}
+
+.request-card__status {
+  position: static;
+  color: #fff;
+}
+
+.request-card__status:empty {
+  display: none;
+}
+
+.about-seo {
+  display: flex;
+  width: min(1060px, var(--container));
+  flex-direction: column;
+  gap: 20px;
+  margin-right: auto;
+}
+
+.about-page .site-footer {
+  min-height: 515px;
+  margin-top: var(--about-section-gap);
+}
+
+@media (max-width: 1500px) and (min-width: 1200px) {
+  .about-page {
+    --about-section-gap: 80px;
+  }
+
+  .about-specialization .vehicle-card {
+    padding-inline: 14px;
+  }
+
+  .about-specialization .vehicle-card__title {
+    font-size: 20px;
+  }
+
+  .about-specialization .vehicle-card__links {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .about-decision__title {
+    font-size: 34px;
+  }
+
+  .about-decision__content p,
+  .about-guarantees__lead {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .about-page {
+    --about-section-gap: 64px;
+  }
+
+  .about-hero-scene__vehicle {
+    top: 350px;
+    right: 24px;
+    width: 45vw;
+    height: auto;
+  }
+
+  .about-hero__content {
+    width: 60%;
+  }
+
+  .about-hero__title {
+    font-size: 46px;
+  }
+
+  .about-hero__benefit {
+    white-space: normal;
+  }
+
+  .about-specialization__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-parts__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-process__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-service,
+  .faq-request {
+    grid-template-columns: 1fr;
+  }
+
+  .about-decision,
+  .about-guarantees {
+    min-height: auto;
+  }
+
+  .about-guarantees__list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-guarantees__list li:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-page {
+    --about-section-gap: 40px;
+  }
+
+  .about-page .page__container,
+  .about-breadcrumb {
+    width: auto;
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .about-page .site-header {
+    z-index: 20;
+  }
+
+  .about-breadcrumb {
+    display: none;
+  }
+
+  .about-hero-scene {
+    height: 1100px;
+  }
+
+  .about-hero-scene__pattern {
+    width: 1920px;
+    height: 820px;
+    max-width: none;
+    object-position: left center;
+    opacity: 0.72;
+  }
+
+  .about-hero-scene__glow--left {
+    top: 250px;
+    left: -50%;
+    width: 140%;
+  }
+
+  .about-hero-scene__glow--top {
+    left: -80%;
+    width: 250%;
+  }
+
+  .about-hero-scene__vehicle {
+    display: none;
+  }
+
+  .about-hero {
+    min-height: 0;
+    padding-top: 40px;
+  }
+
+  .about-hero__content {
+    width: 100%;
+    gap: 24px;
+  }
+
+  .about-hero__intro {
+    gap: 16px;
+  }
+
+  .about-hero__title {
+    font-size: clamp(32px, 8.7vw, 34px);
+    line-height: 1.05;
+    letter-spacing: -0.35px;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+
+  .about-hero__description {
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .about-hero__detail {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .about-hero__benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .about-hero__benefit {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .about-hero__benefit::before {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  .about-hero__vehicle-mobile {
+    display: block;
+    width: min(100%, 450px);
+    height: auto;
+    margin: -8px auto;
+    object-fit: contain;
+  }
+
+  .about-hero__actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .about-hero__actions > * {
+    width: 100%;
+  }
+
+  .about-section-title,
+  .faq-request__title,
+  .request-card__title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .about-intro,
+  .about-seo {
+    width: auto;
+  }
+
+  .about-intro,
+  .about-parts,
+  .about-seo {
+    gap: 16px;
+  }
+
+  .about-intro__copy,
+  .about-specialization__copy,
+  .about-parts__intro,
+  .about-seo__copy {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .about-intro__copy p + p,
+  .about-specialization__copy p + p,
+  .about-parts__intro p + p,
+  .about-seo__copy p + p {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .about-specialization__heading {
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  .about-specialization__heading .text-link {
+    flex: 0 0 auto;
+    font-size: 14px;
+  }
+
+  .about-specialization__grid {
+    display: flex;
+    gap: 10px;
+    padding: 0 0 8px;
+    overflow-x: auto;
+    scroll-padding-inline: 0;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    touch-action: pan-x;
+  }
+
+  .about-specialization__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .about-specialization .vehicle-card {
+    width: 190px;
+    min-height: 0;
+    flex: 0 0 190px;
+    gap: 10px;
+    padding: 20px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px var(--soft);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .about-specialization .vehicle-card__image {
+    width: 150px;
+    height: 150px;
+    aspect-ratio: auto;
+  }
+
+  .about-specialization .vehicle-card__title {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .about-specialization .vehicle-card__links {
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .about-page .team__grid {
+    gap: 10px;
+  }
+
+  .about-page .team-card {
+    flex: 0 0 82%;
+  }
+
+  .about-page .team-callout {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-page .team-callout__content,
+  .about-page .team-callout__button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .about-parts__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .about-parts__grid li {
+    min-height: 64px;
+    align-items: flex-start;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .about-parts__grid li::before {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .about-parts__button {
+    width: 100%;
+  }
+
+  .about-process__list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .about-process__item {
+    height: auto;
+    min-height: 72px;
+    gap: 14px;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 16px;
+  }
+
+  .about-process__item span {
+    min-width: 28px;
+    font-size: 18px;
+  }
+
+  .about-decision,
+  .about-guarantees {
+    padding: 20px;
+  }
+
+  .about-service {
+    gap: 10px;
+  }
+
+  .about-decision {
+    min-height: 0;
+    padding-bottom: 190px;
+  }
+
+  .about-decision__title {
+    font-size: clamp(28px, 8.2vw, 32px);
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
+  .about-decision__content {
+    gap: 12px;
+  }
+
+  .about-decision__content p,
+  .about-guarantees__lead {
+    font-size: 15px;
+    line-height: 1.3;
+  }
+
+  .about-decision__nut {
+    right: -60px;
+    bottom: -195px;
+    width: 320px;
+    height: 320px;
+  }
+
+  .about-guarantees {
+    gap: 16px;
+  }
+
+  .about-guarantees__list {
+    gap: 8px;
+  }
+
+  .about-guarantees__list li {
+    min-height: 0;
+    padding: 16px;
+  }
+
+  .about-guarantees .about-button-secondary {
+    width: 100%;
+  }
+
+  .faq-request {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .faq-item__question {
+    min-height: 72px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .request-card {
+    min-height: 0;
+    gap: 20px;
+    padding: 19px;
+  }
+
+  .request-card__description {
+    font-size: 14px;
+  }
+
+  .request-card__form {
+    gap: 20px;
+  }
+
+  .request-card__fields {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .request-card__consent {
+    width: 100%;
+  }
+
+  .request-card__button {
+    width: 228px;
+  }
+
+  .about-page .site-footer {
+    min-height: 0;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 359px) {
+  .about-page .page__container,
+  .about-breadcrumb,
+  .about-intro,
+  .about-seo {
+    width: auto;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+
+  .about-hero__title {
+    font-size: 30px;
+  }
+
+  .about-section-title,
+  .faq-request__title,
+  .request-card__title,
+  .about-decision__title {
+    font-size: 30px;
+  }
+
+  .about-parts__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-button-secondary,
+  .faq-item__question::after {
+    transition: none;
+  }
+
+  .about-button-secondary:hover {
+    transform: none;
+  }
+}
