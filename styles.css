@@ -1,4 +1,4 @@
-@font-face{font-family:"AA Stetica";src:local("AA Stetica");font-display:swap}
+@font-face{font-family:"AA Stetica";src:url("assets/fonts/aa-stetica-regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
 :root{--red:#e11117;--ink:#050505;--muted:#6f6f6f;--blue:#283951;--soft:#f6f6f6;--line:#e3e3e3;--paper:#fcfcfc;--dark:#1c1c1c;--radius:20px;--container:min(83.333vw,2400px);--section-gap:100px}
 @property --hero-gear-rotation{syntax:"<angle>";initial-value:0rad;inherits:false}
 @property --mobile-brake-rotation{syntax:"<angle>";initial-value:180deg;inherits:false}
