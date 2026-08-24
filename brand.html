@@ -17,10 +17,6 @@
     <div class="brand-hero-scene" aria-hidden="true">
       <img class="brand-hero-scene__pattern" src="assets/brand-hero-pattern.png" alt="" />
       <img class="brand-hero-scene__art" src="assets/brand-hero-art.png" alt="" />
-      <div class="brand-hero-scene__mobile-art">
-        <div class="brand-hero-scene__mobile-wrench"><img class="brand-hero-scene__mobile-wrench-image" src="assets/brand-hero-wrench-mobile.png" alt="" /></div>
-        <div class="brand-hero-scene__mobile-vehicle"><img class="brand-hero-scene__mobile-vehicle-image" src="assets/brand-hero-vehicle-mobile.png" alt="" /></div>
-      </div>
     </div>
 
     <header class="site-header page__container">
@@ -37,7 +33,7 @@
           <a class="brand-logo" href="index.html" aria-label="AutoMD — на главную"><img class="brand-logo__mark" src="assets/logo-red-mark.svg" alt="" /><img class="brand-logo__caption" src="assets/logo-red-caption.svg" alt="" /></a>
           <nav class="site-nav" id="site-navigation" aria-label="Основная навигация">
             <a class="site-nav__link site-nav__link--active" href="cars.html" aria-current="page">Автомобили</a>
-            <a class="site-nav__link" href="#services">Услуги</a>
+            <a class="site-nav__link" href="services.html">Услуги</a>
             <a class="site-nav__link" href="#parts">Запчасти</a>
             <a class="site-nav__link" href="#prices">Цены</a>
             <a class="site-nav__link" href="promotions.html">Акции</a>
@@ -75,6 +71,10 @@
             <li class="brand-hero__advantage"><span class="brand-hero__advantage-icon" aria-hidden="true"><img class="brand-hero__advantage-icon-part brand-hero__advantage-icon-part--user-body" src="assets/brand-advantage-user-body.svg" alt="" /><img class="brand-hero__advantage-icon-part brand-hero__advantage-icon-part--user-head" src="assets/brand-advantage-user-head.svg" alt="" /></span><span>Работаем с физлицами и юр.лицами</span></li>
           </ul>
           <a class="button brand-hero__button" href="#request">Записаться на ремонт</a>
+        </div>
+        <div class="brand-hero-scene__mobile-art" aria-hidden="true">
+          <div class="brand-hero-scene__mobile-wrench"><img class="brand-hero-scene__mobile-wrench-image" src="assets/brand-hero-wrench-mobile.png" alt="" /></div>
+          <div class="brand-hero-scene__mobile-vehicle"><img class="brand-hero-scene__mobile-vehicle-image" src="assets/brand-hero-vehicle-mobile.png" alt="" /></div>
         </div>
       </section>
 
@@ -114,7 +114,7 @@
 
       <section class="brand-services page__container" id="services" aria-labelledby="services-title">
         <h2 class="brand-section-title" id="services-title">Услуги для Ford</h2>
-        <div class="brand-services__grid">
+        <div class="brand-services__grid" data-scroll-pagination="brand-services-pagination">
           <article class="brand-service-card"><img class="brand-service-card__image" src="assets/brand-service-diagnostics.png" alt="Диагностика Ford в AutoMD" loading="lazy" /><div class="brand-service-card__content"><div class="brand-service-card__heading"><h3>Диагностика Ford</h3><p>Проверим основные системы автомобиля и определим причину неисправности перед ремонтом.</p></div><div class="brand-service-card__details"><h4>Что входит</h4><ul><li>Компьютерная диагностика</li><li>Диагностика двигателя</li><li>Диагностика ходовой</li><li>Диагностика тормозной системы</li><li>Диагностика электрики</li><li>Диагностика форсунок</li><li>Проверка перед ремонтом</li><li>Записаться на диагностику</li></ul></div><a class="brand-text-link" href="#request">Записаться на диагностику</a></div></article>
           <article class="brand-service-card"><img class="brand-service-card__image" src="assets/brand-service-maintenance.png" alt="Техническое обслуживание Ford в AutoMD" loading="lazy" /><div class="brand-service-card__content"><div class="brand-service-card__heading"><h3>ТО Ford</h3><p>Проводим плановое обслуживание автомобилей Ford по регламенту и состоянию автомобиля.</p></div><div class="brand-service-card__details"><h4>Что входит</h4><ul><li>Замена масла</li><li>Замена фильтров</li><li>Замена технических жидкостей</li><li>Проверка ходовой</li><li>Проверка тормозной системы</li><li>Проверка электрики</li><li>Подготовка к сезону</li><li>ТО перед рейсом</li></ul></div><a class="brand-text-link" href="#request">Записаться на ТО</a></div></article>
           <article class="brand-service-card"><img class="brand-service-card__image" src="assets/brand-service-repair.png" alt="Ремонт Ford в AutoMD" loading="lazy" /><div class="brand-service-card__content"><div class="brand-service-card__heading"><h3>Ремонт Ford</h3><p>Ремонтируем основные узлы и системы автомобилей Ford после диагностики и согласования стоимости.</p></div><div class="brand-service-card__details"><h4>Основные направления</h4><ul><li>Ремонт двигателя</li><li>Ремонт КПП</li><li>Ремонт ходовой</li><li>Ремонт тормозной системы</li><li>Ремонт электрики</li><li>Ремонт кондиционера</li><li>Ремонт рулевого управления</li><li>Ремонт топливной системы</li></ul></div><a class="brand-text-link" href="#request">Выбрать ремонт</a></div></article>
@@ -122,7 +122,7 @@
           <article class="brand-service-card"><img class="brand-service-card__image" src="assets/brand-service-injectors.png" alt="Диагностика форсунок Ford" loading="lazy" /><div class="brand-service-card__content"><div class="brand-service-card__heading"><h3>Форсунки для Ford</h3><p>Проверяем работу топливной системы, определяем причину неисправности и подбираем решение</p></div><div class="brand-service-card__details"><h4>Что делаем</h4><ul><li>Диагностика форсунок</li><li>Чистка форсунок</li><li>Проверка работы топливной системы</li><li>Ремонт форсунок</li><li>Демонтаж и осмотр</li><li>Восстановление форсунок</li><li>Установка и проверка после работ</li></ul></div><a class="brand-text-link" href="#request">Записаться на диагностику форсунок</a></div></article>
           <article class="brand-service-card brand-service-card--links"><img class="brand-service-card__image" src="assets/brand-service-extra.png" alt="Дополнительные услуги AutoMD" loading="lazy" /><div class="brand-service-card__content"><div class="brand-service-card__heading"><h3>Дополнительные услуги</h3><p>Дополнительные сервисы для владельцев автомобилей Ford.</p></div><div class="brand-service-card__details"><h4>Что входит</h4><ul><li><a href="#request">Эвакуатор</a></li><li><a href="#request">Сход-развал</a></li><li><a href="#request">Заправка кондиционера</a></li><li><a href="#request">Выкуп аварийных авто</a></li><li><a href="#request">Страховка со скидкой</a></li><li><a href="#request">Гарантии и сервис</a></li></ul></div></div></article>
         </div>
-        <div class="brand-services__pagination" aria-hidden="true"><span class="brand-services__dot brand-services__dot--active"></span><span class="brand-services__dot"></span><span class="brand-services__dot"></span><span class="brand-services__dot"></span><span class="brand-services__dot"></span><span class="brand-services__dot"></span></div>
+        <div class="brand-services__pagination" id="brand-services-pagination" aria-label="Навигация по услугам Ford"><button class="brand-services__dot brand-services__dot--active" type="button" aria-label="Перейти к услуге 1" aria-current="true"></button><button class="brand-services__dot" type="button" aria-label="Перейти к услуге 2"></button><button class="brand-services__dot" type="button" aria-label="Перейти к услуге 3"></button><button class="brand-services__dot" type="button" aria-label="Перейти к услуге 4"></button><button class="brand-services__dot" type="button" aria-label="Перейти к услуге 5"></button><button class="brand-services__dot" type="button" aria-label="Перейти к услуге 6"></button></div>
       </section>
 
       <section class="brand-parts page__container" id="parts" aria-labelledby="parts-title">

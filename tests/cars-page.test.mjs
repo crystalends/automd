@@ -32,6 +32,9 @@ test("cars page implements the mobile Figma structure without a desktop width lo
   assert.match(pageStyles, /--container: calc\(100vw - 32px\)/);
   assert.doesNotMatch(pageStyles, /min-width:\s*1200px/);
   assert.equal((markup.match(/class="cars-hero-scene__fade cars-hero-scene__fade--/g) ?? []).length, 4);
+  assert.equal((markup.match(/class="cars-hero__visual-fade cars-hero__visual-fade--/g) ?? []).length, 4);
+  assert.match(pageStyles, /\.cars-hero__visual\s*\{[^}]*position:\s*relative[^}]*display:\s*block[^}]*margin-top:\s*24px/s);
+  assert.match(pageStyles, /\.cars-hero-scene__gear,[\s\S]*?\.cars-hero-scene__vehicles\s*\{[^}]*display:\s*none/s);
 });
 
 test("mobile car brand pagination is interactive", () => {

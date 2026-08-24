@@ -469,6 +469,7 @@
 
 .brand-service-card {
   display: grid;
+  height: 364px;
   min-width: 0;
   min-height: 364px;
   grid-template-columns: clamp(180px, 15.625vw, 250px) minmax(0, 1fr);
@@ -979,6 +980,10 @@
     padding-bottom: 0;
   }
 
+  .brand-page main {
+    z-index: auto;
+  }
+
   .brand-page .page__container,
   .brand-breadcrumb {
     width: calc(100vw - 32px);
@@ -1019,18 +1024,24 @@
   }
 
   .brand-hero-scene__mobile-art {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    inset: auto;
     display: block;
+    width: 100vw;
+    height: min(263px, 67.436vw);
+    flex: 0 0 min(263px, 67.436vw);
+    margin-top: min(59px, 15.128vw);
+    margin-left: -16px;
+    pointer-events: none;
   }
 
   .brand-hero-scene__mobile-wrench {
     position: absolute;
     z-index: 1;
-    top: 740px;
-    left: 199px;
-    width: 322.06px;
-    height: 322.06px;
+    top: max(-76px, -19.487vw);
+    left: min(199px, 51.026vw);
+    width: min(322.06px, 82.579vw);
+    height: min(322.06px, 82.579vw);
   }
 
   .brand-hero-scene__mobile-wrench-image {
@@ -1047,10 +1058,10 @@
   .brand-hero-scene__mobile-vehicle {
     position: absolute;
     z-index: 2;
-    top: 816px;
-    left: 67px;
-    width: 340px;
-    height: 263px;
+    top: 0;
+    left: min(67px, 17.179vw);
+    width: min(340px, 87.179vw);
+    height: min(263px, 67.436vw);
     overflow: hidden;
     mix-blend-mode: darken;
   }
@@ -1072,8 +1083,10 @@
   }
 
   .brand-hero {
-    height: 683px;
-    min-height: auto;
+    display: flex;
+    height: auto;
+    min-height: 683px;
+    flex-direction: column;
     margin-top: 40px;
   }
 
@@ -1121,7 +1134,7 @@
 
   .brand-models {
     gap: 20px;
-    margin-top: 320px;
+    margin-top: 40px;
   }
 
   .brand-models__grid {
@@ -1411,8 +1424,13 @@
   .brand-services__dot {
     width: 6px;
     height: 6px;
+    flex: 0 0 6px;
+    padding: 0;
+    border: 0;
     border-radius: 50%;
     background: var(--line);
+    appearance: none;
+    cursor: pointer;
   }
 
   .brand-services__dot--active {

@@ -561,56 +561,6 @@
     display: none;
   }
 
-  .cars-hero-scene__gear {
-    top: 513px;
-    left: 251px;
-    width: 250px;
-    height: 251px;
-    animation-duration: 2s;
-  }
-
-  .cars-hero-scene__fade {
-    z-index: 3;
-    display: block;
-  }
-
-  .cars-hero-scene__fade--7 {
-    top: 561px;
-    left: 216.492px;
-    width: 244.969px;
-    height: 176.605px;
-  }
-
-  .cars-hero-scene__fade--8 {
-    top: 646px;
-    left: 222.581px;
-    width: 236.278px;
-    height: 131.098px;
-  }
-
-  .cars-hero-scene__fade--9 {
-    top: 578px;
-    left: 145.581px;
-    width: 236.278px;
-    height: 131.098px;
-  }
-
-  .cars-hero-scene__fade--10 {
-    top: 649px;
-    left: 98.581px;
-    width: 236.278px;
-    height: 131.098px;
-  }
-
-  .cars-hero-scene__vehicles {
-    top: 561px;
-    left: 9px;
-    width: 369px;
-    height: 221px;
-    z-index: 4;
-    object-fit: cover;
-  }
-
   .cars-hero {
     min-height: 666px;
     margin-top: 40px;
@@ -1020,17 +970,6 @@
     height: 827px;
   }
 
-  .cars-hero-scene__gear {
-    top: 558px;
-    left: 64vw;
-  }
-
-  .cars-hero-scene__vehicles {
-    top: 606px;
-    left: 2vw;
-    width: 96vw;
-    height: auto;
-  }
 }
 
 @media (max-width: 389px) {
@@ -1041,18 +980,6 @@
   .cars-hero-scene,
   .cars-hero-scene__pattern {
     height: 827px;
-  }
-
-  .cars-hero-scene__gear {
-    top: 558px;
-  }
-
-  .cars-hero-scene__vehicles {
-    top: 606px;
-  }
-
-  .cars-hero-scene__fade {
-    transform: translateY(45px);
   }
 
   .cars-page .benefits__content {
@@ -1081,5 +1008,118 @@
 
   .faq-item__question::after {
     transition: none;
+  }
+}
+
+.cars-hero__visual {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .cars-page main {
+    z-index: auto;
+  }
+
+  .cars-hero-scene__gear,
+  .cars-hero-scene__fade,
+  .cars-hero-scene__vehicles {
+    display: none;
+  }
+
+  .cars-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cars-hero__visual {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: min(221px, 56.667vw);
+    flex: 0 0 min(221px, 56.667vw);
+    margin-top: 24px;
+    margin-left: -16px;
+    pointer-events: none;
+  }
+
+  .cars-hero__visual-gear,
+  .cars-hero__visual-fade,
+  .cars-hero__visual-fade-image,
+  .cars-hero__visual-vehicles {
+    position: absolute;
+    max-width: none;
+    user-select: none;
+  }
+
+  .cars-hero__visual-gear {
+    z-index: 2;
+    top: max(-48px, -12.308vw);
+    right: max(-111px, -28.462vw);
+    width: min(250px, 64.103vw);
+    height: min(251px, 64.359vw);
+    object-fit: contain;
+    transform: rotate(var(--hero-gear-rotation, 0rad));
+    animation: hero-gear-rotation 2s linear infinite;
+  }
+
+  .cars-hero__visual-fade {
+    z-index: 3;
+    display: block;
+  }
+
+  .cars-hero__visual-fade-image {
+    inset: -20.17% -8.92%;
+    width: 117.84%;
+    height: 140.34%;
+  }
+
+  .cars-hero__visual-fade--7 {
+    top: 0;
+    left: min(216.492px, 55.511vw);
+    width: min(244.969px, 62.813vw);
+    height: min(176.605px, 45.283vw);
+  }
+
+  .cars-hero__visual-fade--8 {
+    top: min(85px, 21.795vw);
+    left: min(222.581px, 57.072vw);
+    width: min(236.278px, 60.584vw);
+    height: min(131.098px, 33.615vw);
+  }
+
+  .cars-hero__visual-fade--9 {
+    top: min(17px, 4.359vw);
+    left: min(145.581px, 37.329vw);
+    width: min(236.278px, 60.584vw);
+    height: min(131.098px, 33.615vw);
+  }
+
+  .cars-hero__visual-fade--10 {
+    top: min(88px, 22.564vw);
+    left: min(98.581px, 25.277vw);
+    width: min(236.278px, 60.584vw);
+    height: min(131.098px, 33.615vw);
+  }
+
+  .cars-hero__visual-vehicles {
+    z-index: 4;
+    top: 0;
+    left: min(9px, 2.308vw);
+    width: min(369px, 94.615vw);
+    height: min(221px, 56.667vw);
+    mix-blend-mode: darken;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 359px) {
+  .cars-hero__visual {
+    margin-left: -8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cars-hero__visual-gear {
+    animation: none;
   }
 }

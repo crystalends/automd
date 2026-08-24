@@ -107,8 +107,10 @@ test("hero advantages use the exact layered Figma SVG exports", () => {
 test("mobile hero uses the dedicated Figma vehicle and wrench layers", () => {
   assert.match(markup, /assets\/brand-hero-wrench-mobile\.png/);
   assert.match(markup, /assets\/brand-hero-vehicle-mobile\.png/);
-  assert.match(styles, /\.brand-hero-scene__mobile-wrench\s*\{[^}]*top:\s*740px[^}]*left:\s*199px[^}]*width:\s*322\.06px/s);
-  assert.match(styles, /\.brand-hero-scene__mobile-vehicle\s*\{[^}]*top:\s*816px[^}]*left:\s*67px[^}]*width:\s*340px[^}]*height:\s*263px/s);
+  assert.ok(markup.indexOf('class="brand-hero-scene__mobile-art"') > markup.indexOf('class="brand-hero__content"'));
+  assert.match(styles, /\.brand-hero-scene__mobile-art\s*\{[^}]*position:\s*relative[^}]*height:\s*min\(263px, 67\.436vw\)[^}]*margin-top:\s*min\(59px, 15\.128vw\)/s);
+  assert.match(styles, /\.brand-hero-scene__mobile-wrench\s*\{[^}]*top:\s*max\(-76px, -19\.487vw\)[^}]*left:\s*min\(199px, 51\.026vw\)/s);
+  assert.match(styles, /\.brand-hero-scene__mobile-vehicle\s*\{[^}]*top:\s*0[^}]*left:\s*min\(67px, 17\.179vw\)[^}]*width:\s*min\(340px, 87\.179vw\)/s);
   assert.match(styles, /\.brand-hero-scene__mobile-vehicle-image\s*\{[^}]*top:\s*-15\.96%[^}]*left:\s*-1\.98%[^}]*width:\s*102\.14%[^}]*height:\s*131\.91%/s);
 });
 
@@ -141,6 +143,12 @@ test("mobile services carousel matches the complete Figma cards", () => {
   assert.match(styles, /\.brand-service-card\s*\{[^}]*height:\s*657px/s);
   assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li:nth-child\(7\)\s*\{[^}]*flex:\s*0 0 258px/s);
   assert.match(styles, /\.brand-service-card--links \.brand-service-card__details li\s*\{[^}]*height:\s*24px/s);
+});
+
+test("brand and services pages share interactive 6px service pagination", () => {
+  assert.match(markup, /data-scroll-pagination="brand-services-pagination"/);
+  assert.equal((markup.match(/<button class="brand-services__dot(?: |")/g) ?? []).length, 6);
+  assert.match(styles, /\.brand-services__dot\s*\{[^}]*width:\s*6px[^}]*height:\s*6px[^}]*flex:\s*0 0 6px[^}]*padding:\s*0[^}]*border:\s*0/s);
 });
 
 test("mobile benefits block follows the Figma content with natural height", () => {
