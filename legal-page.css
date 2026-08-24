@@ -1,0 +1,246 @@
+.legal-page {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 30px;
+}
+
+.legal-page .site-header,
+.legal-page main,
+.legal-page .site-footer,
+.legal-page .articles-breadcrumb {
+  position: relative;
+  z-index: 1;
+}
+
+.legal-page__scene {
+  height: 820px;
+}
+
+.legal-hero {
+  display: flex;
+  width: min(1195px, var(--container));
+  min-height: 156px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 80px;
+  margin-right: auto;
+}
+
+.legal-hero__title,
+.legal-hero__lead,
+.legal-content h2,
+.legal-content h3,
+.legal-content p {
+  width: 100%;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.legal-hero__title {
+  font-family: Geologica, sans-serif;
+  font-size: clamp(52px, 3.333vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.64px;
+}
+
+.legal-hero__lead {
+  font-size: 18px;
+}
+
+.legal-content {
+  display: flex;
+  width: min(1060px, var(--container));
+  min-width: 0;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 40px;
+  margin-right: auto;
+}
+
+.legal-content__section,
+.legal-content__heading,
+.legal-content__copy,
+.legal-content__subsection {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.legal-content__section {
+  gap: 20px;
+}
+
+.legal-content__section--highlights {
+  min-height: 250px;
+}
+
+.legal-content__section--warranty {
+  min-height: 264px;
+}
+
+.legal-content__section--warranty-long {
+  min-height: 394px;
+}
+
+.legal-content__section--returns {
+  min-height: 316px;
+}
+
+.legal-content__section--non-returnable {
+  min-height: 444px;
+}
+
+.legal-content__heading,
+.legal-content__copy,
+.legal-content__subsection {
+  width: 100%;
+  gap: 10px;
+}
+
+.legal-content__copy--spacious {
+  gap: 20px;
+}
+
+.legal-content h2 {
+  font-family: Geologica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.legal-content h3 {
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.legal-content p {
+  font-size: 18px;
+}
+
+.legal-check-list {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.legal-check-list li {
+  position: relative;
+  min-height: 24px;
+  padding: 2px 0 2px 24px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.legal-check-list li::before {
+  position: absolute;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.legal-check-list li::before {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/legal-check.svg");
+  background-size: 24px 24px;
+}
+
+.legal-page .site-footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 1199px) {
+  .legal-hero {
+    margin-top: 64px;
+  }
+
+  .legal-hero__title {
+    font-size: clamp(44px, 5vw, 58px);
+  }
+}
+
+@media (max-width: 767px) {
+  .legal-page {
+    padding-bottom: 0;
+  }
+
+  .legal-page .page__container,
+  .legal-page .articles-breadcrumb {
+    width: calc(100vw - 32px);
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .legal-page__scene {
+    width: 100vw;
+    height: 740px;
+  }
+
+  .legal-hero {
+    width: calc(100vw - 32px);
+    min-height: 0;
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  .legal-hero__title {
+    font-size: clamp(32px, 9.5vw, 40px);
+    line-height: 1.08;
+    letter-spacing: -0.35px;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-hero__lead,
+  .legal-content p {
+    font-size: 16px;
+  }
+
+  .legal-content {
+    width: calc(100vw - 32px);
+  }
+
+  .legal-content__section--highlights,
+  .legal-content__section--warranty,
+  .legal-content__section--warranty-long,
+  .legal-content__section--returns,
+  .legal-content__section--non-returnable {
+    min-height: 0;
+  }
+
+  .legal-content h2 {
+    font-size: 30px;
+  }
+
+  .legal-check-list li {
+    font-size: 15px;
+  }
+
+  .legal-page .site-footer {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 359px) {
+  .legal-page .page__container,
+  .legal-page .articles-breadcrumb,
+  .legal-hero,
+  .legal-content {
+    width: calc(100vw - 24px);
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+
+  .legal-hero__title,
+  .legal-content h2 {
+    font-size: 30px;
+  }
+}

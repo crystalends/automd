@@ -35,9 +35,11 @@ test("contacts page reuses shared project blocks and ESM", () => {
   assert.match(markup, /type="module" src="js\/main\.js"/);
 });
 
-test("contacts page uses the existing design assets", () => {
+test("contacts page uses embedded Yandex maps and existing design assets", () => {
   assert.match(markup, /assets\/promotions-hero-pattern\.png/);
-  assert.equal((markup.match(/src="assets\/map\.png"/g) ?? []).length, 3);
+  assert.equal((markup.match(/<iframe/g) ?? []).length, 3);
+  assert.equal((markup.match(/src="https:\/\/yandex\.ru\/map-widget\/v1\//g) ?? []).length, 3);
+  assert.doesNotMatch(markup, /class="(?:locations__map|service-center-card__map)"[^>]*src="assets\/map\.png"/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 
   const resources = [...markup.matchAll(/\b(?:href|src|srcset)="([^"]+)"/g)]
@@ -52,6 +54,7 @@ test("contacts page uses the existing design assets", () => {
 test("contacts layout is fluid and has a content-driven mobile reflow", () => {
   assert.match(styles, /--contacts-section-gap:\s*clamp\(/);
   assert.doesNotMatch(styles, /min-width:\s*1920px/);
+  assert.match(styles, /\.service-center-card__map\s*\{[^}]*border:\s*0[^}]*outline:\s*0[^}]*box-shadow:\s*none/s);
   assert.match(styles, /\.quick-actions__grid\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/s);
   assert.match(styles, /\.service-centers__grid\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/s);
 

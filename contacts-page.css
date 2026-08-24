@@ -233,10 +233,17 @@
 }
 
 .service-center-card__map {
+  display: block;
   width: 100%;
   height: 303px;
+  border: 0;
   border-radius: var(--radius);
-  object-fit: cover;
+  outline: 0;
+  box-shadow: none;
+}
+
+.service-center-card__map:focus-visible {
+  box-shadow: 0 0 0 2px var(--blue);
 }
 
 .service-center-card__actions {
