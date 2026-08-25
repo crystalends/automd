@@ -49,7 +49,8 @@ test("service detail reuses established project components and ESM", () => {
   }
 
   assert.match(markup, /type="module" src="js\/main\.js"/);
-  assert.match(markup, /data-models-toggle aria-expanded="false"/);
+  assert.match(markup, /id="service-models-grid"/);
+  assert.match(markup, /data-models-toggle aria-controls="service-models-grid" aria-expanded="false"/);
   assert.equal((markup.match(/<article class="brand-model-card/g) ?? []).length, 12);
   assert.equal((markup.match(/class="service-price-list__item"/g) ?? []).length, 12);
   assert.equal((markup.match(/class="team-card"/g) ?? []).length, 5);

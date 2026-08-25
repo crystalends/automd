@@ -33,7 +33,7 @@ test("page reuses existing project blocks and shared ESM", () => {
   assert.equal((markup.match(/<article class="location-card">/g) ?? []).length, 2);
   assert.equal((markup.match(/<details class="faq-item">/g) ?? []).length, 8);
   assert.match(markup, /class="request-card"/);
-  assert.match(markup, /href="about-page\.css"/);
+  assert.match(markup, /href="app\.css"/);
   assert.match(markup, /type="module" src="js\/main\.js"/);
 });
 

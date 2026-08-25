@@ -243,6 +243,9 @@ const createReviewsSlider = (Swiper) => {
 export const initSliders = () => {
   const extraServicesCarousel = createExtraServicesCarousel();
   const carBrandsCarousel = createCarBrandsCarousel();
+  const swiperRoot = document.querySelector(".swiper");
+  if (!swiperRoot) return [extraServicesCarousel, carBrandsCarousel].filter(Boolean);
+
   const Swiper = window.Swiper;
   if (typeof Swiper !== "function") {
     console.warn("Swiper не загружен: слайдеры оставлены в статичном состоянии.");

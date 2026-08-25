@@ -36,7 +36,7 @@ test("reviews page reuses established project components", () => {
   for (const component of ["site-header", "faq-request", "request-card", "about-seo", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${component}`));
   }
-  assert.match(markup, /href="about-page\.css"/);
+  assert.match(markup, /href="app\.css"/);
   assert.match(markup, /type="module" src="js\/main\.js"/);
 });
 

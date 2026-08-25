@@ -35,7 +35,7 @@ test("services page follows the Figma section order", () => {
 
 test("services page reuses shared components and focused ESM", () => {
   assert.match(markup, /class="services-finder service-finder/);
-  assert.match(markup, /href="brand-page\.css"/);
+  assert.match(markup, /href="app\.css"/);
   assert.equal((markup.match(/<article class="brand-service-card/g) ?? []).length, 6);
   assert.match(markup, /data-scroll-pagination="services-directions-pagination"/);
   assert.equal((markup.match(/class="vehicle-card(?: |")/g) ?? []).length, 12);

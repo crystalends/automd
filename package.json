@@ -1,0 +1,12 @@
+{
+  "name": "automd-static-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-css.mjs",
+    "audit": "node scripts/audit-project.mjs",
+    "fix:image-dimensions": "node scripts/add-image-dimensions.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm run audit && npm test"
+  }
+}

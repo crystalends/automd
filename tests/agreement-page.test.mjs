@@ -27,7 +27,7 @@ test("legal pages share one responsive BEM implementation", () => {
   const consentMarkup = readFileSync(resolve(projectRoot, "consent.html"), "utf8");
 
   for (const pageMarkup of [markup, consentMarkup]) {
-    assert.match(pageMarkup, /href="legal-page\.css"/);
+    assert.match(pageMarkup, /href="app\.css"/);
     assert.match(pageMarkup, /class="legal-page"/);
     assert.match(pageMarkup, /class="legal-hero page__container"/);
     assert.match(pageMarkup, /class="legal-content page__container"/);

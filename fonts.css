@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "AA Stetica";
+  src: url("assets/fonts/aa-stetica-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geologica;
+  src: url("assets/fonts/geologica-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geologica;
+  src: url("assets/fonts/geologica-500.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Geologica;
+  src: url("assets/fonts/geologica-600.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Onest;
+  src: url("assets/fonts/onest-300.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Onest;
+  src: url("assets/fonts/onest-400.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

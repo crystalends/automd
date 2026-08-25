@@ -105,23 +105,23 @@
   scroll-margin-top: 24px;
 }
 
-#highlights {
+.article-content__section--highlights {
   min-height: 250px;
 }
 
-#warranty {
+.article-content__section--warranty {
   min-height: 264px;
 }
 
-#returns {
+.article-content__section--returns {
   min-height: 316px;
 }
 
-#non-returnable {
+.article-content__section--non-returnable {
   min-height: 444px;
 }
 
-#service-warranty {
+.article-content__section--service-warranty {
   min-height: 394px;
 }
 
@@ -390,11 +390,11 @@
     gap: 40px;
   }
 
-  #highlights,
-  #warranty,
-  #returns,
-  #non-returnable,
-  #service-warranty {
+  .article-content__section--highlights,
+  .article-content__section--warranty,
+  .article-content__section--returns,
+  .article-content__section--non-returnable,
+  .article-content__section--service-warranty {
     min-height: 0;
   }
 

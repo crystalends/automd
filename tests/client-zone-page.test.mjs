@@ -40,7 +40,7 @@ test("page reuses existing responsive components and shared ESM", () => {
   for (const component of ["locations", "location-card", "benefits", "faq-request", "request-card", "site-footer"]) {
     assert.match(markup, new RegExp(`class="[^"]*${component}`));
   }
-  assert.match(markup, /href="about-page\.css"/);
+  assert.match(markup, /href="app\.css"/);
   assert.match(markup, /type="module" src="js\/main\.js"/);
 });
 

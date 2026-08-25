@@ -1541,7 +1541,7 @@
   }
 
   .brand-page .benefits-slider__pagination {
-    width: 61px !important;
+    width: 61px ;
     height: 6px;
     flex-basis: 6px;
     justify-content: flex-start;

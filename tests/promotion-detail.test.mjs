@@ -7,7 +7,7 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "promotion-detail.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "promotion-detail.css"), "utf8");
-const globalStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+const fontStyles = readFileSync(resolve(projectRoot, "fonts.css"), "utf8");
 
 test("promotion detail keeps the Figma section order and composition", () => {
   const sections = ["promotion-hero", "promotion-includes", "related-promotions", "site-footer"];
@@ -50,7 +50,7 @@ test("promotion detail uses local assets and all resources resolve", () => {
   assert.match(markup, /src="assets\/promotion-detail-check\.svg"/);
   assert.doesNotMatch(styles, /radial-gradient/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
-  assert.match(globalStyles, /assets\/fonts\/aa-stetica-regular\.ttf/);
+  assert.match(fontStyles, /assets\/fonts\/aa-stetica-regular\.ttf/);
   assert.ok(existsSync(resolve(projectRoot, "assets/fonts/aa-stetica-regular.ttf")));
 
   const resources = [...markup.matchAll(/(?:href|src)="([^"]+)"/g)]

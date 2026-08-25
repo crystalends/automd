@@ -803,7 +803,7 @@
   }
 
   .cars-page .benefits-slider__pagination {
-    width: 28px !important;
+    width: 28px ;
     height: 6px;
     flex-basis: 6px;
   }

@@ -23,7 +23,7 @@ test("article detail follows the Figma section order", () => {
 test("article detail matches the desktop content composition", () => {
   assert.match(styles, /grid-template-columns:\s*minmax\(0, 925px\) minmax\(0, 655px\)/);
   assert.match(styles, /grid-template-columns:\s*minmax\(0, 1060px\) minmax\(320px, 520px\)/);
-  assert.equal((markup.match(/class="article-content__section"/g) ?? []).length, 5);
+  assert.equal((markup.match(/class="article-content__section(?: |")/g) ?? []).length, 5);
   const tocMarkup = markup.slice(
     markup.indexOf('class="article-toc__list"'),
     markup.indexOf("</ol>", markup.indexOf('class="article-toc__list"')),
