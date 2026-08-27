@@ -140,9 +140,10 @@ test("mobile services carousel matches the complete Figma cards", () => {
 
   assert.match(styles, /assets\/brand-service-check\.svg/);
   assert.match(styles, /assets\/brand-service-expand\.svg/);
-  assert.match(styles, /\.brand-service-card\s*\{[^}]*height:\s*657px/s);
-  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li:nth-child\(7\)\s*\{[^}]*flex:\s*0 0 258px/s);
-  assert.match(styles, /\.brand-service-card--links \.brand-service-card__details li\s*\{[^}]*height:\s*24px/s);
+  assert.match(styles, /\.brand-service-card\s*\{[^}]*height:\s*auto[^}]*min-height:\s*657px/s);
+  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li:nth-child\(7\)\s*\{[^}]*flex:\s*0 0 auto/s);
+  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li\s*\{[^}]*white-space:\s*normal/s);
+  assert.match(styles, /\.brand-service-card--links \.brand-service-card__details li\s*\{[^}]*min-height:\s*24px/s);
 });
 
 test("brand and services pages share interactive 6px service pagination", () => {

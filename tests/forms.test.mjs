@@ -1,7 +1,12 @@
 import assert from "node:assert/strict";
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
 import test from "node:test";
+import { fileURLToPath } from "node:url";
 
 import { initForms } from "../js/modules/forms.js";
+
+const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 const createForm = ({ endpoint, method = null }) => {
   const status = { dataset: {}, textContent: "" };
@@ -90,4 +95,23 @@ test("forms serialize enabled controls before locking the UI and support GET que
   assert.equal(postForm.controls[1].disabled, true);
   assert.equal(postForm.resetCalled, true);
   assert.equal(getForm.resetCalled, true);
+});
+
+test("consent checkboxes share one checked-state implementation", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+  const indexMarkup = readFileSync(resolve(projectRoot, "index.html"), "utf8");
+  const articlesMarkup = readFileSync(resolve(projectRoot, "articles.html"), "utf8");
+
+  assert.match(indexMarkup, /class="booking-form__checkbox"[^>]*type="checkbox"/);
+  assert.match(articlesMarkup, /class="request-card__checkbox"[^>]*type="checkbox"/);
+  assert.match(
+    styles,
+    /\.booking-form__checkbox:checked,\s*\.request-card__checkbox:checked\s*\{[^}]*legal-check\.svg/s,
+  );
+  assert.ok(existsSync(resolve(projectRoot, "assets/legal-check.svg")));
+
+  for (const file of ["about-page.css", "brand-page.css", "cars-page.css", "promotions-page.css"]) {
+    const pageStyles = readFileSync(resolve(projectRoot, file), "utf8");
+    assert.doesNotMatch(pageStyles, /\.request-card__checkbox(?::checked)?\s*\{/);
+  }
 });

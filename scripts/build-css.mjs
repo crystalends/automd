@@ -16,6 +16,7 @@ const pageClasses = [
   "error-page",
   "legal-page",
   "model-service-detail-page",
+  "parts-page",
   "promotion-detail-page",
   "promotions-page",
   "reviews-page",
@@ -39,6 +40,7 @@ const sourceGroups = [
       "articles-page",
       "branch-page",
       "contacts-page",
+      "parts-page",
       "reviews-page",
       "service-detail-page",
       "services-page",
@@ -61,6 +63,7 @@ const sourceGroups = [
   { file: "reviews-page.css", scopes: ["reviews-page"] },
   { file: "service-detail.css", scopes: ["service-detail-page"] },
   { file: "model-service-detail.css", scopes: ["model-service-detail-page"] },
+  { file: "parts-page.css", scopes: ["parts-page"] },
 ];
 
 const hasPageScope = (selector) =>

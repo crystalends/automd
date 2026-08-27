@@ -76,7 +76,8 @@
   }
 
   .model-service-detail-page .promo-banner__slide {
-    height: 498px;
+    height: auto;
+    min-height: 498px;
     aspect-ratio: auto;
   }
 

@@ -13,10 +13,6 @@
   z-index: 1;
 }
 
-.cars-page .site-nav__link--active {
-  color: var(--red);
-}
-
 .cars-breadcrumb {
   display: flex;
   align-items: center;
@@ -262,7 +258,7 @@
 }
 
 .cars-page .service-grid .service-card {
-  height: 108px;
+  height: auto;
   min-height: 108px;
 }
 
@@ -475,23 +471,6 @@
   margin: 0;
   color: var(--line);
   font-size: 14px;
-}
-
-.request-card__checkbox {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  background: transparent;
-  appearance: none;
-}
-
-.request-card__checkbox:checked {
-  border-color: #fff;
-  background: #fff url("assets/business-check.svg") center / 10px 10px no-repeat;
-  transform: rotate(90deg);
 }
 
 .request-card__button {
@@ -758,12 +737,12 @@
   }
 
   .cars-page .service-grid .service-card {
-    height: 120px;
+    height: auto;
     min-height: 120px;
   }
 
   .cars-page .service-grid .service-card:last-child {
-    height: 144px;
+    height: auto;
     min-height: 144px;
   }
 
@@ -773,9 +752,9 @@
   }
 
   .cars-page .benefits__content {
-    height: 700px;
+    height: auto;
     min-height: 700px;
-    flex: 0 0 700px;
+    flex: 0 0 auto;
     padding: 20px;
   }
 
@@ -864,9 +843,9 @@
   }
 
   .request-card {
-    height: 768px;
+    height: auto;
     min-height: 768px;
-    flex: 0 0 768px;
+    flex: 0 0 auto;
     gap: 20px;
     padding: 19px;
     background:
@@ -884,8 +863,8 @@
   }
 
   .request-card__heading {
-    height: 230px;
-    flex: 0 0 230px;
+    min-height: 230px;
+    flex: 0 0 auto;
     gap: 10px;
   }
 
@@ -900,8 +879,8 @@
   }
 
   .request-card__fields {
-    height: 334px;
-    flex: 0 0 334px;
+    min-height: 334px;
+    flex: 0 0 auto;
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -916,9 +895,8 @@
 
   .request-card__consent {
     width: 100%;
-    height: 68px;
     min-height: 68px;
-    flex: 0 0 68px;
+    flex: 0 0 auto;
     font-size: 14px;
     line-height: 17px;
   }

@@ -167,7 +167,8 @@
 
 @media (min-width: 1200px) {
   .service-detail-symptoms {
-    height: 460px;
+    height: auto;
+    min-height: 460px;
   }
 }
 
@@ -245,7 +246,7 @@
 
   .service-detail-hero__model-button {
     width: 215px;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .service-detail-page .brand-hero-scene__mobile-art {

@@ -159,7 +159,7 @@
   align-items: center;
   gap: 2px;
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .about-hero__benefit::before,
@@ -357,7 +357,7 @@
 .about-process__item {
   position: relative;
   display: flex;
-  height: 84px;
+  min-height: 84px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -695,23 +695,6 @@
   gap: 8px;
   color: var(--line);
   font-size: 14px;
-}
-
-.request-card__checkbox {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  background: transparent;
-  appearance: none;
-}
-
-.request-card__checkbox:checked {
-  border-color: #fff;
-  background: #fff url("assets/business-check.svg") center / 10px 10px no-repeat;
-  transform: rotate(90deg);
 }
 
 .request-card__button {

@@ -13,10 +13,6 @@
   z-index: 1;
 }
 
-.promotions-page .site-nav__link--active {
-  color: var(--red);
-}
-
 .promotions-hero-scene {
   position: absolute;
   z-index: 0;
@@ -109,7 +105,7 @@
 .promotions-hero__benefit {
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .promotions-check {
@@ -308,7 +304,7 @@
 .special-offer-card__features li {
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .special-offer-card__features li::before {
@@ -492,23 +488,6 @@
   margin: 0;
   color: var(--line);
   font-size: 14px;
-}
-
-.request-card__checkbox {
-  width: 16px;
-  height: 16px;
-  flex: 0 0 16px;
-  margin: 0;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  background: transparent;
-  appearance: none;
-}
-
-.request-card__checkbox:checked {
-  border-color: #fff;
-  background: #fff url("assets/business-check.svg") center / 10px 10px no-repeat;
-  transform: rotate(90deg);
 }
 
 .request-card__button {

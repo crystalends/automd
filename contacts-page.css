@@ -13,10 +13,6 @@
   z-index: 1;
 }
 
-.contacts-page .site-nav__link--active {
-  color: var(--red);
-}
-
 .contacts-hero-scene {
   position: absolute;
   z-index: 0;
@@ -115,14 +111,14 @@
   .contacts-locations .locations__layout,
   .contacts-locations .location-card,
   .contacts-locations .locations__map {
-    height: 303px;
+    height: auto;
     min-height: 303px;
   }
 }
 
 .quick-actions {
   display: flex;
-  height: 233px;
+  min-height: 233px;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
@@ -147,7 +143,7 @@
   position: relative;
   display: flex;
   min-width: 0;
-  height: 129px;
+  min-height: 129px;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -259,7 +255,7 @@
   font-family: Geologica, sans-serif;
   font-weight: 500;
   line-height: 1;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .service-center-card__button {
@@ -428,8 +424,8 @@
   }
 
   .quick-action-card {
-    height: 129px;
-    min-height: 0;
+    height: auto;
+    min-height: 129px;
     flex: 0 0 100%;
     padding: 20px;
     scroll-snap-align: start;

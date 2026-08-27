@@ -268,7 +268,7 @@
 
   .tour-page .locations__layout,
   .tour-page .location-card {
-    height: 303px;
+    height: auto;
     min-height: 303px;
   }
 
