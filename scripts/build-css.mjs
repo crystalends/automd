@@ -23,6 +23,7 @@ const pageClasses = [
   "service-detail-page",
   "services-page",
   "tour-page",
+  "warranty-page",
 ];
 
 // The sequence mirrors the former per-page link order. Branch used about before brand,
@@ -45,6 +46,7 @@ const sourceGroups = [
       "service-detail-page",
       "services-page",
       "tour-page",
+      "warranty-page",
     ],
   },
   { file: "brand-page.css", scopes: ["branch-page"] },
@@ -64,6 +66,7 @@ const sourceGroups = [
   { file: "service-detail.css", scopes: ["service-detail-page"] },
   { file: "model-service-detail.css", scopes: ["model-service-detail-page"] },
   { file: "parts-page.css", scopes: ["parts-page"] },
+  { file: "warranty-page.css", scopes: ["warranty-page"] },
 ];
 
 const hasPageScope = (selector) =>

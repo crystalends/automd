@@ -7,6 +7,7 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "services.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "services-page.css"), "utf8");
+const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
 const brandStyles = readFileSync(resolve(projectRoot, "brand-page.css"), "utf8");
 
 test("services page follows the Figma section order", () => {
@@ -73,7 +74,8 @@ test("services hero reuses the exact layered Figma advantage icons", () => {
 });
 
 test("services hero follows the layered responsive scene used on the home page", () => {
-  assert.match(markup, /class="services-hero-scene__pattern" src="assets\/hero-pattern\.png"/);
+  assert.match(markup, /class="services-hero-scene__pattern hero-scene__pattern" src="assets\/hero-pattern\.png"/);
+  assert.match(sharedStyles, /\.hero-scene__pattern\{[^}]*width:100%[^}]*height:820px[^}]*object-fit:fill/);
   assert.match(markup, /class="services-hero-scene__vehicle" src="assets\/services-hero\.png"/);
   assert.match(markup, /class="services-hero-scene__glow-asset" src="assets\/hero-glow-middle\.svg"/);
   assert.match(markup, /class="services-hero-scene__accent" src="assets\/services-hero-glow-accent\.svg"/);

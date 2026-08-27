@@ -25,7 +25,6 @@
 .services-hero-scene__glow,
 .services-hero-scene__glow-asset,
 .services-hero-scene__accent,
-.services-hero-scene__pattern,
 .services-hero-scene__vehicle {
   position: absolute;
   max-width: none;
@@ -89,15 +88,6 @@
   width: min(22.699vw, 435.82px);
   height: min(14.334vw, 275.21px);
   transform: rotate(13.96deg);
-}
-
-.services-hero-scene__pattern {
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 820px;
-  object-fit: fill;
 }
 
 .services-hero-scene__vehicle {
