@@ -7,6 +7,8 @@ import { initPartSearch } from "./modules/part-search.js";
 import { initReviewsToggle } from "./modules/reviews-toggle.js";
 import { initScrollPagination } from "./modules/scroll-pagination.js";
 import { initSliders } from "./modules/sliders.js";
+import { initCareerDialog } from "./modules/career-dialog.js";
+import { initVacancyDetailDialog } from "./modules/vacancy-detail-dialog.js";
 
 initMobileMenu();
 initArticleFilter();
@@ -17,3 +19,5 @@ initFooterAccordions();
 initForms();
 initScrollPagination();
 initSliders();
+initVacancyDetailDialog();
+initCareerDialog();

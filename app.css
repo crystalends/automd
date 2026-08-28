@@ -84,7 +84,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 .team{display:flex;flex-direction:column;gap:20px;margin-top:var(--section-gap)}.team__intro{display:flex;width:min(66.25%,1060px);flex-direction:column;gap:20px}.team__title{margin:0;font-family:Geologica,sans-serif;font-size:40px;font-weight:600;line-height:1.1}.team__copy{display:flex;flex-direction:column;gap:10px}.team__description{margin:0;color:var(--muted);font-size:18px;line-height:1.2}.team__grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}.team-card{height:347px;overflow:hidden;border-radius:var(--radius);background:#fff}.team-card__image{width:100%;height:190px;border-radius:var(--radius);object-fit:cover}.team-card__body{display:flex;flex-direction:column;gap:5px;padding:20px}.team-card__title{margin:0;font-family:Geologica,sans-serif;font-size:18px;font-weight:400;line-height:1.2}.team-card__text{margin:0;color:var(--muted);font-size:14px;line-height:1.2}.team-callout{position:relative;display:flex;min-height:131px;align-items:center;justify-content:space-between;gap:40px;overflow:hidden;padding:20px;border-radius:var(--radius);background:#cfdaea}.team-callout__pattern{position:absolute;z-index:0;top:0;right:3px;width:812px;height:131px;max-width:none;pointer-events:none}.team-callout__content{position:relative;z-index:1;width:min(66.25%,1060px)}.team-callout__title,.team-callout__text{margin:0}.team-callout__title{margin-bottom:10px;font-family:Geologica,sans-serif;font-size:20px;font-weight:400;line-height:1.2}.team-callout__text{color:var(--muted);font-size:16px;line-height:1.2}.team-callout__button{position:relative;z-index:1;flex:0 0 auto}
 .service-finder--price{margin-top:var(--section-gap);overflow:hidden}.service-finder__decor{position:absolute;top:-62px;right:-28px;width:285px;transform:rotate(180deg)}.business-offer{display:grid;grid-template-columns:1fr 1fr;margin-top:var(--section-gap);overflow:hidden;border-radius:var(--radius);background:var(--dark);color:#fff}.business-offer__content{padding:60px 40px}.business-offer__title{margin:0 0 10px;font-family:Geologica,sans-serif;font-size:40px;font-weight:600}.business-offer__lead{margin:0 0 30px;color:var(--line);font-size:18px}.business-offer__subtitle{font-family:Geologica,sans-serif;font-size:20px;font-weight:400}.business-offer__audience,.business-offer__features{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;padding:0;list-style:none}.business-offer__audience li::before,.business-offer__features li::before{margin-right:8px;color:var(--red);content:"✓"}.business-offer__features{margin:25px 0 30px;color:var(--line)}.business-offer__image{width:100%;height:100%;object-fit:cover}.extra-services{margin-top:var(--section-gap)}.extra-services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}.service-card--extra{height:142px}
 .reviews{margin-top:var(--section-gap)}.locations{margin-top:var(--section-gap)}.locations__layout{display:grid;height:303px;grid-template-columns:250px 250px minmax(0,1fr);gap:20px;margin-top:20px}.location-card{display:flex;width:250px;height:303px;min-width:0;flex-direction:column;align-items:flex-start;gap:40px;padding:20px;border-radius:var(--radius);background:var(--soft)}.location-card__title{width:100%;margin:0;font-family:Geologica,sans-serif;font-size:20px;font-weight:400;line-height:1.2}.location-card__details{display:flex;width:100%;flex-direction:column;gap:20px;margin:0}.location-card__detail{width:100%;padding-bottom:10px;box-shadow:inset 0 -1px var(--line)}.location-card__label{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;border:0;clip:rect(0 0 0 0);white-space:nowrap}.location-card__value{display:flex;min-width:0;align-items:center;gap:5px;margin:0;color:var(--ink);font-size:14px;line-height:1.2}.location-card__value--muted{color:var(--muted)}.location-card__icon{position:relative;width:16px;height:16px;overflow:visible;flex:0 0 16px}.location-card__icon-part{position:absolute;max-width:none}.location-card__icon-part--pin{top:1.5px;left:2.833px;width:10.333px;height:12.202px}.location-card__icon-part--pin-center{top:4px;left:5.667px;width:4.667px;height:4.667px}.location-card__icon-part--phone{top:1.75px;left:1.75px;width:12.5px;height:12.5px}.location-card__icon-part--time{top:1.667px;left:1.667px;width:12.667px;height:12.667px}.location-card__icon-part--time-hand{top:5.167px;left:7.5px;width:4px;height:3.333px}.location-card__link{align-self:flex-start;border:0;box-shadow:inset 0 -1px var(--blue);line-height:1}.locations__map{width:100%;height:303px;border-radius:var(--radius);object-fit:cover}
-.booking{position:relative;display:flex;height:505px;flex-direction:column;gap:40px;margin-top:var(--section-gap);padding:40px;overflow:hidden;border:1px solid rgba(227,227,227,.5);border-radius:var(--radius);background:var(--soft)}.booking__pattern,.booking__bearing,.booking__bolt,.booking__vehicle{position:absolute;max-width:none;pointer-events:none;user-select:none}.booking__pattern{z-index:0;top:-1px;right:-1px;width:min(752px,47.0588%);height:calc(100% + 2px);object-fit:cover;object-position:right center}.booking__bolt{z-index:1;top:337.1px;left:56.2648%;width:12.4064%;transform:rotate(-76.73deg)}.booking__bearing{z-index:1;top:-40px;right:-7.6345%;width:18.836%}.booking__vehicle{z-index:2;top:-40px;right:.5%;width:40.9262%;mix-blend-mode:darken}.booking__heading{position:relative;z-index:3;width:min(998px,68%);max-width:none;margin:0}.booking-form{position:relative;z-index:3;display:flex;width:min(885px,60%);flex-direction:column;gap:40px}.booking-form__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.booking-form__actions{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.booking-form__consent{display:flex;width:100%;align-items:flex-start;gap:8px;color:var(--muted);font-size:14px;line-height:1.2}.booking-form__checkbox{width:16px;height:16px;flex:0 0 16px;margin:0;border:1px solid var(--line);border-radius:5px;background:transparent;appearance:none}.booking-form__checkbox:checked{border-color:var(--red);background:var(--red)}.booking-form__button{width:174px;min-height:56px;padding:20px 40px}.booking-form__status{top:auto;bottom:18px;left:194px}.booking-form .form-field--select{position:relative}.booking-form .form-field--select::after{position:absolute;right:20px;bottom:15px;width:24px;height:24px;background:url("assets/select-arrow.svg") center/7.061px 12.707px no-repeat;content:"";pointer-events:none;transform:rotate(90deg) scaleX(-1)}.booking-form .form-field--select .form-field__control{padding-right:54px;appearance:none}
+.booking{position:relative;display:flex;height:505px;flex-direction:column;gap:40px;margin-top:var(--section-gap);padding:40px;overflow:hidden;border:1px solid rgba(227,227,227,.5);border-radius:var(--radius);background:var(--soft)}.booking__pattern,.booking__bearing,.booking__bolt,.booking__vehicle{position:absolute;max-width:none;pointer-events:none;user-select:none}.booking__pattern{z-index:0;top:-1px;right:-1px;width:min(752px,47.0588%);height:calc(100% + 2px);object-fit:cover;object-position:right center}.booking__bearing,.booking__bolt,.booking__vehicle{height:auto;aspect-ratio:1}.booking__bolt{z-index:1;top:337.1px;left:56.2648%;width:12.4064%;transform:rotate(-76.73deg)}.booking__bearing{z-index:1;top:-40px;right:-7.6345%;width:18.836%}.booking__vehicle{z-index:2;top:-40px;right:.5%;width:40.9262%;mix-blend-mode:darken}.booking__heading{position:relative;z-index:3;width:min(998px,68%);max-width:none;margin:0}.booking-form{position:relative;z-index:3;display:flex;width:min(885px,60%);flex-direction:column;gap:40px}.booking-form__fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.booking-form__actions{display:flex;flex-direction:column;align-items:flex-start;gap:10px}.booking-form__consent{display:flex;width:100%;align-items:flex-start;gap:8px;color:var(--muted);font-size:14px;line-height:1.2}.booking-form__checkbox{width:16px;height:16px;flex:0 0 16px;margin:0;border:1px solid var(--line);border-radius:5px;background:transparent;appearance:none}.booking-form__checkbox:checked{border-color:var(--red);background:var(--red)}.booking-form__button{width:174px;min-height:56px;padding:20px 40px}.booking-form__status{top:auto;bottom:18px;left:194px}.booking-form .form-field--select{position:relative}.booking-form .form-field--select::after{position:absolute;right:20px;bottom:15px;width:24px;height:24px;background:url("assets/select-arrow.svg") center/7.061px 12.707px no-repeat;content:"";pointer-events:none;transform:rotate(90deg) scaleX(-1)}.booking-form .form-field--select .form-field__control{padding-right:54px;appearance:none}
 .booking__pattern--mobile{display:none}
 @media (max-width:1500px){.booking{height:auto;min-height:505px}}
 .site-footer{display:flex;height:515px;flex-direction:column;gap:20px;margin-top:var(--section-gap);overflow:hidden;font-family:"AA Stetica",Onest,Arial,sans-serif;font-weight:300}.site-footer__intro{display:flex;width:100%;align-items:center;gap:40px;padding:20px;border-radius:var(--radius);background:var(--soft)}.site-footer__logo-box{position:relative;width:294px;height:56px;overflow:hidden;flex:0 0 294px}.site-footer__logo{position:absolute;top:4.967px;left:7.526px;width:278.951px;height:47.226px;max-width:none}.site-footer__description{display:flex;min-width:0;flex:1;flex-direction:column;gap:5px;color:var(--muted);font-size:12px;line-height:12px}.site-footer__description p{width:100%;margin:0}.site-footer__button{flex:0 0 auto;padding:20px 40px}.site-footer__columns{display:flex;width:100%;align-items:flex-start;justify-content:space-between}.site-footer__column{display:flex;width:16.75%;min-width:0;flex-direction:column;align-items:flex-start;gap:20px}.site-footer__column-title{width:100%;margin:0;color:var(--ink);font-family:Geologica,sans-serif;font-size:18px;font-weight:400;line-height:22px}.site-footer__links{display:flex;width:100%;flex-direction:column;align-items:flex-start;gap:10px;color:var(--muted);font-size:16px;line-height:19px}.site-footer__link:hover{color:var(--red)}.site-footer__contacts{display:flex;width:100%;flex-direction:column;gap:20px}.site-footer__contact-row{display:flex;width:100%;min-width:0;align-items:center;gap:5px;padding-bottom:10px;box-shadow:inset 0 -1px var(--line);color:var(--ink);font-size:14px;line-height:17px}.site-footer__contact-row--last{box-shadow:none;color:var(--muted)}.site-footer__contact-icon{position:relative;width:16px;height:16px;flex:0 0 16px}.site-footer__contact-icon-part{position:absolute;max-width:none}.site-footer__contact-icon-part--pin{top:1.5px;left:2.833px;width:10.333px;height:12.202px}.site-footer__contact-icon-part--pin-center{top:4px;left:5.667px;width:4.667px;height:4.667px}.site-footer__contact-icon-part--phone{top:1.75px;left:1.75px;width:12.5px;height:12.5px}.site-footer__contact-icon-part--time{top:1.667px;left:1.667px;width:12.667px;height:12.667px}.site-footer__contact-icon-part--time-hand{top:5.167px;left:7.5px;width:4px;height:3.333px}.site-footer__legal{display:flex;width:100%;align-items:center;justify-content:space-between;padding:20px 0;box-shadow:inset 0 1px var(--line);color:var(--muted);font-size:14px;line-height:17px;letter-spacing:-.15px;white-space:nowrap}.site-footer__developer{display:flex;align-items:center;gap:10px;letter-spacing:.16px}.site-footer__developer-logo{width:39px;height:16px;max-width:none}
@@ -2151,7 +2151,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   }
 }
 
-/* source: about-page.css; scope: about-page, article-detail-page, articles-page, branch-page, contacts-page, parts-page, reviews-page, service-detail-page, services-page, tour-page, warranty-page */
+/* source: about-page.css; scope: about-page, article-detail-page, articles-page, branch-page, careers-page, contacts-page, parts-page, reviews-page, service-detail-page, services-page, tour-page, warranty-page */
 .about-page {
   --about-section-gap: clamp(72px, 5.208vw, 100px);
   background: var(--paper);
@@ -2162,7 +2162,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   z-index: 1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -2173,14 +2173,14 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   pointer-events: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow {
   position: absolute;
   max-width: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern {
   inset: 0;
   width: 100%;
   height: 820px;
@@ -2188,34 +2188,34 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   opacity: 0.55;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow {
   border-radius: 50%;
   background: var(--paper);
   filter: blur(100px);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--left {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--left {
   top: 228px;
   left: -25px;
   width: 53vw;
   height: 493px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--top {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--top {
   top: -144px;
   left: -23vw;
   width: 143vw;
   height: 488px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--right {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--right {
   top: 420px;
   right: -19vw;
   width: 50vw;
   height: 420px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
   z-index: 2;
   top: 280px;
   right: max(calc((100vw - var(--container)) / 2 - 19px), 20px);
@@ -2224,11 +2224,11 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   object-fit: contain;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__vehicle-mobile {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__vehicle-mobile {
   display: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
   position: relative;
   z-index: 2;
   display: flex;
@@ -2239,48 +2239,48 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   font-size: 14px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb__link:hover {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb__link:hover {
   color: var(--red);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb__separator {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb__separator {
   color: var(--line);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero {
   min-height: 653px;
   padding-top: 80px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
   display: flex;
   width: min(925px, 61%);
   flex-direction: column;
   gap: 40px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
   display: flex;
   flex-direction: column;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro {
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees p,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo p {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees p,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo p {
   margin: 0;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
   font-family: Geologica, sans-serif;
   font-size: clamp(48px, 3.333vw, 64px);
   font-weight: 600;
@@ -2288,17 +2288,17 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   letter-spacing: -0.01em;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__accent {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__accent {
   color: var(--red);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
   gap: 5px;
   font-size: 18px;
   line-height: 1.2;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefits {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefits {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
@@ -2308,7 +2308,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   list-style: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -2316,8 +2316,8 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   white-space: normal;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit::before,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li::before {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit::before,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li::before {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -2326,12 +2326,12 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   transform: rotate(90deg);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions {
   display: flex;
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary {
   display: inline-flex;
   min-height: 56px;
   align-items: center;
@@ -2346,13 +2346,13 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   transition: color 0.2s, background 0.2s, transform 0.2s;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary:hover {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary:hover {
   background: var(--blue);
   color: #fff;
   transform: translateY(-2px);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title {
   margin: 0;
   font-family: Geologica, sans-serif;
   font-size: clamp(34px, 2.083vw, 40px);
@@ -2360,17 +2360,17 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   line-height: 1.1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
   margin-top: var(--about-section-gap);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro {
   display: flex;
   width: min(1060px, var(--container));
   flex-direction: column;
@@ -2378,10 +2378,10 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   margin-right: auto;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -2389,25 +2389,25 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   line-height: 1.2;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
   display: flex;
   min-width: 0;
   height: auto;
@@ -2419,24 +2419,24 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   background: #fff;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__image {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__image {
   width: 100%;
   height: auto;
   aspect-ratio: 1;
   object-fit: contain;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
   margin: 0;
   font-size: 24px;
   font-weight: 400;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
   margin-top: auto;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy {
   width: min(1060px, 100%);
 }
 
@@ -2452,18 +2452,18 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   min-width: 260px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro {
   width: min(1060px, 100%);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -2473,7 +2473,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   list-style: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li {
   display: flex;
   min-height: 44px;
   align-items: center;
@@ -2484,7 +2484,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   font-size: 18px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__button {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__button {
   min-height: 46px;
   padding-block: 15px;
 }
@@ -2493,13 +2493,13 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   margin-top: var(--about-section-gap);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
@@ -2508,7 +2508,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   list-style: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
   position: relative;
   display: flex;
   min-height: 84px;
@@ -2522,7 +2522,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   line-height: 1.2;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item span {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item span {
   flex: 0 0 auto;
   color: var(--red);
   font-family: Geologica, sans-serif;
@@ -2568,27 +2568,27 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   margin-top: var(--about-section-gap);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
   position: relative;
   min-height: 453px;
   overflow: hidden;
   border-radius: var(--radius);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision {
   padding: 40px;
   background: radial-gradient(ellipse 700px 700px at 98% 96%, #e21013 0%, #9b0608 100%);
   color: #fff;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__pattern {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__pattern {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -2599,7 +2599,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   opacity: 0.6;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content {
   position: relative;
   z-index: 2;
   display: flex;
@@ -2608,7 +2608,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   gap: 16px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
   max-width: 690px;
   margin: 0;
   font-family: Geologica, sans-serif;
@@ -2617,13 +2617,13 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   line-height: 1.1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p {
   max-width: 690px;
   font-size: 18px;
   line-height: 1.2;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
   position: absolute;
   z-index: 1;
   right: -130px;
@@ -2633,7 +2633,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   max-width: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2643,13 +2643,13 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   background: #fff;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
   color: var(--muted);
   font-size: 18px;
   line-height: 1.2;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2659,33 +2659,33 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   list-style: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li {
   min-height: 59px;
   padding: 20px;
   border-radius: 10px;
   background: var(--soft);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li:last-child {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li:last-child {
   grid-column: 1 / -1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
   display: grid;
   min-height: 566px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__faq {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__faq {
   display: flex;
   min-width: 0;
   flex-direction: column;
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title {
   margin: 0;
   font-family: Geologica, sans-serif;
   font-size: clamp(34px, 2.083vw, 40px);
@@ -2693,19 +2693,19 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   line-height: 1.1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__list {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item {
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--soft);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question {
   position: relative;
   min-height: 52px;
   padding: 15px 54px 15px 20px;
@@ -2714,11 +2714,11 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   font-size: 18px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::-webkit-details-marker {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::-webkit-details-marker {
   display: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::after {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::after {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -2730,18 +2730,18 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   transition: transform 0.2s ease;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item[open] .faq-item__question::after {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item[open] .faq-item__question::after {
   transform: rotate(-90deg) scaleX(-1);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__answer {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__answer {
   margin: 0;
   padding: 0 54px 16px 20px;
   color: var(--muted);
   font-size: 14px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card {
   position: relative;
   display: flex;
   min-width: 0;
@@ -2756,7 +2756,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   color: #fff;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__pattern {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__pattern {
   position: absolute;
   z-index: 0;
   inset: 0;
@@ -2766,53 +2766,53 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   pointer-events: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__pattern-image {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__pattern-image {
   width: 100%;
   height: 100%;
   max-width: none;
   object-fit: fill;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
   position: relative;
   z-index: 1;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form,
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__actions {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form,
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__heading {
   gap: 10px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__description {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__description {
   margin: 0;
   color: var(--line);
   font-size: 16px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
   gap: 40px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__fields {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__fields {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select {
   position: relative;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select::after {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select::after {
   position: absolute;
   right: 20px;
   bottom: 15px;
@@ -2824,25 +2824,25 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   transform: rotate(90deg) scaleX(-1);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select .form-field__control {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field--select .form-field__control {
   padding-right: 54px;
   appearance: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field__label {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field__label {
   color: var(--line);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field__control {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card .form-field__control {
   background: var(--soft);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__actions {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__actions {
   width: 100%;
   gap: 10px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__consent {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__consent {
   display: flex;
   width: min(614px, 100%);
   align-items: flex-start;
@@ -2851,7 +2851,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   font-size: 14px;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button {
   min-width: 229px;
   min-height: 46px;
   padding: 15px 40px;
@@ -2859,20 +2859,20 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   color: var(--red);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button:hover {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button:hover {
   background: var(--soft);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__status {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__status {
   position: static;
   color: #fff;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__status:empty {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__status:empty {
   display: none;
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
   display: flex;
   width: min(1060px, var(--container));
   flex-direction: column;
@@ -2890,25 +2890,25 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     --about-section-gap: 80px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
     padding-inline: 14px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
     font-size: 20px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
     gap: 5px;
     font-size: 11px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
     font-size: 34px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
     font-size: 16px;
   }
 }
@@ -2918,52 +2918,52 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     --about-section-gap: 64px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
     top: 350px;
     right: 24px;
     width: 45vw;
     height: auto;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
     width: 60%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
     font-size: 46px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
     white-space: normal;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
     grid-template-columns: 1fr;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
     min-height: auto;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
     grid-template-columns: 1fr;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li:last-child {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li:last-child {
     grid-column: auto;
   }
 }
@@ -2974,7 +2974,7 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   }
 
   .about-page .page__container,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
     width: auto;
     margin-right: 16px;
     margin-left: 16px;
@@ -2984,15 +2984,15 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     z-index: 20;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
     display: none;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene {
     height: 1100px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__pattern {
     width: 1920px;
     height: 820px;
     max-width: none;
@@ -3000,36 +3000,36 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     opacity: 0.72;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--left {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--left {
     top: 250px;
     left: -50%;
     width: 140%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--top {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__glow--top {
     left: -80%;
     width: 250%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero-scene__vehicle {
     display: none;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero {
     min-height: 0;
     padding-top: 40px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__content {
     width: 100%;
     gap: 24px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__intro {
     gap: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
     font-size: clamp(32px, 8.7vw, 34px);
     line-height: 1.05;
     letter-spacing: -0.35px;
@@ -3037,36 +3037,36 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     text-wrap: balance;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__description {
     gap: 10px;
     font-size: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__detail {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__detail {
     color: var(--muted);
     font-size: 15px;
     line-height: 1.3;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefits {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefits {
     display: grid;
     grid-template-columns: 1fr;
     gap: 8px;
     font-size: 15px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit {
     align-items: flex-start;
     gap: 6px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit::before {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__benefit::before {
     width: 20px;
     height: 20px;
     flex-basis: 20px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__vehicle-mobile {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__vehicle-mobile {
     display: block;
     width: min(100%, 450px);
     height: auto;
@@ -3074,63 +3074,63 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     object-fit: contain;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions {
     flex-direction: column;
     gap: 10px;
     margin-top: 0;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions > * {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__actions > * {
     width: 100%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title {
     font-size: 32px;
     font-weight: 500;
     line-height: 1.2;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
     width: auto;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
     gap: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy {
     font-size: 16px;
     line-height: 1.35;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy p + p,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy p + p,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro p + p,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy p + p {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro__copy p + p,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__copy p + p,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__intro p + p,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo__copy p + p {
     margin-top: 12px;
     padding-top: 12px;
     border-top: 1px solid var(--line);
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading {
     align-items: flex-end;
     gap: 12px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading .text-link {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__heading .text-link {
     flex: 0 0 auto;
     font-size: 14px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid {
     display: flex;
     gap: 10px;
     padding: 0 0 8px;
@@ -3142,11 +3142,11 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     touch-action: pan-x;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid::-webkit-scrollbar {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization__grid::-webkit-scrollbar {
     display: none;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card {
     width: 190px;
     min-height: 0;
     flex: 0 0 190px;
@@ -3158,18 +3158,18 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     scroll-snap-stop: always;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__image {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__image {
     width: 150px;
     height: 150px;
     aspect-ratio: auto;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__title {
     font-size: 18px;
     line-height: 1.2;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-specialization .vehicle-card__links {
     flex-wrap: wrap;
     gap: 10px;
     font-size: 16px;
@@ -3196,12 +3196,12 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     min-width: 0;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li {
     min-height: 64px;
     align-items: flex-start;
     padding: 10px;
@@ -3209,22 +3209,22 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     line-height: 1.2;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li::before {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid li::before {
     width: 20px;
     height: 20px;
     flex: 0 0 20px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__button {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__button {
     width: 100%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__list {
     grid-template-columns: 1fr;
     gap: 8px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
     height: auto;
     min-height: 72px;
     gap: 14px;
@@ -3233,101 +3233,101 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
     font-size: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item span {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item span {
     min-width: 28px;
     font-size: 18px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
     padding: 20px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-service {
     gap: 10px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision {
     min-height: 0;
     padding-bottom: 190px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
     font-size: clamp(28px, 8.2vw, 32px);
     line-height: 1.1;
     text-wrap: balance;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content {
     gap: 12px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content p,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
     font-size: 15px;
     line-height: 1.3;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
     right: -60px;
     bottom: -195px;
     width: 320px;
     height: 320px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
     gap: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list {
     gap: 8px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list li {
     min-height: 0;
     padding: 16px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees .about-button-secondary {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees .about-button-secondary {
     width: 100%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
     display: flex;
     min-height: 0;
     flex-direction: column;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question {
     min-height: 72px;
     font-size: 18px;
     line-height: 1.2;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card {
     min-height: 0;
     gap: 20px;
     padding: 19px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__description {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__description {
     font-size: 14px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__form {
     gap: 20px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__fields {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__fields {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__consent {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__consent {
     width: 100%;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__button {
     width: 228px;
   }
 
@@ -3339,37 +3339,37 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 
 @media (max-width: 359px) {
   .about-page .page__container,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-intro,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-seo {
     width: auto;
     margin-right: 8px;
     margin-left: 8px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-hero__title {
     font-size: 30px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-section-title,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request__title,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .request-card__title,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
     font-size: 30px;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-parts__grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary,
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::after {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary,
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-item__question::after {
     transition: none;
   }
 
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary:hover {
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.careers-page, body.contacts-page, body.parts-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary:hover {
     transform: none;
   }
 }
@@ -6919,6 +6919,1045 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 @media (prefers-reduced-motion: reduce) {
   :where(body.cars-page) .cars-hero__visual-gear {
     animation: none;
+  }
+}
+
+/* source: careers-page.css; scope: careers-page */
+.careers-page {
+  --careers-section-gap: clamp(72px, 5.208vw, 100px);
+  --about-section-gap: var(--careers-section-gap);
+  background: var(--paper);
+}
+
+.careers-page main {
+  position: relative;
+  z-index: 1;
+}
+
+html:has(.careers-page dialog[open]),
+.careers-page:has(dialog[open]) {
+  overflow: hidden;
+}
+
+:where(body.careers-page) .careers-hero-scene {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+:where(body.careers-page) .careers-hero-scene__pattern,
+:where(body.careers-page) .careers-hero-scene__team,
+:where(body.careers-page) .careers-hero-scene__glow {
+  position: absolute;
+  max-width: none;
+}
+
+:where(body.careers-page) .careers-hero-scene__pattern {
+  inset: 0;
+  width: 100%;
+  height: 820px;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+:where(body.careers-page) .careers-hero-scene__glow {
+  border-radius: 50%;
+  background: var(--paper);
+  filter: blur(100px);
+}
+
+:where(body.careers-page) .careers-hero-scene__glow--left {
+  top: 228px;
+  left: -25px;
+  width: 53vw;
+  height: 493px;
+}
+
+:where(body.careers-page) .careers-hero-scene__glow--top {
+  top: -144px;
+  left: -23vw;
+  width: 143vw;
+  height: 488px;
+}
+
+:where(body.careers-page) .careers-hero-scene__glow--right {
+  top: 236px;
+  right: -20vw;
+  width: 70vw;
+  height: 640px;
+}
+
+:where(body.careers-page) .careers-hero-scene__team {
+  z-index: 2;
+  top: 280px;
+  right: max(calc((100vw - var(--container)) / 2 + 60px), 24px);
+  width: min(31vw, 595px);
+  height: min(21vw, 403px);
+  object-fit: cover;
+  mix-blend-mode: darken;
+}
+
+:where(body.careers-page) .careers-hero {
+  min-height: 608px;
+  padding-top: 80px;
+}
+
+:where(body.careers-page) .careers-hero__content {
+  display: flex;
+  width: min(925px, 61%);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+:where(body.careers-page) .careers-hero__team-mobile {
+  display: none;
+}
+
+:where(body.careers-page) .careers-hero__intro,
+:where(body.careers-page) .careers-hero__copy {
+  display: flex;
+  flex-direction: column;
+}
+
+:where(body.careers-page) .careers-hero__intro {
+  gap: 20px;
+}
+
+:where(body.careers-page) .careers-hero__title,
+:where(body.careers-page) .careers-hero__copy p,
+:where(body.careers-page) .careers-conditions__copy p {
+  margin: 0;
+}
+
+:where(body.careers-page) .careers-hero__title {
+  font-family: Geologica, sans-serif;
+  font-size: clamp(48px, 3.333vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+:where(body.careers-page) .careers-hero__copy {
+  gap: 5px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .careers-hero__benefits,
+:where(body.careers-page) .careers-conditions__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where(body.careers-page) .careers-hero__benefits {
+  gap: 10px 20px;
+  color: var(--muted);
+}
+
+:where(body.careers-page) .careers-hero__benefit,
+:where(body.careers-page) .careers-conditions__benefit {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .careers-hero__benefit::before,
+:where(body.careers-page) .careers-conditions__benefit::before {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  background: url("assets/hero-check-mark.svg") center / 7px 9px no-repeat;
+  content: "";
+  transform: rotate(90deg);
+}
+
+:where(body.careers-page) .vacancies {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+:where(body.careers-page) .vacancies__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+:where(body.careers-page) .vacancy-card {
+  display: grid;
+  height: 158px;
+  grid-template-columns: minmax(360px, 632px) minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+  padding: 19px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+:where(body.careers-page) .vacancy-card__summary {
+  display: flex;
+  height: 118px;
+  min-width: 0;
+  flex-direction: column;
+  gap: 10px;
+}
+
+:where(body.careers-page) .vacancy-card__title,
+:where(body.careers-page) .vacancy-card__description,
+:where(body.careers-page) .vacancy-card__salary,
+:where(body.careers-page) .vacancy-card__location {
+  margin: 0;
+}
+
+:where(body.careers-page) .vacancy-card__title {
+  font-family: Geologica, sans-serif;
+  font-size: clamp(26px, 1.667vw, 32px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-card__description {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-card__salary {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-card__aside {
+  display: flex;
+  width: 731px;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  gap: 20px;
+}
+
+:where(body.careers-page) .vacancy-card__location {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-card__location-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+:where(body.careers-page) .vacancy-card__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 20px;
+}
+
+:where(body.careers-page) .vacancy-card__button {
+  width: 193px;
+  min-width: 193px;
+}
+
+:where(body.careers-page) .vacancy-card__more-toggle {
+  display: inline-flex;
+  width: 172px;
+  min-width: 172px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--blue);
+  font-family: Geologica, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+:where(body.careers-page) .vacancy-card__more-toggle:hover {
+  background: var(--blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+:where(body.careers-page) .vacancy-detail-dialog {
+  width: min(1330px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 40px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+:where(body.careers-page) .vacancy-detail-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog::backdrop {
+  background: rgba(252, 252, 252, 0.94);
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__close {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  place-items: center;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__close img {
+  width: 24px;
+  height: 24px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__summary {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--soft);
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__heading,
+:where(body.careers-page) .vacancy-detail-dialog__meta,
+:where(body.careers-page) .vacancy-detail-dialog__section,
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list,
+:where(body.careers-page) .vacancy-detail-dialog__requirements,
+:where(body.careers-page) .vacancy-detail-dialog__conditions {
+  display: flex;
+  flex-direction: column;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__heading,
+:where(body.careers-page) .vacancy-detail-dialog__meta,
+:where(body.careers-page) .vacancy-detail-dialog__section {
+  gap: 10px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__title,
+:where(body.careers-page) .vacancy-detail-dialog__location,
+:where(body.careers-page) .vacancy-detail-dialog__description,
+:where(body.careers-page) .vacancy-detail-dialog__salary,
+:where(body.careers-page) .vacancy-detail-dialog__subtitle,
+:where(body.careers-page) .vacancy-detail-dialog__income {
+  margin: 0;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__title {
+  font-family: Geologica, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__location img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__description {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__salary {
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__columns {
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__subtitle {
+  font-family: Geologica, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list,
+:where(body.careers-page) .vacancy-detail-dialog__requirements,
+:where(body.careers-page) .vacancy-detail-dialog__conditions {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list,
+:where(body.careers-page) .vacancy-detail-dialog__requirements {
+  gap: 5px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list {
+  counter-reset: vacancy-skill;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list li {
+  display: flex;
+  gap: 4px;
+  counter-increment: vacancy-skill;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__numbered-list li::before {
+  flex: 0 0 auto;
+  content: counter(vacancy-skill) ".";
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__requirements li {
+  display: flex;
+  gap: 4px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__requirements li::before {
+  flex: 0 0 auto;
+  content: "-";
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__section--conditions {
+  flex: 0 0 auto;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__conditions {
+  gap: 10px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__conditions li {
+  display: flex;
+  align-items: center;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__conditions img {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__income {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .vacancy-detail-dialog__apply {
+  width: 193px;
+  flex: 0 0 56px;
+  align-self: flex-start;
+}
+
+:where(body.careers-page) .careers-conditions,
+.careers-page .team,
+:where(body.careers-page) .careers-callout {
+  margin-top: var(--careers-section-gap);
+}
+
+:where(body.careers-page) .careers-conditions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+:where(body.careers-page) .careers-conditions__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+:where(body.careers-page) .careers-conditions__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .careers-conditions__panel {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+:where(body.careers-page) .careers-conditions__panel::before {
+  position: absolute;
+  inset: 0 0 0 25%;
+  background: url("assets/team-callout-pattern.png") center / cover no-repeat;
+  content: "";
+  opacity: 0.35;
+}
+
+:where(body.careers-page) .careers-conditions__benefits {
+  position: relative;
+  z-index: 1;
+  gap: 20px 30px;
+}
+
+:where(body.careers-page) .careers-conditions__benefit {
+  font-size: 18px;
+}
+
+.careers-page .team__intro {
+  width: min(1060px, 66.25%);
+}
+
+.careers-page .team-callout__content {
+  width: min(1175px, 78%);
+}
+
+.careers-page .team-callout__button {
+  min-width: 260px;
+}
+
+:where(body.careers-page) .careers-callout {
+  position: relative;
+  min-height: 258px;
+  overflow: hidden;
+  padding: 40px;
+  border-radius: var(--radius);
+  background: var(--red);
+  color: #fff;
+}
+
+:where(body.careers-page) .careers-callout::before {
+  position: absolute;
+  inset: 0;
+  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  content: "";
+  opacity: 0.14;
+}
+
+:where(body.careers-page) .careers-callout__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: min(760px, 52%);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+:where(body.careers-page) .careers-callout__title,
+:where(body.careers-page) .careers-callout__description {
+  margin: 0;
+}
+
+:where(body.careers-page) .careers-callout__title {
+  font-family: Geologica, sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+:where(body.careers-page) .careers-callout__description {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .careers-callout__button {
+  min-width: 216px;
+  background: #fff;
+  color: var(--red);
+}
+
+:where(body.careers-page) .careers-callout__button:hover {
+  background: var(--soft);
+  color: #c70d13;
+}
+
+:where(body.careers-page) .careers-callout__team,
+:where(body.careers-page) .careers-callout__gear {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+}
+
+:where(body.careers-page) .careers-callout__team {
+  z-index: 2;
+  top: -12%;
+  left: 37%;
+  width: 56%;
+  height: 195%;
+  object-fit: fill;
+}
+
+:where(body.careers-page) .careers-callout__gear {
+  z-index: 1;
+  right: -4%;
+  top: 16%;
+  width: 25%;
+}
+
+:where(body.careers-page) .career-dialog {
+  width: min(720px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 28px 90px rgba(5, 5, 5, 0.22);
+}
+
+:where(body.careers-page) .career-dialog::backdrop {
+  background: rgba(5, 5, 5, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+:where(body.careers-page) .career-dialog__inner {
+  position: relative;
+  padding: 40px;
+}
+
+:where(body.careers-page) .career-dialog__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+:where(body.careers-page) .career-dialog__title,
+:where(body.careers-page) .career-dialog__description {
+  margin: 0;
+}
+
+:where(body.careers-page) .career-dialog__title {
+  padding-right: 44px;
+  font-family: Geologica, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+:where(body.careers-page) .career-dialog__description {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+:where(body.careers-page) .career-dialog__form,
+:where(body.careers-page) .career-dialog__fields {
+  display: grid;
+  gap: 20px;
+}
+
+:where(body.careers-page) .career-dialog__form {
+  margin-top: 30px;
+}
+
+:where(body.careers-page) .career-dialog__fields {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+:where(body.careers-page) .career-dialog__field--wide {
+  grid-column: 1 / -1;
+}
+
+:where(body.careers-page) .career-dialog__field input[type="file"] {
+  height: auto;
+  min-height: 56px;
+  padding-block: 14px;
+}
+
+:where(body.careers-page) .career-dialog__consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+:where(body.careers-page) .career-dialog__checkbox {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  accent-color: var(--red);
+}
+
+:where(body.careers-page) .career-dialog__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+:where(body.careers-page) .career-dialog__status {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.careers-page .site-footer {
+  margin-top: var(--careers-section-gap);
+}
+
+@media (max-width: 1500px) {
+  :where(body.careers-page) .careers-hero-scene__team {
+    right: 4vw;
+  }
+
+  :where(body.careers-page) .vacancy-card {
+    height: auto;
+    grid-template-columns: minmax(320px, 1fr) minmax(0, 1.2fr);
+    padding: 20px;
+  }
+
+  :where(body.careers-page) .vacancy-card__aside {
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  :where(body.careers-page) .vacancy-card__summary {
+    height: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  :where(body.careers-page) .careers-hero-scene__team {
+    right: 1vw;
+    width: 39vw;
+    height: auto;
+  }
+
+  :where(body.careers-page) .careers-hero__content {
+    width: 62%;
+  }
+
+  :where(body.careers-page) .vacancy-card {
+    grid-template-columns: 1fr;
+  }
+
+  :where(body.careers-page) .vacancy-card__aside {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  :where(body.careers-page) .careers-conditions__benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .careers-page .team__intro {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .careers-page {
+    --careers-section-gap: 40px;
+  }
+
+  :where(body.careers-page) .careers-hero-scene {
+    height: 940px;
+  }
+
+  :where(body.careers-page) .careers-hero-scene__pattern {
+    height: 940px;
+    opacity: 0.5;
+  }
+
+  :where(body.careers-page) .careers-hero-scene__glow {
+    display: none;
+  }
+
+  :where(body.careers-page) .careers-hero-scene__team {
+    display: none;
+  }
+
+  :where(body.careers-page) .careers-hero {
+    width: calc(100vw - 32px);
+    min-height: 0;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding-top: 40px;
+  }
+
+  :where(body.careers-page) .careers-hero__content {
+    width: 100%;
+    gap: 24px;
+  }
+
+  :where(body.careers-page) .careers-hero__intro {
+    gap: 14px;
+  }
+
+  :where(body.careers-page) .careers-hero__title {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+
+  :where(body.careers-page) .careers-hero__copy {
+    font-size: 15px;
+  }
+
+  :where(body.careers-page) .careers-hero__benefits {
+    gap: 6px 12px;
+  }
+
+  :where(body.careers-page) .careers-hero__benefit {
+    font-size: 14px;
+  }
+
+  :where(body.careers-page) .careers-hero__benefit::before,
+  :where(body.careers-page) .careers-conditions__benefit::before {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  :where(body.careers-page) .careers-hero__team-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -12px;
+    mix-blend-mode: darken;
+  }
+
+  :where(body.careers-page) .vacancies {
+    width: calc(100vw - 32px);
+    margin: 20px 16px 0;
+  }
+
+  :where(body.careers-page) .vacancy-card {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  :where(body.careers-page) .vacancy-card__title {
+    font-size: 24px;
+  }
+
+  :where(body.careers-page) .vacancy-card__description,
+  :where(body.careers-page) .vacancy-card__location {
+    font-size: 14px;
+  }
+
+  :where(body.careers-page) .vacancy-card__salary {
+    font-size: 16px;
+  }
+
+  :where(body.careers-page) .vacancy-card__aside {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  :where(body.careers-page) .vacancy-card__actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  :where(body.careers-page) .vacancy-card__button,
+  :where(body.careers-page) .vacancy-card__more-toggle {
+    width: 100%;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog {
+    max-height: calc(100dvh - 32px);
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog[open] {
+    gap: 24px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__summary {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__title {
+    padding-right: 20px;
+    font-size: 28px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__location,
+  :where(body.careers-page) .vacancy-detail-dialog__description,
+  :where(body.careers-page) .vacancy-detail-dialog__numbered-list,
+  :where(body.careers-page) .vacancy-detail-dialog__requirements,
+  :where(body.careers-page) .vacancy-detail-dialog__conditions,
+  :where(body.careers-page) .vacancy-detail-dialog__income {
+    font-size: 14px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__salary {
+    font-size: 16px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__columns {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__subtitle {
+    font-size: 18px;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__conditions li {
+    align-items: flex-start;
+  }
+
+  :where(body.careers-page) .vacancy-detail-dialog__apply {
+    width: 100%;
+  }
+
+  :where(body.careers-page) .careers-conditions,
+  :where(body.careers-page) .careers-callout {
+    width: calc(100vw - 32px);
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  :where(body.careers-page) .careers-conditions {
+    grid-template-columns: 1fr;
+  }
+
+  :where(body.careers-page) .careers-conditions__copy {
+    font-size: 16px;
+  }
+
+  :where(body.careers-page) .careers-conditions__benefit {
+    font-size: 16px;
+  }
+
+  .careers-page .team {
+    width: calc(100vw - 32px);
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  .careers-page .team__intro {
+    width: 100%;
+  }
+
+  :where(body.careers-page) .careers-callout {
+    min-height: 470px;
+    padding: 20px;
+  }
+
+  :where(body.careers-page) .careers-callout__content {
+    width: 100%;
+  }
+
+  :where(body.careers-page) .careers-callout__title {
+    font-size: 30px;
+  }
+
+  :where(body.careers-page) .careers-callout__description {
+    font-size: 16px;
+  }
+
+  :where(body.careers-page) .careers-callout__button {
+    width: auto;
+  }
+
+  :where(body.careers-page) .careers-callout__team {
+    top: auto;
+    bottom: -11%;
+    left: -4%;
+    width: 118%;
+    height: 69%;
+  }
+
+  :where(body.careers-page) .careers-callout__gear {
+    right: -18%;
+    top: auto;
+    bottom: -11%;
+    width: 64%;
+  }
+
+  :where(body.careers-page) .career-dialog__inner {
+    padding: 24px 20px;
+  }
+
+  :where(body.careers-page) .career-dialog__title {
+    font-size: 26px;
+  }
+
+  :where(body.careers-page) .career-dialog__fields {
+    grid-template-columns: 1fr;
+  }
+
+  :where(body.careers-page) .career-dialog__field--wide {
+    grid-column: auto;
+  }
+
+  :where(body.careers-page) .career-dialog__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(body.careers-page) .career-dialog::backdrop {
+    backdrop-filter: none;
   }
 }
 
