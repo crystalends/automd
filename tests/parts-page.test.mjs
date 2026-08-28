@@ -126,6 +126,87 @@ test("parts booking matches the Figma parts request form", () => {
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.booking--parts \.booking__bearing\s*\{[^}]*top:\s*663px[^}]*left:\s*240px[^}]*width:\s*197px[^}]*transform:\s*none/s);
 });
 
+test("parts picker dialog matches the dedicated Figma form", () => {
+  const markup = read("parts.html");
+  const styles = read("styles.css");
+  const entrypoint = read("js/main.js");
+  const dialog = markup.match(/<dialog class="request-dialog request-dialog--parts"[\s\S]*?<\/dialog>/)?.[0] ?? "";
+
+  assert.match(markup, /data-part-request-open>Подобрать запчасть<\/button>/);
+  assert.match(dialog, /data-part-request-dialog/);
+  assert.match(dialog, /Подберите запчасть для своего автомобиля/);
+  assert.match(dialog, /Укажите автомобиль и нужную деталь/);
+  for (const field of ["name", "phone", "model", "brand", "year", "vin", "part", "consent"]) {
+    assert.match(dialog, new RegExp(`name="${field}"`));
+  }
+  for (const asset of ["assets/booking-pattern.png", "assets/booking-bolt.png", "assets/vacancy-detail-close.svg"]) {
+    assert.match(dialog, new RegExp(asset.replaceAll("/", "\\/")));
+    assert.ok(existsSync(resolve(projectRoot, asset)), `${asset} should exist`);
+  }
+  assert.match(styles, /\.request-dialog\s*\{[^}]*width:\s*min\(864px,[^}]*border-radius:\s*var\(--radius\)/s);
+  assert.match(styles, /\.request-dialog__content\s*\{[^}]*gap:\s*40px[^}]*padding:\s*40px/s);
+  assert.match(styles, /\.request-dialog__fields\s*\{[^}]*grid-template-columns:\s*repeat\(2,[^}]*gap:\s*20px/s);
+  assert.match(styles, /\.request-dialog--parts \.request-dialog__bolt\s*\{[^}]*top:\s*593px[^}]*left:\s*699px/s);
+  assert.match(styles, /\.request-dialog__bolt\s*\{[^}]*width:\s*198\.254px/s);
+  assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.request-dialog__fields\s*\{[^}]*grid-template-columns:\s*1fr/s);
+  assert.match(entrypoint, /initPartRequestDialog/);
+  assert.doesNotMatch(dialog, /figma\.com\/api\/mcp\/asset/);
+});
+
+test("parts picker dialog opens and closes through its focused ESM", async (context) => {
+  const originalDocument = globalThis.document;
+  context.after(() => {
+    globalThis.document = originalDocument;
+  });
+
+  const closeButton = {
+    addEventListener(_type, listener) {
+      this.listener = listener;
+    },
+  };
+  const dialog = {
+    focused: false,
+    listener: null,
+    open: false,
+    addEventListener(_type, listener) {
+      this.listener = listener;
+    },
+    close() {
+      this.open = false;
+    },
+    focus() {
+      this.focused = true;
+    },
+    querySelector() {
+      return closeButton;
+    },
+    showModal() {
+      this.open = true;
+    },
+  };
+  const opener = {
+    addEventListener(_type, listener) {
+      this.listener = listener;
+    },
+  };
+  globalThis.document = {
+    querySelector: () => dialog,
+    querySelectorAll: () => [opener],
+  };
+
+  const { initPartRequestDialog } = await import("../js/modules/part-request-dialog.js");
+  const controls = initPartRequestDialog();
+
+  opener.listener();
+  assert.equal(dialog.open, true);
+  assert.equal(dialog.focused, true);
+  closeButton.listener();
+  assert.equal(dialog.open, false);
+  controls.open();
+  dialog.listener({ target: dialog });
+  assert.equal(dialog.open, false);
+});
+
 test("parts store promo matches the Figma desktop geometry and icon", () => {
   const markup = read("parts.html");
   const styles = read("parts-page.css");

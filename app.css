@@ -498,6 +498,305 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 .form-status[data-status="error"]{color:#b42318}
 [data-form][aria-busy="true"]{cursor:progress}
 
+html:has(.request-dialog[open]),
+body:has(.request-dialog[open]) {
+  overflow: hidden;
+}
+
+.request-dialog {
+  width: min(864px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(227 227 227 / 50%);
+  border-radius: var(--radius);
+  background: var(--soft);
+  color: var(--ink);
+  box-shadow: 0 28px 90px rgb(5 5 5 / 22%);
+  outline: none;
+}
+
+.request-dialog::backdrop {
+  background: rgb(5 5 5 / 48%);
+  backdrop-filter: blur(4px);
+}
+
+.request-dialog__pattern,
+.request-dialog__bolt {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.request-dialog__pattern {
+  z-index: 0;
+  top: -15px;
+  left: -109px;
+  width: 1079px;
+  height: 807px;
+  opacity: 0.6;
+  object-fit: fill;
+}
+
+.request-dialog__bolt {
+  z-index: 1;
+  width: 198.254px;
+  height: 198.254px;
+  transform: rotate(-76.73deg);
+}
+
+.request-dialog--parts .request-dialog__bolt {
+  top: 593px;
+  left: 699px;
+}
+
+.request-dialog--booking .request-dialog__bolt {
+  top: 439px;
+  left: 706px;
+}
+
+.request-dialog--estimate .request-dialog__bolt {
+  top: 263.109px;
+  left: 719.109px;
+  transform: rotate(-18.83deg);
+}
+
+.request-dialog--business .request-dialog__bolt {
+  top: 528.112px;
+  left: 725.112px;
+}
+
+.request-dialog__close {
+  position: absolute;
+  z-index: 4;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  place-items: center;
+}
+
+.request-dialog__close img {
+  width: 24px;
+  height: 24px;
+}
+
+.request-dialog__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  max-height: calc(100dvh - 32px);
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  overflow: auto;
+}
+
+.request-dialog__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.request-dialog__title,
+.request-dialog__description {
+  margin: 0;
+}
+
+.request-dialog__title {
+  padding-right: 24px;
+  font-family: Geologica, sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.request-dialog__description {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.request-dialog__form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.request-dialog__fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.request-dialog__field--wide {
+  grid-column: 1 / -1;
+}
+
+.request-dialog .form-field--select {
+  position: relative;
+}
+
+.request-dialog .form-field--select::after {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  width: 24px;
+  height: 24px;
+  background: url("assets/select-arrow.svg") center / 7.061px 12.707px no-repeat;
+  content: "";
+  pointer-events: none;
+  transform: rotate(90deg) scaleX(-1);
+}
+
+.request-dialog .form-field--select .form-field__control {
+  padding-right: 54px;
+  appearance: none;
+}
+
+.request-dialog__date-control {
+  position: relative;
+  display: block;
+}
+
+.request-dialog__date-input {
+  color: var(--muted);
+}
+
+.request-dialog__date-input:invalid:not(:focus)::-webkit-datetime-edit {
+  color: transparent;
+}
+
+.request-dialog__date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.request-dialog__date-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: var(--muted);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.request-dialog__date-control:has(.request-dialog__date-input:focus) .request-dialog__date-placeholder,
+.request-dialog__date-control:has(.request-dialog__date-input:valid) .request-dialog__date-placeholder {
+  opacity: 0;
+}
+
+.request-dialog__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.request-dialog__consent {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.request-dialog__consent a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+}
+
+.request-dialog__consent a:hover {
+  text-decoration-color: currentColor;
+}
+
+.request-dialog__checkbox {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+.request-dialog__checkbox:checked {
+  border-color: var(--line);
+  background: #fff url("assets/legal-check.svg") center / 14px 14px no-repeat;
+}
+
+.request-dialog__status {
+  position: static;
+}
+
+.request-dialog__status:empty {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .request-dialog {
+    width: calc(100vw - 32px);
+    max-height: calc(100dvh - 32px);
+    border-radius: 16px;
+  }
+
+  .request-dialog__content {
+    max-height: calc(100dvh - 32px);
+    gap: 24px;
+    padding: 24px 20px;
+  }
+
+  .request-dialog__title {
+    padding-right: 28px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .request-dialog__description {
+    font-size: 15px;
+  }
+
+  .request-dialog__form {
+    gap: 24px;
+  }
+
+  .request-dialog__fields {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .request-dialog__field--wide {
+    grid-column: auto;
+  }
+
+  .request-dialog__bolt {
+    top: auto;
+    right: -68px;
+    bottom: -68px;
+    left: auto;
+    width: 170px;
+    height: 170px;
+  }
+
+  .request-dialog__submit {
+    width: 169px;
+  }
+}
+
 /* source: brand-page.css; scope: brand-page, services-page */
 .brand-page {
   --brand-section-gap: clamp(72px, 5.208vw, 100px);

@@ -63,7 +63,7 @@
               <p>В AutoMD доступны новые и б/у запчасти, оригинальные детали и качественные аналоги для ремонта, ТО и обслуживания фургонов, микроавтобусов и коммерческих автомобилей. Актуальный ассортимент, цены и наличие можно посмотреть в интернет-магазине, а если вы не знаете точный артикул — оставьте заявку на подбор детали по марке, модели, году выпуска или VIN.</p>
             </div>
           </div>
-          <a class="button parts-hero__button" href="#search">Перейти в интернет-магазин</a>
+          <button class="button parts-hero__button" type="button" data-part-request-open>Подобрать запчасть</button>
         </div>
         <div class="parts-hero__visual" aria-hidden="true"><img class="parts-hero__image" src="assets/parts-hero.png" alt="" width="1254" height="1254" /></div>
       </section>
@@ -293,6 +293,38 @@
       </div>
       <div class="site-footer__legal"><span>© AutoMD, 2026 Профессиональный автотехцентр в Москве</span><a class="site-footer__legal-link" href="privacy.html">Политика конфиденциальности</a><a class="site-footer__legal-link" href="consent.html">Согласие на обработку персональных данных</a><a class="site-footer__legal-link" href="agreement.html">Пользовательское соглашение</a><span class="site-footer__legal-item">Реквизиты</span><span class="site-footer__developer">Разработан <img class="site-footer__developer-logo" src="assets/footer-developer-logo.svg" alt="IS ART" width="39" height="16" /></span></div>
     </footer>
+
+    <dialog class="request-dialog request-dialog--parts" data-part-request-dialog aria-labelledby="part-request-dialog-title" tabindex="-1">
+      <img class="request-dialog__pattern" src="assets/booking-pattern.png" alt="" aria-hidden="true" width="752" height="505" />
+      <img class="request-dialog__bolt" src="assets/booking-bolt.png" alt="" aria-hidden="true" width="1280" height="1280" />
+      <button class="request-dialog__close" type="button" data-part-request-close aria-label="Закрыть форму подбора запчасти"><img src="assets/vacancy-detail-close.svg" alt="" aria-hidden="true" width="24" height="24" /></button>
+
+      <div class="request-dialog__content">
+        <header class="request-dialog__heading">
+          <h2 class="request-dialog__title" id="part-request-dialog-title">Подберите запчасть для своего автомобиля</h2>
+          <p class="request-dialog__description">Укажите автомобиль и нужную деталь — менеджер проверит совместимость, подскажет варианты и направит в интернет-магазин AutoMD.</p>
+        </header>
+
+        <form class="request-dialog__form" data-form="booking">
+          <div class="request-dialog__fields">
+            <label class="form-field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+            <label class="form-field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+            <label class="form-field form-field--select"><span class="form-field__label">Модель</span><select class="form-field__control" name="model" required><option value="" selected disabled>Выбрать</option><option>Ducato</option><option>Transit</option><option>Boxer</option><option>Jumper</option><option>Daily</option><option>Partner</option><option>Berlingo</option><option>Atlant</option><option>Sunray</option></select></label>
+            <label class="form-field form-field--select"><span class="form-field__label">Марка</span><select class="form-field__control" name="brand" required><option value="" selected disabled>Выбрать</option><option>Fiat</option><option>Ford</option><option>Peugeot</option><option>Citroen</option><option>Iveco</option><option>Sollers</option><option>JAC</option></select></label>
+            <label class="form-field"><span class="form-field__label">Год выпуска</span><input class="form-field__control" name="year" inputmode="numeric" autocomplete="off" placeholder="Напишите" pattern="(?:19|20)[0-9]{2}" title="Укажите год в формате ГГГГ" required /></label>
+            <label class="form-field"><span class="form-field__label">VIN, если есть</span><input class="form-field__control" name="vin" autocomplete="off" placeholder="Напишите" maxlength="17" /></label>
+            <label class="form-field request-dialog__field request-dialog__field--wide"><span class="form-field__label">Название детали или артикул</span><input class="form-field__control" name="part" placeholder="Напишите" required /></label>
+          </div>
+
+          <div class="request-dialog__actions">
+            <label class="request-dialog__consent"><input class="request-dialog__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия <a href="privacy.html">Политики конфиденциальности</a>, <a href="consent.html">Согласия на обработку персональных данных</a> и <a href="agreement.html">Пользовательского соглашения</a></span></label>
+            <button class="button request-dialog__submit" type="submit">Отправить</button>
+            <p class="form-status request-dialog__status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>

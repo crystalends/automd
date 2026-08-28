@@ -134,7 +134,7 @@
                 <span class="hero__advantage-text">Ремонт, ТО и установка деталей в одном месте</span>
               </li>
             </ul>
-            <a class="button hero__button" href="#booking">Записаться на ремонт</a>
+            <a class="button hero__button" href="#booking" data-booking-dialog-open>Записаться на ремонт</a>
           </div>
           <div class="hero__visual" aria-hidden="true">
             <img class="hero__visual-gear" src="assets/hero-gear.png" alt="" width="1280" height="1280" />
@@ -248,7 +248,7 @@
         <div class="team-callout"><img class="team-callout__pattern" src="assets/team-callout-pattern.png" alt="" aria-hidden="true" width="812" height="131" /><div class="team-callout__content"><h3 class="team-callout__title">Почему это важно</h3><p class="team-callout__text">Коммерческий транспорт часто используется каждый день, поэтому в ремонте важны не только навыки мастера, но и организация процесса. Когда диагностика, подбор запчастей, согласование и ремонт работают как единая система, автомобиль быстрее возвращается в работу.</p></div><a class="button button--blue team-callout__button" href="#booking">Посмотреть вакансии</a></div>
       </section>
 
-      <section class="service-finder service-finder--price page__container" id="price"><img class="service-finder__decor" src="assets/brake-disc.png" alt="" aria-hidden="true" width="1280" height="1280" /><div class="section-heading section-heading--compact"><h2 class="section-heading__title">Узнайте стоимость работ по своей модели</h2><p class="section-heading__text">Цены зависят от автомобиля, типа работ и необходимых запчастей. Выберите модель — сайт покажет доступные услуги, ориентировочную стоимость и варианты записи.</p></div><form class="finder-form finder-form--price" data-form="price"><label class="form-field form-field--select"><span class="form-field__label">Марка</span><select class="form-field__control" name="brand" required><option value="" selected disabled>Выбрать</option><option>Fiat</option><option>Ford</option></select></label><label class="form-field form-field--select"><span class="form-field__label">Модель</span><select class="form-field__control" name="model" required><option value="" selected disabled>Выбрать</option><option>Ducato</option><option>Transit</option></select></label><label class="form-field form-field--select"><span class="form-field__label">Услуга</span><select class="form-field__control" name="service" required><option value="" selected disabled>Выбрать</option><option>Ремонт</option><option>ТО</option></select></label><button class="button finder-form__button" type="submit">Посмотреть цены</button><p class="form-status" aria-live="polite"></p></form></section>
+      <section class="service-finder service-finder--price page__container" id="price"><img class="service-finder__decor" src="assets/brake-disc.png" alt="" aria-hidden="true" width="1280" height="1280" /><div class="section-heading section-heading--compact"><h2 class="section-heading__title">Узнайте стоимость работ по своей модели</h2><p class="section-heading__text">Цены зависят от автомобиля, типа работ и необходимых запчастей. Выберите модель — сайт покажет доступные услуги, ориентировочную стоимость и варианты записи.</p></div><form class="finder-form finder-form--price" data-form="price" data-estimate-form><label class="form-field form-field--select"><span class="form-field__label">Марка</span><select class="form-field__control" name="brand" required><option value="" selected disabled>Выбрать</option><option>Fiat</option><option>Ford</option></select></label><label class="form-field form-field--select"><span class="form-field__label">Модель</span><select class="form-field__control" name="model" required><option value="" selected disabled>Выбрать</option><option>Ducato</option><option>Transit</option></select></label><label class="form-field form-field--select"><span class="form-field__label">Услуга</span><select class="form-field__control" name="service" required><option value="" selected disabled>Выбрать</option><option>Ремонт</option><option>ТО</option></select></label><button class="button finder-form__button" type="button" data-estimate-dialog-open>Посмотреть цены</button><p class="form-status" aria-live="polite"></p></form></section>
 
       <section class="business-offer page__container" id="business">
         <div class="business-offer__content">
@@ -258,7 +258,7 @@
             <ul class="business-offer__audience-column"><li class="business-offer__audience-item"><span class="business-offer__user-icon" aria-hidden="true"><img class="business-offer__user-body" src="assets/business-user-body.svg" alt="" width="16" height="5" /><img class="business-offer__user-head" src="assets/business-user-head.svg" alt="" width="9" height="9" /></span><span>Сервисных служб</span></li><li class="business-offer__audience-item"><span class="business-offer__user-icon" aria-hidden="true"><img class="business-offer__user-body" src="assets/business-user-body.svg" alt="" width="16" height="5" /><img class="business-offer__user-head" src="assets/business-user-head.svg" alt="" width="9" height="9" /></span><span>Производственных компаний</span></li><li class="business-offer__audience-item"><span class="business-offer__user-icon" aria-hidden="true"><img class="business-offer__user-body" src="assets/business-user-body.svg" alt="" width="16" height="5" /><img class="business-offer__user-head" src="assets/business-user-head.svg" alt="" width="9" height="9" /></span><span>Производственных компаний</span></li></ul>
           </div></div>
           <ul class="business-offer__features"><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Подбор запчастей</span></li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Безналичная оплата</span></li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Закрывающие документы</span></li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Приоритетная запись</span></li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Обслуживание нескольких автомобилей</span></li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span><span>Персональная консультация по автопарку</span></li></ul>
-          <a class="button business-offer__button" href="#booking">Отправить заявку</a>
+          <a class="button business-offer__button" href="#booking" data-business-dialog-open>Отправить заявку</a>
         </div>
         <div class="business-offer__visual"><img class="business-offer__image" src="assets/business.jpg" alt="Обсуждение обслуживания корпоративного автопарка" width="1448" height="1086" /></div>
       </section>
@@ -428,6 +428,92 @@
         <span class="site-footer__developer">Разработан <img class="site-footer__developer-logo" src="assets/footer-developer-logo.svg" alt="IS ART" width="39" height="16" /></span>
       </div>
     </footer>
+    <dialog class="request-dialog request-dialog--booking" data-booking-dialog aria-labelledby="booking-dialog-title" tabindex="-1">
+      <img class="request-dialog__pattern" src="assets/booking-pattern.png" alt="" aria-hidden="true" width="752" height="505" />
+      <img class="request-dialog__bolt" src="assets/booking-bolt.png" alt="" aria-hidden="true" width="1280" height="1280" />
+      <button class="request-dialog__close" type="button" data-booking-dialog-close aria-label="Закрыть форму записи в техцентр"><img src="assets/vacancy-detail-close.svg" alt="" aria-hidden="true" width="24" height="24" /></button>
+
+      <div class="request-dialog__content">
+        <header class="request-dialog__heading">
+          <h2 class="request-dialog__title" id="booking-dialog-title">Запишитесь в AutoMD</h2>
+          <p class="request-dialog__description">Оставьте заявку — менеджер уточнит автомобиль, задачу и предложит удобное время для визита в техцентр.</p>
+        </header>
+
+        <form class="request-dialog__form" data-form="booking">
+          <div class="request-dialog__fields">
+            <label class="form-field request-dialog__field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field request-dialog__date-field"><span class="form-field__label">Удобная дата</span><span class="request-dialog__date-control"><input class="form-field__control request-dialog__date-input" name="date" type="date" required /><span class="request-dialog__date-placeholder" aria-hidden="true">Выбрать</span></span></label>
+            <label class="form-field form-field--select request-dialog__field"><span class="form-field__label">Удобный техцентр</span><select class="form-field__control" name="location" required><option value="" selected disabled>Выбрать</option><option>Пражская — ул. Красного Маяка, 16</option><option>Ховрино — Ижорская ул., 8с1</option></select></label>
+            <label class="form-field request-dialog__field request-dialog__field--wide"><span class="form-field__label">Комментарий</span><input class="form-field__control" name="comment" placeholder="Напишите" /></label>
+          </div>
+
+          <div class="request-dialog__actions">
+            <label class="request-dialog__consent"><input class="request-dialog__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия <a href="privacy.html">Политики конфиденциальности</a>, <a href="consent.html">Согласия на обработку персональных данных</a> и <a href="agreement.html">Пользовательского соглашения</a></span></label>
+            <button class="button request-dialog__submit" type="submit">Отправить</button>
+            <p class="form-status request-dialog__status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="request-dialog request-dialog--estimate" data-estimate-dialog aria-labelledby="estimate-dialog-title" tabindex="-1">
+      <img class="request-dialog__pattern" src="assets/booking-pattern.png" alt="" aria-hidden="true" width="752" height="505" />
+      <img class="request-dialog__bolt" src="assets/booking-bolt.png" alt="" aria-hidden="true" width="1280" height="1280" />
+      <button class="request-dialog__close" type="button" data-estimate-dialog-close aria-label="Закрыть форму расчета стоимости"><img src="assets/vacancy-detail-close.svg" alt="" aria-hidden="true" width="24" height="24" /></button>
+
+      <div class="request-dialog__content">
+        <header class="request-dialog__heading">
+          <h2 class="request-dialog__title" id="estimate-dialog-title">Получите расчет стоимости</h2>
+          <p class="request-dialog__description">Опишите задачу — менеджер сориентирует по стоимости работ, запчастям и ближайшему времени записи. Если потребуется диагностика, мы заранее объясним, почему она нужна.</p>
+        </header>
+
+        <form class="request-dialog__form" data-form="booking">
+          <div class="request-dialog__fields">
+            <label class="form-field request-dialog__field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+          </div>
+          <input type="hidden" name="brand" data-estimate-value="brand" />
+          <input type="hidden" name="model" data-estimate-value="model" />
+          <input type="hidden" name="service" data-estimate-value="service" />
+
+          <div class="request-dialog__actions">
+            <label class="request-dialog__consent"><input class="request-dialog__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия <a href="privacy.html">Политики конфиденциальности</a>, <a href="consent.html">Согласия на обработку персональных данных</a> и <a href="agreement.html">Пользовательского соглашения</a></span></label>
+            <button class="button request-dialog__submit" type="submit">Отправить</button>
+            <p class="form-status request-dialog__status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="request-dialog request-dialog--business" data-business-dialog aria-labelledby="business-dialog-title" tabindex="-1">
+      <img class="request-dialog__pattern" src="assets/booking-pattern.png" alt="" aria-hidden="true" width="752" height="505" />
+      <img class="request-dialog__bolt" src="assets/booking-bolt.png" alt="" aria-hidden="true" width="1280" height="1280" />
+      <button class="request-dialog__close" type="button" data-business-dialog-close aria-label="Закрыть форму для юридических лиц"><img src="assets/vacancy-detail-close.svg" alt="" aria-hidden="true" width="24" height="24" /></button>
+
+      <div class="request-dialog__content">
+        <header class="request-dialog__heading">
+          <h2 class="request-dialog__title" id="business-dialog-title">Оставьте заявку для юридических лиц</h2>
+          <p class="request-dialog__description">Расскажите, какие автомобили нужно обслуживать и какая задача стоит сейчас. Менеджер уточнит детали, подскажет формат работы и предложит удобный вариант записи.</p>
+        </header>
+
+        <form class="request-dialog__form" data-form="booking">
+          <div class="request-dialog__fields">
+            <label class="form-field request-dialog__field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field request-dialog__field--wide"><span class="form-field__label">Количество автомобилей</span><input class="form-field__control" name="vehicle_count" inputmode="numeric" pattern="[0-9]+" placeholder="Напишите" required /></label>
+            <label class="form-field request-dialog__field request-dialog__field--wide"><span class="form-field__label">Комментарий</span><input class="form-field__control" name="comment" placeholder="Напишите" /></label>
+          </div>
+
+          <div class="request-dialog__actions">
+            <label class="request-dialog__consent"><input class="request-dialog__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия <a href="privacy.html">Политики конфиденциальности</a>, <a href="consent.html">Согласия на обработку персональных данных</a> и <a href="agreement.html">Пользовательского соглашения</a></span></label>
+            <button class="button request-dialog__submit" type="submit">Отправить</button>
+            <p class="form-status request-dialog__status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
