@@ -13,8 +13,10 @@ import { initScrollPagination } from "./modules/scroll-pagination.js";
 import { initSliders } from "./modules/sliders.js";
 import { initCareerDialog } from "./modules/career-dialog.js";
 import { initVacancyDetailDialog } from "./modules/vacancy-detail-dialog.js";
+import { initVehicleMenu } from "./modules/vehicle-menu.js";
 
 initMobileMenu();
+initVehicleMenu();
 initArticleFilter();
 initModelCatalog();
 initPartSearch();
