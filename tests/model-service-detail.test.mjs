@@ -57,7 +57,7 @@ test("model service detail reuses established responsive components", () => {
     assert.match(markup, new RegExp(component.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.equal((markup.match(/class="service-price-list__item"/g) ?? []).length, 12);
   assert.equal((markup.match(/class="team-card"/g) ?? []).length, 5);
 });

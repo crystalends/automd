@@ -31,13 +31,13 @@ test("reviews page follows the Figma desktop section order", () => {
 });
 
 test("reviews page reuses established project components", () => {
-  assert.ok((markup.match(/<article class="review-card"/g) ?? []).length >= 12);
+  assert.ok((markup.match(/<article class="[^"]*\breview-card\b[^"]*"/g) ?? []).length >= 12);
   assert.equal((markup.match(/<figure class="review-book__card">/g) ?? []).length, 12);
   for (const component of ["site-header", "faq-request", "request-card", "about-seo", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${component}`));
   }
   assert.match(markup, /href="app\.css"/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("reviews page implements responsive content-driven layouts", () => {
@@ -59,8 +59,8 @@ test("reviews page implements responsive content-driven layouts", () => {
 test("reviews guide matches the Figma card geometry and visual variants", () => {
   assert.match(markup, /reviews-guide__card reviews-guide__card--related related-sections/);
   assert.match(styles, /\.reviews-guide__card--related\s*\{[^}]*background:\s*#fff[^}]*box-shadow:\s*inset 0 0 0 1px var\(--soft\)/s);
-  assert.match(styles, /\.reviews-guide__list li\s*\{[^}]*height:\s*59px[^}]*reviews-guide-pattern-right\.png/s);
-  assert.match(styles, /\.related-sections__links a\s*\{[^}]*height:\s*64px[^}]*reviews-guide-pattern-left\.png/s);
+  assert.match(styles, /\.reviews-guide__list-item:is\(li\)\s*\{[^}]*height:\s*59px[^}]*reviews-guide-pattern-right\.png/s);
+  assert.match(styles, /\.related-sections__links-link:is\(a\)\s*\{[^}]*height:\s*64px[^}]*reviews-guide-pattern-left\.png/s);
   assert.match(styles, /\.related-sections__button\s*\{[^}]*width:\s*265px/s);
   assert.match(styles, /border-radius:\s*var\(--radius\)/);
   for (const asset of ["reviews-guide-pattern-right.png", "reviews-guide-pattern-left.png", "reviews-guide-arrow.svg"]) {

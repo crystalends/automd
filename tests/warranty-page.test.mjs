@@ -37,8 +37,7 @@ test("warranty page reuses shared responsive components and ESM", () => {
   for (const component of ["site-header", "benefits", "faq-request", "request-card", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${component}`));
   }
-  assert.match(markup, /src="vendor\/swiper\/swiper-bundle\.min\.js"/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(markup, /data-form="booking"/);
 });
 
@@ -72,20 +71,20 @@ test("warranty layout is fluid and has a content-driven mobile reflow", () => {
   assert.match(markup, /class="warranty-section-heading warranty-process__heading"/);
   assert.match(styles, /\.warranty-process__heading\s*\{[^}]*gap:\s*20px/s);
   assert.match(styles, /\.warranty-process-card\s*\{[^}]*min-height:\s*373px/s);
-  assert.match(styles, /\.warranty-process-card__list li\s*\{[^}]*min-height:\s*39px[^}]*warranty-process-pattern\.png[^}]*305px 39px/s);
-  assert.match(styles, /@media \(max-width: 1199px\)[\s\S]*?\.warranty-process-card__list li\s*\{[^}]*height:\s*auto[^}]*min-height:\s*39px/s);
+  assert.match(styles, /\.warranty-process-card__list-item:is\(li\)\s*\{[^}]*min-height:\s*39px[^}]*warranty-process-pattern\.png[^}]*305px 39px/s);
+  assert.match(styles, /@media \(max-width: 1199px\)[\s\S]*?\.warranty-process-card__list-item:is\(li\)\s*\{[^}]*height:\s*auto[^}]*min-height:\s*39px/s);
   assert.match(styles, /\.warranty-return-card__title\s*\{[^}]*font-size:\s*40px[^}]*font-weight:\s*600[^}]*line-height:\s*1\.1/s);
   assert.match(styles, /\.warranty-return-card__heading\s*\{[^}]*min-height:\s*130px[^}]*gap:\s*10px/s);
   assert.match(styles, /\.warranty-return-card--non-returnable \.warranty-return-card__heading\s*\{[^}]*min-height:\s*120px/s);
   assert.match(styles, /\.warranty-return-card__note\s*\{[^}]*font-size:\s*14px/s);
   assert.match(styles, /\.warranty-return-card__list\s*\{[^}]*gap:\s*10px 20px/s);
-  assert.match(styles, /\.warranty-return-card__list li\s*\{[^}]*min-height:\s*64px[^}]*warranty-return-pattern-positive\.png/s);
-  assert.match(styles, /\.warranty-return-card__list--negative li\s*\{[^}]*warranty-return-pattern-negative-short\.png/s);
+  assert.match(styles, /\.warranty-return-card__list-item:is\(li\)\s*\{[^}]*min-height:\s*64px[^}]*warranty-return-pattern-positive\.png/s);
+  assert.match(styles, /\.warranty-return-card__list--negative :where\(\.warranty-return-card__list-item\):is\(li\)\s*\{[^}]*warranty-return-pattern-negative-short\.png/s);
   assert.match(styles, /@media \(max-width: 1199px\)[\s\S]*?\.warranty-return-card,[\s\S]*?height:\s*auto/s);
   assert.match(markup, /class="warranty-check-list warranty-exclusions__list"/);
   assert.match(styles, /\.warranty-exclusions__heading\s*\{[^}]*min-height:\s*98px/s);
-  assert.match(styles, /\.warranty-exclusions__list li\s*\{[^}]*display:\s*flex[^}]*min-height:\s*24px/s);
-  assert.match(styles, /\.warranty-check-list\.warranty-exclusions__list li::before\s*\{[^}]*content:\s*none/s);
+  assert.match(styles, /\.warranty-exclusions__list-item:is\(li\)\s*\{[^}]*display:\s*flex[^}]*min-height:\s*24px/s);
+  assert.match(styles, /\.warranty-exclusions__list-item\.warranty-check-list__item:is\(li\)::before\s*\{[^}]*content:\s*none/s);
   assert.match(styles, /\.warranty-exclusions__note\s*\{[^}]*font-size:\s*16px/s);
   assert.match(styles, /\.warranty-memo__grid\s*\{[^}]*grid-template-columns:\s*repeat\(3, minmax\(0, 1fr\)\)[^}]*gap:\s*20px/s);
   assert.match(styles, /\.warranty-memo-card\s*\{[^}]*min-height:\s*120px[^}]*padding:\s*20px[^}]*border:\s*1px solid var\(--line\)[^}]*border-radius:\s*var\(--radius\)/s);
@@ -97,11 +96,11 @@ test("warranty layout is fluid and has a content-driven mobile reflow", () => {
     /\.warranty-hero\s*\{[^}]*\}/,
     /\.warranty-overview\s*\{[^}]*\}/,
     /\.warranty-process-card\s*\{[^}]*\}/,
-    /\.warranty-process-card__list li\s*\{[^}]*\}/,
+    /\.warranty-process-card__list-item:is\(li\)\s*\{[^}]*\}/,
     /\.warranty-exclusions__heading\s*\{[^}]*\}/,
     /\.warranty-return-card\s*\{[^}]*\}/,
     /\.warranty-return-card__heading\s*\{[^}]*\}/,
-    /\.warranty-return-card__list li\s*\{[^}]*\}/,
+    /\.warranty-return-card__list-item:is\(li\)\s*\{[^}]*\}/,
     /\.warranty-memo-card\s*\{[^}]*\}/,
   ]) {
     const rule = styles.match(rulePattern)?.[0] ?? "";

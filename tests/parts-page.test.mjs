@@ -41,7 +41,7 @@ test("parts page reuses shared project components and ESM", () => {
   for (const block of ["site-header", "booking", "benefits", "team", "faq-request", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${block}`));
   }
-  assert.match(markup, /src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(entrypoint, /initPartSearch/);
   assert.match(entrypoint, /initForms/);
   assert.match(entrypoint, /initSliders/);
@@ -115,7 +115,7 @@ test("parts booking matches the Figma parts request form", () => {
   const markup = read("parts.html");
   const styles = read("parts-page.css");
 
-  assert.match(markup, /class="booking booking--parts page__container"/);
+  assert.match(markup, /class="booking booking--parts layout-container"/);
   assert.match(markup, />Марка<\/span>/);
   assert.match(markup, />Модель<\/span>/);
   assert.match(markup, />Название детали или артикул<\/span>/);
@@ -126,7 +126,7 @@ test("parts booking matches the Figma parts request form", () => {
   assert.match(styles, /\.booking--parts \.booking__bearing\s*\{[^}]*animation:\s*none[^}]*transform:\s*rotate\(0\.321rad\)/s);
   assert.match(styles, /\.booking--parts \.booking__bolt\s*\{[^}]*animation:\s*none/s);
   assert.match(styles, /\.booking__bearing-glow\s*\{[^}]*background:\s*radial-gradient/s);
-  assert.match(styles, /\.booking--parts \.booking-form__field--wide\s*\{[^}]*grid-column:\s*1 \/ -1/s);
+  assert.match(styles, /\.booking-form__field--wide\.booking__field\s*\{[^}]*grid-column:\s*1 \/ -1/s);
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.booking--parts \.booking__bearing\s*\{[^}]*top:\s*663px[^}]*left:\s*240px[^}]*width:\s*197px[^}]*transform:\s*none/s);
 });
 
@@ -215,12 +215,12 @@ test("parts store promo matches the Figma desktop geometry and icon", () => {
   const markup = read("parts.html");
   const styles = read("parts-page.css");
 
-  assert.match(markup, /class="parts-promo page__container"/);
+  assert.match(markup, /class="parts-promo layout-container"/);
   assert.match(markup, /class="parts-promo__image" src="assets\/business\.jpg"/);
   assert.ok(existsSync(resolve(projectRoot, "assets/parts-promo-check.svg")));
   assert.match(styles, /\.parts-promo\s*\{[^}]*min-height:\s*490px[^}]*grid-template-columns:[^;]*788px[^}]*padding-left:\s*40px/s);
   assert.match(styles, /\.parts-promo__content\s*\{[^}]*gap:\s*30px[^}]*padding:\s*60px 0/s);
-  assert.match(styles, /\.parts-promo__features li::before\s*\{[^}]*width:\s*24px[^}]*height:\s*24px[^}]*parts-promo-check\.svg/s);
+  assert.match(styles, /\.parts-promo__features-item:is\(li\)::before\s*\{[^}]*width:\s*24px[^}]*height:\s*24px[^}]*parts-promo-check\.svg/s);
 });
 
 test("parts categories match the Figma grid, content, and icon", () => {

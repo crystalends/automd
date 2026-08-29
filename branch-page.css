@@ -100,11 +100,11 @@
   gap: 40px;
 }
 
-.branch-contact-card .location-card__details {
+.location-card__details.branch-contact-card__details {
   gap: 20px;
 }
 
-.branch-contact-card .location-card__value {
+.location-card__value.branch-contact-card__value {
   margin: 0;
 }
 
@@ -181,13 +181,13 @@
   gap: 10px;
 }
 
-.branch-overview__heading .branch-section-title {
+.branch-section-title.branch-overview__heading-branch-section-title {
   font-size: 32px;
   font-weight: 500;
   line-height: 1.2;
 }
 
-.branch-overview__heading p {
+.branch-overview__heading-text:is(p) {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
@@ -205,12 +205,12 @@
   list-style: none;
 }
 
-.branch-overview__list li {
+.branch-overview__list-item:is(li) {
   padding-bottom: 5px;
   border-bottom: 1px solid var(--line);
 }
 
-.branch-overview__list li:last-child {
+.branch-overview__list-item:is(li):last-child {
   border-bottom: 0;
 }
 
@@ -218,7 +218,7 @@
   min-height: 550px;
 }
 
-.branch-overview__visual .benefits-slider__pagination {
+.benefits-slider__pagination.branch-overview__visual-pagination {
   margin: 0 auto;
 }
 
@@ -246,7 +246,7 @@
   gap: 20px;
 }
 
-.branch-directions__heading p {
+.branch-directions__heading-text:is(p) {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
@@ -306,15 +306,15 @@
   min-height: 486px;
 }
 
-.branch-services .brand-services__grid {
+.brand-services__grid.branch-services__grid {
   margin-top: 20px;
 }
 
-.branch-services .brand-services__pagination {
+.brand-services__pagination.branch-services__pagination {
   display: none;
 }
 
-.branch-services .brand-services__dot {
+.brand-services__dot.branch-services__dot {
   flex: 0 0 6px;
   padding: 0;
   border: 0;
@@ -335,13 +335,13 @@
     grid-template-columns: 340px minmax(0, 1fr);
   }
 
-  .branch-overview__heading .branch-section-title {
+  .branch-section-title.branch-overview__heading-branch-section-title {
     font-size: 28px;
   }
 
-  .branch-overview__heading p,
+  .branch-overview__heading-text:is(p),
   .branch-overview__list,
-  .branch-directions__heading p,
+  .branch-directions__heading-text:is(p),
   .branch-step {
     font-size: 16px;
   }
@@ -370,7 +370,7 @@
   }
 
   .branch-contact-card__button,
-  .branch-contact-card .branch-outline-button {
+  .branch-outline-button.branch-contact-card__branch-outline-button {
     width: 100%;
   }
 
@@ -396,7 +396,7 @@
     padding-bottom: 16px;
   }
 
-  .branch-page .page__container,
+  .branch-page .layout-container,
   .branch-breadcrumb {
     width: auto;
     margin-right: 16px;
@@ -450,7 +450,7 @@
     padding: 20px;
   }
 
-  .branch-contact-card .location-card__details {
+  .location-card__details.branch-contact-card__details {
     gap: 16px;
   }
 
@@ -459,7 +459,7 @@
   }
 
   .branch-contact-card__button,
-  .branch-contact-card .branch-outline-button {
+  .branch-outline-button.branch-contact-card__branch-outline-button {
     width: 100%;
   }
 
@@ -479,13 +479,13 @@
     background: var(--soft);
   }
 
-  .branch-overview__heading .branch-section-title {
+  .branch-section-title.branch-overview__heading-branch-section-title {
     font-size: 26px;
   }
 
-  .branch-overview__heading p,
+  .branch-overview__heading-text:is(p),
   .branch-overview__list,
-  .branch-directions__heading p,
+  .branch-directions__heading-text:is(p),
   .branch-step {
     font-size: 16px;
   }
@@ -530,7 +530,7 @@
     aspect-ratio: 644 / 372;
   }
 
-  .branch-services .brand-services__pagination {
+  .brand-services__pagination.branch-services__pagination {
     display: flex;
   }
 
@@ -546,7 +546,7 @@
 }
 
 @media (max-width: 359px) {
-  .branch-page .page__container,
+  .branch-page .layout-container,
   .branch-breadcrumb {
     margin-right: 8px;
     margin-left: 8px;

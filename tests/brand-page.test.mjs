@@ -42,7 +42,7 @@ test("brand page uses a fluid four-column desktop model grid", () => {
 
 test("brand page implements the 390px Figma composition without changing desktop", () => {
   assert.match(styles, /@media \(max-width: 767px\)/);
-  assert.match(styles, /\.brand-page \.page__container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
+  assert.match(styles, /\.brand-page \.layout-container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
   assert.match(styles, /\.brand-page \.site-header\s*\{[^}]*z-index:\s*20/s);
   assert.match(styles, /\.brand-models__grid\s*\{[^}]*repeat\(2, minmax\(0, 1fr\)\)/s);
   assert.match(styles, /\.brand-service-card\s*\{[^}]*flex:\s*0 0 100%[^}]*scroll-snap-align:\s*start/s);
@@ -141,9 +141,9 @@ test("mobile services carousel matches the complete Figma cards", () => {
   assert.match(styles, /assets\/brand-service-check\.svg/);
   assert.match(styles, /assets\/brand-service-expand\.svg/);
   assert.match(styles, /\.brand-service-card\s*\{[^}]*height:\s*auto[^}]*min-height:\s*657px/s);
-  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li:nth-child\(7\)\s*\{[^}]*flex:\s*0 0 auto/s);
-  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details li\s*\{[^}]*white-space:\s*normal/s);
-  assert.match(styles, /\.brand-service-card--links \.brand-service-card__details li\s*\{[^}]*min-height:\s*24px/s);
+  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details-item:is\(li\):nth-child\(7\)\s*\{[^}]*flex:\s*0 0 auto/s);
+  assert.match(styles, /\.brand-service-card:nth-child\(5\) \.brand-service-card__details-item:is\(li\)\s*\{[^}]*white-space:\s*normal/s);
+  assert.match(styles, /\.brand-service-card--links \.brand-service-card__details-item:is\(li\)\s*\{[^}]*min-height:\s*24px/s);
 });
 
 test("brand and services pages share interactive 6px service pagination", () => {

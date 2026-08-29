@@ -60,14 +60,14 @@
 }
 
 .prices-hero__title,
-.prices-hero__copy p,
+.prices-hero__copy-text:is(p),
 .price-catalog__title,
 .price-catalog__description,
 .price-catalog__note,
 .price-details__title,
 .price-details__text,
 .price-seo__title,
-.price-seo__copy p {
+.price-seo__copy-text:is(p) {
   margin: 0;
 }
 
@@ -110,7 +110,7 @@
   list-style: none;
 }
 
-.prices-hero__benefits li {
+.prices-hero__benefits-item:is(li) {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -122,12 +122,12 @@
   flex: 0 0 24px;
 }
 
-.prices-hero__benefits li:nth-child(1) { width: 323px; }
-.prices-hero__benefits li:nth-child(2) { width: 327px; }
-.prices-hero__benefits li:nth-child(3) { width: 306px; }
-.prices-hero__benefits li:nth-child(4) { width: 257px; }
-.prices-hero__benefits li:nth-child(5) { width: 395px; }
-.prices-hero__benefits li:nth-child(6) { width: 210px; }
+.prices-hero__benefits-item:is(li):nth-child(1) { width: 323px; }
+.prices-hero__benefits-item:is(li):nth-child(2) { width: 327px; }
+.prices-hero__benefits-item:is(li):nth-child(3) { width: 306px; }
+.prices-hero__benefits-item:is(li):nth-child(4) { width: 257px; }
+.prices-hero__benefits-item:is(li):nth-child(5) { width: 395px; }
+.prices-hero__benefits-item:is(li):nth-child(6) { width: 210px; }
 
 .business-offer--prices .business-offer__feature {
   display: flex;
@@ -165,7 +165,7 @@
   width: min(998px, 68%);
 }
 
-.price-quote__heading .section-heading__text {
+.section-heading__text.price-quote__heading-text {
   font-size: 16px;
 }
 
@@ -183,7 +183,7 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.price-quote .booking-form__field--wide {
+.booking-form__field--wide.price-quote__field {
   grid-column: 1 / -1;
 }
 
@@ -300,7 +300,7 @@
   display: none;
 }
 
-.price-catalog__row strong {
+.price-catalog__row-title:is(strong) {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -454,7 +454,7 @@
   gap: 10px;
 }
 
-.price-details__actions .button,
+.button.price-details__actions-button,
 .price-details__secondary {
   width: 316px;
   min-height: 46px;
@@ -598,7 +598,7 @@
 @media (max-width: 767px) {
   .prices-page { --prices-section-gap: 40px; }
   .prices-page::before { height: 900px; background-position: 35% top; opacity: 0.7; }
-  .prices-page .page__container,
+  .prices-page .layout-container,
   .price-breadcrumb { width: auto; margin-right: 16px; margin-left: 16px; }
   .price-breadcrumb { display: none; }
   .prices-hero { min-height: 819px; padding-top: 62px; }
@@ -607,8 +607,8 @@
   .prices-hero__title { height: auto; font-size: 40px; font-weight: 500; line-height: 1.05; letter-spacing: -0.4px; }
   .prices-hero__copy { min-height: 0; margin-top: 20px; font-size: 16px; line-height: 1.2; }
   .prices-hero__benefits { min-height: 0; flex-direction: column; flex-wrap: nowrap; gap: 10px; font-size: 16px; }
-  .prices-hero__benefits li:nth-child(n) { width: auto; }
-  .prices-hero__benefits li { align-items: flex-start; }
+  .prices-hero__benefits-item:is(li):nth-child(n) { width: auto; }
+  .prices-hero__benefits-item:is(li) { align-items: flex-start; }
   .prices-hero__button { width: 280px; }
 
   .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: 62px; padding: 20px; }
@@ -617,11 +617,11 @@
   .price-quote__heading { width: 100%; }
   .price-quote__heading--mobile { display: block; }
   .price-quote__form--mobile { display: flex; }
-  .price-quote__heading .section-heading__title { font-size: 32px; font-weight: 500; }
+  .section-heading__title.price-quote__heading-title { font-size: 32px; font-weight: 500; }
   .price-quote__vehicle { display: none; }
   .price-quote__bearing { top: 663px; right: auto; left: 240px; width: 197px; animation-duration: 2s; }
   .price-quote__bolt { top: 705px; right: auto; left: 184px; width: 198px; }
-  .price-quote .booking__pattern--mobile { display: block; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); object-fit: fill; }
+  .booking__pattern--mobile.price-quote__pattern { display: block; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); object-fit: fill; }
 
   .price-catalog__heading { width: 100%; min-height: 0; }
   .price-catalog { gap: 30px; }
@@ -638,7 +638,7 @@
   .price-catalog__list { gap: 0; margin-top: 20px; border-top: 1px solid var(--line); }
   .price-catalog__row,
   .price-catalog__row:nth-child(odd) { height: auto; min-height: 49px; gap: 16px; padding: 1px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; font-size: 14px; }
-  .price-catalog__row strong { font-family: Geologica, sans-serif; font-size: 16px; font-weight: 500; }
+  .price-catalog__row-title:is(strong) { font-family: Geologica, sans-serif; font-size: 16px; font-weight: 500; }
   .price-catalog__more { width: 202px; }
 
   .price-details { display: flex; flex-direction: column; gap: 20px; }
@@ -655,7 +655,7 @@
   .price-details__parts-content { justify-content: flex-start; padding: 20px; }
   .price-details__heading--parts { width: 100%; }
   .price-details__actions { width: 100%; align-items: flex-start; margin-top: 20px; }
-  .price-details__actions .button { width: 100%; min-height: 46px; padding: 14px 20px; }
+  .button.price-details__actions-button { width: 100%; min-height: 46px; padding: 14px 20px; }
   .price-details__secondary { display: inline-flex; width: 100%; min-height: 46px; align-items: center; justify-content: center; padding: 12px 20px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); }
 
   .business-offer--prices { height: auto; min-height: 813px; gap: 0; padding-left: 0; }
@@ -676,7 +676,7 @@
 }
 
 @media (max-width: 359px) {
-  .prices-page .page__container { margin-right: 8px; margin-left: 8px; }
+  .prices-page .layout-container { margin-right: 8px; margin-left: 8px; }
   .prices-hero__title { font-size: 36px; }
   .prices-hero__button { width: 100%; }
   .price-catalog__row { grid-template-columns: minmax(0, 1fr) 92px; }

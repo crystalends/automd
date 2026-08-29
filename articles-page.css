@@ -95,8 +95,8 @@
   line-height: 1.2;
 }
 
-.articles-hero__copy p,
-.articles-seo__copy p {
+.articles-hero__copy-text:is(p),
+.articles-seo__copy-text:is(p) {
   margin: 0;
 }
 
@@ -309,7 +309,7 @@
     padding-bottom: 0;
   }
 
-  .articles-page .page__container,
+  .articles-page .layout-container,
   .articles-breadcrumb {
     width: calc(100vw - 32px);
     margin-right: 16px;
@@ -389,7 +389,7 @@
 }
 
 @media (max-width: 359px) {
-  .articles-page .page__container,
+  .articles-page .layout-container,
   .articles-breadcrumb {
     width: calc(100vw - 24px);
     margin-right: 12px;

@@ -44,7 +44,7 @@ test("services page reuses shared components and focused ESM", () => {
   for (const component of ["promo-banner", "business-offer", "benefits", "faq-request", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${component}`));
   }
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("new services blocks preserve the Figma composition", () => {
@@ -115,7 +115,7 @@ test("services layout is fluid and has content-driven mobile layouts", () => {
   assert.match(brandMobileStyles, /\.brand-services__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto/s);
   assert.match(brandMobileStyles, /\.brand-service-card\s*\{[^}]*flex:\s*0 0 100%[^}]*scroll-snap-align:\s*start/s);
   assert.match(mobileStyles, /\.popular-services__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto/s);
-  assert.match(mobileStyles, /\.services-vehicles \.vehicle-list__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto/s);
+  assert.match(mobileStyles, /\.vehicle-list__grid\.services-vehicles__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto/s);
   assert.match(mobileStyles, /\.services-page \.business-offer\s*\{[^}]*flex-direction:\s*column/s);
 });
 

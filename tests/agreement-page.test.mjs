@@ -29,8 +29,8 @@ test("legal pages share one responsive BEM implementation", () => {
   for (const pageMarkup of [markup, consentMarkup]) {
     assert.match(pageMarkup, /href="app\.css"/);
     assert.match(pageMarkup, /class="legal-page"/);
-    assert.match(pageMarkup, /class="legal-hero page__container"/);
-    assert.match(pageMarkup, /class="legal-content page__container"/);
+    assert.match(pageMarkup, /class="legal-hero layout-container"/);
+    assert.match(pageMarkup, /class="legal-content layout-container"/);
   }
 
   assert.match(styles, /\.legal-hero\s*\{[^}]*width:\s*min\(1195px, var\(--container\)\)[^}]*min-height:\s*156px/s);

@@ -38,7 +38,7 @@ test("branch page reuses established project blocks and shared ESM", () => {
   assert.equal((markup.match(/<article class="brand-service-card/g) ?? []).length, 6);
   assert.match(markup, /class="faq-request /);
   assert.match(markup, /class="request-card"/);
-  assert.match(markup, /type="module" src="js\/main\.js(?:\?[^\"]+)?"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("branch page implements the route and branch-specific content", () => {

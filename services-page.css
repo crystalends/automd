@@ -162,7 +162,7 @@
 }
 
 .services-hero__title,
-.services-hero__description p {
+.services-hero__description-text:is(p) {
   margin: 0;
 }
 
@@ -186,11 +186,11 @@
   margin-top: 0;
 }
 
-.services-finder .section-heading {
+.section-heading.services-finder__section-heading {
   margin-bottom: 0;
 }
 
-.services-finder .finder-form {
+.finder-form.services-finder__finder-form {
   width: 100%;
 }
 
@@ -198,7 +198,7 @@
   margin-top: var(--services-section-gap);
 }
 
-.services-promo .promo-banner__slide {
+.promo-banner__slide.services-promo__slide {
   aspect-ratio: 1600 / 518;
 }
 
@@ -259,28 +259,28 @@
   text-align: center;
 }
 
-.popular-service-card__content strong {
+.popular-service-card__content-title:is(strong) {
   font-family: Geologica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.popular-service-card__content small {
+.popular-service-card__content-description:is(small) {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
 }
 
-.services-vehicles .vehicle-list__grid {
+.vehicle-list__grid.services-vehicles__grid {
   margin-top: 20px;
 }
 
-.services-vehicles .vehicle-card {
+.vehicle-card.services-vehicles__vehicle-card {
   min-height: 350px;
 }
 
-.services-vehicles .vehicle-card__image {
+.vehicle-card__image.services-vehicles__image {
   height: 200px;
 }
 
@@ -319,7 +319,7 @@
   gap: 10px;
 }
 
-.service-prices__heading p {
+.service-prices__heading-text:is(p) {
   width: min(1060px, 100%);
   margin: 0;
   color: var(--muted);
@@ -352,7 +352,7 @@
   background: var(--soft);
 }
 
-.service-price-list__item strong {
+.service-price-list__item-title:is(strong) {
   flex: 0 0 auto;
   font-weight: 400;
   white-space: nowrap;
@@ -400,7 +400,7 @@
     width: min(680px, 48%);
   }
 
-  .popular-service-card__content strong {
+  .popular-service-card__content-title:is(strong) {
     font-size: 20px;
   }
 }
@@ -519,17 +519,17 @@
     padding: 20px;
   }
 
-  .services-finder .section-heading__title,
+  .section-heading__title.services-finder__title,
   .services-section-title {
     font-size: 32px;
     line-height: 1.2;
   }
 
-  .services-finder .section-heading__text {
+  .section-heading__text.services-finder__text {
     font-size: 14px;
   }
 
-  .services-promo .promo-banner__slide {
+  .promo-banner__slide.services-promo__slide {
     aspect-ratio: 16 / 7;
   }
 
@@ -556,15 +556,15 @@
     scroll-snap-align: start;
   }
 
-  .popular-service-card__content strong {
+  .popular-service-card__content-title:is(strong) {
     font-size: 18px;
   }
 
-  .popular-service-card__content small {
+  .popular-service-card__content-description:is(small) {
     font-size: 12px;
   }
 
-  .services-vehicles .vehicle-list__grid {
+  .vehicle-list__grid.services-vehicles__grid {
     display: flex;
     gap: 10px;
     margin-right: -16px;
@@ -576,18 +576,18 @@
     scrollbar-width: none;
   }
 
-  .services-vehicles .vehicle-list__grid::-webkit-scrollbar {
+  .vehicle-list__grid.services-vehicles__grid::-webkit-scrollbar {
     display: none;
   }
 
-  .services-vehicles .vehicle-card {
+  .vehicle-card.services-vehicles__vehicle-card {
     width: 210px;
     min-height: 320px;
     flex: 0 0 210px;
     scroll-snap-align: start;
   }
 
-  .services-vehicles .vehicle-card__image {
+  .vehicle-card__image.services-vehicles__image {
     height: 180px;
   }
 
@@ -595,7 +595,7 @@
     align-items: stretch;
   }
 
-  .service-prices__heading p {
+  .service-prices__heading-text:is(p) {
     font-size: 16px;
   }
 
@@ -606,7 +606,7 @@
     font-size: 14px;
   }
 
-  .service-price-list__item span {
+  .service-price-list__item-value:is(span) {
     min-width: 0;
   }
 
@@ -650,7 +650,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .popular-services__grid,
-  .services-vehicles .vehicle-list__grid {
+  .vehicle-list__grid.services-vehicles__grid {
     scroll-behavior: auto;
   }
 }

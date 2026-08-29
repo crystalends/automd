@@ -30,7 +30,7 @@
   gap: 20px;
 }
 
-.diagnostics-hero__actions .brand-outline-button {
+.brand-outline-button.diagnostics-hero__actions-brand-outline-button {
   min-height: 56px;
   padding: 19px 40px;
 }
@@ -120,19 +120,19 @@
   text-align: center;
 }
 
-.diagnostics-type-card h3,
-.diagnostics-type-card p {
+.diagnostics-type-card__title:is(h3),
+.diagnostics-type-card__text:is(p) {
   margin: 0;
 }
 
-.diagnostics-type-card h3 {
+.diagnostics-type-card__title:is(h3) {
   font-family: Geologica, sans-serif;
   font-size: clamp(19px, 1.25vw, 24px);
   font-weight: 400;
   line-height: 1.2;
 }
 
-.diagnostics-type-card p {
+.diagnostics-type-card__text:is(p) {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
@@ -161,7 +161,7 @@
   line-height: 1.2;
 }
 
-.diagnostics-need__copy p {
+.diagnostics-need__copy-text:is(p) {
   margin: 0;
 }
 
@@ -189,7 +189,7 @@
   pointer-events: none;
 }
 
-.diagnostics-need__signs li {
+.diagnostics-need__signs-item:is(li) {
   position: relative;
   z-index: 1;
   display: flex;
@@ -200,7 +200,7 @@
   line-height: 1.2;
 }
 
-.diagnostics-need__signs li::before {
+.diagnostics-need__signs-item:is(li)::before {
   width: 16px;
   aspect-ratio: 1;
   flex: 0 0 16px;
@@ -224,7 +224,7 @@
   list-style: none;
 }
 
-.diagnostics-process__grid li {
+.diagnostics-process__grid-item:is(li) {
   position: relative;
   display: grid;
   min-width: 0;
@@ -240,7 +240,7 @@
   line-height: 1.2;
 }
 
-.diagnostics-process__grid li::after {
+.diagnostics-process__grid-item:is(li)::after {
   position: absolute;
   z-index: 0;
   inset: 0 0 0 52%;
@@ -249,12 +249,12 @@
   opacity: 0.06;
 }
 
-.diagnostics-process__grid span,
-.diagnostics-process__grid li {
+.diagnostics-process__grid-value:is(span),
+.diagnostics-process__grid-item:is(li) {
   isolation: isolate;
 }
 
-.diagnostics-process__grid span {
+.diagnostics-process__grid-value:is(span) {
   color: var(--red);
   font-size: 20px;
 }
@@ -283,14 +283,14 @@
   background: #fff;
 }
 
-.diagnostics-vehicle-card img {
+.diagnostics-vehicle-card__image:is(img) {
   width: 100%;
   aspect-ratio: 21 / 20;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.diagnostics-vehicle-card h3 {
+.diagnostics-vehicle-card__title:is(h3) {
   margin: 0;
   font-family: Geologica, sans-serif;
   font-size: clamp(19px, 1.25vw, 24px);
@@ -305,11 +305,11 @@
   font-size: 18px;
 }
 
-.diagnostics-vehicle-card--all img {
+.diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__image):is(img) {
   object-fit: contain;
 }
 
-.diagnostics-vehicle-card--all span {
+.diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__value):is(span) {
   display: flex;
   width: 100%;
   align-items: center;
@@ -317,7 +317,7 @@
   gap: 12px;
 }
 
-.diagnostics-page .service-detail-promo .promo-banner__slide {
+.diagnostics-page .promo-banner__slide.service-detail-promo__slide {
   aspect-ratio: 1600 / 518;
 }
 
@@ -335,7 +335,7 @@
   gap: 10px 20px;
 }
 
-.diagnostics-parts__tags a {
+.diagnostics-parts__tags-link:is(a) {
   padding: 10px 20px;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -360,7 +360,7 @@
   gap: 10px;
 }
 
-.related-services__heading p {
+.related-services__heading-text:is(p) {
   margin: 0;
   color: var(--muted);
   font-size: 16px;
@@ -385,7 +385,7 @@
   background: #fff;
 }
 
-.related-service-card img {
+.related-service-card__image:is(img) {
   width: 60px;
   aspect-ratio: 1;
   border-radius: 10px;
@@ -401,20 +401,20 @@
   text-align: center;
 }
 
-.related-service-card strong {
+.related-service-card__title:is(strong) {
   font-family: Geologica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.related-service-card small {
+.related-service-card__description:is(small) {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
 }
 
-.related-service-card b {
+.related-service-card__arrow:is(b) {
   color: var(--muted);
   font-family: Geologica, sans-serif;
   font-size: 24px;
@@ -470,7 +470,7 @@
     width: 54px;
   }
 
-  .diagnostics-type-card h3 {
+  .diagnostics-type-card__title:is(h3) {
     font-size: 19px;
   }
 
@@ -530,16 +530,16 @@
     gap: 40px;
   }
 
-  .diagnostics-hero__content .services-hero__intro {
+  .services-hero__intro.diagnostics-hero__content-intro {
     gap: 20px;
   }
 
-  .diagnostics-hero__content .services-hero__title {
+  .services-hero__title.diagnostics-hero__content-title {
     line-height: 1.1;
     letter-spacing: 0;
   }
 
-  .diagnostics-hero__content .services-hero__description {
+  .services-hero__description.diagnostics-hero__content-description {
     line-height: 19px;
   }
 
@@ -549,8 +549,8 @@
     align-items: flex-start;
   }
 
-  .diagnostics-hero__actions .button,
-  .diagnostics-hero__actions .brand-outline-button {
+  .button.diagnostics-hero__actions-button,
+  .brand-outline-button.diagnostics-hero__actions-brand-outline-button {
     width: fit-content;
     max-width: 100%;
     min-width: 0;
@@ -561,21 +561,21 @@
     text-align: center;
   }
 
-  .diagnostics-hero__actions .button {
+  .button.diagnostics-hero__actions-button {
     padding-top: 18px;
     padding-bottom: 18px;
   }
 
-  .diagnostics-hero__actions .brand-outline-button {
+  .brand-outline-button.diagnostics-hero__actions-brand-outline-button {
     padding-top: 19px;
     padding-bottom: 19px;
   }
 
-  .diagnostics-hero__actions .button {
+  .button.diagnostics-hero__actions-button {
     width: 100%;
   }
 
-  .diagnostics-hero__actions .brand-outline-button {
+  .brand-outline-button.diagnostics-hero__actions-brand-outline-button {
     width: min(253px, 100%);
   }
 
@@ -633,7 +633,7 @@
     grid-template-columns: 1fr;
   }
 
-  .diagnostics-process__grid li {
+  .diagnostics-process__grid-item:is(li) {
     font-size: 16px;
   }
 
@@ -641,7 +641,7 @@
     padding-bottom: 20px;
   }
 
-  .diagnostics-parts__tags a {
+  .diagnostics-parts__tags-link:is(a) {
     text-align: left;
   }
 
@@ -691,11 +691,11 @@
   }
 
   .diagnostics-type-card__image,
-  .related-service-card img {
+  .related-service-card__image:is(img) {
     width: 48px;
   }
 
-  .related-service-card b {
+  .related-service-card__arrow:is(b) {
     display: none;
   }
 }

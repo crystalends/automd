@@ -57,7 +57,7 @@
   line-height: 22px;
 }
 
-.model-service-summary__copy p {
+.model-service-summary__copy-text:is(p) {
   margin: 0;
 }
 
@@ -81,8 +81,8 @@
     aspect-ratio: auto;
   }
 
-  .model-service-detail-page .service-detail-parts .brand-section-heading p,
-  .model-service-detail-page .service-detail-seo .brand-seo__copy {
+  .model-service-detail-page .brand-section-heading__text.service-detail-parts__text:is(p),
+  .model-service-detail-page .brand-seo__copy.service-detail-seo__copy {
     line-height: 22px;
   }
 

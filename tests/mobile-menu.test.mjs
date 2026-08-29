@@ -86,10 +86,8 @@ test("all exact Figma interface icons are stored locally", () => {
   assert.doesNotMatch(moduleSource, /figma\.com\/api\/mcp\/asset/);
 });
 
-test("both site entrypoints initialize the shared mobile menu", () => {
-  for (const file of ["js/main.js", "js/error-page.js"]) {
-    const source = read(file);
-    assert.match(source, /import \{ initMobileMenu \} from "\.\/modules\/mobile-menu\.js"/);
-    assert.match(source, /initMobileMenu\(\)/);
-  }
+test("the shared site entrypoint initializes the mobile menu", () => {
+  const source = read("js/main.js");
+  assert.match(source, /import \{ initMobileMenu \} from "\.\/modules\/mobile-menu\.js"/);
+  assert.match(source, /initMobileMenu\(\)/);
 });

@@ -75,7 +75,7 @@
   line-height: 1.2;
 }
 
-.promotions-hero__description p {
+.promotions-hero__description-text:is(p) {
   margin: 0;
 }
 
@@ -289,13 +289,13 @@
   list-style: none;
 }
 
-.special-offer-card__features li {
+.special-offer-card__features-item:is(li) {
   display: flex;
   align-items: center;
   white-space: normal;
 }
 
-.special-offer-card__features li::before {
+.special-offer-card__features-item:is(li)::before {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -431,11 +431,11 @@
   gap: 20px;
 }
 
-.request-card .form-field--select {
+.form-field--select.request-card__form-field {
   position: relative;
 }
 
-.request-card .form-field--select::after {
+.form-field--select.request-card__form-field::after {
   position: absolute;
   right: 20px;
   bottom: 15px;
@@ -447,16 +447,16 @@
   transform: rotate(90deg) scaleX(-1);
 }
 
-.request-card .form-field--select .form-field__control {
+.form-field--select.form-field__control.request-card__form-field-control {
   padding-right: 54px;
   appearance: none;
 }
 
-.request-card .form-field__label {
+.form-field__label.request-card__label {
   color: var(--line);
 }
 
-.request-card .form-field__control {
+.form-field__control.request-card__control {
   background: var(--soft);
 }
 
@@ -518,7 +518,7 @@
   line-height: 1.2;
 }
 
-.promotions-seo__copy p {
+.promotions-seo__copy-text:is(p) {
   margin: 0;
 }
 
@@ -633,7 +633,7 @@
     padding-bottom: 0;
   }
 
-  .promotions-page .page__container,
+  .promotions-page .layout-container,
   .promotions-breadcrumb {
     width: calc(100vw - 32px);
     margin-right: 16px;
@@ -762,7 +762,7 @@
     font-size: 14px;
   }
 
-  .special-offer-card__features li {
+  .special-offer-card__features-item:is(li) {
     white-space: normal;
   }
 
@@ -815,12 +815,12 @@
     gap: 10px;
   }
 
-  .request-card .form-field__label {
+  .form-field__label.request-card__label {
     font-size: 14px;
     line-height: 1.2;
   }
 
-  .request-card .form-field__control {
+  .form-field__control.request-card__control {
     height: 54px;
     padding-left: 20px;
     font-size: 16px;
@@ -851,7 +851,7 @@
 }
 
 @media (max-width: 359px) {
-  .promotions-page .page__container,
+  .promotions-page .layout-container,
   .promotions-breadcrumb {
     width: calc(100vw - 16px);
     margin-right: 8px;

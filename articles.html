@@ -18,7 +18,7 @@
       </span>
     </div>
 
-    <header class="site-header page__container">
+    <header class="site-header layout-container">
       <div class="site-header__meta">
         <div class="site-header__locations">
           <span class="site-header__meta-item"><span class="site-header__meta-icon" aria-hidden="true"><img class="site-header__icon-part site-header__icon-part--pin" src="assets/header-pin.svg" alt="" width="15" height="18" /><img class="site-header__icon-part site-header__icon-part--pin-center" src="assets/header-pin-center.svg" alt="" width="7" height="7" /></span><span class="site-header__meta-text">ЮАО, метро&nbsp;Пражская</span></span>
@@ -51,22 +51,22 @@
       </div>
     </header>
 
-    <nav class="articles-breadcrumb page__container" aria-label="Хлебные крошки">
+    <nav class="articles-breadcrumb layout-container" aria-label="Хлебные крошки">
       <a class="articles-breadcrumb__link" href="index.html">Главная</a>
       <span class="articles-breadcrumb__separator" aria-hidden="true">&gt;</span>
       <span aria-current="page">Статьи/Новости</span>
     </nav>
 
     <main id="top">
-      <section class="articles-hero page__container" aria-labelledby="articles-title">
+      <section class="articles-hero layout-container" aria-labelledby="articles-title">
         <h1 class="articles-hero__title" id="articles-title">Статьи о ремонте, ТО и обслуживании автомобилей</h1>
         <div class="articles-hero__copy">
-          <p>Полезные материалы AutoMD для владельцев коммерческого транспорта: как понять причину неисправности, когда ехать на диагностику, какие запчасти выбирать и как обслуживать автомобиль без лишнего простоя.</p>
-          <p>Пишем о Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant, JAC Sunray и других автомобилях.</p>
+          <p class="articles-hero__copy-text">Полезные материалы AutoMD для владельцев коммерческого транспорта: как понять причину неисправности, когда ехать на диагностику, какие запчасти выбирать и как обслуживать автомобиль без лишнего простоя.</p>
+          <p class="articles-hero__copy-text">Пишем о Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant, JAC Sunray и других автомобилях.</p>
         </div>
       </section>
 
-      <div class="article-filter page__container" data-article-filter role="group" aria-label="Фильтр статей по теме">
+      <div class="article-filter layout-container" data-article-filter role="group" aria-label="Фильтр статей по теме">
         <button class="article-filter__button article-filter__button--active" type="button" data-article-category="all" aria-pressed="true">Все</button>
         <button class="article-filter__button" type="button" data-article-category="diagnostics" aria-pressed="false">Диагностика</button>
         <button class="article-filter__button" type="button" data-article-category="maintenance" aria-pressed="false">ТО</button>
@@ -76,7 +76,7 @@
         <button class="article-filter__button" type="button" data-article-category="commercial" aria-pressed="false">Коммерческий транспорт</button>
       </div>
 
-      <section class="articles-catalog page__container" id="articles" aria-label="Статьи AutoMD">
+      <section class="articles-catalog layout-container" id="articles" aria-label="Статьи AutoMD">
         <p class="visually-hidden" data-article-filter-status aria-live="polite">Показано статей: 12</p>
         <div class="articles-catalog__grid">
           <article class="article-card" data-article-card data-category="diagnostics"><img class="article-card__image" src="assets/articles-card.png" alt="" width="1717" height="916" /><div class="article-card__body"><h2 class="article-card__title">[Название статьи]</h2><p class="article-card__description">Как понять, что проблема требует проверки в техцентре, какие симптомы нельзя игнорировать и почему диагностика помогает не менять лишние детали.</p><p class="article-card__category">Диагностика</p><a class="article-card__link" href="article-detail.html">Читать статью</a></div></article>
@@ -94,7 +94,7 @@
         </div>
       </section>
 
-      <section class="faq-request page__container" id="request">
+      <section class="faq-request layout-container" id="request">
         <div class="faq-request__faq">
           <h2 class="faq-request__title">Часто задаваемые вопросы</h2>
           <div class="faq-request__list">
@@ -113,28 +113,28 @@
           <div class="request-card__heading"><h2 class="request-card__title">Поможем уточнить модель и подобрать решение</h2><p class="request-card__description">Оставьте контакты — менеджер уточнит марку, модель, год выпуска и задачу. После этого подскажем, какие услуги доступны и в какой техцентр лучше записаться.</p></div>
           <form class="request-card__form" data-form="booking">
             <div class="request-card__fields">
-              <label class="form-field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
-              <label class="form-field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
-              <label class="form-field form-field--select"><span class="form-field__label">Удобное время</span><select class="form-field__control" name="time" required><option value="" selected disabled>Выбрать</option><option>Утро</option><option>День</option><option>Вечер</option></select></label>
-              <label class="form-field form-field--select"><span class="form-field__label">Техцентр</span><select class="form-field__control" name="location" required><option value="" selected disabled>Выбрать</option><option>Пражская</option><option>Ховрино</option></select></label>
+              <label class="form-field"><span class="form-field__label request-card__label">Имя</span><input class="form-field__control request-card__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+              <label class="form-field"><span class="form-field__label request-card__label">Телефон</span><input class="form-field__control request-card__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+              <label class="form-field form-field--select request-card__form-field"><span class="form-field__label request-card__label">Удобное время</span><select class="form-field__control request-card__control request-card__form-field-control" name="time" required><option value="" selected disabled>Выбрать</option><option>Утро</option><option>День</option><option>Вечер</option></select></label>
+              <label class="form-field form-field--select request-card__form-field"><span class="form-field__label request-card__label">Техцентр</span><select class="form-field__control request-card__control request-card__form-field-control" name="location" required><option value="" selected disabled>Выбрать</option><option>Пражская</option><option>Ховрино</option></select></label>
             </div>
             <div class="request-card__actions"><label class="request-card__consent"><input class="request-card__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия Политики конфиденциальности, Согласия на обработку персональных данных и Пользовательского соглашения</span></label><button class="button request-card__button" type="submit">Отправить заявку</button><p class="form-status request-card__status" aria-live="polite"></p></div>
           </form>
         </div>
       </section>
 
-      <section class="articles-seo page__container" aria-labelledby="articles-seo-title">
+      <section class="articles-seo layout-container" aria-labelledby="articles-seo-title">
         <h2 class="articles-seo__title" id="articles-seo-title">Сео текст</h2>
         <div class="articles-seo__copy">
-          <p>Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.</p>
-          <p>Профессиональное сервисное обслуживание Форд Транзит в Москве более 10 лет успешно выполняет автотехцентр «AutoMD». Высококвалифицированные мастера, новейшее оборудование, высокий сервис, фирменная гарантия и доступные цены на ремонт Форд Транзит в комплексе обеспечивают стабильно высокий результат и только положительные эмоции от сотрудничества с «AutoMD»!</p>
-          <p>У разных автомобилей отличаются регламенты ТО, стоимость работ, доступность запчастей и типовые неисправности. Поэтому в AutoMD основной путь начинается с выбора марки и модели.</p>
+          <p class="articles-seo__copy-text">Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым. Это тестовый контент, который не должен нести никакого смысла, лишь показать наличие самого текста или продемонстрировать типографику в деле.</p>
+          <p class="articles-seo__copy-text">Профессиональное сервисное обслуживание Форд Транзит в Москве более 10 лет успешно выполняет автотехцентр «AutoMD». Высококвалифицированные мастера, новейшее оборудование, высокий сервис, фирменная гарантия и доступные цены на ремонт Форд Транзит в комплексе обеспечивают стабильно высокий результат и только положительные эмоции от сотрудничества с «AutoMD»!</p>
+          <p class="articles-seo__copy-text">У разных автомобилей отличаются регламенты ТО, стоимость работ, доступность запчастей и типовые неисправности. Поэтому в AutoMD основной путь начинается с выбора марки и модели.</p>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer page__container">
-      <div class="site-footer__intro"><div class="site-footer__logo-box"><img class="site-footer__logo" src="assets/logo-black.svg" alt="AutoMD" width="279" height="47" /></div><div class="site-footer__description"><p>Профессиональный автотехцентр в Москве. Ремонт, ТО, диагностика и запчасти для коммерческого транспорта.</p><p>Работаем с Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily и другими моделями.</p></div><a class="button site-footer__button" href="#request">Получить консультацию</a></div>
+    <footer class="site-footer layout-container">
+      <div class="site-footer__intro"><div class="site-footer__logo-box"><img class="site-footer__logo" src="assets/logo-black.svg" alt="AutoMD" width="279" height="47" /></div><div class="site-footer__description"><p class="site-footer__description-text">Профессиональный автотехцентр в Москве. Ремонт, ТО, диагностика и запчасти для коммерческого транспорта.</p><p class="site-footer__description-text">Работаем с Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily и другими моделями.</p></div><a class="button site-footer__button" href="#request">Получить консультацию</a></div>
       <div class="site-footer__columns">
         <section class="site-footer__column"><h2 class="site-footer__column-title">Автомобили</h2><nav class="site-footer__links" aria-label="Автомобили"><a class="site-footer__link" href="cars.html">Fiat Ducato</a><a class="site-footer__link" href="brand.html">Ford Transit</a><a class="site-footer__link" href="cars.html">Peugeot Boxer</a><a class="site-footer__link" href="cars.html">Citroen Jumper</a><a class="site-footer__link" href="cars.html">Iveco Daily</a><a class="site-footer__link" href="cars.html">Все автомобили</a></nav></section>
         <section class="site-footer__column"><h2 class="site-footer__column-title">Услуги</h2><nav class="site-footer__links" aria-label="Услуги"><a class="site-footer__link" href="index.html#services">Плановое ТО</a><a class="site-footer__link" href="index.html#services">Диагностика</a><a class="site-footer__link" href="index.html#services">Ремонт</a><a class="site-footer__link" href="index.html#services">Замена</a><a class="site-footer__link" href="index.html#services">Форсунки</a><a class="site-footer__link" href="index.html#services">Все услуги</a></nav></section>
@@ -144,6 +144,6 @@
       </div>
       <div class="site-footer__legal"><span>© AutoMD, 2026 Профессиональный автотехцентр в Москве</span><a class="site-footer__legal-link" href="privacy.html">Политика конфиденциальности</a><a class="site-footer__legal-link" href="consent.html">Согласие на обработку персональных данных</a><a class="site-footer__legal-link" href="agreement.html">Пользовательское соглашение</a><span class="site-footer__legal-item">Реквизиты</span><span class="site-footer__developer">Разработан <img class="site-footer__developer-logo" src="assets/footer-developer-logo.svg" alt="IS ART" width="39" height="16" /></span></div>
     </footer>
-    <script type="module" src="js/main.js"></script>
+    <script src="app.js" defer></script>
   </body>
 </html>

@@ -34,7 +34,7 @@ test("page reuses existing project blocks and shared ESM", () => {
   assert.equal((markup.match(/<details class="faq-item">/g) ?? []).length, 8);
   assert.match(markup, /class="request-card"/);
   assert.match(markup, /href="app\.css"/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("tour layout is fluid and has a content-driven mobile reflow", () => {

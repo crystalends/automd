@@ -26,7 +26,7 @@ test("prices page reuses established responsive project blocks", () => {
   for (const component of ["booking", "form-field", "business-offer", "benefits", "request-card", "site-footer"]) {
     assert.match(markup, new RegExp(`class="[^"]*${component}`));
   }
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("prices hero matches the dedicated Figma composition", () => {
@@ -37,8 +37,8 @@ test("prices hero matches the dedicated Figma composition", () => {
   assert.match(styles, /\.prices-hero__inner\s*\{[^}]*width:\s*min\(1195px, 75%\)[^}]*gap:\s*40px/s);
   assert.match(styles, /\.prices-hero__content\s*\{[^}]*min-height:\s*253px/s);
   assert.match(styles, /\.prices-hero__benefits\s*\{[^}]*display:\s*flex[^}]*min-height:\s*58px[^}]*gap:\s*10px 20px/s);
-  assert.match(styles, /\.prices-hero__benefits li:nth-child\(1\) \{ width:\s*323px/);
-  assert.match(styles, /\.prices-hero__benefits li:nth-child\(6\) \{ width:\s*210px/);
+  assert.match(styles, /\.prices-hero__benefits-item:is\(li\):nth-child\(1\) \{ width:\s*323px/);
+  assert.match(styles, /\.prices-hero__benefits-item:is\(li\):nth-child\(6\) \{ width:\s*210px/);
   assert.match(styles, /\.prices-hero__button\s*\{[^}]*width:\s*280px[^}]*margin:\s*0/s);
 });
 
@@ -56,7 +56,7 @@ test("business offer matches the dedicated Figma composition", () => {
 test("SEO copy matches the dedicated Figma composition", () => {
   const section = markup.match(/<section class="price-seo[\s\S]*?<\/section>/)?.[0] ?? "";
   assert.match(section, /<h2 class="price-seo__title"[^>]*>Сео текст<\/h2>/);
-  assert.equal((section.match(/<p>/g) ?? []).length, 3);
+  assert.equal((section.match(/<p class="price-seo__copy-text">/g) ?? []).length, 3);
   assert.match(styles, /\.price-seo\s*\{[^}]*display:\s*flex[^}]*width:\s*min\(1060px, var\(--container\)\)[^}]*min-height:\s*282px[^}]*flex-direction:\s*column[^}]*gap:\s*20px/s);
   assert.match(styles, /\.price-seo__copy\s*\{[^}]*min-height:\s*218px[^}]*gap:\s*10px[^}]*color:\s*var\(--ink\)[^}]*font-size:\s*18px/s);
 });
@@ -107,12 +107,12 @@ test("desktop and mobile quote forms follow the two Figma variants", () => {
   assert.match(markup, /price-quote__heading--mobile[^]*Запишитесь на ремонт или консультацию/);
   assert.match(markup, /src="assets\/price-quote-vehicle\.png"/);
   assert.match(markup, /src="assets\/booking-bearing\.png"/);
-  assert.match(markup, /booking-form__field booking-form__field--wide[^>]*><span class="form-field__label">Услуга/);
+  assert.match(markup, /booking-form__field booking-form__field--wide[^>]*><span class="form-field__label booking-form__label">Услуга/);
   assert.match(markup, /booking__pattern booking__pattern--desktop price-quote__pattern/);
   assert.match(markup, /booking__pattern booking__pattern--mobile price-quote__pattern/);
   assert.match(styles, /\.price-quote__form--desktop\s*\{[^}]*width:\s*min\(885px, 60%\)[^}]*gap:\s*40px/s);
   assert.match(styles, /\.price-quote__fields--desktop\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/s);
-  assert.match(styles, /\.price-quote \.booking-form__field--wide\s*\{[^}]*grid-column:\s*1 \/ -1/s);
+  assert.match(styles, /\.booking-form__field--wide\.price-quote__field\s*\{[^}]*grid-column:\s*1 \/ -1/s);
   assert.match(styles, /\.price-quote__heading--mobile,[\s\S]*?display:\s*none/);
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.price-quote__form--mobile \{ display:\s*flex/);
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.price-quote__heading \{ width:\s*100%/);

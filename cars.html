@@ -22,7 +22,7 @@
       <img class="cars-hero-scene__vehicles" src="assets/hero-vehicles.png" alt="" width="1448" height="1086" />
     </div>
 
-    <header class="site-header page__container">
+    <header class="site-header layout-container">
       <div class="site-header__meta">
         <div class="site-header__locations">
           <span class="site-header__meta-item">
@@ -67,20 +67,20 @@
       </div>
     </header>
 
-    <nav class="cars-breadcrumb page__container" aria-label="Хлебные крошки">
+    <nav class="cars-breadcrumb layout-container" aria-label="Хлебные крошки">
       <a class="cars-breadcrumb__link" href="index.html">Главная</a>
       <span class="cars-breadcrumb__separator" aria-hidden="true">&gt;</span>
       <span aria-current="page">Автомобили</span>
     </nav>
 
     <main id="top">
-      <section class="cars-hero page__container">
+      <section class="cars-hero layout-container">
         <div class="cars-hero__content">
           <div class="cars-hero__intro">
             <h1 class="cars-hero__title">Ремонт и обслуживание <span class="cars-hero__accent">автомобилей</span> в AutoMD</h1>
             <div class="cars-hero__description">
-              <p>Выберите свой автомобиль, чтобы посмотреть доступные услуги, цены, запчасти и ближайшее время для записи в техцентр</p>
-              <p>AutoMD специализируется на коммерческом транспорте и популярных рабочих моделях: Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant и JAC Sunray.</p>
+              <p class="cars-hero__description-text">Выберите свой автомобиль, чтобы посмотреть доступные услуги, цены, запчасти и ближайшее время для записи в техцентр</p>
+              <p class="cars-hero__description-text">AutoMD специализируется на коммерческом транспорте и популярных рабочих моделях: Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant и JAC Sunray.</p>
             </div>
           </div>
           <a class="button cars-hero__button" href="#request">Записаться на ремонт</a>
@@ -95,7 +95,7 @@
         </div>
       </section>
 
-      <section class="service-finder cars-page__finder page__container" id="finder">
+      <section class="service-finder cars-page__finder layout-container" id="finder">
         <div class="section-heading section-heading--compact">
           <h2 class="section-heading__title">Найдите услугу для своего автомобиля</h2>
           <p class="section-heading__text">Выберите марку, модель и задачу — мы покажем подходящие услуги, цены, запчасти и ближайшее время для записи.</p>
@@ -105,23 +105,23 @@
           <label class="form-field"><span class="form-field__label">Модель</span><select class="form-field__control" name="model" required><option value="" selected disabled>Выбрать</option><option>Ducato</option><option>Transit</option><option>Boxer</option><option>Jumper</option><option>Daily</option><option>Atlant</option></select></label>
           <label class="form-field"><span class="form-field__label">Услуга</span><select class="form-field__control" name="service" required><option value="" selected disabled>Выбрать</option><option>Плановое ТО</option><option>Диагностика</option><option>Ремонт</option><option>Замена</option></select></label>
           <button class="button finder-form__button" type="submit">Показать варианты</button>
-          <p class="form-status" aria-live="polite"></p>
+          <p class="form-status finder-form__form-status" aria-live="polite"></p>
         </form>
       </section>
 
-      <section class="car-brands page__container" id="cars">
+      <section class="car-brands layout-container" id="cars">
         <h2 class="section-heading__title">Популярные автомобили</h2>
         <div class="car-brands__grid" tabindex="0" aria-label="Популярные марки автомобилей">
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-fiat.png" alt="Fiat" width="1366" height="768" /><h3 class="vehicle-card__title">Fiat</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-ford.png" alt="Ford" width="1672" height="941" /><h3 class="vehicle-card__title">Ford</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-peugeot.png" alt="Peugeot" width="1672" height="941" /><h3 class="vehicle-card__title">Peugeot</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-citroen.png" alt="Citroen" width="1672" height="941" /><h3 class="vehicle-card__title">Citroen</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-renault.png" alt="Renault" width="1672" height="941" /><h3 class="vehicle-card__title">Renault</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-iveco.png" alt="Iveco" width="1672" height="941" /><h3 class="vehicle-card__title">Iveco</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-jac.png" alt="JAC" width="1672" height="941" /><h3 class="vehicle-card__title">JAC</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-sollers.png" alt="Sollers" width="1672" height="941" /><h3 class="vehicle-card__title">Sollers</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-mercedes.png" alt="Mercedes" width="1672" height="941" /><h3 class="vehicle-card__title">Mercedes</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
-          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-foton.png" alt="Foton" width="1672" height="941" /><h3 class="vehicle-card__title">Foton</h3><div class="vehicle-card__links"><a href="#services">Ремонт</a><a href="#services">ТО</a><a href="#finder">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-fiat.png" alt="Fiat" width="1366" height="768" /><h3 class="vehicle-card__title">Fiat</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-ford.png" alt="Ford" width="1672" height="941" /><h3 class="vehicle-card__title">Ford</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-peugeot.png" alt="Peugeot" width="1672" height="941" /><h3 class="vehicle-card__title">Peugeot</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-citroen.png" alt="Citroen" width="1672" height="941" /><h3 class="vehicle-card__title">Citroen</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-renault.png" alt="Renault" width="1672" height="941" /><h3 class="vehicle-card__title">Renault</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-iveco.png" alt="Iveco" width="1672" height="941" /><h3 class="vehicle-card__title">Iveco</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-jac.png" alt="JAC" width="1672" height="941" /><h3 class="vehicle-card__title">JAC</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-sollers.png" alt="Sollers" width="1672" height="941" /><h3 class="vehicle-card__title">Sollers</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-mercedes.png" alt="Mercedes" width="1672" height="941" /><h3 class="vehicle-card__title">Mercedes</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
+          <article class="vehicle-card"><img class="vehicle-card__image" src="assets/car-logo-foton.png" alt="Foton" width="1672" height="941" /><h3 class="vehicle-card__title">Foton</h3><div class="vehicle-card__links"><a href="#services" class="vehicle-card__links-link">Ремонт</a><a href="#services" class="vehicle-card__links-link">ТО</a><a href="#finder" class="vehicle-card__links-link">Запчасти</a></div></article>
         </div>
         <div class="car-brands__pagination" aria-label="Навигация по маркам">
           <button class="car-brands__dot car-brands__dot--active" type="button" aria-label="Марки 1–2" aria-current="true"></button>
@@ -132,19 +132,19 @@
         </div>
       </section>
 
-      <section class="service-grid cars-page__services page__container" id="services">
+      <section class="service-grid cars-page__services layout-container" id="services">
         <h2 class="section-heading__title">Услуги</h2>
         <div class="service-grid__items">
-          <article class="service-card service-card--selected"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--maintenance" src="assets/service-maintenance.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Плановое ТО</h3><p class="service-card__text">Регламентное обслуживание, замена масла, фильтров, жидкостей и расходников</p></div></article>
-          <article class="service-card"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--diagnostics" src="assets/service-diagnostics.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Диагностика</h3><p class="service-card__text">Компьютерная диагностика, проверка двигателя, ходовой, тормозной системы и электрики</p></div></article>
-          <article class="service-card"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--repair" src="assets/service-repair.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Ремонт</h3><p class="service-card__text">Ремонтируем основные узлы и системы автомобиля после диагностики и согласования работ</p></div></article>
-          <article class="service-card"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--replacement" src="assets/service-replacement.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Замена</h3><p class="service-card__text">Выполняем замену расходников, узлов и деталей с подбором запчастей под конкретную модель</p></div></article>
-          <article class="service-card"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--injectors" src="assets/service-injectors.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Форсунки</h3><p class="service-card__text">Диагностика, ремонт и восстановление форсунок для коммерческого транспорта</p></div></article>
-          <article class="service-card"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--extra" src="assets/service-extra.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Дополнительные услуги</h3><p class="service-card__text">Дополнительные сервисы для владельцев автомобилей и юридических лиц</p></div></article>
+          <article class="service-card service-card--direction service-card--selected"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--maintenance" src="assets/service-maintenance.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Плановое ТО</h3><p class="service-card__text">Регламентное обслуживание, замена масла, фильтров, жидкостей и расходников</p></div></article>
+          <article class="service-card service-card--direction"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--diagnostics" src="assets/service-diagnostics.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Диагностика</h3><p class="service-card__text">Компьютерная диагностика, проверка двигателя, ходовой, тормозной системы и электрики</p></div></article>
+          <article class="service-card service-card--direction"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--repair" src="assets/service-repair.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Ремонт</h3><p class="service-card__text">Ремонтируем основные узлы и системы автомобиля после диагностики и согласования работ</p></div></article>
+          <article class="service-card service-card--direction"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--replacement" src="assets/service-replacement.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Замена</h3><p class="service-card__text">Выполняем замену расходников, узлов и деталей с подбором запчастей под конкретную модель</p></div></article>
+          <article class="service-card service-card--direction"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--injectors" src="assets/service-injectors.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Форсунки</h3><p class="service-card__text">Диагностика, ремонт и восстановление форсунок для коммерческого транспорта</p></div></article>
+          <article class="service-card service-card--direction"><div class="service-card__icon-box"><img class="service-card__icon service-card__icon--extra" src="assets/service-extra.png" alt="" width="1254" height="1254" /></div><div class="service-card__content"><h3 class="service-card__title">Дополнительные услуги</h3><p class="service-card__text">Дополнительные сервисы для владельцев автомобилей и юридических лиц</p></div></article>
         </div>
       </section>
 
-      <section class="benefits page__container" aria-labelledby="benefits-title">
+      <section class="benefits layout-container" aria-labelledby="benefits-title">
         <div class="benefits__content">
           <h2 class="benefits__title" id="benefits-title">Почему выбирают AutoMD</h2>
           <div class="benefits__list">
@@ -168,7 +168,7 @@
         </figure>
       </section>
 
-      <section class="team page__container" id="team">
+      <section class="team layout-container" id="team">
         <div class="team__intro">
           <h2 class="team__title">Команда AutoMD</h2>
           <div class="team__copy">
@@ -190,7 +190,7 @@
         </div>
       </section>
 
-      <section class="business-offer page__container" id="business">
+      <section class="business-offer layout-container" id="business">
         <div class="business-offer__content">
           <div class="business-offer__header"><h2 class="business-offer__title">Для юридических лиц</h2><p class="business-offer__lead">AutoMD помогает компаниям быстрее возвращать автомобили в работу: выполняем диагностику, ТО, ремонт, подбор и установку запчастей для коммерческого транспорта</p></div>
           <div class="business-offer__audience-group">
@@ -201,14 +201,14 @@
             </div>
           </div>
           <ul class="business-offer__features">
-            <li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Подбор запчастей</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Безналичная оплата</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Закрывающие документы</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Приоритетная запись</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Обслуживание нескольких автомобилей</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" /></span>Персональная консультация по автопарку</li>
+            <li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Подбор запчастей</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Безналичная оплата</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Закрывающие документы</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Приоритетная запись</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Обслуживание нескольких автомобилей</li><li class="business-offer__feature"><span class="business-offer__check-icon" aria-hidden="true"><img src="assets/business-check.svg" alt="" width="7" height="9" class="business-offer__check-icon-image" /></span>Персональная консультация по автопарку</li>
           </ul>
           <a class="button business-offer__button" href="#request">Отправить заявку</a>
         </div>
         <div class="business-offer__visual"><img class="business-offer__image" src="assets/business.jpg" alt="Менеджер и мастер AutoMD обсуждают обслуживание автопарка" loading="lazy" width="1448" height="1086" /></div>
       </section>
 
-      <section class="faq-request page__container" id="request">
+      <section class="faq-request layout-container" id="request">
         <div class="faq-request__faq">
           <h2 class="faq-request__title">Часто задаваемые вопросы</h2>
           <div class="faq-request__list">
@@ -230,10 +230,10 @@
           <div class="request-card__heading"><h2 class="request-card__title">Поможем уточнить модель и подобрать решение</h2><p class="request-card__description">Оставьте контакты — менеджер уточнит марку, модель, год выпуска и задачу. После этого подскажем, какие услуги доступны и в какой техцентр лучше записаться.</p></div>
           <form class="request-card__form" data-form="booking">
             <div class="request-card__fields">
-              <label class="form-field"><span class="form-field__label">Имя</span><input class="form-field__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
-              <label class="form-field"><span class="form-field__label">Телефон</span><input class="form-field__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
-              <label class="form-field form-field--select"><span class="form-field__label">Удобное время</span><select class="form-field__control" name="time" required><option value="" selected disabled>Выбрать</option><option>Утро</option><option>День</option><option>Вечер</option></select></label>
-              <label class="form-field form-field--select"><span class="form-field__label">Техцентр</span><select class="form-field__control" name="location" required><option value="" selected disabled>Выбрать</option><option>Пражская</option><option>Ховрино</option></select></label>
+              <label class="form-field"><span class="form-field__label request-card__label">Имя</span><input class="form-field__control request-card__control" name="name" autocomplete="name" placeholder="Напишите" required /></label>
+              <label class="form-field"><span class="form-field__label request-card__label">Телефон</span><input class="form-field__control request-card__control" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Напишите" required /></label>
+              <label class="form-field form-field--select request-card__form-field"><span class="form-field__label request-card__label">Удобное время</span><select class="form-field__control request-card__control request-card__form-field-control" name="time" required><option value="" selected disabled>Выбрать</option><option>Утро</option><option>День</option><option>Вечер</option></select></label>
+              <label class="form-field form-field--select request-card__form-field"><span class="form-field__label request-card__label">Техцентр</span><select class="form-field__control request-card__control request-card__form-field-control" name="location" required><option value="" selected disabled>Выбрать</option><option>Пражская</option><option>Ховрино</option></select></label>
             </div>
             <div class="request-card__actions">
               <label class="request-card__consent"><input class="request-card__checkbox" type="checkbox" name="consent" value="accepted" required /><span>Я принимаю условия Политики конфиденциальности, Согласием на обработку персональных данных и Пользовательским соглашением</span></label>
@@ -245,10 +245,10 @@
       </section>
     </main>
 
-    <footer class="site-footer page__container">
+    <footer class="site-footer layout-container">
       <div class="site-footer__intro">
         <div class="site-footer__logo-box"><img class="site-footer__logo" src="assets/logo-black.svg" alt="AutoMD" width="279" height="47" /></div>
-        <div class="site-footer__description"><p>Профессиональный автотехцентр в Москве. Ремонт, ТО, диагностика и запчасти для коммерческого транспорта.</p><p>Работаем с Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant, JAC Sunray и другими моделями.</p></div>
+        <div class="site-footer__description"><p class="site-footer__description-text">Профессиональный автотехцентр в Москве. Ремонт, ТО, диагностика и запчасти для коммерческого транспорта.</p><p class="site-footer__description-text">Работаем с Fiat Ducato, Ford Transit, Peugeot Boxer, Citroen Jumper, Iveco Daily, Peugeot Partner, Citroen Berlingo, Sollers Atlant, JAC Sunray и другими моделями.</p></div>
         <a class="button site-footer__button" href="#request">Получить консультацию</a>
       </div>
       <div class="site-footer__columns">
@@ -261,7 +261,6 @@
       <div class="site-footer__legal"><span>© AutoMD, 2026 Профессиональный автотехцентр в Москве</span><a class="site-footer__legal-link" href="privacy.html">Политика конфиденциальности</a><a class="site-footer__legal-link" href="consent.html">Согласие на обработку персональных данных</a><a class="site-footer__legal-link" href="agreement.html">Пользовательское соглашение</a><span class="site-footer__legal-item">Реквизиты</span><span class="site-footer__developer">Разработан <img class="site-footer__developer-logo" src="assets/footer-developer-logo.svg" alt="IS ART" width="39" height="16" /></span></div>
     </footer>
 
-    <script src="vendor/swiper/swiper-bundle.min.js"></script>
-    <script type="module" src="js/main.js"></script>
+    <script src="app.js" defer></script>
   </body>
 </html>

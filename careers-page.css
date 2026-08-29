@@ -96,8 +96,8 @@ html:has(.careers-page dialog[open]),
 }
 
 .careers-hero__title,
-.careers-hero__copy p,
-.careers-conditions__copy p {
+.careers-hero__copy-text:is(p),
+.careers-conditions__copy-text:is(p) {
   margin: 0;
 }
 
@@ -302,7 +302,7 @@ html:has(.careers-page dialog[open]),
   place-items: center;
 }
 
-.vacancy-detail-dialog__close img {
+.vacancy-detail-dialog__close-image:is(img) {
   width: 24px;
   height: 24px;
 }
@@ -357,7 +357,7 @@ html:has(.careers-page dialog[open]),
   line-height: 1.2;
 }
 
-.vacancy-detail-dialog__location img {
+.vacancy-detail-dialog__location-image:is(img) {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
@@ -408,23 +408,23 @@ html:has(.careers-page dialog[open]),
   counter-reset: vacancy-skill;
 }
 
-.vacancy-detail-dialog__numbered-list li {
+.vacancy-detail-dialog__numbered-list-item:is(li) {
   display: flex;
   gap: 4px;
   counter-increment: vacancy-skill;
 }
 
-.vacancy-detail-dialog__numbered-list li::before {
+.vacancy-detail-dialog__numbered-list-item:is(li)::before {
   flex: 0 0 auto;
   content: counter(vacancy-skill) ".";
 }
 
-.vacancy-detail-dialog__requirements li {
+.vacancy-detail-dialog__requirements-item:is(li) {
   display: flex;
   gap: 4px;
 }
 
-.vacancy-detail-dialog__requirements li::before {
+.vacancy-detail-dialog__requirements-item:is(li)::before {
   flex: 0 0 auto;
   content: "-";
 }
@@ -437,12 +437,12 @@ html:has(.careers-page dialog[open]),
   gap: 10px;
 }
 
-.vacancy-detail-dialog__conditions li {
+.vacancy-detail-dialog__conditions-item:is(li) {
   display: flex;
   align-items: center;
 }
 
-.vacancy-detail-dialog__conditions img {
+.vacancy-detail-dialog__conditions-image:is(img) {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -682,7 +682,7 @@ html:has(.careers-page dialog[open]),
   grid-column: 1 / -1;
 }
 
-.career-dialog__field input[type="file"] {
+.career-dialog__field-input:is(input)[type="file"] {
   height: auto;
   min-height: 56px;
   padding-block: 14px;
@@ -921,7 +921,7 @@ html:has(.careers-page dialog[open]),
     font-size: 18px;
   }
 
-  .vacancy-detail-dialog__conditions li {
+  .vacancy-detail-dialog__conditions-item:is(li) {
     align-items: flex-start;
   }
 

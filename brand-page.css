@@ -30,7 +30,7 @@
   gap: 10px;
 }
 
-.brand-section-heading p {
+.brand-section-heading__text:is(p) {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
@@ -114,7 +114,7 @@
   line-height: 1.2;
 }
 
-.brand-breadcrumb a:hover {
+.brand-breadcrumb__link:is(a):hover {
   color: var(--red);
 }
 
@@ -159,7 +159,7 @@
   line-height: 1.2;
 }
 
-.brand-hero__description p {
+.brand-hero__description-text:is(p) {
   margin: 0;
 }
 
@@ -256,7 +256,7 @@
   margin-top: var(--brand-section-gap);
 }
 
-.brand-models .brand-section-title {
+.brand-section-title.brand-models__brand-section-title {
   width: 100%;
 }
 
@@ -325,7 +325,7 @@
   line-height: 1;
 }
 
-.brand-model-card__links a {
+.brand-model-card__links-link:is(a) {
   padding: 0 5px 5px;
   border-bottom: 1px solid var(--blue);
   color: var(--blue);
@@ -354,7 +354,7 @@
   gap: 10px;
 }
 
-.brand-finder__heading p {
+.brand-finder__heading-text:is(p) {
   margin: 0;
   color: var(--muted);
 }
@@ -367,16 +367,16 @@
   gap: 20px;
 }
 
-.brand-finder .form-field--select {
+.form-field--select.brand-finder__form-field {
   position: relative;
 }
 
-.request-card .form-field--select {
+.form-field--select.request-card__form-field {
   position: relative;
 }
 
-.brand-finder .form-field--select::after,
-.request-card .form-field--select::after {
+.form-field--select.brand-finder__form-field::after,
+.form-field--select.request-card__form-field::after {
   position: absolute;
   right: 20px;
   bottom: 15px;
@@ -388,8 +388,8 @@
   transform: rotate(90deg) scaleX(-1);
 }
 
-.brand-finder .form-field__control,
-.request-card .form-field--select .form-field__control {
+.form-field__control.brand-finder__control,
+.form-field--select.form-field__control.request-card__form-field-control {
   padding-right: 54px;
   appearance: none;
 }
@@ -416,7 +416,7 @@
   background: #fff;
 }
 
-.brand-promo__banner img {
+.brand-promo__banner-image:is(img) {
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
@@ -488,20 +488,20 @@
   gap: 10px;
 }
 
-.brand-service-card__heading h3,
-.brand-service-card__heading p,
-.brand-service-card__details h4 {
+.brand-service-card__heading-title:is(h3),
+.brand-service-card__heading-text:is(p),
+.brand-service-card__details-subtitle:is(h4) {
   margin: 0;
 }
 
-.brand-service-card__heading h3 {
+.brand-service-card__heading-title:is(h3) {
   font-family: Geologica, sans-serif;
   font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 400;
   line-height: 1.2;
 }
 
-.brand-service-card__heading p {
+.brand-service-card__heading-text:is(p) {
   color: var(--muted);
   font-size: clamp(14px, 0.938vw, 18px);
   line-height: 1.2;
@@ -514,14 +514,14 @@
   gap: 10px;
 }
 
-.brand-service-card__details h4 {
+.brand-service-card__details-subtitle:is(h4) {
   font-family: Geologica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.brand-service-card__details ul {
+.brand-service-card__details-list:is(ul) {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
@@ -533,14 +533,14 @@
   list-style: none;
 }
 
-.brand-service-card__details li {
+.brand-service-card__details-item:is(li) {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.brand-service-card:not(.brand-service-card--links) .brand-service-card__details li::before,
-.brand-parts__grid li::before {
+.brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item:is(li)::before,
+.brand-parts__grid-item:is(li)::before {
   width: 12px;
   height: 12px;
   flex: 0 0 12px;
@@ -549,28 +549,28 @@
   transform: rotate(90deg);
 }
 
-.brand-service-card .brand-text-link {
+.brand-text-link.brand-service-card__brand-text-link {
   margin-top: auto;
 }
 
-.brand-service-card--links .brand-service-card__details ul {
+.brand-service-card--links .brand-service-card__details-list:is(ul) {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   color: var(--ink);
 }
 
-.brand-service-card--links .brand-service-card__details li,
-.brand-service-card--links .brand-service-card__details a {
+.brand-service-card--links .brand-service-card__details-item:is(li),
+.brand-service-card--links .brand-service-card__details-link:is(a) {
   width: 100%;
 }
 
-.brand-service-card--links .brand-service-card__details a {
+.brand-service-card--links .brand-service-card__details-link:is(a) {
   position: relative;
   padding-right: 24px;
 }
 
-.brand-service-card--links .brand-service-card__details a::after {
+.brand-service-card--links .brand-service-card__details-link:is(a)::after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -594,7 +594,7 @@
   list-style: none;
 }
 
-.brand-parts__grid li {
+.brand-parts__grid-item:is(li) {
   display: flex;
   min-width: 0;
   min-height: 44px;
@@ -637,12 +637,12 @@
   background: var(--soft);
 }
 
-.brand-price-row span {
+.brand-price-row__value:is(span) {
   min-width: 0;
   white-space: normal;
 }
 
-.brand-price-row span:last-child {
+.brand-price-row__value:is(span):last-child {
   flex: 0 0 auto;
 }
 
@@ -817,11 +817,11 @@
   gap: 20px;
 }
 
-.request-card .form-field__label {
+.form-field__label.request-card__label {
   color: var(--line);
 }
 
-.request-card .form-field__control {
+.form-field__control.request-card__control {
   background: var(--soft);
 }
 
@@ -884,7 +884,7 @@
   line-height: 1.2;
 }
 
-.brand-seo__copy p {
+.brand-seo__copy-text:is(p) {
   margin: 0;
 }
 
@@ -926,11 +926,11 @@
     gap: 22px;
   }
 
-  .brand-service-card__details ul {
+  .brand-service-card__details-list:is(ul) {
     gap: 8px 12px;
   }
 
-  .brand-parts__grid li {
+  .brand-parts__grid-item:is(li) {
     font-size: 15px;
   }
 
@@ -953,7 +953,7 @@
     z-index: auto;
   }
 
-  .brand-page .page__container,
+  .brand-page .layout-container,
   .brand-breadcrumb {
     width: calc(100vw - 32px);
     margin-right: 16px;
@@ -972,7 +972,7 @@
     gap: 10px;
   }
 
-  .brand-section-heading p {
+  .brand-section-heading__text:is(p) {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -1150,7 +1150,7 @@
     text-align: center;
   }
 
-  .brand-model-card__links a {
+  .brand-model-card__links-link:is(a) {
     width: 100%;
     padding: 0 5px 5px;
   }
@@ -1173,7 +1173,7 @@
     gap: 10px;
   }
 
-  .brand-finder__heading p {
+  .brand-finder__heading-text:is(p) {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -1184,11 +1184,11 @@
     gap: 20px;
   }
 
-  .brand-finder .form-field__label {
+  .form-field__label.brand-finder__label {
     font-size: 14px;
   }
 
-  .brand-finder .form-field__control {
+  .form-field__control.brand-finder__control {
     height: 54px;
     padding-left: 20px;
     background: var(--paper);
@@ -1274,22 +1274,22 @@
     padding: 10px 10px 20px;
   }
 
-  .brand-service-card__heading h3 {
+  .brand-service-card__heading-title:is(h3) {
     font-size: 20px;
     line-height: 1.2;
   }
 
-  .brand-service-card__heading p {
+  .brand-service-card__heading-text:is(p) {
     font-size: 16px;
     line-height: 1.2;
   }
 
-  .brand-service-card__details h4 {
+  .brand-service-card__details-subtitle:is(h4) {
     font-size: 18px;
   }
 
-  .brand-service-card__details ul,
-  .brand-service-card--links .brand-service-card__details ul {
+  .brand-service-card__details-list:is(ul),
+  .brand-service-card--links .brand-service-card__details-list:is(ul) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1297,20 +1297,20 @@
     font-size: 14px;
   }
 
-  .brand-service-card__details li {
+  .brand-service-card__details-item:is(li) {
     align-items: center;
     gap: 0;
   }
 
-  .brand-service-card:not(.brand-service-card--links) .brand-service-card__details li::before,
-  .brand-parts__grid li::before {
+  .brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item:is(li)::before,
+  .brand-parts__grid-item:is(li)::before {
     width: 24px;
     height: 24px;
     flex-basis: 24px;
     background-size: 7.061px 8.738px;
   }
 
-  .brand-service-card .brand-text-link {
+  .brand-text-link.brand-service-card__brand-text-link {
     margin-top: 0;
   }
 
@@ -1318,7 +1318,7 @@
     justify-content: flex-start;
   }
 
-  .brand-service-card--links .brand-service-card__details ul {
+  .brand-service-card--links .brand-service-card__details-list:is(ul) {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
@@ -1326,46 +1326,46 @@
     line-height: 1.2;
   }
 
-  .brand-service-card--links .brand-service-card__details li,
-  .brand-service-card--links .brand-service-card__details a {
+  .brand-service-card--links .brand-service-card__details-item:is(li),
+  .brand-service-card--links .brand-service-card__details-link:is(a) {
     width: 100%;
   }
 
-  .brand-service-card--links .brand-service-card__details li {
+  .brand-service-card--links .brand-service-card__details-item:is(li) {
     display: flex;
     min-height: 24px;
     align-items: center;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(1) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(1) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(2) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(2) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(3) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(3) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(4) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(4) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(5) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(5) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(6) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(6) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li:nth-child(7) {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(7) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details li {
+  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li) {
     min-width: 0;
     white-space: normal;
   }
@@ -1406,7 +1406,7 @@
     margin: 20px 0;
   }
 
-  .brand-parts__grid li {
+  .brand-parts__grid-item:is(li) {
     height: 37px;
     gap: 10px;
     padding: 6px 10px;
@@ -1414,7 +1414,7 @@
     line-height: 1.2;
   }
 
-  .brand-parts .brand-outline-button {
+  .brand-outline-button.brand-parts__brand-outline-button {
     min-height: 46px;
     padding: 15px 40px;
     font-size: 16px;
@@ -1439,11 +1439,11 @@
     line-height: 16.5px;
   }
 
-  .brand-price-row span:first-child {
+  .brand-price-row__value:is(span):first-child {
     white-space: normal;
   }
 
-  .brand-price-row span:last-child {
+  .brand-price-row__value:is(span):last-child {
     font-size: 16px;
     white-space: nowrap;
   }
@@ -1590,7 +1590,7 @@
     gap: 10px;
   }
 
-  .request-card .form-field__control {
+  .form-field__control.request-card__control {
     height: 54px;
     padding-left: 20px;
     font-size: 16px;

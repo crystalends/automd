@@ -161,8 +161,8 @@
   line-height: 1.2;
 }
 
-.promotion-hero__description p,
-.promotion-includes p {
+.promotion-hero__description-text:is(p),
+.promotion-includes__text:is(p) {
   margin: 0;
 }
 
@@ -284,14 +284,14 @@
   list-style: none;
 }
 
-.promotion-includes__list li {
+.promotion-includes__list-item:is(li) {
   position: relative;
   min-height: 24px;
   padding-left: 24px;
   line-height: 24px;
 }
 
-.promotion-includes__list li::before {
+.promotion-includes__list-item:is(li)::before {
   position: absolute;
   top: 8px;
   left: 8px;
@@ -467,7 +467,7 @@
     font-size: 16px;
   }
 
-  .promotion-includes__list li {
+  .promotion-includes__list-item:is(li) {
     line-height: 1.2;
   }
 
@@ -483,7 +483,7 @@
     display: none;
   }
 
-  .related-promotions .promotion-card {
+  .promotion-card.related-promotions__promotion-card {
     width: 100%;
     flex: 0 0 100%;
     scroll-snap-align: start;

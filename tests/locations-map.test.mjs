@@ -9,9 +9,9 @@ const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 test("shared location blocks use the interactive Yandex map", () => {
   for (const page of ["index.html", "about.html", "3d-tour.html", "client-zone.html", "contacts.html"]) {
     const markup = readFileSync(resolve(projectRoot, page), "utf8");
-    assert.match(markup, /<iframe\b[\s\S]*?class="locations__map"[\s\S]*?yandex\.ru\/map-widget\/v1\//);
-    assert.match(markup, /<iframe\b[\s\S]*?class="locations__map"[\s\S]*?loading="lazy"/);
-    assert.doesNotMatch(markup, /<img\b[^>]*class="locations__map"/);
+    assert.match(markup, /<iframe\b[\s\S]*?class="[^"]*\blocations__map\b[^"]*"[\s\S]*?yandex\.ru\/map-widget\/v1\//);
+    assert.match(markup, /<iframe\b[\s\S]*?class="[^"]*\blocations__map\b[^"]*"[\s\S]*?loading="lazy"/);
+    assert.doesNotMatch(markup, /<img\b[^>]*class="[^"]*\blocations__map\b[^"]*"/);
   }
 });
 

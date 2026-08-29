@@ -28,12 +28,12 @@ test("contacts page follows the Figma section order", () => {
 });
 
 test("contacts page reuses shared project blocks and ESM", () => {
-  assert.equal((markup.match(/class="location-card"/g) ?? []).length, 2);
+  assert.equal((markup.match(/class="[^"]*\blocation-card\b[^"]*"/g) ?? []).length, 2);
   assert.equal((markup.match(/class="quick-action-card"/g) ?? []).length, 4);
   assert.equal((markup.match(/class="service-center-card"/g) ?? []).length, 2);
   assert.match(markup, /class="faq-request /);
   assert.match(markup, /class="request-card"/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("contacts page uses embedded Yandex maps and existing design assets", () => {

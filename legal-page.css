@@ -131,7 +131,7 @@
   list-style: none;
 }
 
-.legal-check-list li {
+.legal-check-list__item:is(li) {
   position: relative;
   min-height: 24px;
   padding: 2px 0 2px 24px;
@@ -139,13 +139,13 @@
   line-height: 1.2;
 }
 
-.legal-check-list li::before {
+.legal-check-list__item:is(li)::before {
   position: absolute;
   background-repeat: no-repeat;
   content: "";
 }
 
-.legal-check-list li::before {
+.legal-check-list__item:is(li)::before {
   top: 0;
   left: 0;
   width: 24px;
@@ -173,7 +173,7 @@
     padding-bottom: 0;
   }
 
-  .legal-page .page__container,
+  .legal-page .layout-container,
   .legal-page .articles-breadcrumb {
     width: calc(100vw - 32px);
     margin-right: 16px;
@@ -220,7 +220,7 @@
     font-size: 30px;
   }
 
-  .legal-check-list li {
+  .legal-check-list__item:is(li) {
     font-size: 15px;
   }
 
@@ -230,7 +230,7 @@
 }
 
 @media (max-width: 359px) {
-  .legal-page .page__container,
+  .legal-page .layout-container,
   .legal-page .articles-breadcrumb,
   .legal-hero,
   .legal-content {

@@ -110,7 +110,7 @@
 }
 
 .tour-hero__title,
-.tour-hero__description p,
+.tour-hero__description-text:is(p),
 .virtual-tour__title,
 .virtual-tour__description {
   margin: 0;
@@ -322,7 +322,7 @@
     --tour-section-gap: 40px;
   }
 
-  .tour-page .page__container,
+  .tour-page .layout-container,
   .tour-breadcrumb,
   .tour-page .about-seo {
     width: auto;
@@ -459,7 +459,7 @@
 }
 
 @media (max-width: 359px) {
-  .tour-page .page__container,
+  .tour-page .layout-container,
   .tour-breadcrumb,
   .tour-page .about-seo {
     margin-right: 8px;

@@ -55,7 +55,7 @@ test("articles layout is responsive without locking the viewport", () => {
   assert.match(tabletStyles, /\.articles-catalog__grid\s*\{[^}]*repeat\(2, minmax\(0, 1fr\)\)/s);
   assert.match(mobileStyles, /\.articles-catalog__grid\s*\{[^}]*grid-template-columns:\s*1fr/s);
   assert.match(mobileStyles, /\.article-filter\s*\{[^}]*overscroll-behavior-inline:\s*contain/s);
-  assert.match(mobileStyles, /\.articles-page \.page__container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
+  assert.match(mobileStyles, /\.articles-page \.layout-container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
 });
 
 test("article filter is accessible and initialized defensively", () => {

@@ -48,7 +48,7 @@ test("business page reuses established responsive components", () => {
   assert.equal((markup.match(/<article class="vehicle-card">/g) ?? []).length, 12);
   assert.equal((markup.match(/<article class="brand-service-card(?: |")/g) ?? []).length, 6);
   assert.equal((markup.match(/<article class="team-card">/g) ?? []).length, 5);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(markup, /class="commercial-hero-scene hero-grid"/);
   assert.match(markup, /class="commercial-hero-scene__mobile-vehicle business-hero__vehicle-mobile"/);
 });

@@ -6,6 +6,20 @@ import { fileURLToPath } from "node:url";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const htmlFiles = readdirSync(projectRoot).filter((file) => extname(file) === ".html").sort();
 const failures = [];
+const bemClassPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)?(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$/u;
+const pageScopes = new Set([
+  "about-page", "article-detail-page", "articles-page", "branch-page", "brand-page", "business-page",
+  "cars-page", "careers-page", "client-zone-page", "contacts-page", "diagnostics-page", "error-page",
+  "legal-page", "model-service-detail-page", "parts-page", "prices-page", "promotion-detail-page",
+  "promotions-page", "reviews-page", "service-detail-page", "services-page", "tour-page", "warranty-page",
+]);
+const allowedCrossBlockSelectors = new Set([
+  "site-header--vehicles-open|vehicle-menu",
+  "site-header--vehicles-open|site-nav__link",
+  "mobile-menu__logo|brand-logo__mark",
+  "mobile-menu__logo|brand-logo__caption",
+]);
+const getBemBlock = (className) => className.split(/__|--/u, 1)[0];
 
 const check = (condition, message) => {
   if (!condition) failures.push(message);
@@ -15,8 +29,12 @@ for (const file of htmlFiles) {
   const markup = readFileSync(resolve(projectRoot, file), "utf8");
   const localStyles = [...markup.matchAll(/<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"|<link\b[^>]*href="([^"]+)"[^>]*rel="stylesheet"/g)]
     .map((match) => match[1] || match[2]);
+  const localScripts = [...markup.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*>/gu)]
+    .map((match) => match[1])
+    .filter((source) => !/^(?:https?:|data:)/u.test(source));
 
   check(localStyles.length === 1 && localStyles[0] === "app.css", `${file}: expected app.css to be the only stylesheet`);
+  check(localScripts.length === 1 && localScripts[0] === "app.js", `${file}: expected app.js to be the only script`);
   check((markup.match(/<main\b/gu) ?? []).length === 1, `${file}: expected exactly one main element`);
   check((markup.match(/<h1\b/gu) ?? []).length === 1, `${file}: expected exactly one h1 element`);
   check(/<html\b[^>]*lang="ru"/u.test(markup), `${file}: missing lang=ru`);
@@ -58,13 +76,10 @@ for (const file of htmlFiles) {
     }
   }
 
-  const hasSwiperMarkup = /class="[^"]*\bswiper\b/u.test(markup);
-  const hasSwiperScript = /src="vendor\/swiper\/swiper-bundle\.min\.js"/u.test(markup);
-  check(hasSwiperMarkup === hasSwiperScript, `${file}: Swiper script does not match page usage`);
-
   for (const match of markup.matchAll(/class="([^"]*)"/gu)) {
     const classes = match[1].trim().split(/\s+/u).filter(Boolean);
     for (const className of classes) {
+      check(bemClassPattern.test(className), `${file}: invalid BEM class ${className}`);
       check(!className.includes("__") || className.indexOf("__") === className.lastIndexOf("__"), `${file}: nested BEM element ${className}`);
       const classWithoutBemSeparator = className.replaceAll("__", "");
       check(!/[A-Z_]/u.test(classWithoutBemSeparator), `${file}: invalid class casing ${className}`);
@@ -81,6 +96,28 @@ const firstPartyCss = cssFiles
   .map((file) => readFileSync(resolve(projectRoot, file), "utf8"))
   .join("\n");
 check(!firstPartyCss.includes("!important"), "first-party CSS contains !important");
+
+for (const match of firstPartyCss.matchAll(/\.([a-zA-Z_][a-zA-Z0-9_-]*)/gu)) {
+  check(bemClassPattern.test(match[1]), `CSS: invalid BEM class ${match[1]}`);
+}
+
+const structuralTagPattern = /\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?:(?:\[[^\]]+\]|:[a-z-]+(?:\([^)]*\))?))*\s+(a|b|button|h[1-6]|img|input|li|p|small|span|strong|summary|svg|ul)\b/gu;
+for (const match of firstPartyCss.matchAll(structuralTagPattern)) {
+  const richTextSelector = ["article-content", "legal-content"].includes(match[1])
+    && ["h2", "h3", "p"].includes(match[2]);
+  check(richTextSelector, `CSS: structural tag selector .${match[1]} ${match[2]} must use a BEM element class`);
+}
+
+const classPairPattern = /(?=(\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)\s+\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?![a-z0-9_-])))/gu;
+for (const match of firstPartyCss.matchAll(classPairPattern)) {
+  const parent = match[2];
+  const child = match[3];
+  const sameBlock = getBemBlock(parent) === getBemBlock(child);
+  const pageScope = pageScopes.has(parent) || pageScopes.has(getBemBlock(parent));
+  const thirdParty = getBemBlock(child).startsWith("swiper");
+  const explicitException = allowedCrossBlockSelectors.has(`${parent}|${child}`);
+  check(sameBlock || pageScope || thirdParty || explicitException, `CSS: cross-block selector .${parent} .${child} must use a BEM mix`);
+}
 
 for (const file of cssFiles) {
   const css = readFileSync(resolve(projectRoot, file), "utf8");

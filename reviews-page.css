@@ -75,7 +75,7 @@
 }
 
 .reviews-hero__title,
-.reviews-hero__copy p,
+.reviews-hero__copy-text:is(p),
 .reviews-rating__title,
 .reviews-rating__description,
 .reviews-section-title,
@@ -271,13 +271,13 @@
   gap: 20px;
 }
 
-.review-catalog .review-card {
+.review-card.review-catalog__review-card {
   width: 100%;
   height: auto;
   min-height: 194px;
 }
 
-.review-catalog .review-card__text {
+.review-card__text.review-catalog__text {
   display: block;
   height: auto;
   overflow: visible;
@@ -397,8 +397,8 @@
   list-style: none;
 }
 
-.reviews-guide__list li,
-.related-sections__links a {
+.reviews-guide__list-item:is(li),
+.related-sections__links-link:is(a) {
   position: relative;
   display: flex;
   align-items: center;
@@ -408,7 +408,7 @@
   font-size: 16px;
 }
 
-.reviews-guide__list li {
+.reviews-guide__list-item:is(li) {
   min-height: 59px;
   background: #fff url("assets/reviews-guide-pattern-right.png") right center / 190px 59px no-repeat;
 }
@@ -423,7 +423,7 @@
   flex: 0 0 auto;
 }
 
-.related-sections__heading .reviews-guide__description {
+.reviews-guide__description.related-sections__heading-description {
   font-size: 18px;
 }
 
@@ -434,13 +434,13 @@
   margin-top: 20px;
 }
 
-.related-sections__links a {
+.related-sections__links-link:is(a) {
   min-height: 64px;
   padding-right: 54px;
   background: var(--soft) url("assets/reviews-guide-pattern-left.png") left center / 195px 64px no-repeat;
 }
 
-.related-sections__links a::after {
+.related-sections__links-link:is(a)::after {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -465,7 +465,7 @@
   line-height: 1.2;
 }
 
-.reviews-page .about-seo__copy p {
+.reviews-page .about-seo__copy-text:is(p) {
   margin: 0;
 }
 
@@ -553,7 +553,7 @@
     --reviews-section-gap: 40px;
   }
 
-  .reviews-page .page__container,
+  .reviews-page .layout-container,
   .reviews-breadcrumb,
   .reviews-page .about-seo {
     width: auto;
@@ -594,7 +594,7 @@
   .reviews-hero__copy,
   .reviews-rating__description,
   .review-book__description,
-  .related-sections__heading .reviews-guide__description,
+  .reviews-guide__description.related-sections__heading-description,
   .reviews-page .about-seo__copy {
     font-size: 16px;
     line-height: 1.35;
@@ -722,8 +722,8 @@
     margin-top: 16px;
   }
 
-  .reviews-guide__list li,
-  .related-sections__links a {
+  .reviews-guide__list-item:is(li),
+  .related-sections__links-link:is(a) {
     height: auto;
     min-height: 54px;
     padding: 16px;
@@ -740,7 +740,7 @@
 }
 
 @media (max-width: 359px) {
-  .reviews-page .page__container,
+  .reviews-page .layout-container,
   .reviews-breadcrumb,
   .reviews-page .about-seo {
     margin-right: 8px;

@@ -48,7 +48,7 @@ test("mobile layout reflows unique and reused sections", () => {
   const mobileStyles = styles.slice(mobileStart, narrowStart);
 
   assert.ok(mobileStart >= 0, "mobile breakpoint must exist");
-  assert.match(mobileStyles, /\.promotions-page \.page__container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
+  assert.match(mobileStyles, /\.promotions-page \.layout-container,[\s\S]*?width:\s*calc\(100vw - 32px\)/);
   assert.match(mobileStyles, /\.promotions-catalog__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto[^}]*scroll-snap-type:\s*x mandatory/s);
   assert.match(mobileStyles, /\.promotion-card\s*\{[^}]*flex:\s*0 0 100%[^}]*scroll-snap-align:\s*start/s);
   assert.match(mobileStyles, /\.special-offer-card\s*\{[^}]*flex-direction:\s*column/s);

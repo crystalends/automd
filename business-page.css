@@ -66,7 +66,7 @@
   line-height: 1.2;
 }
 
-.business-hero__copy p,
+.business-hero__copy-text:is(p),
 .business-hero__advantages {
   margin: 0;
 }
@@ -289,7 +289,7 @@
   color: var(--ink);
 }
 
-.business-insights__panel--accent .business-insight-card {
+.business-insight-card.business-insights__panel-business-insight-card {
   background: var(--soft);
 }
 
@@ -306,7 +306,7 @@
   pointer-events: none;
 }
 
-.business-insights__panel--accent .business-insight-card::after {
+.business-insight-card.business-insights__panel-business-insight-card::after {
   right: 0;
   left: auto;
   width: 190px;
@@ -457,7 +457,7 @@
 }
 
 .business-seo__title,
-.business-seo__copy p {
+.business-seo__copy-text:is(p) {
   margin: 0;
 }
 

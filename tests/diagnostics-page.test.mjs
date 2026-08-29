@@ -69,7 +69,7 @@ test("diagnostics page reuses established responsive project blocks", () => {
     assert.match(markup, new RegExp(component.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(buildScript, /diagnostics-page\.css/);
 });
 
@@ -77,7 +77,7 @@ test("diagnostics-specific content cards have no hard pixel height", () => {
   for (const selector of [
     ".diagnostics-type-card",
     ".diagnostics-need__signs",
-    ".diagnostics-process__grid li",
+    ".diagnostics-process__grid-item:is(li)",
     ".diagnostics-vehicle-card",
     ".related-service-card",
   ]) {
@@ -87,7 +87,7 @@ test("diagnostics-specific content cards have no hard pixel height", () => {
   }
 
   assert.match(styles, /\.diagnostics-page \.team-card,[\s\S]*height:\s*auto;[\s\S]*min-height:\s*0;/);
-  assert.match(styles, /\.diagnostics-vehicle-card img\s*\{[^}]*aspect-ratio:\s*21 \/ 20/s);
+  assert.match(styles, /\.diagnostics-vehicle-card__image:is\(img\)\s*\{[^}]*aspect-ratio:\s*21 \/ 20/s);
 });
 
 test("diagnostics layout reflows without a fixed desktop canvas", () => {
@@ -105,12 +105,12 @@ test("diagnostics layout reflows without a fixed desktop canvas", () => {
 test("diagnostics mobile hero follows Figma node 353:27276", () => {
   assert.match(styles, /\.diagnostics-page \.services-breadcrumb\s*\{[^}]*margin-top:\s*10px;[^}]*line-height:\s*1;/s);
   assert.match(styles, /\.diagnostics-hero__content\s*\{[^}]*gap:\s*40px;/s);
-  assert.match(styles, /\.diagnostics-hero__content \.services-hero__intro\s*\{[^}]*gap:\s*20px;/s);
-  assert.match(styles, /\.diagnostics-hero__content \.services-hero__description\s*\{[^}]*line-height:\s*19px;/s);
+  assert.match(styles, /\.services-hero__intro\.diagnostics-hero__content-intro\s*\{[^}]*gap:\s*20px;/s);
+  assert.match(styles, /\.services-hero__description\.diagnostics-hero__content-description\s*\{[^}]*line-height:\s*19px;/s);
   assert.match(styles, /\.diagnostics-hero__actions\s*\{[^}]*width:\s*min\(305px, 100%\);[^}]*align-items:\s*flex-start;/s);
-  assert.match(styles, /\.diagnostics-hero__actions \.button,[\s\S]*min-height:\s*56px;[\s\S]*font-size:\s*16px;/s);
-  assert.match(styles, /\.diagnostics-hero__actions \.button\s*\{[^}]*width:\s*100%;/s);
-  assert.match(styles, /\.diagnostics-hero__actions \.brand-outline-button\s*\{[^}]*width:\s*min\(253px, 100%\);/s);
+  assert.match(styles, /\.button\.diagnostics-hero__actions-button,[\s\S]*min-height:\s*56px;[\s\S]*font-size:\s*16px;/s);
+  assert.match(styles, /\.button\.diagnostics-hero__actions-button\s*\{[^}]*width:\s*100%;/s);
+  assert.match(styles, /\.brand-outline-button\.diagnostics-hero__actions-brand-outline-button\s*\{[^}]*width:\s*min\(253px, 100%\);/s);
   assert.match(styles, /\.diagnostics-hero__visual\s*\{[^}]*width:\s*92\.0513vw;[^}]*margin:\s*-0\.686px 0 0 25\.8974vw;/s);
   assert.doesNotMatch(getRule(".diagnostics-hero__visual"), /height:\s*\d+px/);
 });

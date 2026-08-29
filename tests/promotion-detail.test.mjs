@@ -19,7 +19,7 @@ test("promotion detail keeps the Figma section order and composition", () => {
     previousIndex = sectionIndex;
   }
 
-  assert.equal((markup.match(/<article class="promotion-card">/g) ?? []).length, 4);
+  assert.equal((markup.match(/<article class="promotion-card related-promotions__promotion-card">/g) ?? []).length, 4);
   assert.match(styles, /grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/);
   assert.match(styles, /\.related-promotions__grid\s*\{[^}]*repeat\(4, minmax\(0, 1fr\)\)/s);
 });

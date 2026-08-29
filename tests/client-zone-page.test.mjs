@@ -30,7 +30,7 @@ test("client zone page follows the Figma section order", () => {
 test("unique client zone content matches the Figma composition", () => {
   assert.match(markup, /<h1[^>]*>Клиентская зона AutoMD<\/h1>/);
   assert.equal((markup.match(/<article class="client-zone-card">/g) ?? []).length, 8);
-  assert.equal((markup.match(/<li>/g) ?? []).length, 6);
+  assert.equal((markup.match(/<li class="client-zone-hero__benefits-item">/g) ?? []).length, 6);
   assert.match(styles, /grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/);
   assert.match(styles, /\.client-zone-card\s*\{[^}]*height:\s*368px/s);
   assert.match(styles, /\.client-zone-card__image\s*\{[^}]*height:\s*290px/s);
@@ -41,7 +41,7 @@ test("page reuses existing responsive components and shared ESM", () => {
     assert.match(markup, new RegExp(`class="[^"]*${component}`));
   }
   assert.match(markup, /href="app\.css"/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("locations use the existing embedded Yandex map", () => {
@@ -61,7 +61,7 @@ test("client zone layout is fluid and scrollable on mobile", () => {
 
   assert.match(mobileStyles, /\.client-zone-amenities__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto[^}]*scroll-snap-type:\s*x mandatory/s);
   assert.match(mobileStyles, /\.client-zone-card\s*\{[^}]*flex:\s*0 0 100%[^}]*scroll-snap-align:\s*start/s);
-  assert.match(mobileStyles, /\.client-zone-hero__benefits li\s*\{[^}]*width:\s*100%/s);
+  assert.match(mobileStyles, /\.client-zone-hero__benefits-item:is\(li\)\s*\{[^}]*width:\s*100%/s);
 });
 
 test("Figma images are local and every local resource resolves", () => {

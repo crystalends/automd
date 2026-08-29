@@ -30,7 +30,7 @@ test("consent page reuses shared components and exact local Figma assets", () =>
 
   assert.match(styles, /assets\/legal-check\.svg/);
   assert.doesNotMatch(markup + styles, /figma\.com\/api\/mcp\/asset/);
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
 });
 
 test("consent desktop geometry and mobile layout are content-driven", () => {

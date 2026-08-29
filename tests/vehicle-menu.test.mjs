@@ -7,12 +7,10 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const read = (file) => readFileSync(resolve(projectRoot, file), "utf8");
 
-test("shared entrypoints initialize the vehicle dropdown", () => {
-  for (const file of ["js/main.js", "js/error-page.js"]) {
-    const source = read(file);
-    assert.match(source, /import \{ initVehicleMenu \} from "\.\/modules\/vehicle-menu\.js";/);
-    assert.match(source, /initVehicleMenu\(\);/);
-  }
+test("the shared entrypoint initializes the vehicle dropdown", () => {
+  const source = read("js/main.js");
+  assert.match(source, /import \{ initVehicleMenu \} from "\.\/modules\/vehicle-menu\.js";/);
+  assert.match(source, /initVehicleMenu\(\);/);
 });
 
 test("vehicle dropdown reuses every local brand asset from the Figma menu", () => {

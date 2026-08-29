@@ -28,7 +28,7 @@ test("article detail matches the desktop content composition", () => {
     markup.indexOf('class="article-toc__list"'),
     markup.indexOf("</ol>", markup.indexOf('class="article-toc__list"')),
   );
-  assert.equal((tocMarkup.match(/<li>/g) ?? []).length, 7);
+  assert.equal((tocMarkup.match(/<li class="article-toc__list-item">/g) ?? []).length, 7);
   assert.equal((markup.match(/<article class="article-card">/g) ?? []).length, 3);
   assert.match(markup, /<h2>Главное в материале<\/h2>/);
   assert.match(markup, /<h2>Условия возврата<\/h2>/);
@@ -39,7 +39,7 @@ test("article detail reuses shared project components and modules", () => {
   for (const component of ["site-header", "article-card", "faq-request", "request-card", "site-footer"]) {
     assert.match(markup, new RegExp(`class="${component}`));
   }
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(markup, /data-form="booking"/);
   assert.equal((articlesMarkup.match(/href="article-detail\.html">Читать статью<\/a>/g) ?? []).length, 12);
 });

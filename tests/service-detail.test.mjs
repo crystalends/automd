@@ -48,7 +48,7 @@ test("service detail reuses established project components and ESM", () => {
     assert.match(markup, new RegExp(component.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
 
-  assert.match(markup, /type="module" src="js\/main\.js"/);
+  assert.match(markup, /src="app\.js" defer/);
   assert.match(markup, /id="service-models-grid"/);
   assert.match(markup, /data-models-toggle aria-controls="service-models-grid" aria-expanded="false"/);
   assert.equal((markup.match(/<article class="brand-model-card/g) ?? []).length, 12);
@@ -88,7 +88,7 @@ test("service detail is fluid and has a content-driven mobile layout", () => {
 test("service detail keeps mobile overrides scoped to its unique blocks", () => {
   assert.doesNotMatch(markup, /class="service-detail-parts__mobile-break"/);
   assert.match(styles, /\.service-detail-hero__actions\s*\{[^}]*align-items:\s*flex-start[^}]*gap:\s*20px/s);
-  assert.match(styles, /\.service-detail-hero__actions \.brand-hero__button\s*\{[^}]*width:\s*261px/s);
+  assert.match(styles, /\.brand-hero__button\.service-detail-hero__actions-button\s*\{[^}]*width:\s*261px/s);
   assert.match(styles, /\.service-detail-symptoms__visual\s*\{[^}]*height:\s*246px/s);
   assert.doesNotMatch(styles, /\.service-detail-page \.brand-model-card/);
   assert.doesNotMatch(styles, /\.service-detail-page \.service-price-list__item/);

@@ -10,9 +10,9 @@ const pageStyles = readFileSync(resolve(projectRoot, "cars-page.css"), "utf8");
 const sliderModule = readFileSync(resolve(projectRoot, "js/modules/sliders.js"), "utf8");
 
 test("cars page contains the Figma desktop sections", () => {
-  assert.match(markup, /class="cars-hero page__container"/);
-  assert.match(markup, /class="car-brands page__container"/);
-  assert.match(markup, /class="faq-request page__container"/);
+  assert.match(markup, /class="cars-hero layout-container"/);
+  assert.match(markup, /class="car-brands layout-container"/);
+  assert.match(markup, /class="faq-request layout-container"/);
   assert.equal((markup.match(/<article class="vehicle-card">/g) ?? []).length, 10);
 });
 
@@ -26,7 +26,7 @@ test("FAQ request section keeps the Figma structure and local pattern asset", ()
 });
 
 test("cars page implements the mobile Figma structure without a desktop width lock", () => {
-  assert.match(markup, /class="cars-breadcrumb page__container"/);
+  assert.match(markup, /class="cars-breadcrumb layout-container"/);
   assert.equal((markup.match(/class="car-brands__dot(?: car-brands__dot--active)?"/g) ?? []).length, 5);
   assert.match(pageStyles, /@media \(max-width: 767px\)/);
   assert.match(pageStyles, /--container: calc\(100vw - 32px\)/);
