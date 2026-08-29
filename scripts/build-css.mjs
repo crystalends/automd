@@ -10,10 +10,12 @@ const pageClasses = [
   "articles-page",
   "branch-page",
   "brand-page",
+  "business-page",
   "cars-page",
   "careers-page",
   "client-zone-page",
   "contacts-page",
+  "diagnostics-page",
   "error-page",
   "legal-page",
   "model-service-detail-page",
@@ -34,7 +36,7 @@ const sourceGroups = [
   { file: "vendor/swiper/swiper-bundle.min.css" },
   { file: "fonts.css" },
   { file: "styles.css" },
-  { file: "brand-page.css", scopes: ["brand-page", "services-page"] },
+  { file: "brand-page.css", scopes: ["brand-page", "business-page", "services-page"] },
   {
     file: "about-page.css",
     scopes: [
@@ -42,6 +44,7 @@ const sourceGroups = [
       "article-detail-page",
       "articles-page",
       "branch-page",
+      "business-page",
       "careers-page",
       "contacts-page",
       "parts-page",
@@ -73,6 +76,8 @@ const sourceGroups = [
   { file: "parts-page.css", scopes: ["parts-page"] },
   { file: "prices-page.css", scopes: ["prices-page"] },
   { file: "warranty-page.css", scopes: ["warranty-page"] },
+  { file: "business-page.css", scopes: ["business-page"] },
+  { file: "diagnostics-page.css", scopes: ["diagnostics-page"] },
 ];
 
 const hasPageScope = (selector) =>

@@ -32,42 +32,6 @@
   overflow: hidden;
 }
 
-.warranty-hero-scene__light {
-  position: absolute;
-}
-
-.warranty-hero-scene__light--main {
-  top: 246.954px;
-  left: 863.668px;
-  width: 1376.428px;
-  height: 428.002px;
-}
-
-.warranty-hero-scene__light--soft {
-  top: 158.189px;
-  left: -25px;
-  width: 1017px;
-  height: 341.138px;
-}
-
-.warranty-hero-scene__light-frame {
-  position: absolute;
-}
-
-.warranty-hero-scene__light-frame--main {
-  inset: -81.64% -15.19%;
-}
-
-.warranty-hero-scene__light-frame--soft {
-  inset: -58.63% -19.67%;
-}
-
-.warranty-hero-scene__light-asset {
-  width: 100%;
-  height: 100%;
-  max-width: none;
-}
-
 .warranty-breadcrumb {
   display: flex;
   min-height: 17px;

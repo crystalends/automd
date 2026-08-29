@@ -47,6 +47,15 @@ test("cars page contains no expiring Figma asset URLs", () => {
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 });
 
+test("desktop vehicle light separates the cars from the animated gear", () => {
+  assert.match(markup, /class="cars-hero-scene__vehicle-light" data-node-id="227:16146"/);
+  assert.match(markup, /src="assets\/cars-hero-vehicle-light\.svg"/);
+  assert.match(pageStyles, /\.cars-hero-scene__gear\s*\{[^}]*z-index:\s*2/s);
+  assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*z-index:\s*3/s);
+  assert.match(pageStyles, /\.cars-hero-scene__vehicles\s*\{[^}]*z-index:\s*4/s);
+  assert.ok(existsSync(resolve(projectRoot, "assets/cars-hero-vehicle-light.svg")));
+});
+
 test("all local resources referenced by the cars page exist", () => {
   const resources = [...markup.matchAll(/(?:href|src)="([^"]+)"/g)]
     .map(([, value]) => value.split("#")[0])

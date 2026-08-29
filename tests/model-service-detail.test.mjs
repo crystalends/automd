@@ -64,7 +64,6 @@ test("model service detail reuses established responsive components", () => {
 
 test("model service detail keeps all Figma assets local", () => {
   for (const asset of [
-    "brand-hero-pattern.png",
     "model-service-hero-vehicle.png",
     "brand-advantage-wallet.svg",
     "promo-tires.png",
@@ -74,6 +73,9 @@ test("model service detail keeps all Figma assets local", () => {
   ]) {
     assert.match(markup, new RegExp(`assets/${asset.replace(".", "\\.")}`));
   }
+
+  assert.match(markup, /class="brand-hero-scene model-service-hero-scene hero-grid"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
 
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 });

@@ -37,8 +37,8 @@
   pointer-events: none;
 }
 
-.cars-hero-scene__pattern,
 .cars-hero-scene__gear,
+.cars-hero-scene__vehicle-light,
 .cars-hero-scene__vehicles,
 .cars-hero-scene__glow,
 .cars-hero-scene__fade {
@@ -58,15 +58,6 @@
   width: 117.84%;
   height: 140.34%;
   max-width: none;
-}
-
-.cars-hero-scene__pattern {
-  z-index: 0;
-  inset: 0;
-  width: 100%;
-  height: 820px;
-  object-fit: fill;
-  opacity: 0.5;
 }
 
 .cars-hero-scene__glow {
@@ -109,8 +100,25 @@
   animation: hero-gear-rotation 24s linear infinite;
 }
 
-.cars-hero-scene__vehicles {
+.cars-hero-scene__vehicle-light {
   z-index: 3;
+  top: min(17.646vw, 338.807px);
+  left: 73.107vw;
+  width: min(20.467vw, 392.97px);
+  height: min(14.329vw, 275.121px);
+  pointer-events: none;
+}
+
+.cars-hero-scene__vehicle-light-image {
+  position: absolute;
+  inset: -20.49% -11.24%;
+  width: 122.48%;
+  height: 140.98%;
+  max-width: none;
+}
+
+.cars-hero-scene__vehicles {
+  z-index: 4;
   top: 264px;
   left: 49.479vw;
   width: 43.177vw;
@@ -529,13 +537,6 @@
     height: 782px;
   }
 
-  .cars-hero-scene__pattern {
-    width: 100%;
-    height: 782px;
-    object-fit: cover;
-    opacity: 0.72;
-  }
-
   .cars-hero-scene__glow {
     display: none;
   }
@@ -943,8 +944,7 @@
     min-height: 711px;
   }
 
-  .cars-hero-scene,
-  .cars-hero-scene__pattern {
+  .cars-hero-scene {
     height: 827px;
   }
 
@@ -955,8 +955,7 @@
     min-height: 711px;
   }
 
-  .cars-hero-scene,
-  .cars-hero-scene__pattern {
+  .cars-hero-scene {
     height: 827px;
   }
 
@@ -999,6 +998,7 @@
   }
 
   .cars-hero-scene__gear,
+  .cars-hero-scene__vehicle-light,
   .cars-hero-scene__fade,
   .cars-hero-scene__vehicles {
     display: none;

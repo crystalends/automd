@@ -21,6 +21,7 @@ test("mobile vehicle heroes keep their artwork in content flow", () => {
   const cases = [
     ["cars.html", "cars-page.css", "cars-hero__visual"],
     ["brand.html", "brand-page.css", "brand-hero-scene__mobile-art"],
+    ["parts.html", "parts-page.css", "parts-hero__visual"],
     ["services.html", "services-page.css", "services-hero__visual"],
   ];
 

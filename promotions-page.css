@@ -24,18 +24,6 @@
   pointer-events: none;
 }
 
-.promotions-hero-scene__pattern {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: max(100%, 1920px);
-  height: 820px;
-  max-width: none;
-  object-fit: fill;
-  transform: translateX(-50%);
-  user-select: none;
-}
-
 .promotions-breadcrumb {
   display: flex;
   align-items: center;
@@ -655,12 +643,6 @@
   .promotions-hero-scene {
     width: 100vw;
     height: 720px;
-  }
-
-  .promotions-hero-scene__pattern {
-    width: 1920px;
-    height: 820px;
-    opacity: 0.72;
   }
 
   .promotions-breadcrumb {

@@ -8,10 +8,6 @@
   height: auto;
 }
 
-.promotion-detail-page .promotions-hero-scene__pattern {
-  display: none;
-}
-
 .promotion-detail-fade {
   position: absolute;
   display: flex;

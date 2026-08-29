@@ -24,19 +24,6 @@
   pointer-events: none;
 }
 
-.articles-hero-scene__pattern {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 50%;
-  width: max(100%, 1920px);
-  height: 820px;
-  max-width: none;
-  object-fit: fill;
-  transform: translateX(-50%);
-  user-select: none;
-}
-
 .articles-hero-scene__glow {
   position: absolute;
   z-index: 1;
@@ -332,12 +319,6 @@
   .articles-hero-scene {
     width: 100vw;
     height: 900px;
-  }
-
-  .articles-hero-scene__pattern {
-    width: 1920px;
-    height: 820px;
-    opacity: 0.72;
   }
 
   .articles-breadcrumb {

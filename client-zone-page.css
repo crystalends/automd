@@ -14,18 +14,9 @@
   pointer-events: none;
 }
 
-.client-zone-hero-scene__pattern,
 .client-zone-hero-scene__glow {
   position: absolute;
   max-width: none;
-}
-
-.client-zone-hero-scene__pattern {
-  inset: 0;
-  width: 100%;
-  height: 820px;
-  object-fit: cover;
-  opacity: 0.55;
 }
 
 .client-zone-hero-scene__glow {
@@ -265,13 +256,6 @@
 @media (max-width: 767px) {
   .client-zone-hero-scene {
     height: 720px;
-  }
-
-  .client-zone-hero-scene__pattern {
-    width: 1920px;
-    height: 820px;
-    object-position: left center;
-    opacity: 0.72;
   }
 
   .client-zone-hero-scene__glow--left {

@@ -58,7 +58,6 @@ test("service detail reuses established project components and ESM", () => {
 
 test("service detail uses the exact local Figma assets", () => {
   for (const asset of [
-    "brand-hero-pattern.png",
     "brand-hero-art.png",
     "brand-hero-wrench-mobile.png",
     "brand-hero-vehicle-mobile.png",
@@ -70,6 +69,9 @@ test("service detail uses the exact local Figma assets", () => {
   ]) {
     assert.match(markup, new RegExp(`assets/${asset.replace(".", "\\.")}`));
   }
+
+  assert.match(markup, /class="brand-hero-scene hero-grid"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
 
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 });

@@ -7,6 +7,7 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "promotions.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "promotions-page.css"), "utf8");
+const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
 
 test("promotions page keeps the Figma desktop section order", () => {
   const sections = [
@@ -56,8 +57,18 @@ test("mobile layout reflows unique and reused sections", () => {
   assert.match(mobileStyles, /\.request-card\s*\{[^}]*min-height:\s*auto/s);
 });
 
+test("promotions hero reuses the home page grid primitive", () => {
+  assert.match(markup, /class="promotions-hero-scene hero-grid"/);
+  assert.doesNotMatch(markup, /promotions-hero-scene__pattern/);
+  assert.doesNotMatch(styles, /promotions-hero-scene__pattern/);
+  assert.doesNotMatch(markup, /hero-scene__glow/);
+  assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
+});
+
 test("promotions page uses local Figma assets and all local resources resolve", () => {
-  assert.match(markup, /src="assets\/promotions-hero-pattern\.png"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-soft.svg")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-paper.svg")));
   assert.match(markup, /src="assets\/promotions-card\.png"/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 

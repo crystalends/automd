@@ -21,18 +21,9 @@
   pointer-events: none;
 }
 
-.reviews-hero-scene__pattern,
 .reviews-hero-scene__glow {
   position: absolute;
   max-width: none;
-}
-
-.reviews-hero-scene__pattern {
-  inset: 0;
-  width: 100%;
-  height: 720px;
-  object-fit: cover;
-  opacity: 0.55;
 }
 
 .reviews-hero-scene__glow {
@@ -572,11 +563,6 @@
 
   .reviews-hero-scene {
     height: 610px;
-  }
-
-  .reviews-hero-scene__pattern {
-    height: 610px;
-    opacity: 0.4;
   }
 
   .reviews-hero-scene__glow--left {

@@ -61,9 +61,7 @@ test("parts paginated scrollers support mouse dragging", () => {
 test("parts page uses local Figma assets and all resources resolve", () => {
   const markup = read("parts.html");
   for (const asset of [
-    "assets/parts-hero.png",
-    "assets/parts-hero-scene.png",
-    "assets/parts-hero-mobile-scene.png",
+    "assets/parts-hero-transparent.png",
     "assets/parts-original.png",
     "assets/parts-analog.png",
     "assets/parts-restored.png",
@@ -87,24 +85,30 @@ test("parts page is fluid and has a content-driven mobile layout", () => {
   assert.match(mobileStyles, /\.parts-promo\s*\{[^}]*min-height:\s*0/s);
 });
 
-test("parts hero uses the exact Figma scene and desktop geometry", () => {
+test("parts hero uses the shared in-flow visual on desktop", () => {
   const markup = read("parts.html");
   const styles = read("parts-page.css");
 
-  assert.match(markup, /class="parts-hero-scene__composition" src="assets\/parts-hero-scene\.png"/);
+  assert.match(markup, /class="parts-hero__visual" data-node-id="258:28181"[^>]*>[\s\S]*?class="parts-hero__image" src="assets\/parts-hero-transparent\.png"/);
   assert.match(styles, /\.parts-hero\s*\{[^}]*min-height:\s*565px/s);
-  assert.match(styles, /\.parts-hero-scene__composition\s*\{[^}]*left:\s*50vw[^}]*width:\s*max\(100vw, 1920px\)/s);
+  assert.match(styles, /\.parts-hero__visual\s*\{[^}]*display:\s*block[^}]*max-width:\s*540px[^}]*aspect-ratio:\s*540 \/ 403[^}]*align-self:\s*start[^}]*margin-top:\s*21px/s);
+  assert.match(styles, /\.parts-hero__image\s*\{[^}]*display:\s*block[^}]*width:\s*100%[^}]*height:\s*100%[^}]*object-fit:\s*cover/s);
+  assert.doesNotMatch(styles, /\.parts-hero__image\s*\{[^}]*position:\s*absolute/s);
+  assert.doesNotMatch(styles, /\.parts-hero__image\s*\{[^}]*mix-blend-mode/s);
+  assert.doesNotMatch(markup, /parts-hero-scene__(?:composition|mobile-composition)/);
 });
 
-test("parts hero uses the exact flattened Figma composition on mobile", () => {
+test("parts hero keeps the same proportional visual in the mobile content flow", () => {
   const markup = read("parts.html");
   const styles = read("parts-page.css");
+  const mobileStyles = styles.slice(styles.indexOf("@media (max-width: 767px)"));
 
-  assert.match(markup, /class="parts-hero-scene__mobile-composition" src="assets\/parts-hero-mobile-scene\.png"/);
-  assert.match(styles, /\.parts-hero-scene__mobile-composition\s*\{[^}]*top:\s*199\.39px[^}]*left:\s*50%[^}]*width:\s*390px[^}]*height:\s*1104px[^}]*translateX\(-50%\)/s);
-  assert.match(styles, /\.parts-hero__description\s*\{[^}]*font-size:\s*16px[^}]*line-height:\s*19px/s);
-  assert.match(styles, /\.parts-hero__button\s*\{[^}]*width:\s*min\(316px, 100%\)/s);
-  assert.match(styles, /\.parts-hero__visual\s*\{[^}]*display:\s*none/s);
+  assert.match(markup, /class="parts-hero__image" src="assets\/parts-hero-transparent\.png"/);
+  assert.match(mobileStyles, /\.parts-hero\s*\{[^}]*display:\s*flex[^}]*min-height:\s*0[^}]*flex-direction:\s*column/s);
+  assert.match(mobileStyles, /\.parts-hero__description\s*\{[^}]*font-size:\s*16px[^}]*line-height:\s*19px/s);
+  assert.match(mobileStyles, /\.parts-hero__button\s*\{[^}]*width:\s*min\(316px, 100%\)/s);
+  assert.match(mobileStyles, /\.parts-hero__visual\s*\{[^}]*display:\s*block[^}]*aspect-ratio:\s*540 \/ 403[^}]*overflow:\s*hidden/s);
+  assert.doesNotMatch(mobileStyles, /parts-hero-scene__mobile-composition/);
 });
 
 test("parts booking matches the Figma parts request form", () => {

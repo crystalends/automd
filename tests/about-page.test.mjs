@@ -64,9 +64,9 @@ test("unique about blocks use content-driven mobile layouts", () => {
   const narrowStart = styles.indexOf("@media (max-width: 359px)");
   const mobileStyles = styles.slice(mobileStart, narrowStart);
 
-  assert.match(markup, /class="about-hero__vehicle-mobile"[^>]*src="assets\/about-hero-vehicle\.png"/);
-  assert.match(mobileStyles, /\.about-hero-scene__vehicle\s*\{[^}]*display:\s*none/s);
-  assert.match(mobileStyles, /\.about-hero__vehicle-mobile\s*\{[^}]*display:\s*block/s);
+  assert.match(markup, /class="commercial-hero-scene__mobile-vehicle"[^>]*src="assets\/about-hero-vehicle\.png"/);
+  assert.match(mobileStyles, /\.commercial-hero-scene__vehicle\s*\{[^}]*display:\s*none/s);
+  assert.match(mobileStyles, /\.commercial-hero-scene__mobile-vehicle\s*\{[^}]*display:\s*block/s);
   assert.match(mobileStyles, /\.about-hero\s*\{[^}]*min-height:\s*0/s);
   assert.match(mobileStyles, /\.about-hero__actions\s*\{[^}]*margin-top:\s*0/s);
   assert.doesNotMatch(mobileStyles, /\.about-hero__actions\s*\{[^}]*margin-top:\s*[1-9]\d+px/s);
@@ -84,7 +84,10 @@ test("service process cards match the Figma node", () => {
 });
 
 test("about page uses local Figma assets and all local resources resolve", () => {
+  assert.match(markup, /class="commercial-hero-scene hero-grid"/);
   assert.match(markup, /src="assets\/about-hero-vehicle\.png"/);
+  assert.match(styles, /\.commercial-hero-scene__vehicle\s*\{[^}]*mix-blend-mode:\s*darken/s);
+  assert.match(styles, /\.commercial-hero-scene__mobile-vehicle\s*\{[^}]*mix-blend-mode:\s*darken/s);
   assert.match(markup, /src="assets\/about-decision-nut\.png"/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 

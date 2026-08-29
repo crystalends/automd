@@ -7,6 +7,7 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "articles.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "articles-page.css"), "utf8");
+const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
 const filterModule = readFileSync(resolve(projectRoot, "js/modules/article-filter.js"), "utf8");
 const mainModule = readFileSync(resolve(projectRoot, "js/main.js"), "utf8");
 
@@ -31,14 +32,14 @@ test("articles catalog matches the Figma card composition", () => {
 });
 
 test("hero background keeps both Figma fade ellipses above the grid pattern", () => {
-  const patternIndex = markup.indexOf("articles-hero-scene__pattern");
+  const patternIndex = markup.indexOf("articles-hero-scene hero-grid");
   const rightGlowIndex = markup.indexOf("articles-hero-scene__glow--right");
   const leftGlowIndex = markup.indexOf("articles-hero-scene__glow--left");
 
   assert.ok(patternIndex >= 0);
   assert.ok(rightGlowIndex > patternIndex);
   assert.ok(leftGlowIndex > rightGlowIndex);
-  assert.match(styles, /\.articles-hero-scene__pattern\s*\{[^}]*z-index:\s*0/s);
+  assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*z-index:0[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
   assert.match(styles, /\.articles-hero-scene__glow\s*\{[^}]*z-index:\s*1/s);
   assert.match(styles, /\.articles-hero-scene__glow--right\s*\{[^}]*top:\s*304px[^}]*width:\s*1316\.58px[^}]*height:\s*531\.412px/s);
   assert.match(styles, /\.articles-hero-scene__glow--left\s*\{[^}]*top:\s*439px[^}]*width:\s*1017px[^}]*height:\s*341\.138px/s);
@@ -69,7 +70,10 @@ test("article filter is accessible and initialized defensively", () => {
 
 test("articles page uses local assets and all local resources resolve", () => {
   assert.match(markup, /src="assets\/articles-card\.png"/);
-  assert.match(markup, /src="assets\/promotions-hero-pattern\.png"/);
+  assert.match(markup, /class="articles-hero-scene hero-grid"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-soft.svg")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-paper.svg")));
   assert.match(markup, /src="assets\/articles-glow-right\.svg"/);
   assert.match(markup, /src="assets\/articles-glow-left\.svg"/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);

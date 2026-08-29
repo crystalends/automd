@@ -1,0 +1,707 @@
+.diagnostics-page {
+  --diagnostics-section-gap: clamp(72px, 5.208vw, 100px);
+}
+
+.diagnostics-page main {
+  position: relative;
+  z-index: 2;
+}
+
+.diagnostics-hero-scene__vehicle {
+  top: 206px;
+  right: clamp(36px, 5.729vw, 110px);
+  width: clamp(560px, 38.542vw, 740px);
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.diagnostics-hero {
+  min-height: 547px;
+  padding-top: 80px;
+}
+
+.diagnostics-hero__content {
+  gap: 40px;
+}
+
+.diagnostics-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.diagnostics-hero__actions .brand-outline-button {
+  min-height: 56px;
+  padding: 19px 40px;
+}
+
+.diagnostics-picker {
+  margin-top: 0;
+}
+
+.diagnostics-picker__form {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.diagnostics-heading {
+  display: flex;
+  width: min(1060px, 100%);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diagnostics-heading__title {
+  margin: 0;
+  font-family: Geologica, sans-serif;
+  font-size: clamp(34px, 2.083vw, 40px);
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.diagnostics-heading__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.diagnostics-types,
+.diagnostics-need,
+.diagnostics-process,
+.diagnostics-vehicles,
+.diagnostics-parts,
+.related-services {
+  margin-top: var(--diagnostics-section-gap);
+}
+
+.diagnostics-types {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diagnostics-types__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.diagnostics-type-card {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 60px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--soft);
+  border-radius: var(--radius);
+  background: transparent;
+}
+
+.diagnostics-type-card--selected,
+.diagnostics-type-card:hover {
+  border-color: var(--line);
+  background: #fff;
+}
+
+.diagnostics-type-card__image {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.diagnostics-type-card__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.diagnostics-type-card h3,
+.diagnostics-type-card p {
+  margin: 0;
+}
+
+.diagnostics-type-card h3 {
+  font-family: Geologica, sans-serif;
+  font-size: clamp(19px, 1.25vw, 24px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.diagnostics-type-card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.diagnostics-need {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.diagnostics-need__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.diagnostics-need__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.diagnostics-need__copy p {
+  margin: 0;
+}
+
+.diagnostics-need__signs {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+  gap: 10px 20px;
+  overflow: hidden;
+  margin: 0;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--soft);
+  list-style: none;
+}
+
+.diagnostics-need__signs::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 28%;
+  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  content: "";
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.diagnostics-need__signs li {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.diagnostics-need__signs li::before {
+  width: 16px;
+  aspect-ratio: 1;
+  flex: 0 0 16px;
+  background: url("assets/brand-service-check.svg") center / 6px 8px no-repeat;
+  content: "";
+  transform: rotate(90deg);
+}
+
+.diagnostics-process {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diagnostics-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.diagnostics-process__grid li {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--soft);
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.diagnostics-process__grid li::after {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 52%;
+  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  content: "";
+  opacity: 0.06;
+}
+
+.diagnostics-process__grid span,
+.diagnostics-process__grid li {
+  isolation: isolate;
+}
+
+.diagnostics-process__grid span {
+  color: var(--red);
+  font-size: 20px;
+}
+
+.diagnostics-vehicles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diagnostics-vehicles__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.diagnostics-vehicle-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 20px 40px;
+  border: 1px solid var(--soft);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.diagnostics-vehicle-card img {
+  width: 100%;
+  aspect-ratio: 21 / 20;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.diagnostics-vehicle-card h3 {
+  margin: 0;
+  font-family: Geologica, sans-serif;
+  font-size: clamp(19px, 1.25vw, 24px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.diagnostics-vehicle-card--all {
+  justify-content: space-between;
+  color: var(--red);
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+}
+
+.diagnostics-vehicle-card--all img {
+  object-fit: contain;
+}
+
+.diagnostics-vehicle-card--all span {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.diagnostics-page .service-detail-promo .promo-banner__slide {
+  aspect-ratio: 1600 / 518;
+}
+
+.diagnostics-parts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.diagnostics-parts__tags {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px 20px;
+}
+
+.diagnostics-parts__tags a {
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.related-services {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.related-services__heading {
+  display: flex;
+  width: min(865px, 100%);
+  flex-direction: column;
+  gap: 10px;
+}
+
+.related-services__heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.related-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.related-service-card {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: 60px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--soft);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+.related-service-card img {
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.related-service-card > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.related-service-card strong {
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.related-service-card small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.related-service-card b {
+  color: var(--muted);
+  font-family: Geologica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* Content cards on this template grow from their content. */
+.diagnostics-page .team-card,
+.diagnostics-page .team-callout,
+.diagnostics-page .benefits,
+.diagnostics-page .benefits__item,
+.diagnostics-page .business-offer,
+.diagnostics-page .faq-request,
+.diagnostics-page .faq-request__faq,
+.diagnostics-page .request-card,
+.diagnostics-page .service-price-list__item {
+  height: auto;
+  min-height: 0;
+  max-height: none;
+}
+
+.diagnostics-page .team-card__image {
+  height: auto;
+  aspect-ratio: 292 / 190;
+}
+
+.diagnostics-page .business-offer__visual,
+.diagnostics-page .business-offer__image,
+.diagnostics-page .benefits__visual,
+.diagnostics-page .benefits-slider,
+.diagnostics-page .benefits-slider__slide,
+.diagnostics-page .benefits-slider__image {
+  height: auto;
+  min-height: 0;
+}
+
+.diagnostics-page .benefits__visual {
+  aspect-ratio: 790 / 541;
+}
+
+.diagnostics-page .business-offer__image,
+.diagnostics-page .benefits-slider__image {
+  aspect-ratio: 790 / 541;
+}
+
+@media (max-width: 1500px) {
+  .diagnostics-type-card {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .diagnostics-type-card__image {
+    width: 54px;
+  }
+
+  .diagnostics-type-card h3 {
+    font-size: 19px;
+  }
+
+  .diagnostics-need__signs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .diagnostics-hero-scene__vehicle {
+    top: 240px;
+    right: 1vw;
+    width: 52vw;
+  }
+
+  .diagnostics-types__grid,
+  .related-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .diagnostics-process__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .diagnostics-vehicles__grid,
+  .diagnostics-parts__tags {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .diagnostics-page {
+    --diagnostics-section-gap: 40px;
+  }
+
+  .diagnostics-page .services-hero-scene {
+    height: clamp(974px, 249.774vw, 1040px);
+  }
+
+  .diagnostics-hero-scene__vehicle {
+    display: none;
+  }
+
+  .diagnostics-page .services-breadcrumb {
+    margin-top: 10px;
+    line-height: 1;
+  }
+
+  .diagnostics-hero {
+    min-height: 0;
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  .diagnostics-hero__content {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .diagnostics-hero__content .services-hero__intro {
+    gap: 20px;
+  }
+
+  .diagnostics-hero__content .services-hero__title {
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+
+  .diagnostics-hero__content .services-hero__description {
+    line-height: 19px;
+  }
+
+  .diagnostics-hero__actions {
+    width: min(305px, 100%);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diagnostics-hero__actions .button,
+  .diagnostics-hero__actions .brand-outline-button {
+    width: fit-content;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 56px;
+    padding-right: clamp(20px, 10.256vw, 40px);
+    padding-left: clamp(20px, 10.256vw, 40px);
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .diagnostics-hero__actions .button {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .diagnostics-hero__actions .brand-outline-button {
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  .diagnostics-hero__actions .button {
+    width: 100%;
+  }
+
+  .diagnostics-hero__actions .brand-outline-button {
+    width: min(253px, 100%);
+  }
+
+  .diagnostics-hero__visual {
+    width: 92.0513vw;
+    height: auto;
+    aspect-ratio: 359 / 214.514;
+    flex-basis: auto;
+    align-self: flex-start;
+    margin: -0.686px 0 0 25.8974vw;
+    overflow: hidden;
+  }
+
+  .diagnostics-hero__image {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: darken;
+    object-fit: contain;
+  }
+
+  .diagnostics-picker {
+    padding: 20px;
+  }
+
+  .diagnostics-picker__form,
+  .diagnostics-types__grid,
+  .diagnostics-need,
+  .diagnostics-process__grid,
+  .diagnostics-vehicles__grid,
+  .diagnostics-parts__tags,
+  .related-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostics-heading__text,
+  .diagnostics-need__copy {
+    font-size: 16px;
+  }
+
+  .diagnostics-type-card {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .diagnostics-type-card__image {
+    width: 60px;
+  }
+
+  .diagnostics-type-card__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .diagnostics-need__signs {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostics-process__grid li {
+    font-size: 16px;
+  }
+
+  .diagnostics-vehicle-card {
+    padding-bottom: 20px;
+  }
+
+  .diagnostics-parts__tags a {
+    text-align: left;
+  }
+
+  .related-services {
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .related-service-card {
+    grid-template-columns: 60px minmax(0, 1fr) 24px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .related-service-card > span {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .diagnostics-page .benefits,
+  .diagnostics-page .business-offer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .diagnostics-page .business-offer__image,
+  .diagnostics-page .benefits-slider__image {
+    aspect-ratio: 390 / 260;
+  }
+
+  .diagnostics-page .benefits__visual {
+    width: 100%;
+    aspect-ratio: 390 / 260;
+  }
+
+  .diagnostics-page .benefits-slider,
+  .diagnostics-page .benefits-slider__slide,
+  .diagnostics-page .benefits-slider__image {
+    height: 100%;
+  }
+}
+
+@media (max-width: 389px) {
+  .diagnostics-type-card,
+  .related-service-card {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .diagnostics-type-card__image,
+  .related-service-card img {
+    width: 48px;
+  }
+
+  .related-service-card b {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diagnostics-page {
+    scroll-behavior: auto;
+  }
+}

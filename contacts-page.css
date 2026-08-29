@@ -24,18 +24,6 @@
   pointer-events: none;
 }
 
-.contacts-hero-scene__pattern {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: max(100%, 1920px);
-  height: 820px;
-  max-width: none;
-  object-fit: fill;
-  transform: translateX(-50%);
-  user-select: none;
-}
-
 .contacts-breadcrumb {
   display: flex;
   align-items: center;
@@ -371,12 +359,6 @@
   }
 
   .contacts-hero-scene {
-    height: 720px;
-  }
-
-  .contacts-hero-scene__pattern {
-    left: 41%;
-    width: 1686px;
     height: 720px;
   }
 

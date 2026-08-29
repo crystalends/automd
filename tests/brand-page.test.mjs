@@ -181,7 +181,8 @@ test("price list matches the Figma desktop section", () => {
 
 test("all brand page Figma assets are local and resolve", () => {
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
-  assert.match(markup, /src="assets\/brand-hero-pattern\.png"/);
+  assert.match(markup, /class="brand-hero-scene hero-grid"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
   assert.match(markup, /src="assets\/brand-hero-art\.png"/);
   assert.doesNotMatch(markup, /brand-hero-scene__orb/);
   const resources = [...markup.matchAll(/\b(?:href|src)="([^"]+)"/g)]

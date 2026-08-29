@@ -19,64 +19,6 @@
   pointer-events: none;
 }
 
-.parts-hero-scene__composition,
-.parts-hero-scene__mobile-composition,
-.parts-hero-scene__pattern,
-.parts-hero-scene__glow {
-  position: absolute;
-}
-
-.parts-hero-scene__mobile-composition {
-  display: none;
-}
-
-.parts-hero-scene__composition {
-  top: 0;
-  left: 50vw;
-  width: max(100vw, 1920px);
-  height: auto;
-  max-width: none;
-  transform: translateX(-50%);
-}
-
-.parts-hero-scene__pattern {
-  display: none;
-  inset: 0;
-  width: 100%;
-  height: 820px;
-  max-width: none;
-  object-fit: cover;
-  opacity: 0.48;
-}
-
-.parts-hero-scene__glow {
-  display: none;
-  border-radius: 50%;
-  background: var(--paper);
-  filter: blur(100px);
-}
-
-.parts-hero-scene__glow--left {
-  top: 210px;
-  left: -4vw;
-  width: 58vw;
-  height: 510px;
-}
-
-.parts-hero-scene__glow--top {
-  top: -160px;
-  left: -20vw;
-  width: 140vw;
-  height: 500px;
-}
-
-.parts-hero-scene__glow--right {
-  top: 410px;
-  right: -15vw;
-  width: 55vw;
-  height: 420px;
-}
-
 .parts-breadcrumb {
   position: relative;
   z-index: 2;
@@ -152,18 +94,21 @@
 
 .parts-hero__visual {
   position: relative;
-  display: none;
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 540 / 403;
   min-width: 0;
-  min-height: 485px;
+  min-height: 0;
+  align-self: start;
+  margin-top: 21px;
 }
 
 .parts-hero__image {
-  position: absolute;
-  top: -58px;
-  right: -12px;
-  width: min(41.5vw, 730px);
-  max-width: none;
-  mix-blend-mode: multiply;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .parts-hero__button,
@@ -821,11 +766,6 @@
     font-size: 52px;
   }
 
-  .parts-hero__image {
-    right: -40px;
-    width: 48vw;
-  }
-
   .parts-promo {
     grid-template-columns: minmax(0, 1fr) 49%;
   }
@@ -854,15 +794,6 @@
     --parts-section-gap: 64px;
   }
 
-  .parts-hero-scene__composition {
-    display: none;
-  }
-
-  .parts-hero-scene__pattern,
-  .parts-hero-scene__glow {
-    display: block;
-  }
-
   .parts-hero {
     min-height: 560px;
     grid-template-columns: minmax(0, 60%) minmax(0, 40%);
@@ -871,16 +802,6 @@
 
   .parts-hero__title {
     font-size: clamp(40px, 5vw, 48px);
-  }
-
-  .parts-hero__image {
-    top: 30px;
-    right: -14vw;
-    width: 58vw;
-  }
-
-  .parts-hero__visual {
-    display: block;
   }
 
   .parts-promo {
@@ -943,28 +864,12 @@
     height: 919px;
   }
 
-  .parts-hero-scene__pattern {
-    display: none;
-  }
-
-  .parts-hero-scene__glow {
-    display: none;
-  }
-
-  .parts-hero-scene__mobile-composition {
-    top: 199.39px;
-    left: 50%;
-    display: block;
-    width: 390px;
-    height: 1104px;
-    max-width: none;
-    transform: translateX(-50%);
-  }
-
-  .parts-hero {
-    display: block;
+.parts-hero {
+    display: flex;
     height: auto;
-    min-height: 763px;
+    min-height: 0;
+    flex-direction: column;
+    gap: 0;
     margin-top: 40px;
     padding-top: 0;
   }
@@ -1004,7 +909,12 @@
   }
 
   .parts-hero__visual {
-    display: none;
+    display: block;
+    width: 100%;
+    aspect-ratio: 540 / 403;
+    margin-top: 12px;
+    overflow: hidden;
+    flex: 0 0 auto;
   }
 
   .part-search {
@@ -1350,16 +1260,12 @@
 @media (max-width: 359px) {
   .parts-hero {
     height: auto;
-    min-height: 763px;
-    padding-bottom: 226px;
+    min-height: 0;
+    padding-bottom: 0;
   }
 
   .parts-hero__title {
     font-size: 34px;
-  }
-
-  .parts-hero-scene__mobile-composition {
-    top: 279px;
   }
 
   .parts-page .booking {

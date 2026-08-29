@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "warranty.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "warranty-page.css"), "utf8");
+const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
 
 test("warranty page follows the Figma section order", () => {
   const sections = [
@@ -61,10 +62,9 @@ test("warranty layout is fluid and has a content-driven mobile reflow", () => {
   assert.match(styles, /--warranty-section-gap:\s*clamp\(/);
   assert.match(styles, /\.warranty-hero\s*\{[^}]*width:\s*min\(1195px, var\(--container\)\)[^}]*min-height:\s*302px[^}]*gap:\s*20px[^}]*margin-top:\s*80px/s);
   assert.match(styles, /\.warranty-hero__copy\s*\{[^}]*gap:\s*5px/s);
-  assert.match(markup, /class="warranty-hero-scene__pattern hero-scene__pattern" src="assets\/hero-pattern\.png"/);
+  assert.match(markup, /class="warranty-hero-scene__grid-window hero-grid"/);
   assert.match(styles, /\.warranty-hero-scene__grid-window\s*\{[^}]*top:\s*1px[^}]*width:\s*100vw[^}]*height:\s*597px[^}]*overflow:\s*hidden/s);
-  assert.match(styles, /\.warranty-hero-scene__light--main\s*\{[^}]*top:\s*246\.954px[^}]*left:\s*863\.668px[^}]*width:\s*1376\.428px[^}]*height:\s*428\.002px/s);
-  assert.match(styles, /\.warranty-hero-scene__light--soft\s*\{[^}]*top:\s*158\.189px[^}]*left:\s*-25px[^}]*width:\s*1017px[^}]*height:\s*341\.138px/s);
+  assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
   assert.match(styles, /\.warranty-overview\s*\{[^}]*min-height:\s*409px/s);
   assert.match(styles, /\.warranty-overview__visual\s*\{[^}]*position:\s*relative/s);
   assert.match(styles, /\.warranty-overview__image\s*\{[^}]*position:\s*absolute[^}]*object-fit:\s*cover/s);
@@ -120,9 +120,9 @@ test("warranty layout is fluid and has a content-driven mobile reflow", () => {
 
 test("warranty Figma asset is local and every local resource resolves", () => {
   assert.match(markup, /src="assets\/warranty-service\.png"/);
-  assert.match(markup, /src="assets\/hero-pattern\.png"/);
-  assert.match(markup, /src="assets\/warranty-hero-light-main\.svg"/);
-  assert.match(markup, /src="assets\/warranty-hero-light-soft\.svg"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-soft.svg")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-paper.svg")));
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
   assert.ok(existsSync(resolve(projectRoot, "assets/warranty-process-pattern.png")));
   for (const asset of [

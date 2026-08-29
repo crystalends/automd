@@ -8,7 +8,7 @@
   z-index: 1;
 }
 
-.about-hero-scene {
+.commercial-hero-scene {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -19,59 +19,52 @@
   pointer-events: none;
 }
 
-.about-hero-scene__pattern,
-.about-hero-scene__vehicle,
-.about-hero-scene__glow {
+.commercial-hero-scene__vehicle,
+.commercial-hero-scene__glow {
   position: absolute;
   max-width: none;
 }
 
-.about-hero-scene__pattern {
-  inset: 0;
-  width: 100%;
-  height: 820px;
-  object-fit: cover;
-  opacity: 0.55;
-}
-
-.about-hero-scene__glow {
+.commercial-hero-scene__glow {
   border-radius: 50%;
   background: var(--paper);
   filter: blur(100px);
 }
 
-.about-hero-scene__glow--left {
+.commercial-hero-scene__glow--left {
   top: 228px;
   left: -25px;
   width: 53vw;
   height: 493px;
 }
 
-.about-hero-scene__glow--top {
+.commercial-hero-scene__glow--top {
   top: -144px;
   left: -23vw;
   width: 143vw;
   height: 488px;
 }
 
-.about-hero-scene__glow--right {
+.commercial-hero-scene__glow--right {
   top: 420px;
   right: -19vw;
   width: 50vw;
   height: 420px;
 }
 
-.about-hero-scene__vehicle {
+.commercial-hero-scene__vehicle {
   z-index: 2;
   top: 280px;
   right: max(calc((100vw - var(--container)) / 2 - 19px), 20px);
   width: min(35.104vw, 674px);
   height: min(20.99vw, 403px);
+  mix-blend-mode: darken;
   object-fit: contain;
 }
 
-.about-hero__vehicle-mobile {
+.commercial-hero-scene__mobile-vehicle {
   display: none;
+  mix-blend-mode: darken;
 }
 
 .about-breadcrumb {
@@ -764,7 +757,7 @@
     --about-section-gap: 64px;
   }
 
-  .about-hero-scene__vehicle {
+  .commercial-hero-scene__vehicle {
     top: 350px;
     right: 24px;
     width: 45vw;
@@ -834,30 +827,22 @@
     display: none;
   }
 
-  .about-hero-scene {
+  .commercial-hero-scene {
     height: 1100px;
   }
 
-  .about-hero-scene__pattern {
-    width: 1920px;
-    height: 820px;
-    max-width: none;
-    object-position: left center;
-    opacity: 0.72;
-  }
-
-  .about-hero-scene__glow--left {
+  .commercial-hero-scene__glow--left {
     top: 250px;
     left: -50%;
     width: 140%;
   }
 
-  .about-hero-scene__glow--top {
+  .commercial-hero-scene__glow--top {
     left: -80%;
     width: 250%;
   }
 
-  .about-hero-scene__vehicle {
+  .commercial-hero-scene__vehicle {
     display: none;
   }
 
@@ -912,7 +897,7 @@
     flex-basis: 20px;
   }
 
-  .about-hero__vehicle-mobile {
+  .commercial-hero-scene__mobile-vehicle {
     display: block;
     width: min(100%, 450px);
     height: auto;

@@ -85,20 +85,10 @@
   pointer-events: none;
 }
 
-.brand-hero-scene__pattern,
 .brand-hero-scene__art {
   position: absolute;
   max-width: none;
   user-select: none;
-}
-
-.brand-hero-scene__pattern {
-  top: 0;
-  left: 50%;
-  width: max(100%, 1920px);
-  height: 820px;
-  object-fit: fill;
-  transform: translateX(-50%);
 }
 
 .brand-hero-scene__art {
@@ -990,12 +980,6 @@
   .brand-hero-scene {
     width: 100vw;
     height: 1119px;
-  }
-
-  .brand-hero-scene__pattern {
-    width: 1920px;
-    height: 820px;
-    opacity: 0.72;
   }
 
   .brand-hero-scene__art {

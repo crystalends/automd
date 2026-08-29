@@ -7,6 +7,7 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "contacts.html"), "utf8");
 const styles = readFileSync(resolve(projectRoot, "contacts-page.css"), "utf8");
+const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
 
 test("contacts page follows the Figma section order", () => {
   const sections = [
@@ -36,7 +37,10 @@ test("contacts page reuses shared project blocks and ESM", () => {
 });
 
 test("contacts page uses embedded Yandex maps and existing design assets", () => {
-  assert.match(markup, /assets\/promotions-hero-pattern\.png/);
+  assert.match(markup, /class="contacts-hero-scene hero-grid"/);
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-soft.svg")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-paper.svg")));
   assert.equal((markup.match(/<iframe/g) ?? []).length, 3);
   assert.equal((markup.match(/src="https:\/\/yandex\.ru\/map-widget\/v1\//g) ?? []).length, 3);
   assert.doesNotMatch(markup, /class="(?:locations__map|service-center-card__map)"[^>]*src="assets\/map\.png"/);
@@ -49,6 +53,15 @@ test("contacts page uses embedded Yandex maps and existing design assets", () =>
   for (const resource of resources) {
     assert.ok(existsSync(resolve(projectRoot, resource)), `Missing resource: ${resource}`);
   }
+});
+
+test("contacts hero reuses the shared grid and Figma light layers", () => {
+  assert.match(markup, /class="contacts-hero-scene hero-grid"/);
+  assert.doesNotMatch(markup, /contacts-hero-scene__pattern/);
+  assert.doesNotMatch(styles, /contacts-hero-scene__pattern/);
+  assert.doesNotMatch(styles, /contacts-hero-scene__light/);
+  assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*height:820px[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
+  assert.match(sharedStyles, /background-position:clamp\(260px,31\.379vw,602\.477px\) 57\.947px,clamp\(260px,36\.125vw,693\.592px\) 138\.47px,center top/);
 });
 
 test("contacts layout is fluid and has a content-driven mobile reflow", () => {

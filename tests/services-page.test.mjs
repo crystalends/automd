@@ -74,8 +74,8 @@ test("services hero reuses the exact layered Figma advantage icons", () => {
 });
 
 test("services hero follows the layered responsive scene used on the home page", () => {
-  assert.match(markup, /class="services-hero-scene__pattern hero-scene__pattern" src="assets\/hero-pattern\.png"/);
-  assert.match(sharedStyles, /\.hero-scene__pattern\{[^}]*width:100%[^}]*height:820px[^}]*object-fit:fill/);
+  assert.match(markup, /class="services-hero-scene hero-grid"/);
+  assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*width:100%[^}]*height:820px[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
   assert.match(markup, /class="services-hero-scene__vehicle" src="assets\/services-hero\.png"/);
   assert.match(markup, /class="services-hero-scene__glow-asset" src="assets\/hero-glow-middle\.svg"/);
   assert.match(markup, /class="services-hero-scene__accent" src="assets\/services-hero-glow-accent\.svg"/);
@@ -92,7 +92,7 @@ test("services mobile hero matches the dedicated 390px Figma composition", () =>
   const mobileStyles = styles.slice(mobileStart, narrowStart);
 
   assert.match(mobileStyles, /\.services-hero-scene\s*\{[^}]*height:\s*1031px/s);
-  assert.match(mobileStyles, /\.services-hero-scene__pattern\s*\{[^}]*left:\s*calc\(100vw - 1733\.132px\)[^}]*width:\s*1920px[^}]*height:\s*820px/s);
+  assert.match(sharedStyles, /@media \(max-width:767px\)\{[\s\S]*?\.hero-grid::before\s*\{[^}]*width:100vw[^}]*height:940px[^}]*background-image:url\("assets\/hero-pattern\.png"\)[^}]*background-size:cover/s);
   assert.match(styles, /\.services-hero__visual\s*\{[^}]*width:\s*106\.0415vw[^}]*height:\s*63\.3631vw[^}]*margin:\s*-38px 0 10px 34\.771vw/s);
   assert.match(styles, /\.services-hero__glow--left\s*\{[^}]*top:\s*-2\.733px[^}]*left:\s*-486\.563px/s);
   assert.match(styles, /\.services-hero__accent\s*\{[^}]*top:\s*2\.219px[^}]*left:\s*155\.598px/s);
@@ -153,4 +153,8 @@ test("primary page navigation exposes the services route", () => {
     const pageMarkup = readFileSync(resolve(projectRoot, page), "utf8");
     assert.match(pageMarkup, /href="services\.html">Услуги<\/a>/, `${page} must link to services page`);
   }
+});
+
+test("diagnostics direction exposes the dedicated service page", () => {
+  assert.match(markup, /href="diagnostics\.html">Подробнее о диагностике<\/a>/);
 });

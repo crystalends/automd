@@ -25,19 +25,10 @@ html:has(.careers-page dialog[open]),
   pointer-events: none;
 }
 
-.careers-hero-scene__pattern,
 .careers-hero-scene__team,
 .careers-hero-scene__glow {
   position: absolute;
   max-width: none;
-}
-
-.careers-hero-scene__pattern {
-  inset: 0;
-  width: 100%;
-  height: 820px;
-  object-fit: cover;
-  opacity: 0.55;
 }
 
 .careers-hero-scene__glow {
@@ -790,11 +781,6 @@ html:has(.careers-page dialog[open]),
 
   .careers-hero-scene {
     height: 940px;
-  }
-
-  .careers-hero-scene__pattern {
-    height: 940px;
-    opacity: 0.5;
   }
 
   .careers-hero-scene__glow {

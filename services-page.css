@@ -440,12 +440,6 @@
     display: none;
   }
 
-  .services-hero-scene__pattern {
-    height: 940px;
-    opacity: 0.72;
-    object-fit: cover;
-  }
-
   .services-hero {
     min-height: 0;
     flex-direction: column;
@@ -464,15 +458,6 @@
 
   .services-hero-scene {
     height: 1031px;
-  }
-
-  .services-hero-scene__pattern {
-    top: 0;
-    left: calc(100vw - 1733.132px);
-    width: 1920px;
-    height: 820px;
-    opacity: 1;
-    object-fit: fill;
   }
 
   .services-breadcrumb {
