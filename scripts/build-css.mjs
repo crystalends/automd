@@ -18,6 +18,7 @@ const pageClasses = [
   "legal-page",
   "model-service-detail-page",
   "parts-page",
+  "prices-page",
   "promotion-detail-page",
   "promotions-page",
   "reviews-page",
@@ -44,6 +45,7 @@ const sourceGroups = [
       "careers-page",
       "contacts-page",
       "parts-page",
+      "prices-page",
       "reviews-page",
       "service-detail-page",
       "services-page",
@@ -69,6 +71,7 @@ const sourceGroups = [
   { file: "service-detail.css", scopes: ["service-detail-page"] },
   { file: "model-service-detail.css", scopes: ["model-service-detail-page"] },
   { file: "parts-page.css", scopes: ["parts-page"] },
+  { file: "prices-page.css", scopes: ["prices-page"] },
   { file: "warranty-page.css", scopes: ["warranty-page"] },
 ];
 

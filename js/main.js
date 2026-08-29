@@ -14,6 +14,7 @@ import { initSliders } from "./modules/sliders.js";
 import { initCareerDialog } from "./modules/career-dialog.js";
 import { initVacancyDetailDialog } from "./modules/vacancy-detail-dialog.js";
 import { initVehicleMenu } from "./modules/vehicle-menu.js";
+import { initPriceCatalog } from "./modules/price-catalog.js";
 
 initMobileMenu();
 initVehicleMenu();
@@ -31,3 +32,4 @@ initScrollPagination();
 initSliders();
 initVacancyDetailDialog();
 initCareerDialog();
+initPriceCatalog();

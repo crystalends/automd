@@ -1,6 +1,6 @@
 const desktopMedia = window.matchMedia("(min-width: 1200px)");
 
-const vehicles = [
+export const vehicles = [
   { name: "Fiat", image: "assets/car-logo-fiat.png", width: 1366, height: 768, href: "cars.html#cars" },
   { name: "Ford", image: "assets/car-logo-ford.png", width: 1672, height: 941, href: "brand.html", imageModifier: "ford" },
   { name: "Peugeot", image: "assets/car-logo-peugeot.png", width: 1672, height: 941, href: "cars.html#cars" },
