@@ -10,7 +10,7 @@ const bemClassPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)
 const pageScopes = new Set([
   "about-page", "article-detail-page", "articles-page", "branch-page", "brand-page", "business-page",
   "cars-page", "careers-page", "client-zone-page", "contacts-page", "diagnostics-page", "error-page",
-  "legal-page", "model-service-detail-page", "parts-page", "prices-page", "promotion-detail-page",
+  "legal-page", "model-page", "model-service-detail-page", "parts-page", "prices-page", "promotion-detail-page",
   "promotions-page", "reviews-page", "service-detail-page", "services-page", "tour-page", "warranty-page",
 ]);
 const allowedCrossBlockSelectors = new Set([

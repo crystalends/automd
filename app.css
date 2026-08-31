@@ -14477,10 +14477,12 @@ html:has(.careers-page dialog[open]),
 
 :where(body.model-service-detail-page) .model-service-hero-scene__vehicle {
   position: absolute;
-  top: 247px;
+  z-index: 3;
+  top: 262px;
   left: calc(50% + 14px);
-  width: 786px;
-  height: 500px;
+  width: min(40.938vw, 786px);
+  height: auto;
+  aspect-ratio: 786 / 470;
   overflow: hidden;
   mix-blend-mode: darken;
   transform: scaleX(-1);
@@ -14488,11 +14490,111 @@ html:has(.careers-page dialog[open]),
 
 :where(body.model-service-detail-page) .model-service-hero-scene__vehicle-image {
   position: absolute;
-  top: -6.41%;
-  left: 4.38%;
-  width: 95.62%;
-  height: 112.82%;
+  top: -6.37%;
+  left: 9.87%;
+  width: 89.86%;
+  height: 112.71%;
   max-width: none;
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow,
+:where(body.model-service-detail-page) .model-service-hero-scene__glow-image,
+:where(body.model-service-detail-page) .model-service-hero-scene__wrench,
+:where(body.model-service-detail-page) .model-service-hero-scene__accent {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow {
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow--left {
+  top: 228px;
+  left: -25px;
+  width: min(52.969vw, 1017px);
+  height: min(25.648vw, 496px);
+  background: var(--soft);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow--top {
+  top: -145px;
+  left: -440px;
+  width: min(142.957vw, 2744.77px);
+  height: min(25.597vw, 491.46px);
+  background: var(--paper);
+  transform: rotate(-1.15deg);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow--middle {
+  top: 263px;
+  left: min(38.958vw, 748px);
+  width: min(66.669vw, 1280px);
+  height: min(22.721vw, 436.24px);
+  overflow: visible;
+  background: none;
+  filter: none;
+  transform: rotate(-20.59deg);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow-image {
+  inset: -45.53% -15.61%;
+  width: 131.22%;
+  height: 191.06%;
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__glow--right {
+  top: 421px;
+  right: -15.64vw;
+  width: min(46.986vw, 902.13px);
+  height: min(17.973vw, 345.08px);
+  background: var(--paper);
+  transform: rotate(20.8deg);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__wrench {
+  z-index: 2;
+  top: 262.79px;
+  left: min(76.708vw, 1472.79px);
+  display: flex;
+  width: min(19.538vw, 375.13px);
+  height: auto;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__wrench-image {
+  width: 72.17%;
+  height: 72.17%;
+  max-width: none;
+  object-fit: cover;
+  transform: rotate(-33.45deg);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__accent {
+  z-index: 2;
+  border-radius: 50%;
+  background: var(--soft);
+  transform: rotate(-0.61deg);
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__accent--short {
+  top: 313.03px;
+  left: min(80.156vw, 1539px);
+  width: min(5.164vw, 99.15px);
+  height: 197.55px;
+}
+
+:where(body.model-service-detail-page) .model-service-hero-scene__accent--tall {
+  top: 321.07px;
+  left: min(80.833vw, 1552px);
+  width: min(4.869vw, 93.48px);
+  height: 346.9px;
 }
 
 :where(body.model-service-detail-page) .brand-hero__advantage-icon-part--wallet {
@@ -14566,11 +14668,11 @@ html:has(.careers-page dialog[open]),
 
 @media (max-width: 1500px) and (min-width: 1200px) {
   :where(body.model-service-detail-page) .model-service-hero-scene__vehicle {
-    top: 235px;
+    top: 250px;
     left: 53%;
-    width: min(786px, 52vw);
+    width: min(786px, 46vw);
     height: auto;
-    aspect-ratio: 786 / 500;
+    aspect-ratio: 786 / 470;
   }
 }
 
@@ -14578,9 +14680,9 @@ html:has(.careers-page dialog[open]),
   :where(body.model-service-detail-page) .model-service-hero-scene__vehicle {
     top: 255px;
     left: 54%;
-    width: 52vw;
+    width: 46vw;
     height: auto;
-    aspect-ratio: 786 / 500;
+    aspect-ratio: 786 / 470;
   }
 
   .model-service-detail-page .service-detail-hero {
@@ -14594,6 +14696,12 @@ html:has(.careers-page dialog[open]),
   }
 
   :where(body.model-service-detail-page) .model-service-hero-scene__vehicle {
+    display: none;
+  }
+
+  :where(body.model-service-detail-page) .model-service-hero-scene__glow,
+  :where(body.model-service-detail-page) .model-service-hero-scene__wrench,
+  :where(body.model-service-detail-page) .model-service-hero-scene__accent {
     display: none;
   }
 
@@ -14634,6 +14742,408 @@ html:has(.careers-page dialog[open]),
   :where(body.model-service-detail-page) .model-service-summary .model-service-summary__button {
     width: 100%;
     min-width: 0;
+  }
+}
+
+/* source: model-page.css; scope: model-page */
+.model-page .brand-hero {
+  min-height: 479px;
+}
+
+.model-page .brand-service-card__image {
+  min-height: 0;
+}
+
+.model-page .team {
+  min-height: 0;
+}
+
+.model-page .business-offer__audience-item,
+.model-page .business-offer__feature {
+  padding-left: 0;
+}
+
+.model-page .business-offer__audience .business-offer__audience-item::before,
+.model-page .business-offer__features .business-offer__feature::before {
+  content: none;
+}
+
+:where(body.model-page) .model-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--brand-section-gap);
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+}
+
+:where(body.model-page) .model-actions__heading {
+  display: flex;
+  width: min(865px, 100%);
+  flex-direction: column;
+  gap: 10px;
+}
+
+:where(body.model-page) .model-actions__description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+:where(body.model-page) .model-actions__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+:where(body.model-page) .model-action-card {
+  display: grid;
+  min-width: 0;
+  min-height: 125px;
+  grid-template-columns: 60px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--soft);
+  border-radius: var(--radius);
+  background: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+:where(body.model-page) .model-action-card:hover {
+  border-color: var(--line);
+  background: var(--soft);
+  transform: translateY(-2px);
+}
+
+:where(body.model-page) .model-action-card__image {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+:where(body.model-page) .model-action-card__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+:where(body.model-page) .model-action-card__title {
+  font-family: Geologica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+:where(body.model-page) .model-action-card__description {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+:where(body.model-page) .model-action-card__arrow {
+  width: 24px;
+  height: 24px;
+  padding: 5px 8px;
+  object-fit: contain;
+  transform: scaleX(-1);
+  transition: transform 0.2s ease;
+}
+
+:where(body.model-page) .model-action-card:hover .model-action-card__arrow {
+  transform: translateX(3px) scaleX(-1);
+}
+
+:where(body.model-page) .model-issues {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: var(--brand-section-gap);
+}
+
+:where(body.model-page) .model-issues__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+:where(body.model-page) .model-issues__description {
+  max-width: 790px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.model-page) .model-issues__button {
+  margin-top: 10px;
+}
+
+:where(body.model-page) .model-issues__panel {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: var(--soft);
+}
+
+:where(body.model-page) .model-issues__pattern {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: -20px;
+  width: 812px;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+:where(body.model-page) .model-issues__list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:where(body.model-page) .model-issues__item {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+:where(body.model-page) .model-issues__item::before {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  background: url("assets/model-issue-info.svg") center / contain no-repeat;
+  content: "";
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1500px) and (min-width: 1200px) {
+  :where(body.model-page) .model-actions {
+    padding: 32px;
+  }
+
+  :where(body.model-page) .model-action-card {
+    grid-template-columns: 52px minmax(0, 1fr) 20px;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  :where(body.model-page) .model-action-card__image {
+    width: 52px;
+    height: 52px;
+  }
+
+  :where(body.model-page) .model-action-card__arrow {
+    width: 20px;
+    height: 20px;
+    padding: 4px 6px;
+  }
+
+  :where(body.model-page) .model-action-card__description {
+    font-size: 13px;
+  }
+
+  :where(body.model-page) .model-issues__item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1199px) {
+  :where(body.model-page) .model-actions {
+    padding: 30px;
+  }
+
+  :where(body.model-page) .model-actions__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  :where(body.model-page) .model-action-card__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  :where(body.model-page) .model-issues {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .model-page .model-service-hero-scene__wrench,
+  .model-page .model-service-hero-scene__accent {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .model-page .brand-hero {
+    min-height: 0;
+  }
+
+  .model-page .model-service-hero__mobile-art {
+    position: relative;
+    width: 100vw;
+    height: min(249.77px, 64.044vw);
+    margin-top: min(10px, 2.564vw);
+    overflow: hidden;
+  }
+
+  :where(body.model-page) .model-service-hero__mobile-wrench,
+  :where(body.model-page) .model-service-hero__mobile-vehicle-frame {
+    position: absolute;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  :where(body.model-page) .model-service-hero__mobile-wrench {
+    z-index: 1;
+    top: min(0.42px, 0.108vw);
+    left: min(258.8px, 66.36vw);
+    display: flex;
+    width: min(199.42px, 51.133vw);
+    height: min(199.42px, 51.133vw);
+    align-items: center;
+    justify-content: center;
+  }
+
+  :where(body.model-page) .model-service-hero__mobile-wrench-image {
+    width: 72.17%;
+    height: 72.17%;
+    max-width: none;
+    object-fit: cover;
+    transform: rotate(-33.45deg);
+  }
+
+  :where(body.model-page) .model-service-hero__mobile-vehicle-frame {
+    z-index: 2;
+    top: 0;
+    left: max(-6.51px, -1.669vw);
+    width: min(418px, 107.18vw);
+    height: min(249.77px, 64.044vw);
+    overflow: hidden;
+    mix-blend-mode: darken;
+    transform: scaleX(-1);
+  }
+
+  .model-page .model-service-hero__mobile-vehicle {
+    position: absolute;
+    top: -6.37%;
+    left: 9.87%;
+    width: 89.86%;
+    height: 112.71%;
+    max-width: none;
+    object-fit: fill;
+    transform: none;
+  }
+
+  :where(body.model-page) .model-actions {
+    gap: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+    padding: 20px;
+  }
+
+  :where(body.model-page) .model-actions__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  :where(body.model-page) .model-action-card {
+    min-height: 0;
+    grid-template-columns: 50px minmax(0, 1fr) 24px;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  :where(body.model-page) .model-action-card__image {
+    width: 50px;
+    height: 50px;
+  }
+
+  :where(body.model-page) .model-action-card__title {
+    font-size: 16px;
+  }
+
+  :where(body.model-page) .model-action-card__description {
+    font-size: 12px;
+  }
+
+  :where(body.model-page) .model-issues {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+
+  :where(body.model-page) .model-issues__description,
+  :where(body.model-page) .model-issues__item {
+    font-size: 16px;
+  }
+
+  :where(body.model-page) .model-issues__button {
+    width: 100%;
+  }
+
+  :where(body.model-page) .model-issues__panel {
+    padding: 20px 16px;
+  }
+
+  :where(body.model-page) .model-issues__list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  :where(body.model-page) .model-issues__pattern {
+    right: -300px;
+    width: 812px;
+  }
+}
+
+@media (max-width: 359px) {
+  :where(body.model-page) .model-actions,
+  :where(body.model-page) .model-issues {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  :where(body.model-page) .model-actions {
+    padding: 16px;
+  }
+
+  :where(body.model-page) .model-action-card {
+    grid-template-columns: 44px minmax(0, 1fr) 20px;
+    padding: 12px;
+  }
+
+  :where(body.model-page) .model-action-card__image {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(body.model-page) .model-action-card,
+  :where(body.model-page) .model-action-card__arrow {
+    transition: none;
   }
 }
 

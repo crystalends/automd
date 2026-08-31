@@ -8,10 +8,12 @@
 
 .model-service-hero-scene__vehicle {
   position: absolute;
-  top: 247px;
+  z-index: 3;
+  top: 262px;
   left: calc(50% + 14px);
-  width: 786px;
-  height: 500px;
+  width: min(40.938vw, 786px);
+  height: auto;
+  aspect-ratio: 786 / 470;
   overflow: hidden;
   mix-blend-mode: darken;
   transform: scaleX(-1);
@@ -19,11 +21,111 @@
 
 .model-service-hero-scene__vehicle-image {
   position: absolute;
-  top: -6.41%;
-  left: 4.38%;
-  width: 95.62%;
-  height: 112.82%;
+  top: -6.37%;
+  left: 9.87%;
+  width: 89.86%;
+  height: 112.71%;
   max-width: none;
+}
+
+.model-service-hero-scene__glow,
+.model-service-hero-scene__glow-image,
+.model-service-hero-scene__wrench,
+.model-service-hero-scene__accent {
+  position: absolute;
+  max-width: none;
+  pointer-events: none;
+  user-select: none;
+}
+
+.model-service-hero-scene__glow {
+  z-index: 1;
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.model-service-hero-scene__glow--left {
+  top: 228px;
+  left: -25px;
+  width: min(52.969vw, 1017px);
+  height: min(25.648vw, 496px);
+  background: var(--soft);
+}
+
+.model-service-hero-scene__glow--top {
+  top: -145px;
+  left: -440px;
+  width: min(142.957vw, 2744.77px);
+  height: min(25.597vw, 491.46px);
+  background: var(--paper);
+  transform: rotate(-1.15deg);
+}
+
+.model-service-hero-scene__glow--middle {
+  top: 263px;
+  left: min(38.958vw, 748px);
+  width: min(66.669vw, 1280px);
+  height: min(22.721vw, 436.24px);
+  overflow: visible;
+  background: none;
+  filter: none;
+  transform: rotate(-20.59deg);
+}
+
+.model-service-hero-scene__glow-image {
+  inset: -45.53% -15.61%;
+  width: 131.22%;
+  height: 191.06%;
+}
+
+.model-service-hero-scene__glow--right {
+  top: 421px;
+  right: -15.64vw;
+  width: min(46.986vw, 902.13px);
+  height: min(17.973vw, 345.08px);
+  background: var(--paper);
+  transform: rotate(20.8deg);
+}
+
+.model-service-hero-scene__wrench {
+  z-index: 2;
+  top: 262.79px;
+  left: min(76.708vw, 1472.79px);
+  display: flex;
+  width: min(19.538vw, 375.13px);
+  height: auto;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-service-hero-scene__wrench-image {
+  width: 72.17%;
+  height: 72.17%;
+  max-width: none;
+  object-fit: cover;
+  transform: rotate(-33.45deg);
+}
+
+.model-service-hero-scene__accent {
+  z-index: 2;
+  border-radius: 50%;
+  background: var(--soft);
+  transform: rotate(-0.61deg);
+}
+
+.model-service-hero-scene__accent--short {
+  top: 313.03px;
+  left: min(80.156vw, 1539px);
+  width: min(5.164vw, 99.15px);
+  height: 197.55px;
+}
+
+.model-service-hero-scene__accent--tall {
+  top: 321.07px;
+  left: min(80.833vw, 1552px);
+  width: min(4.869vw, 93.48px);
+  height: 346.9px;
 }
 
 .brand-hero__advantage-icon-part--wallet {
@@ -97,11 +199,11 @@
 
 @media (max-width: 1500px) and (min-width: 1200px) {
   .model-service-hero-scene__vehicle {
-    top: 235px;
+    top: 250px;
     left: 53%;
-    width: min(786px, 52vw);
+    width: min(786px, 46vw);
     height: auto;
-    aspect-ratio: 786 / 500;
+    aspect-ratio: 786 / 470;
   }
 }
 
@@ -109,9 +211,9 @@
   .model-service-hero-scene__vehicle {
     top: 255px;
     left: 54%;
-    width: 52vw;
+    width: 46vw;
     height: auto;
-    aspect-ratio: 786 / 500;
+    aspect-ratio: 786 / 470;
   }
 
   .model-service-detail-page .service-detail-hero {
@@ -125,6 +227,12 @@
   }
 
   .model-service-hero-scene__vehicle {
+    display: none;
+  }
+
+  .model-service-hero-scene__glow,
+  .model-service-hero-scene__wrench,
+  .model-service-hero-scene__accent {
     display: none;
   }
 
