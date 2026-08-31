@@ -62,7 +62,7 @@ test("model hero reproduces Figma lighting group 298:25365", () => {
   assert.match(markup, /model-service-hero-scene__accent--short/);
   assert.match(markup, /model-service-hero-scene__accent--tall/);
   assert.match(sceneStyles, /\.model-service-hero-scene__glow--middle\s*\{[^}]*top:\s*263px[^}]*left:\s*min\(38\.958vw, 748px\)[^}]*rotate\(-20\.59deg\)/s);
-  assert.match(sceneStyles, /\.model-service-hero-scene__wrench\s*\{[^}]*top:\s*262\.79px[^}]*left:\s*min\(76\.708vw, 1472\.79px\)/s);
+  assert.match(sceneStyles, /\.model-service-hero-scene__wrench\s*\{[^}]*top:\s*262\.79px[^}]*left:\s*min\(76\.708vw, calc\(50% \+ 512\.79px\)\)/s);
   assert.match(sceneStyles, /\.model-service-hero-scene__wrench-image\s*\{[^}]*width:\s*72\.17%[^}]*rotate\(-33\.45deg\)/s);
 });
 
@@ -82,6 +82,25 @@ test("model hero reproduces Figma mobile artwork group 348:36432", () => {
   assert.match(
     styles,
     /@media \(max-width: 1199px\) and \(min-width: 768px\)[\s\S]*\.model-page \.model-service-hero-scene__wrench,[\s\S]*\.model-page \.model-service-hero-scene__accent\s*\{[^}]*display:\s*none/s,
+  );
+});
+
+test("model hero keeps the vehicle and wrench aligned between target widths", () => {
+  assert.match(
+    sceneStyles,
+    /\.model-service-hero-scene__vehicle\s*\{[^}]*left:\s*calc\(50% \+ 14px\)[^}]*width:\s*min\(40\.938vw, 786px\)/s,
+  );
+  assert.doesNotMatch(
+    sceneStyles,
+    /@media \(max-width: 1500px\) and \(min-width: 1200px\)[\s\S]*\.model-service-hero-scene__vehicle\s*\{[^}]*width:\s*min\(786px, 46vw\)/s,
+  );
+  assert.match(
+    sceneStyles,
+    /\.model-service-hero-scene__accent--short\s*\{[^}]*left:\s*min\(80\.156vw, calc\(50% \+ 579px\)\)/s,
+  );
+  assert.match(
+    sceneStyles,
+    /\.model-service-hero-scene__accent--tall\s*\{[^}]*left:\s*min\(80\.833vw, calc\(50% \+ 592px\)\)/s,
   );
 });
 

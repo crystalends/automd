@@ -14559,7 +14559,7 @@ html:has(.careers-page dialog[open]),
 :where(body.model-service-detail-page) .model-service-hero-scene__wrench {
   z-index: 2;
   top: 262.79px;
-  left: min(76.708vw, 1472.79px);
+  left: min(76.708vw, calc(50% + 512.79px));
   display: flex;
   width: min(19.538vw, 375.13px);
   height: auto;
@@ -14585,14 +14585,14 @@ html:has(.careers-page dialog[open]),
 
 :where(body.model-service-detail-page) .model-service-hero-scene__accent--short {
   top: 313.03px;
-  left: min(80.156vw, 1539px);
+  left: min(80.156vw, calc(50% + 579px));
   width: min(5.164vw, 99.15px);
   height: 197.55px;
 }
 
 :where(body.model-service-detail-page) .model-service-hero-scene__accent--tall {
   top: 321.07px;
-  left: min(80.833vw, 1552px);
+  left: min(80.833vw, calc(50% + 592px));
   width: min(4.869vw, 93.48px);
   height: 346.9px;
 }
@@ -14663,16 +14663,6 @@ html:has(.careers-page dialog[open]),
 
   .model-service-detail-page .benefits {
     margin-top: calc(var(--brand-section-gap) + 1px);
-  }
-}
-
-@media (max-width: 1500px) and (min-width: 1200px) {
-  :where(body.model-service-detail-page) .model-service-hero-scene__vehicle {
-    top: 250px;
-    left: 53%;
-    width: min(786px, 46vw);
-    height: auto;
-    aspect-ratio: 786 / 470;
   }
 }
 
