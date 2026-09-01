@@ -79,24 +79,199 @@
   z-index: 0;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 1234px;
   overflow: hidden;
   pointer-events: none;
 }
 
-.brand-hero-scene__art {
+.brand-hero-scene__desktop-art {
   position: absolute;
-  max-width: none;
+  z-index: 1;
+  top: 0;
+  left: 50vw;
+  width: min(1920px, calc(100vw + 334px));
+  aspect-ratio: 1920 / 1234;
+  transform: translateX(-50%);
   user-select: none;
 }
 
-.brand-hero-scene__art {
-  top: 0;
-  left: 50%;
-  width: min(1920px, calc(100vw + 334px));
+.brand-hero-scene__light {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-hero-scene__light-shape {
+  position: relative;
+  flex: none;
+}
+
+.brand-hero-scene__light-image {
+  position: absolute;
+  width: auto;
   height: auto;
-  transform: translateX(-50%);
+  max-width: none;
+}
+
+.brand-hero-scene__light--7 {
+  top: 34.384348%;
+  left: 62.239583%;
+  width: 50.385451%;
+  height: 52.316695%;
+}
+
+.brand-hero-scene__light--7 .brand-hero-scene__light-shape {
+  width: 93.344432%;
+  height: 53.824159%;
+  transform: rotate(20.8deg) skewX(0.03deg);
+}
+
+.brand-hero-scene__light--7 .brand-hero-scene__light-image {
+  inset: -57.56% -22.15%;
+}
+
+.brand-hero-scene__light--5 {
+  top: 18.651886%;
+  left: -1.302083%;
+  width: 52.96875%;
+  height: 40.223197%;
+}
+
+.brand-hero-scene__light--5 .brand-hero-scene__light-shape {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-hero-scene__light--5 .brand-hero-scene__light-image {
+  inset: -40.29% -19.67%;
+}
+
+.brand-hero-scene__light--8 {
+  top: -16.192632%;
+  left: -22.909813%;
+  width: 142.956526%;
+  height: 39.826889%;
+}
+
+.brand-hero-scene__light--8 .brand-hero-scene__light-shape {
+  width: 99.700332%;
+  height: 88.791678%;
+  transform: rotate(-1.15deg);
+}
+
+.brand-hero-scene__light--8 .brand-hero-scene__light-image {
+  inset: -45.83% -7.31%;
+}
+
+.brand-hero-scene__light--6 {
+  top: -14.991896%;
+  left: 38.958333%;
+  width: 70.506323%;
+  height: 69.844508%;
+}
+
+.brand-hero-scene__light--6 .brand-hero-scene__light-shape {
+  width: 94.648577%;
+  height: 50.966917%;
+  transform: rotate(-20.59deg) skewX(-0.03deg);
+}
+
+.brand-hero-scene__light--6 .brand-hero-scene__light-image {
+  inset: -45.53% -15.61%;
+}
+
+.brand-hero-scene__light--9-right,
+.brand-hero-scene__light--9-left {
+  width: 20.467182%;
+  height: 22.455383%;
+}
+
+.brand-hero-scene__light--9-right {
+  top: 27.653447%;
+  left: 70.619792%;
+}
+
+.brand-hero-scene__light--9-left {
+  top: 22.771475%;
+  left: 62.494792%;
+}
+
+.brand-hero-scene__light--9-right .brand-hero-scene__light-shape,
+.brand-hero-scene__light--9-left .brand-hero-scene__light-shape {
+  width: 90.584021%;
+  height: 70.937134%;
+  transform: rotate(14.05deg) skewX(0.02deg);
+}
+
+.brand-hero-scene__light--9-right .brand-hero-scene__light-image,
+.brand-hero-scene__light--9-left .brand-hero-scene__light-image {
+  inset: -20.35% -11.24%;
+}
+
+.brand-hero-scene__light--10 {
+  top: 25.850891%;
+  left: 76.041667%;
+  width: 8.502043%;
+  height: 12.295497%;
+}
+
+.brand-hero-scene__light--10 .brand-hero-scene__light-shape {
+  width: 63.882692%;
+  height: 85.890433%;
+  transform: rotate(63.32deg) skewX(0.02deg);
+}
+
+.brand-hero-scene__light--10 .brand-hero-scene__light-image {
+  inset: -30.7% -38.36%;
+}
+
+.brand-hero-scene__wrench {
+  position: absolute;
+  top: 16.207455%;
+  left: 73.75%;
+  display: flex;
+  width: 17.771458%;
+  height: 27.650891%;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-hero-scene__wrench-image {
+  width: 77.943919%;
+  height: 77.943919%;
+  max-width: none;
+  object-fit: cover;
+  transform: rotate(-69.88deg);
+}
+
+.brand-hero-scene__vehicle {
+  position: absolute;
+  top: 18.800648%;
+  left: 52.34375%;
+  width: 35.729167%;
+  height: 43.111831%;
+  overflow: hidden;
+  mix-blend-mode: darken;
+}
+
+.brand-hero-scene__vehicle-image {
+  position: absolute;
+  top: -15.96%;
+  left: -1.98%;
+  width: 102.14%;
+  height: 131.91%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .brand-hero-scene.hero-grid::before {
+    background-image: url("assets/hero-pattern.png");
+    background-position: center top;
+    background-size: max(1920px, 100%) auto;
+    opacity: 0.5;
+  }
 }
 
 .brand-hero-scene__mobile-art {
@@ -982,7 +1157,7 @@
     height: 1119px;
   }
 
-  .brand-hero-scene__art {
+  .brand-hero-scene__desktop-art {
     display: none;
   }
 

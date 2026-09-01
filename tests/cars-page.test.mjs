@@ -59,9 +59,24 @@ test("cars page contains no expiring Figma asset URLs", () => {
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 });
 
-test("desktop vehicle light separates the cars from the animated gear", () => {
+test("desktop lighting reproduces Figma group 298:25359", () => {
+  assert.match(markup, /data-node-id="298:25359"/);
+  for (const [nodeId, asset] of [
+    ["215:14736", "cars-hero-glow-7.svg"],
+    ["215:14737", "cars-hero-glow-5.svg"],
+    ["215:14738", "cars-hero-glow-8.svg"],
+    ["215:14739", "cars-hero-glow-6.svg"],
+  ]) {
+    assert.match(markup, new RegExp(`data-node-id="${nodeId}"[^>]*><img[^>]*src="assets/${asset}"`));
+    assert.ok(existsSync(resolve(projectRoot, "assets", asset)));
+  }
+
   assert.match(markup, /class="cars-hero-scene__vehicle-light" data-node-id="227:16146"/);
   assert.match(markup, /src="assets\/cars-hero-vehicle-light\.svg"/);
+  assert.match(pageStyles, /\.cars-hero-scene__glow--7\s*\{[^}]*rotate\(20\.67deg\)/s);
+  assert.match(pageStyles, /\.cars-hero-scene__glow--8\s*\{[^}]*rotate\(-1\.15deg\)/s);
+  assert.match(pageStyles, /\.cars-hero-scene__glow--6\s*\{[^}]*rotate\(-20\.46deg\)/s);
+  assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*rotate\(13\.96deg\)/s);
   assert.match(pageStyles, /\.cars-hero-scene__gear\s*\{[^}]*z-index:\s*2/s);
   assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*z-index:\s*3/s);
   assert.match(pageStyles, /\.cars-hero-scene__vehicles\s*\{[^}]*z-index:\s*4/s);

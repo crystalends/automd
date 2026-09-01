@@ -183,7 +183,16 @@ test("all brand page Figma assets are local and resolve", () => {
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
   assert.match(markup, /class="brand-hero-scene hero-grid"/);
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
-  assert.match(markup, /src="assets\/brand-hero-art\.png"/);
+  assert.match(markup, /class="brand-hero-scene__desktop-art" data-node-id="298:25361"/);
+  assert.doesNotMatch(markup, /src="assets\/brand-hero-art\.png"/);
+  for (const asset of ["light-5.svg", "light-6.svg", "light-7.svg", "light-8.svg", "light-9.svg", "light-10.svg", "wrench.png", "vehicle.png"]) {
+    assert.match(markup, new RegExp(`assets/brand-hero-${asset.replace(".", "\\.")}`));
+  }
+  for (const nodeId of ["228:21109", "228:21110", "228:21111", "228:21112", "228:21114", "248:6108", "298:25351", "298:25352", "228:22359"]) {
+    assert.match(markup, new RegExp(`data-node-id="${nodeId}"`));
+  }
+  assert.match(styles, /\.brand-hero-scene\.hero-grid::before\s*\{[^}]*background-image:\s*url\("assets\/hero-pattern\.png"\)[^}]*opacity:\s*0\.5/s);
+  assert.match(styles, /\.brand-hero-scene__vehicle\s*\{[^}]*mix-blend-mode:\s*darken/s);
   assert.doesNotMatch(markup, /brand-hero-scene__orb/);
   const resources = [...markup.matchAll(/\b(?:href|src)="([^"]+)"/g)]
     .map(([, value]) => value.split("#")[0])
