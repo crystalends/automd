@@ -17,6 +17,13 @@ test("mobile home hero visual follows copy height", () => {
   assert.match(styles, /\.hero__visual\{position:relative;display:block[^}]*height:min\(226px,57\.949vw\)/);
 });
 
+test("home hero gear keeps the same rotation speed on desktop and mobile", () => {
+  const styles = read("styles.css");
+
+  assert.match(styles, /\.hero-scene__gear\{[^}]*animation:hero-gear-rotation 24s linear infinite/);
+  assert.match(styles, /\.hero__visual-gear\{[^}]*animation:hero-gear-rotation 24s linear infinite/);
+});
+
 test("mobile vehicle heroes keep their artwork in content flow", () => {
   const cases = [
     ["cars.html", "cars-page.css", "cars-hero__visual"],

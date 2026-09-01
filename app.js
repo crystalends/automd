@@ -1506,8 +1506,38 @@ var Swiper=function(){"use strict";function e(e=""){return e.trim().split(" ").f
   return Object.freeze({ initPriceCatalog });
   })();
 
-  // source: js/main.js
+  // source: js/modules/faq-accordions.js
   const __module19 = (() => {
+  const closeOtherFaqItems = (items, activeItem) => {
+    items.forEach((item) => {
+      if (item !== activeItem) item.open = false;
+    });
+  };
+
+  const initFaqAccordions = () => {
+    const groups = [...document.querySelectorAll(".faq-request__list")];
+
+    groups.forEach((group) => {
+      const items = [...group.querySelectorAll(".faq-item")];
+      const initiallyOpenItem = items.find((item) => item.open);
+
+      if (initiallyOpenItem) closeOtherFaqItems(items, initiallyOpenItem);
+
+      items.forEach((item) => {
+        item.addEventListener("toggle", () => {
+          if (item.open) closeOtherFaqItems(items, item);
+        });
+      });
+    });
+
+    return groups;
+  };
+
+  return Object.freeze({ closeOtherFaqItems, initFaqAccordions });
+  })();
+
+  // source: js/main.js
+  const __module20 = (() => {
   const { initFooterAccordions } = __module0;
   const { initForms } = __module1;
   const { initArticleFilter } = __module2;
@@ -1525,6 +1555,7 @@ var Swiper=function(){"use strict";function e(e=""){return e.trim().split(" ").f
   const { initVacancyDetailDialog } = __module16;
   const { initVehicleMenu } = __module17;
   const { initPriceCatalog } = __module18;
+  const { initFaqAccordions } = __module19;
   initMobileMenu();
   initVehicleMenu();
   initArticleFilter();
@@ -1542,5 +1573,6 @@ var Swiper=function(){"use strict";function e(e=""){return e.trim().split(" ").f
   initVacancyDetailDialog();
   initCareerDialog();
   initPriceCatalog();
+  initFaqAccordions();
   })();
 })();

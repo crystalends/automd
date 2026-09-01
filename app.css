@@ -892,7 +892,7 @@ body:has(.mobile-menu[open]){
 @media (max-width:767px){
   .hero__visual{position:relative;display:block;width:100vw;height:min(226px,57.949vw);flex:0 0 min(226px,57.949vw);margin-left:-16px;pointer-events:none}
   .hero__visual-gear,.hero__visual-van{position:absolute;max-width:none;user-select:none}
-  .hero__visual-gear{z-index:2;top:max(-56px,-14.359vw);right:max(-111px,-28.462vw);width:min(250px,64.103vw);height:min(251px,64.359vw);object-fit:contain;transform:rotate(var(--hero-gear-rotation,0rad));animation:hero-gear-rotation 2s linear infinite}
+  .hero__visual-gear{z-index:2;top:max(-56px,-14.359vw);right:max(-111px,-28.462vw);width:min(250px,64.103vw);height:min(251px,64.359vw);object-fit:contain;transform:rotate(var(--hero-gear-rotation,0rad));animation:hero-gear-rotation 24s linear infinite}
   .hero__visual-van{z-index:3;top:0;right:max(-43px,-11.026vw);width:min(377px,96.667vw);height:min(226px,57.949vw);object-fit:cover;transform:scaleX(-1)}
 }
 
