@@ -24,6 +24,45 @@ test("home hero gear keeps the same rotation speed on desktop and mobile", () =>
   assert.match(styles, /\.hero__visual-gear\{[^}]*animation:hero-gear-rotation 24s linear infinite/);
 });
 
+test("home hero artwork scales from the 1920px reference composition", () => {
+  const markup = read("index.html");
+  const styles = read("styles.css");
+
+  for (const [suffix, nodeId] of [
+    ["8", "292:20714"],
+    ["9", "292:20715"],
+    ["12", "297:24336"],
+    ["10", "292:20716"],
+    ["11", "292:20717"],
+  ]) {
+    assert.match(
+      markup,
+      new RegExp(`class="hero__visual-blur hero__visual-blur--${suffix}"[^>]*data-node-id="${nodeId}"`),
+    );
+  }
+
+  assert.match(
+    styles,
+    /@media \(min-width:768px\)[\s\S]*\.hero__visual\s*\{[^}]*aspect-ratio:999\/629[\s\S]*\.hero__visual-gear\s*\{[^}]*top:0[^}]*right:0[^}]*width:56\.256%[\s\S]*\.hero__visual-van\s*\{[^}]*top:19\.714%[^}]*left:0[^}]*width:84\.685%[^}]*height:80\.286%/,
+  );
+  assert.match(
+    styles,
+    /\.hero__visual-blur--8\{[^}]*top:50\.508558%[^}]*left:58\.524991%[^}]*width:55\.642042%[^}]*height:60\.184897%\}/,
+  );
+  assert.match(
+    styles,
+    /@media \(min-width:1200px\)[\s\S]*\.hero__visual\s*\{[^}]*top:calc\(6\.25vw - 140px\)[^}]*right:calc\(1\.615vw - \(100vw - var\(--container\)\)\/2\)[^}]*width:clamp\(519px,calc\(66\.667vw - 281px\),999px\)/,
+  );
+  assert.match(
+    styles,
+    /@media \(min-width:992px\) and \(max-width:1199px\)[\s\S]*\.hero__content\s*\{[^}]*display:grid[^}]*grid-template-columns:minmax\(0,620px\) minmax\(280px,1fr\)/,
+  );
+  assert.match(
+    styles,
+    /@media \(min-width:768px\) and \(max-width:991px\)[\s\S]*\.hero__content\s*\{[^}]*display:flex[^}]*flex-direction:column/,
+  );
+});
+
 test("mobile vehicle heroes keep their artwork in content flow", () => {
   const cases = [
     ["cars.html", "cars-page.css", "cars-hero__visual"],

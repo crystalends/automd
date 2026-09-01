@@ -115,3 +115,21 @@ test("consent checkboxes share one checked-state implementation", () => {
     assert.doesNotMatch(pageStyles, /\.request-card__checkbox(?::checked)?\s*\{/);
   }
 });
+
+test("homepage finder selects use the Figma chevron instead of native controls", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+  const indexMarkup = readFileSync(resolve(projectRoot, "index.html"), "utf8");
+  const finderMarkup = indexMarkup.match(/<form class="finder-form"[\s\S]*?<\/form>/)?.[0] ?? "";
+
+  assert.equal((finderMarkup.match(/form-field--select finder-form__form-field/g) ?? []).length, 3);
+  assert.equal((finderMarkup.match(/form-field__control finder-form__control/g) ?? []).length, 3);
+  assert.match(
+    styles,
+    /\.form-field--select\.finder-form__form-field::after\{[^}]*width:24px[^}]*height:24px[^}]*select-arrow\.svg[^}]*pointer-events:none/s,
+  );
+  assert.match(
+    styles,
+    /\.form-field__control\.finder-form__control\{[^}]*background-image:none[^}]*-webkit-appearance:none[^}]*appearance:none/s,
+  );
+  assert.ok(existsSync(resolve(projectRoot, "assets/select-arrow.svg")));
+});
