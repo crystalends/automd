@@ -819,14 +819,14 @@
 
   .faq-request {
     display: flex;
-    min-height: 1546px;
+    min-height: 0;
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
   }
 
   .faq-request__faq {
-    min-height: 758px;
+    min-height: 0;
   }
 
   .faq-request__title,
@@ -837,7 +837,7 @@
   }
 
   .faq-item__question {
-    min-height: 72px;
+    min-height: 0;
     padding: 15px 54px 15px 20px;
     font-size: 18px;
     line-height: 21px;
@@ -845,7 +845,7 @@
 
   .request-card {
     height: auto;
-    min-height: 768px;
+    min-height: 0;
     flex: 0 0 auto;
     gap: 20px;
     padding: 19px;
@@ -864,7 +864,7 @@
   }
 
   .request-card__heading {
-    min-height: 230px;
+    min-height: 0;
     flex: 0 0 auto;
     gap: 10px;
   }
@@ -880,7 +880,7 @@
   }
 
   .request-card__fields {
-    min-height: 334px;
+    min-height: 0;
     flex: 0 0 auto;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -896,7 +896,7 @@
 
   .request-card__consent {
     width: 100%;
-    min-height: 68px;
+    min-height: 0;
     flex: 0 0 auto;
     font-size: 14px;
     line-height: 17px;
@@ -967,7 +967,6 @@
 
   .request-card {
     height: auto;
-    min-height: 768px;
     flex-basis: auto;
   }
 

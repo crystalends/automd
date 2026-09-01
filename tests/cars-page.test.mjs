@@ -37,6 +37,18 @@ test("cars page implements the mobile Figma structure without a desktop width lo
   assert.match(pageStyles, /\.cars-hero-scene__gear,[\s\S]*?\.cars-hero-scene__vehicles\s*\{[^}]*display:\s*none/s);
 });
 
+test("mobile FAQ keeps its gaps while item heights follow wrapped content", () => {
+  const mobileStyles = pageStyles.match(/@media \(max-width: 767px\) \{[\s\S]*?\n\}/)?.[0] ?? "";
+
+  assert.match(mobileStyles, /\.faq-request\s*\{[^}]*min-height:\s*0[^}]*gap:\s*20px/s);
+  assert.match(mobileStyles, /\.faq-request__faq\s*\{[^}]*min-height:\s*0/s);
+  assert.match(mobileStyles, /\.faq-item__question\s*\{[^}]*min-height:\s*0[^}]*padding:\s*15px 54px 15px 20px/s);
+  assert.match(mobileStyles, /\.request-card\s*\{[^}]*min-height:\s*0[^}]*gap:\s*20px/s);
+  assert.match(mobileStyles, /\.request-card__heading\s*\{[^}]*min-height:\s*0[^}]*gap:\s*10px/s);
+  assert.match(mobileStyles, /\.request-card__fields\s*\{[^}]*min-height:\s*0[^}]*gap:\s*10px/s);
+  assert.match(mobileStyles, /\.request-card__consent\s*\{[^}]*min-height:\s*0/s);
+});
+
 test("mobile car brand pagination is interactive", () => {
   assert.match(sliderModule, /const createCarBrandsCarousel = \(\) =>/);
   assert.match(sliderModule, /car-brands__dot--active/);
