@@ -57,6 +57,7 @@ test("business page has fluid, content-driven layouts", () => {
   assert.match(styles, /--business-section-gap:\s*clamp\(/);
   assert.match(styles, /\.business-audience__grid\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/s);
   assert.match(styles, /\.business-hero\s*\{[^}]*min-height:\s*697px[^}]*padding-bottom:\s*80px/s);
+  assert.match(styles, /\.business-audience\s*\{[^}]*margin-top:\s*0/s);
   assert.doesNotMatch(styles, /min-width:\s*1920px/);
 
   for (const selector of [

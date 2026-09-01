@@ -93,6 +93,20 @@ test("decision and guarantees cards match Figma nodes 267:75531 and 267:72345", 
   assert.match(styles, /\.about-button-secondary\.about-guarantees__about-button-secondary\s*\{[^}]*width:\s*172px[^}]*min-height:\s*46px/s);
 });
 
+test("location cards preserve Figma node 267:72277 typography", () => {
+  const sharedStyles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+  assert.match(sharedStyles, /\.location-card__title\s*\{[^}]*font-family:Geologica,sans-serif[^}]*font-size:20px[^}]*font-weight:400[^}]*line-height:1\.2/s);
+  assert.match(sharedStyles, /\.location-card__value\s*\{[^}]*font-family:"AA Stetica",sans-serif[^}]*font-size:14px[^}]*font-weight:400[^}]*line-height:1\.2/s);
+  assert.match(sharedStyles, /\.location-card__link\s*\{[^}]*font-family:Geologica,sans-serif[^}]*font-size:16px[^}]*font-weight:500[^}]*line-height:1/s);
+
+  const mobileStart = sharedStyles.indexOf("@media (max-width:767px)");
+  const narrowStart = sharedStyles.indexOf("@media (max-width:359px)");
+  const mobileStyles = sharedStyles.slice(mobileStart, narrowStart);
+  assert.match(mobileStyles, /\.location-card__title\s*\{[^}]*font-size:20px[^}]*line-height:1\.2/s);
+  assert.match(mobileStyles, /\.location-card__value\s*\{[^}]*font-size:14px[^}]*line-height:1\.2/s);
+  assert.match(mobileStyles, /\.location-card__link\s*\{[^}]*font-size:16px[^}]*line-height:1/s);
+});
+
 test("about page uses local Figma assets and all local resources resolve", () => {
   assert.match(markup, /class="commercial-hero-scene hero-grid"/);
   assert.match(markup, /src="assets\/about-hero-vehicle\.png"/);

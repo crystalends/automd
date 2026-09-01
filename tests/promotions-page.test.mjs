@@ -65,6 +65,17 @@ test("promotions hero reuses the home page grid primitive", () => {
   assert.match(sharedStyles, /\.hero-grid::before\s*\{[^}]*hero-grid-light-soft\.svg[^}]*hero-grid-light-paper\.svg[^}]*hero-pattern\.png/s);
 });
 
+test("promotions hero content follows Figma node 267:44718", () => {
+  assert.match(markup, /<h1 class="promotions-hero__title"[^>]*><span class="promotions-hero__accent">Акции<\/span> и специальные предложения AutoMD<\/h1>/);
+  assert.equal((markup.match(/src="assets\/promotions-check\.svg"[^>]*width="24" height="24"/g) ?? []).length, 5);
+  assert.match(styles, /\.promotions-hero\s*\{[^}]*min-height:\s*307px;[^}]*gap:\s*40px;/s);
+  assert.match(styles, /\.promotions-hero__intro\s*\{[^}]*width:\s*min\(1195px, 100%\);[^}]*gap:\s*20px;/s);
+  assert.match(styles, /\.promotions-hero__title\s*\{[^}]*font-size:\s*clamp\(52px, 3\.333vw, 64px\);[^}]*font-weight:\s*600;[^}]*line-height:\s*1\.1;[^}]*letter-spacing:\s*-0\.64px;/s);
+  assert.match(styles, /\.promotions-hero__benefits\s*\{[^}]*width:\s*min\(1195px, 100%\);[^}]*gap:\s*10px 20px;/s);
+  assert.match(styles, /\.promotions-hero__benefit\s*\{[^}]*flex:\s*0 0 auto;[^}]*white-space:\s*nowrap;/s);
+  assert.ok(existsSync(resolve(projectRoot, "assets/promotions-check.svg")));
+});
+
 test("promotions page uses local Figma assets and all local resources resolve", () => {
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-grid-light-soft.svg")));
