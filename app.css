@@ -118,14 +118,14 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 @media (max-width:1250px){.site-footer__legal{font-size:11px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.hero-scene__gear{animation:none}}
 
-/* Vehicle navigation dropdown */
-.site-header--vehicle-menu-ready{z-index:30}
-.site-header.site-header--vehicle-menu-ready.site-header--vehicles-open{z-index:100}
+/* Desktop navigation dropdowns */
+.site-header--desktop-menu-ready{z-index:30}
+.site-header.site-header--desktop-menu-ready.site-header--desktop-menu-open{z-index:100}
 .vehicle-menu{position:absolute;z-index:30;isolation:isolate;top:calc(100% + 10px);left:0;width:100%;height:382px;padding:40px;border:1px solid var(--line);border-radius:20px;background-color:#fff;visibility:hidden;pointer-events:none}
 .vehicle-menu::before{position:absolute;right:0;bottom:100%;left:0;height:11px;content:""}
-.site-header--vehicles-open .vehicle-menu{visibility:visible;pointer-events:auto}
-.site-header--vehicles-open .site-nav__link[aria-controls="vehicle-menu"]{color:var(--red)}
-.site-header--vehicles-open .site-nav__link[aria-controls="vehicle-menu"]::after{position:absolute;right:0;bottom:0;left:0;height:1px;background:var(--red);content:"";pointer-events:none}
+.vehicle-menu[aria-hidden="false"]{visibility:visible;pointer-events:auto}
+.site-nav__link[aria-expanded="true"]{color:var(--red)}
+.site-nav__link[aria-expanded="true"]::after{position:absolute;right:0;bottom:0;left:0;height:1px;background:var(--red);content:"";pointer-events:none}
 .vehicle-menu__grid{display:grid;width:100%;height:100%;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,141px);align-content:center;gap:20px}
 .vehicle-menu__item{display:flex;min-width:0;height:141px;flex-direction:column;align-items:flex-start;gap:5px;border-radius:20px;color:var(--ink)}
 .vehicle-menu__item--all{justify-content:flex-end;color:var(--red)}
@@ -140,8 +140,36 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 .vehicle-menu__item:hover .vehicle-menu__label,.vehicle-menu__item:focus-visible .vehicle-menu__label{border-bottom:1px solid var(--blue);color:var(--blue)}
 .vehicle-menu__item:focus-visible{outline:2px solid var(--red);outline-offset:4px}
 
-@media (max-width:1500px){.vehicle-menu{padding:clamp(24px,2.083vw,40px)}.vehicle-menu__grid{gap:clamp(12px,1.042vw,20px)}}
+.desktop-card-menu{position:absolute;z-index:30;isolation:isolate;top:calc(100% + 10px);left:0;width:100%;padding:40px;border:1px solid var(--line);border-radius:20px;background-color:#fff;visibility:hidden;pointer-events:none}
+.desktop-card-menu::before{position:absolute;right:0;bottom:100%;left:0;height:11px;content:""}
+.desktop-card-menu[aria-hidden="false"]{visibility:visible;pointer-events:auto}
+.desktop-card-menu--services{height:352px}
+.desktop-card-menu--company{height:302px}
+.desktop-card-menu__grid{display:grid;width:100%;height:100%;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:20px}
+.desktop-card-menu__item{display:flex;min-width:0;align-items:center;justify-content:center;gap:20px;padding:20px;border:1px solid var(--soft);border-radius:20px;background:#fff;color:var(--ink)}
+.desktop-card-menu__item:hover,.desktop-card-menu__item:focus-visible{border-color:var(--line);background:var(--paper)}
+.desktop-card-menu__item:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.desktop-card-menu__image-frame{position:relative;display:block;width:60px;height:60px;overflow:hidden;flex:0 0 60px;border-radius:10px}
+.desktop-card-menu__image{position:absolute;max-width:none;height:auto;pointer-events:none}
+.desktop-card-menu__image--maintenance,.desktop-card-menu__image--diagnostics{top:-29.85%;left:-29.35%;width:158.42%}
+.desktop-card-menu__image--repair{top:-18.44%;left:-18.9%;width:137.12%}
+.desktop-card-menu__image--replacement{top:-11.69%;left:-13.9%;width:127.94%}
+.desktop-card-menu__image--injectors{top:-29.17%;left:-29.17%;width:158.33%;transform:rotate(58deg)}
+.desktop-card-menu__image--extra{top:-10.3%;left:-11.42%;width:120.98%}
+.desktop-card-menu__image--about{top:-33.74%;left:-37.3%;width:174.85%}
+.desktop-card-menu__image--tour{top:-40.55%;left:-40.11%;width:181.52%}
+.desktop-card-menu__image--reviews{top:-35.17%;left:-36.61%;width:171.77%}
+.desktop-card-menu__image--vacancies{top:-32.8%;left:-32.72%;width:164.84%}
+.desktop-card-menu__image--client-zone{top:-45.81%;left:-45.35%;width:191.29%}
+.desktop-card-menu__image--warranty{top:-22.89%;left:-23.27%;width:146.97%}
+.desktop-card-menu__content{display:flex;min-width:0;flex:1 1 0;flex-direction:column;align-items:center;gap:5px;text-align:center}
+.desktop-card-menu__title{font-family:Geologica,sans-serif;font-size:18px;font-weight:400;line-height:1.2}
+.desktop-card-menu__description{width:100%;color:var(--muted);font-family:"AA Stetica",sans-serif;font-size:14px;line-height:1.2}
+.desktop-card-menu__arrow{width:24px;height:24px;flex:0 0 24px}
+
+@media (max-width:1500px){.vehicle-menu,.desktop-card-menu{padding:clamp(24px,2.083vw,40px)}.vehicle-menu__grid,.desktop-card-menu__grid{gap:clamp(12px,1.042vw,20px)}.desktop-card-menu__item{gap:clamp(12px,1.333vw,20px);padding:clamp(14px,1.333vw,20px)}.desktop-card-menu__description{font-size:clamp(12px,.933vw,14px)}}
 @media (max-width:1199px){.vehicle-menu{display:none}}
+@media (max-width:1199px){.desktop-card-menu{display:none}}
 .team-callout__button{width:258px;flex-basis:258px}
 .form-field--select.finder-form__form-field{position:relative}.form-field--select.finder-form__form-field::after{position:absolute;right:20px;bottom:15px;width:24px;height:24px;background:url("assets/select-arrow.svg") center/7.061px 12.707px no-repeat;content:"";pointer-events:none;transform:rotate(90deg) scaleX(-1)}.form-field__control.finder-form__control{padding-right:54px;appearance:none}
 .service-finder--price{padding:59px}.service-finder--price .service-finder__decor{top:-63px;right:-29px}
@@ -2682,26 +2710,14 @@ body:has(.request-dialog[open]) {
   }
 
   .brand-page .benefits-slider__pagination {
-    width: 61px ;
+    width: 28px;
     height: 6px;
     flex-basis: 6px;
-    justify-content: flex-start;
   }
 
   .brand-page .benefits-slider__pagination .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
-  }
-
-  .brand-page .benefits-slider__pagination--six-dots::after {
-    width: 28px;
-    height: 6px;
-    flex: 0 0 28px;
-    background:
-      radial-gradient(circle at 3px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 14px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 25px 3px, var(--line) 0 3px, transparent 3.2px);
-    content: "";
   }
 
   .brand-page .team,
@@ -3242,7 +3258,7 @@ body:has(.request-dialog[open]) {
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision {
   padding: 40px;
-  background: radial-gradient(ellipse 700px 700px at 98% 96%, #e21013 0%, #9b0608 100%);
+  background: #e21013;
   color: #fff;
 }
 
@@ -3253,21 +3269,20 @@ body:has(.request-dialog[open]) {
   width: 100%;
   height: 100%;
   max-width: none;
-  object-fit: cover;
-  opacity: 0.6;
+  object-fit: fill;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content {
   position: relative;
   z-index: 2;
   display: flex;
-  width: 100%;
+  width: min(614px, 100%);
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__title {
-  max-width: 690px;
+  max-width: 614px;
   margin: 0;
   font-family: Geologica, sans-serif;
   font-size: 40px;
@@ -3276,19 +3291,20 @@ body:has(.request-dialog[open]) {
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__content-text:is(p) {
-  max-width: 690px;
-  font-size: 18px;
+  max-width: 614px;
+  font-size: 16px;
   line-height: 1.2;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
   position: absolute;
   z-index: 1;
-  right: -130px;
-  bottom: -350px;
-  width: 520px;
-  height: 520px;
+  top: 227px;
+  left: 479px;
+  width: 437px;
+  height: 437px;
   max-width: none;
+  object-fit: cover;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
@@ -3297,12 +3313,12 @@ body:has(.request-dialog[open]) {
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-  border: 1px solid var(--soft);
+  border: 0.5px solid rgba(227, 227, 227, 0.5);
   background: #fff;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__lead {
-  color: var(--muted);
+  color: #6f6f6f;
   font-size: 18px;
   line-height: 1.2;
 }
@@ -3311,7 +3327,7 @@ body:has(.request-dialog[open]) {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 10px 20px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -3320,12 +3336,18 @@ body:has(.request-dialog[open]) {
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list-item:is(li) {
   min-height: 59px;
   padding: 20px;
-  border-radius: 10px;
-  background: var(--soft);
+  border-radius: 20px;
+  background: #f6f6f6 url("assets/service-assurance-item-pattern.png") left top / 195px 59px no-repeat;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees__list-item:is(li):last-child {
   grid-column: 1 / -1;
+}
+
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-button-secondary.about-guarantees__about-button-secondary {
+  width: 172px;
+  min-height: 46px;
+  padding: 15px 40px;
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .faq-request {
@@ -3919,10 +3941,16 @@ body:has(.request-dialog[open]) {
   }
 
   :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__nut {
+    top: auto;
     right: -60px;
     bottom: -195px;
+    left: auto;
     width: 320px;
     height: 320px;
+  }
+
+  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-decision__pattern {
+    object-fit: cover;
   }
 
   :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-guarantees {
@@ -5527,26 +5555,14 @@ body:has(.request-dialog[open]) {
   }
 
   .brand-page .benefits-slider__pagination {
-    width: 61px ;
+    width: 28px;
     height: 6px;
     flex-basis: 6px;
-    justify-content: flex-start;
   }
 
   .brand-page .benefits-slider__pagination .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
-  }
-
-  .brand-page .benefits-slider__pagination--six-dots::after {
-    width: 28px;
-    height: 6px;
-    flex: 0 0 28px;
-    background:
-      radial-gradient(circle at 3px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 14px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 25px 3px, var(--line) 0 3px, transparent 3.2px);
-    content: "";
   }
 
   .brand-page .team,
@@ -18732,34 +18748,42 @@ html:has(.careers-page dialog[open]),
   gap: 10px;
   color: var(--muted);
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 22px;
 }
 
 :where(body.diagnostics-page) .diagnostics-need__copy-text:is(p) {
   margin: 0;
 }
 
+:where(body.diagnostics-page) .diagnostics-need__button:is(a) {
+  width: 304px;
+}
+
 :where(body.diagnostics-page) .diagnostics-need__signs {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-content: start;
-  gap: 10px 20px;
+  display: flex;
+  min-width: 0;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 20px 30px;
+  flex-wrap: wrap;
   overflow: hidden;
   margin: 0;
   padding: 20px;
   border-radius: var(--radius);
-  background: var(--soft);
+  background: #f6f6f6;
   list-style: none;
 }
 
 :where(body.diagnostics-page) .diagnostics-need__signs::after {
   position: absolute;
   z-index: 0;
-  inset: 0 0 0 28%;
-  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  top: 0;
+  right: 0;
+  width: min(605px, 76.5823%);
+  height: 272px;
+  background: url("assets/diagnostics-need-pattern.png") right top / 100% 100% no-repeat;
   content: "";
-  opacity: 0.07;
   pointer-events: none;
 }
 
@@ -18770,17 +18794,17 @@ html:has(.careers-page dialog[open]),
   min-width: 0;
   align-items: flex-start;
   gap: 5px;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
 }
 
 :where(body.diagnostics-page) .diagnostics-need__signs-item:is(li)::before {
   width: 16px;
   aspect-ratio: 1;
   flex: 0 0 16px;
-  background: url("assets/brand-service-check.svg") center / 6px 8px no-repeat;
+  background: url("assets/diagnostics-need-info.png") center / contain no-repeat;
   content: "";
-  transform: rotate(90deg);
 }
 
 :where(body.diagnostics-page) .diagnostics-process {
@@ -18800,37 +18824,48 @@ html:has(.careers-page dialog[open]),
 
 :where(body.diagnostics-page) .diagnostics-process__grid-item:is(li) {
   position: relative;
-  display: grid;
+  display: flex;
   min-width: 0;
-  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 20px;
   overflow: hidden;
   padding: 20px;
   border-radius: var(--radius);
-  background: var(--soft);
-  font-family: Geologica, sans-serif;
+  background: #f6f6f6;
+  font-family: "AA Stetica", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 22px;
 }
 
 :where(body.diagnostics-page) .diagnostics-process__grid-item:is(li)::after {
   position: absolute;
   z-index: 0;
-  inset: 0 0 0 52%;
-  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 195px;
+  height: 84px;
+  background: url("assets/service-assurance-item-pattern.png") left top / 195px 84px no-repeat;
   content: "";
-  opacity: 0.06;
+  pointer-events: none;
 }
 
 :where(body.diagnostics-page) .diagnostics-process__grid-value:is(span),
-:where(body.diagnostics-page) .diagnostics-process__grid-item:is(li) {
-  isolation: isolate;
+:where(body.diagnostics-page) .diagnostics-process__grid-text:is(span) {
+  position: relative;
+  z-index: 1;
 }
 
 :where(body.diagnostics-page) .diagnostics-process__grid-value:is(span) {
+  flex: 0 0 auto;
   color: var(--red);
+  font-family: Geologica, sans-serif;
   font-size: 20px;
+  line-height: 24px;
+}
+
+:where(body.diagnostics-page) .diagnostics-process__grid-text:is(span) {
+  min-width: 0;
+  flex: 1;
 }
 
 :where(body.diagnostics-page) .diagnostics-vehicles {
@@ -18852,16 +18887,30 @@ html:has(.careers-page dialog[open]),
   align-items: flex-start;
   gap: 20px;
   padding: 20px 20px 40px;
-  border: 1px solid var(--soft);
+  border: 0;
   border-radius: var(--radius);
   background: #fff;
+  box-shadow: inset 0 0 0 1px var(--soft);
+}
+
+:where(body.diagnostics-page) .diagnostics-vehicle-card__image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 20;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 10px;
 }
 
 :where(body.diagnostics-page) .diagnostics-vehicle-card__image:is(img) {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 21 / 20;
+  height: 100%;
+  max-width: none;
   border-radius: 10px;
   object-fit: cover;
+  pointer-events: none;
 }
 
 :where(body.diagnostics-page) .diagnostics-vehicle-card__title:is(h3) {
@@ -18873,22 +18922,41 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.diagnostics-page) .diagnostics-vehicle-card--all {
-  justify-content: space-between;
   color: var(--red);
   font-family: Geologica, sans-serif;
   font-size: 18px;
 }
 
-:where(body.diagnostics-page) .diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__image):is(img) {
-  object-fit: contain;
+:where(body.diagnostics-page) .diagnostics-vehicle-card--all .diagnostics-vehicle-card__image-frame {
+  min-height: 0;
+  aspect-ratio: auto;
+  flex: 1 1 0;
 }
 
-:where(body.diagnostics-page) .diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__value):is(span) {
+:where(body.diagnostics-page) .diagnostics-vehicle-card--all .diagnostics-vehicle-card__image:is(img) {
+  top: 5.04%;
+  left: -3.33%;
+  width: 106.19%;
+  height: 89.92%;
+  border-radius: 0;
+  object-fit: fill;
+}
+
+:where(body.diagnostics-page) .diagnostics-vehicle-card__value:is(span) {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 20px;
+  line-height: 1.2;
+}
+
+:where(body.diagnostics-page) .diagnostics-vehicle-card__value-text {
+  white-space: nowrap;
+}
+
+:where(body.diagnostics-page) .diagnostics-vehicle-card__arrow:is(img) {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }
 
 .diagnostics-page .promo-banner__slide.service-detail-promo__slide {
@@ -19048,9 +19116,6 @@ html:has(.careers-page dialog[open]),
     font-size: 19px;
   }
 
-  :where(body.diagnostics-page) .diagnostics-need__signs {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 1199px) {
@@ -19072,6 +19137,11 @@ html:has(.careers-page dialog[open]),
   :where(body.diagnostics-page) .diagnostics-vehicles__grid,
   :where(body.diagnostics-page) .diagnostics-parts__tags {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :where(body.diagnostics-page) .diagnostics-vehicle-card--all .diagnostics-vehicle-card__image-frame {
+    aspect-ratio: 21 / 20;
+    flex: 0 0 auto;
   }
 }
 
@@ -19204,7 +19274,18 @@ html:has(.careers-page dialog[open]),
   }
 
   :where(body.diagnostics-page) .diagnostics-need__signs {
-    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  :where(body.diagnostics-page) .diagnostics-need__signs-item:is(li) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  :where(body.diagnostics-page) .diagnostics-need__button:is(a) {
+    width: 100%;
   }
 
   :where(body.diagnostics-page) .diagnostics-process__grid-item:is(li) {

@@ -1,54 +1,6 @@
-import { vehicles } from "./vehicle-menu.js";
+import { companyItems, services, vehicles } from "./navigation-data.js";
 
 const mobileMedia = window.matchMedia("(max-width: 1199px)");
-
-const services = [
-  {
-    name: "Плановое ТО",
-    description: "Регламентное обслуживание, замена масла, фильтров, жидкостей и расходников",
-    image: "assets/service-maintenance.png",
-    imageModifier: "maintenance",
-  },
-  {
-    name: "Диагностика",
-    description: "Компьютерная диагностика, проверка двигателя, ходовой, тормозной системы и электрики",
-    image: "assets/service-diagnostics.png",
-    imageModifier: "diagnostics",
-  },
-  {
-    name: "Ремонт",
-    description: "Ремонтируем основные узлы и системы автомобиля после диагностики и согласования работ",
-    image: "assets/service-repair.png",
-    imageModifier: "repair",
-  },
-  {
-    name: "Замена",
-    description: "Выполняем замену расходников, узлов и деталей с подбором запчастей под конкретную модель",
-    image: "assets/service-replacement.png",
-    imageModifier: "replacement",
-  },
-  {
-    name: "Форсунки",
-    description: "Диагностика, ремонт и восстановление форсунок для коммерческого транспорта",
-    image: "assets/service-injectors.png",
-    imageModifier: "injectors",
-  },
-  {
-    name: "Дополнительные услуги",
-    description: "Дополнительные сервисы для владельцев автомобилей и юридических лиц",
-    image: "assets/service-extra.png",
-    imageModifier: "extra",
-  },
-];
-
-const companyItems = [
-  { name: "О AutoMD", image: "assets/mobile-menu-about.png", imageModifier: "about", href: "about.html" },
-  { name: "3D-тур", image: "assets/mobile-menu-tour.png", imageModifier: "tour", href: "3d-tour.html" },
-  { name: "Отзывы", image: "assets/mobile-menu-reviews.png", imageModifier: "reviews", href: "reviews.html" },
-  { name: "Вакансии", image: "assets/mobile-menu-vacancies.png", imageModifier: "vacancies", href: "vacancies.html" },
-  { name: "Клиентская зона", image: "assets/mobile-menu-client-zone.png", imageModifier: "client-zone", href: "client-zone.html" },
-  { name: "Гарантии и сервис", image: "assets/mobile-menu-warranty.png", imageModifier: "warranty", href: "warranty.html" },
-];
 
 const promotionItems = [
   { name: "Все акции", image: "assets/mobile-menu-promotions.png", imageModifier: "promotions", href: "promotions.html" },
@@ -260,13 +212,13 @@ const createVehiclesScreen = () => {
   return screen;
 };
 
-const createServiceItem = ({ name, description, image, imageModifier }, index) => {
+const createServiceItem = ({ name, description, image, imageModifier, href }, index) => {
   const item = document.createElement("a");
   item.className = [
     "mobile-menu__service",
     index === 0 ? "mobile-menu__service--selected" : "",
   ].filter(Boolean).join(" ");
-  item.href = "services.html#directions";
+  item.href = href;
 
   const imageFrame = document.createElement("span");
   imageFrame.className = "mobile-menu__service-image-frame";

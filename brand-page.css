@@ -1500,26 +1500,14 @@
   }
 
   .brand-page .benefits-slider__pagination {
-    width: 61px ;
+    width: 28px;
     height: 6px;
     flex-basis: 6px;
-    justify-content: flex-start;
   }
 
   .brand-page .benefits-slider__pagination .swiper-pagination-bullet {
     width: 6px;
     height: 6px;
-  }
-
-  .brand-page .benefits-slider__pagination--six-dots::after {
-    width: 28px;
-    height: 6px;
-    flex: 0 0 28px;
-    background:
-      radial-gradient(circle at 3px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 14px 3px, var(--line) 0 3px, transparent 3.2px),
-      radial-gradient(circle at 25px 3px, var(--line) 0 3px, transparent 3.2px);
-    content: "";
   }
 
   .brand-page .team,

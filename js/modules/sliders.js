@@ -143,26 +143,25 @@ const createCarBrandsCarousel = () => {
   return { update: updateActivePage };
 };
 
-const createBenefitsSlider = (Swiper) => {
-  const element = document.querySelector(".benefits-slider");
-  if (!element) return null;
-
-  const swiper = new Swiper(element, {
-    ...getCommonOptions(),
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 0,
-    grabCursor: false,
-    simulateTouch: true,
-    touchStartPreventDefault: true,
-    autoplay: getBenefitsAutoplay(),
-    pagination: {
-      el: element.parentElement.querySelector(".benefits-slider__pagination"),
-      clickable: true,
-    },
+const createBenefitsSliders = (Swiper) =>
+  [...document.querySelectorAll(".benefits-slider")].map((element) => {
+    const pagination = element.parentElement?.querySelector(".benefits-slider__pagination");
+    const swiper = new Swiper(element, {
+      ...getCommonOptions(),
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      grabCursor: false,
+      simulateTouch: true,
+      touchStartPreventDefault: true,
+      autoplay: getBenefitsAutoplay(),
+      pagination: {
+        el: pagination,
+        clickable: true,
+      },
+    });
+    return bindKeyboardToFocus(swiper, element);
   });
-  return bindKeyboardToFocus(swiper, element);
-};
 
 const createPromoSlider = (Swiper) => {
   const element = document.querySelector(".promo-banner__slider");
@@ -256,7 +255,7 @@ export const initSliders = () => {
     extraServicesCarousel,
     carBrandsCarousel,
     createPromoSlider(Swiper),
-    createBenefitsSlider(Swiper),
+    ...createBenefitsSliders(Swiper),
     createReviewsSlider(Swiper),
   ].filter(Boolean);
 };

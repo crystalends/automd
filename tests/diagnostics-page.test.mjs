@@ -54,6 +54,56 @@ test("diagnostics page reproduces the Figma content and composition", () => {
   assert.equal((markup.match(/class="related-service-card"/g) ?? []).length, 6);
 });
 
+test("when-service-needed section follows Figma node 258:21742", () => {
+  assert.equal((markup.match(/class="diagnostics-need__signs-item"/g) ?? []).length, 13);
+  assert.match(markup, /Описать проблему мастеру/);
+  assert.match(styles, /\.diagnostics-need\s*\{[^}]*grid-template-columns:\s*repeat\(2,/s);
+  assert.match(styles, /\.diagnostics-need__content\s*\{[^}]*gap:\s*20px;/s);
+  assert.match(styles, /\.diagnostics-need__copy\s*\{[^}]*gap:\s*10px;[^}]*font-size:\s*18px;[^}]*line-height:\s*22px;/s);
+  assert.match(styles, /\.diagnostics-need__button:is\(a\)\s*\{[^}]*width:\s*304px;/s);
+  assert.match(styles, /\.diagnostics-need__signs\s*\{[^}]*display:\s*flex;[^}]*gap:\s*20px 30px;[^}]*padding:\s*20px;[^}]*border-radius:\s*var\(--radius\);[^}]*background:\s*#f6f6f6;/s);
+  assert.match(styles, /\.diagnostics-need__signs::after\s*\{[^}]*width:\s*min\(605px, 76\.5823%\);[^}]*height:\s*272px;[^}]*diagnostics-need-pattern\.png/s);
+  assert.match(styles, /\.diagnostics-need__signs-item:is\(li\)\s*\{[^}]*gap:\s*5px;[^}]*font-size:\s*18px;[^}]*line-height:\s*22px;[^}]*white-space:\s*nowrap;/s);
+  assert.match(styles, /\.diagnostics-need__signs-item:is\(li\)::before\s*\{[^}]*width:\s*16px;[^}]*diagnostics-need-info\.png/s);
+  assert.ok(existsSync(resolve(projectRoot, "assets/diagnostics-need-pattern.png")));
+  assert.ok(existsSync(resolve(projectRoot, "assets/diagnostics-need-info.png")));
+});
+
+test("service process cards follow Figma node 258:23450", () => {
+  assert.equal((markup.match(/class="diagnostics-process__grid-item"/g) ?? []).length, 8);
+  assert.equal((markup.match(/class="diagnostics-process__grid-text"/g) ?? []).length, 8);
+  assert.match(styles, /\.diagnostics-process__grid\s*\{[^}]*grid-template-columns:\s*repeat\(4,[^}]*gap:\s*20px;/s);
+  assert.match(styles, /\.diagnostics-process__grid-item:is\(li\)\s*\{[^}]*display:\s*flex;[^}]*gap:\s*20px;[^}]*padding:\s*20px;[^}]*font-family:\s*"AA Stetica", sans-serif;[^}]*font-size:\s*18px;[^}]*line-height:\s*22px;/s);
+  assert.match(styles, /\.diagnostics-process__grid-item:is\(li\)::after\s*\{[^}]*left:\s*0;[^}]*width:\s*195px;[^}]*height:\s*84px;[^}]*service-assurance-item-pattern\.png[^}]*195px 84px/s);
+  assert.doesNotMatch(styles, /repeating-linear-gradient/);
+  assert.match(styles, /\.diagnostics-process__grid-value:is\(span\)\s*\{[^}]*font-family:\s*Geologica,[^}]*font-size:\s*20px;[^}]*line-height:\s*24px;/s);
+  const patternPath = resolve(projectRoot, "assets/service-assurance-item-pattern.png");
+  assert.ok(existsSync(patternPath));
+  const pattern = readFileSync(patternPath);
+  assert.equal(pattern.readUInt32BE(16), 195);
+  assert.equal(pattern.readUInt32BE(20), 84);
+});
+
+test("vehicle cards follow Figma node 258:24721", () => {
+  assert.equal((markup.match(/class="diagnostics-vehicle-card__image-frame"/g) ?? []).length, 12);
+  assert.equal((markup.match(/class="diagnostics-vehicle-card__image"[^>]*width="1254" height="1254"/g) ?? []).length, 12);
+  assert.match(markup, /diagnostics-vehicles-arrow\.svg/);
+  assert.match(styles, /\.diagnostics-vehicles__grid\s*\{[^}]*grid-template-columns:\s*repeat\(6,[^}]*gap:\s*20px;/s);
+  assert.match(styles, /\.diagnostics-vehicle-card\s*\{[^}]*gap:\s*20px;[^}]*padding:\s*20px 20px 40px;[^}]*border:\s*0;[^}]*box-shadow:\s*inset 0 0 0 1px var\(--soft\);/s);
+  assert.match(styles, /\.diagnostics-vehicle-card__image-frame\s*\{[^}]*aspect-ratio:\s*21 \/ 20;[^}]*border-radius:\s*10px;/s);
+  assert.match(styles, /\.diagnostics-vehicle-card--all \.diagnostics-vehicle-card__image:is\(img\)\s*\{[^}]*top:\s*5\.04%;[^}]*left:\s*-3\.33%;[^}]*width:\s*106\.19%;[^}]*height:\s*89\.92%;/s);
+  assert.match(styles, /\.diagnostics-vehicle-card__value:is\(span\)\s*\{[^}]*gap:\s*20px;[^}]*line-height:\s*1\.2;/s);
+  assert.match(styles, /\.diagnostics-vehicle-card__value-text\s*\{[^}]*white-space:\s*nowrap;/s);
+  for (const asset of [
+    "diagnostics-vehicle-ducato.png",
+    "diagnostics-vehicle-transit.png",
+    "diagnostics-vehicle-boxer.png",
+    "diagnostics-vehicle-jumper-daily.png",
+    "diagnostics-vehicles-all.png",
+    "diagnostics-vehicles-arrow.svg",
+  ]) assert.ok(existsSync(resolve(projectRoot, `assets/${asset}`)), `missing Figma asset ${asset}`);
+});
+
 test("diagnostics page reuses established responsive project blocks", () => {
   for (const component of [
     "services-hero-scene",
@@ -87,7 +137,7 @@ test("diagnostics-specific content cards have no hard pixel height", () => {
   }
 
   assert.match(styles, /\.diagnostics-page \.team-card,[\s\S]*height:\s*auto;[\s\S]*min-height:\s*0;/);
-  assert.match(styles, /\.diagnostics-vehicle-card__image:is\(img\)\s*\{[^}]*aspect-ratio:\s*21 \/ 20/s);
+  assert.match(styles, /\.diagnostics-vehicle-card__image-frame\s*\{[^}]*aspect-ratio:\s*21 \/ 20/s);
 });
 
 test("diagnostics layout reflows without a fixed desktop canvas", () => {

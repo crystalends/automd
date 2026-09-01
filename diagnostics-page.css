@@ -158,34 +158,42 @@
   gap: 10px;
   color: var(--muted);
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 22px;
 }
 
 .diagnostics-need__copy-text:is(p) {
   margin: 0;
 }
 
+.diagnostics-need__button:is(a) {
+  width: 304px;
+}
+
 .diagnostics-need__signs {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-content: start;
-  gap: 10px 20px;
+  display: flex;
+  min-width: 0;
+  align-content: flex-start;
+  align-items: flex-start;
+  gap: 20px 30px;
+  flex-wrap: wrap;
   overflow: hidden;
   margin: 0;
   padding: 20px;
   border-radius: var(--radius);
-  background: var(--soft);
+  background: #f6f6f6;
   list-style: none;
 }
 
 .diagnostics-need__signs::after {
   position: absolute;
   z-index: 0;
-  inset: 0 0 0 28%;
-  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  top: 0;
+  right: 0;
+  width: min(605px, 76.5823%);
+  height: 272px;
+  background: url("assets/diagnostics-need-pattern.png") right top / 100% 100% no-repeat;
   content: "";
-  opacity: 0.07;
   pointer-events: none;
 }
 
@@ -196,17 +204,17 @@
   min-width: 0;
   align-items: flex-start;
   gap: 5px;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 22px;
+  white-space: nowrap;
 }
 
 .diagnostics-need__signs-item:is(li)::before {
   width: 16px;
   aspect-ratio: 1;
   flex: 0 0 16px;
-  background: url("assets/brand-service-check.svg") center / 6px 8px no-repeat;
+  background: url("assets/diagnostics-need-info.png") center / contain no-repeat;
   content: "";
-  transform: rotate(90deg);
 }
 
 .diagnostics-process {
@@ -226,37 +234,48 @@
 
 .diagnostics-process__grid-item:is(li) {
   position: relative;
-  display: grid;
+  display: flex;
   min-width: 0;
-  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 20px;
   overflow: hidden;
   padding: 20px;
   border-radius: var(--radius);
-  background: var(--soft);
-  font-family: Geologica, sans-serif;
+  background: #f6f6f6;
+  font-family: "AA Stetica", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 22px;
 }
 
 .diagnostics-process__grid-item:is(li)::after {
   position: absolute;
   z-index: 0;
-  inset: 0 0 0 52%;
-  background: url("assets/hero-pattern.png") center / cover no-repeat;
+  top: 0;
+  left: 0;
+  width: 195px;
+  height: 84px;
+  background: url("assets/service-assurance-item-pattern.png") left top / 195px 84px no-repeat;
   content: "";
-  opacity: 0.06;
+  pointer-events: none;
 }
 
 .diagnostics-process__grid-value:is(span),
-.diagnostics-process__grid-item:is(li) {
-  isolation: isolate;
+.diagnostics-process__grid-text:is(span) {
+  position: relative;
+  z-index: 1;
 }
 
 .diagnostics-process__grid-value:is(span) {
+  flex: 0 0 auto;
   color: var(--red);
+  font-family: Geologica, sans-serif;
   font-size: 20px;
+  line-height: 24px;
+}
+
+.diagnostics-process__grid-text:is(span) {
+  min-width: 0;
+  flex: 1;
 }
 
 .diagnostics-vehicles {
@@ -278,16 +297,30 @@
   align-items: flex-start;
   gap: 20px;
   padding: 20px 20px 40px;
-  border: 1px solid var(--soft);
+  border: 0;
   border-radius: var(--radius);
   background: #fff;
+  box-shadow: inset 0 0 0 1px var(--soft);
+}
+
+.diagnostics-vehicle-card__image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 20;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border-radius: 10px;
 }
 
 .diagnostics-vehicle-card__image:is(img) {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 21 / 20;
+  height: 100%;
+  max-width: none;
   border-radius: 10px;
   object-fit: cover;
+  pointer-events: none;
 }
 
 .diagnostics-vehicle-card__title:is(h3) {
@@ -299,22 +332,41 @@
 }
 
 .diagnostics-vehicle-card--all {
-  justify-content: space-between;
   color: var(--red);
   font-family: Geologica, sans-serif;
   font-size: 18px;
 }
 
-.diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__image):is(img) {
-  object-fit: contain;
+.diagnostics-vehicle-card--all .diagnostics-vehicle-card__image-frame {
+  min-height: 0;
+  aspect-ratio: auto;
+  flex: 1 1 0;
 }
 
-.diagnostics-vehicle-card--all :where(.diagnostics-vehicle-card__value):is(span) {
+.diagnostics-vehicle-card--all .diagnostics-vehicle-card__image:is(img) {
+  top: 5.04%;
+  left: -3.33%;
+  width: 106.19%;
+  height: 89.92%;
+  border-radius: 0;
+  object-fit: fill;
+}
+
+.diagnostics-vehicle-card__value:is(span) {
   display: flex;
-  width: 100%;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 20px;
+  line-height: 1.2;
+}
+
+.diagnostics-vehicle-card__value-text {
+  white-space: nowrap;
+}
+
+.diagnostics-vehicle-card__arrow:is(img) {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
 }
 
 .diagnostics-page .promo-banner__slide.service-detail-promo__slide {
@@ -474,9 +526,6 @@
     font-size: 19px;
   }
 
-  .diagnostics-need__signs {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 1199px) {
@@ -498,6 +547,11 @@
   .diagnostics-vehicles__grid,
   .diagnostics-parts__tags {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .diagnostics-vehicle-card--all .diagnostics-vehicle-card__image-frame {
+    aspect-ratio: 21 / 20;
+    flex: 0 0 auto;
   }
 }
 
@@ -630,7 +684,18 @@
   }
 
   .diagnostics-need__signs {
-    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .diagnostics-need__signs-item:is(li) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+
+  .diagnostics-need__button:is(a) {
+    width: 100%;
   }
 
   .diagnostics-process__grid-item:is(li) {

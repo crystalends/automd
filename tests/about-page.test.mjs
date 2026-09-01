@@ -83,12 +83,24 @@ test("service process cards match the Figma node", () => {
   assert.ok(existsSync(resolve(projectRoot, "assets/about-process-pattern.png")));
 });
 
+test("decision and guarantees cards match Figma nodes 267:75531 and 267:72345", () => {
+  assert.match(markup, /class="about-decision__pattern" src="assets\/service-assurance-pattern\.png"/);
+  assert.match(styles, /\.about-decision__content\s*\{[^}]*width:\s*min\(614px, 100%\)[^}]*gap:\s*10px/s);
+  assert.match(styles, /\.about-decision__content-text:is\(p\)\s*\{[^}]*max-width:\s*614px[^}]*font-size:\s*16px/s);
+  assert.match(styles, /\.about-decision__nut\s*\{[^}]*top:\s*227px[^}]*left:\s*479px[^}]*width:\s*437px[^}]*height:\s*437px/s);
+  assert.match(styles, /\.about-guarantees__list\s*\{[^}]*gap:\s*10px 20px/s);
+  assert.match(styles, /\.about-guarantees__list-item:is\(li\)\s*\{[^}]*min-height:\s*59px[^}]*border-radius:\s*20px[^}]*service-assurance-item-pattern\.png/s);
+  assert.match(styles, /\.about-button-secondary\.about-guarantees__about-button-secondary\s*\{[^}]*width:\s*172px[^}]*min-height:\s*46px/s);
+});
+
 test("about page uses local Figma assets and all local resources resolve", () => {
   assert.match(markup, /class="commercial-hero-scene hero-grid"/);
   assert.match(markup, /src="assets\/about-hero-vehicle\.png"/);
   assert.match(styles, /\.commercial-hero-scene__vehicle\s*\{[^}]*mix-blend-mode:\s*darken/s);
   assert.match(styles, /\.commercial-hero-scene__mobile-vehicle\s*\{[^}]*mix-blend-mode:\s*darken/s);
   assert.match(markup, /src="assets\/about-decision-nut\.png"/);
+  assert.match(markup, /src="assets\/service-assurance-pattern\.png"/);
+  assert.match(styles, /service-assurance-item-pattern\.png/);
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 
   const resources = [...markup.matchAll(/(?:href|src|srcset)="([^"]+)"/g)]

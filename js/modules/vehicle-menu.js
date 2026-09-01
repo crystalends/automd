@@ -1,17 +1,8 @@
+import { companyItems, services, vehicles } from "./navigation-data.js";
+
 const desktopMedia = window.matchMedia("(min-width: 1200px)");
 
-export const vehicles = [
-  { name: "Fiat", image: "assets/car-logo-fiat.png", width: 1366, height: 768, href: "cars.html#cars" },
-  { name: "Ford", image: "assets/car-logo-ford.png", width: 1672, height: 941, href: "brand.html", imageModifier: "ford" },
-  { name: "Peugeot", image: "assets/car-logo-peugeot.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Citroen", image: "assets/car-logo-citroen.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Iveco", image: "assets/car-logo-iveco.png", width: 1672, height: 941, href: "cars.html#cars", imageModifier: "iveco" },
-  { name: "Renault", image: "assets/car-logo-renault.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "JAC", image: "assets/car-logo-jac.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Sollers", image: "assets/car-logo-sollers.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Mercedes", image: "assets/car-logo-mercedes.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Все автомобили", image: "assets/hero-vehicles.png", width: 1448, height: 1086, href: "cars.html", all: true, imageModifier: "all" },
-];
+export { vehicles };
 
 const createVehicleItem = ({ name, image, width, height, href, all, imageModifier }) => {
   const item = document.createElement("a");
@@ -65,57 +56,131 @@ const createVehicleMenu = () => {
   return menu;
 };
 
+const createCardMenuItem = ({ name, description, image, imageModifier, href }) => {
+  const item = document.createElement("a");
+  item.className = "desktop-card-menu__item";
+  item.href = href;
+
+  const imageFrame = document.createElement("span");
+  imageFrame.className = "desktop-card-menu__image-frame";
+  const imageElement = document.createElement("img");
+  imageElement.className = `desktop-card-menu__image desktop-card-menu__image--${imageModifier}`;
+  imageElement.src = image;
+  imageElement.alt = "";
+  imageElement.width = 1254;
+  imageElement.height = 1254;
+  imageElement.loading = "lazy";
+  imageFrame.append(imageElement);
+
+  const content = document.createElement("span");
+  content.className = "desktop-card-menu__content";
+  const title = document.createElement("span");
+  title.className = "desktop-card-menu__title";
+  title.textContent = name;
+  content.append(title);
+
+  if (description) {
+    const copy = document.createElement("span");
+    copy.className = "desktop-card-menu__description";
+    copy.textContent = description;
+    content.append(copy);
+  }
+
+  const arrow = document.createElement("img");
+  arrow.className = "desktop-card-menu__arrow";
+  arrow.src = "assets/mobile-menu-arrow.svg";
+  arrow.alt = "";
+  arrow.width = 24;
+  arrow.height = 24;
+
+  item.append(imageFrame, content, arrow);
+  return item;
+};
+
+const createCardMenu = ({ id, label, items, modifier }) => {
+  const menu = document.createElement("nav");
+  menu.className = `desktop-card-menu desktop-card-menu--${modifier}`;
+  menu.id = id;
+  menu.setAttribute("aria-label", label);
+
+  const grid = document.createElement("div");
+  grid.className = "desktop-card-menu__grid";
+  grid.append(...items.map(createCardMenuItem));
+  menu.append(grid);
+  return menu;
+};
+
 const initVehicleMenu = () => {
   const header = document.querySelector(".site-header");
   const navigation = header?.querySelector(".site-nav");
-  const trigger = [...(navigation?.querySelectorAll(".site-nav__link") ?? [])]
-    .find((link) => link.textContent.trim() === "Автомобили");
-  if (!header || !navigation || !trigger) return null;
+  if (!header || !navigation) return null;
 
-  const menu = createVehicleMenu();
+  const definitions = [
+    { triggerLabel: "Автомобили", menu: createVehicleMenu() },
+    {
+      triggerLabel: "Услуги",
+      menu: createCardMenu({ id: "services-menu", label: "Каталог услуг", items: services, modifier: "services" }),
+    },
+    {
+      triggerLabel: "О компании",
+      menu: createCardMenu({ id: "company-menu", label: "О компании", items: companyItems, modifier: "company" }),
+    },
+  ];
+  const links = [...navigation.querySelectorAll(".site-nav__link")];
+  const controls = definitions.map(({ triggerLabel, menu }) => ({
+    menu,
+    trigger: links.find((link) => link.textContent.trim() === triggerLabel),
+  })).filter(({ trigger }) => trigger);
+  if (!controls.length) return null;
+
   let closeTimer = 0;
 
-  const setOpen = (open) => {
-    const nextOpen = open && desktopMedia.matches;
+  const setOpen = (activeControl = null) => {
+    const nextControl = desktopMedia.matches ? activeControl : null;
     window.clearTimeout(closeTimer);
-    header.classList.toggle("site-header--vehicles-open", nextOpen);
-    trigger.setAttribute("aria-expanded", String(nextOpen));
-    menu.setAttribute("aria-hidden", String(!nextOpen));
-    menu.toggleAttribute("inert", !nextOpen);
+    header.classList.toggle("site-header--desktop-menu-open", Boolean(nextControl));
+    controls.forEach((control) => {
+      const open = control === nextControl;
+      control.trigger.setAttribute("aria-expanded", String(open));
+      control.menu.setAttribute("aria-hidden", String(!open));
+      control.menu.toggleAttribute("inert", !open);
+    });
   };
 
-  const open = () => setOpen(true);
   const scheduleClose = () => {
     window.clearTimeout(closeTimer);
-    closeTimer = window.setTimeout(() => setOpen(false), 120);
+    closeTimer = window.setTimeout(() => setOpen(), 120);
   };
 
-  header.classList.add("site-header--vehicle-menu-ready");
-  trigger.setAttribute("aria-haspopup", "true");
-  trigger.setAttribute("aria-controls", menu.id);
-  header.append(menu);
-
-  trigger.addEventListener("mouseenter", open);
-  trigger.addEventListener("mouseleave", scheduleClose);
-  trigger.addEventListener("focus", open);
-  menu.addEventListener("mouseenter", open);
-  menu.addEventListener("mouseleave", scheduleClose);
-  menu.addEventListener("focusin", open);
+  header.classList.add("site-header--desktop-menu-ready");
+  controls.forEach((control) => {
+    const open = () => setOpen(control);
+    control.trigger.setAttribute("aria-haspopup", "true");
+    control.trigger.setAttribute("aria-controls", control.menu.id);
+    header.append(control.menu);
+    control.trigger.addEventListener("mouseenter", open);
+    control.trigger.addEventListener("mouseleave", scheduleClose);
+    control.trigger.addEventListener("focus", open);
+    control.menu.addEventListener("mouseenter", open);
+    control.menu.addEventListener("mouseleave", scheduleClose);
+    control.menu.addEventListener("focusin", open);
+  });
 
   document.addEventListener("focusin", (event) => {
-    if (event.target === trigger || menu.contains(event.target)) return;
-    setOpen(false);
+    if (controls.some(({ trigger, menu }) => event.target === trigger || menu.contains(event.target))) return;
+    setOpen();
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape" || trigger.getAttribute("aria-expanded") !== "true") return;
-    setOpen(false);
-    trigger.focus();
+    const activeControl = controls.find(({ trigger }) => trigger.getAttribute("aria-expanded") === "true");
+    if (event.key !== "Escape" || !activeControl) return;
+    setOpen();
+    activeControl.trigger.focus();
   });
 
-  desktopMedia.addEventListener("change", () => setOpen(false));
-  setOpen(false);
-  return { close: () => setOpen(false) };
+  desktopMedia.addEventListener("change", () => setOpen());
+  setOpen();
+  return { close: () => setOpen() };
 };
 
 export { initVehicleMenu };

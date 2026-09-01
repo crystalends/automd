@@ -166,8 +166,8 @@ test("mobile benefits block follows the Figma content with natural height", () =
   assert.doesNotMatch(styles, /\.brand-page \.benefits\s*\{[^}]*min-height:\s*996px/s);
   assert.match(styles, /\.brand-page \.benefits__visual\s*\{[^}]*height:\s*296px/s);
   assert.match(styles, /\.brand-page \.benefits-slider__slide\s*\{[^}]*padding:\s*20px/s);
-  assert.match(styles, /\.brand-page \.benefits-slider__pagination\s*\{[^}]*width:\s*61px[^}]*height:\s*6px/s);
-  assert.match(markup, /benefits-slider__pagination--six-dots/);
+  assert.match(styles, /\.brand-page \.benefits-slider__pagination\s*\{[^}]*width:\s*28px[^}]*height:\s*6px/s);
+  assert.doesNotMatch(markup, /benefits-slider__pagination--six-dots/);
 });
 
 test("price list matches the Figma desktop section", () => {

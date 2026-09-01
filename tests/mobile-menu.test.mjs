@@ -10,12 +10,14 @@ const moduleSource = read("js/modules/mobile-menu.js");
 const styles = read("styles.css");
 
 test("mobile menu implements all five Figma screens from shared site data", () => {
+  const navigationData = read("js/modules/navigation-data.js");
+  const menuData = `${moduleSource}\n${navigationData}`;
   assert.match(moduleSource, /dataset\.mobileMenuView = "root"/);
   assert.match(moduleSource, /dataset\.mobileMenuView = "vehicles"/);
   assert.match(moduleSource, /dataset\.mobileMenuView = "services"/);
   assert.match(moduleSource, /view: "company"/);
   assert.match(moduleSource, /view: "promotions"/);
-  assert.match(moduleSource, /import \{ vehicles \} from "\.\/vehicle-menu\.js"/);
+  assert.match(moduleSource, /import \{ companyItems, services, vehicles \} from "\.\/navigation-data\.js"/);
 
   for (const label of [
     "Плановое ТО",
@@ -33,7 +35,7 @@ test("mobile menu implements all five Figma screens from shared site data", () =
     "Все акции",
     "Страховка со скидкой",
   ]) {
-    assert.match(moduleSource, new RegExp(label));
+    assert.match(menuData, new RegExp(label));
   }
 });
 
