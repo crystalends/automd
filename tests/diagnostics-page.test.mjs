@@ -182,12 +182,15 @@ test("diagnostics uses local exact Figma assets and all resources resolve", () =
     "diagnostics-brakes.png",
     "diagnostics-fuel.png",
     "diagnostics-electrical.png",
-    "promo-tires.png",
     "benefits.jpg",
     "business.jpg",
   ]) {
     assert.match(markup, new RegExp(`assets/${asset.replace(".", "\\.")}`));
   }
+
+
+  assert.match(markup, /class="promo-banner__slide promo-banner__slide--tires/);
+  assert.doesNotMatch(markup, /assets\/promo-tires\.png/);
 
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);
 

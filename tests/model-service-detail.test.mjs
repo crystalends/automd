@@ -66,13 +66,15 @@ test("model service detail keeps all Figma assets local", () => {
   for (const asset of [
     "model-service-hero-vehicle.png",
     "brand-advantage-wallet.svg",
-    "promo-tires.png",
     "business.jpg",
     "benefits.jpg",
     "faq-request-pattern.png",
   ]) {
     assert.match(markup, new RegExp(`assets/${asset.replace(".", "\\.")}`));
   }
+
+  assert.match(markup, /class="promo-banner__slide promo-banner__slide--tires/);
+  assert.doesNotMatch(markup, /assets\/promo-tires\.png/);
 
   assert.match(markup, /class="brand-hero-scene model-service-hero-scene hero-grid"/);
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));

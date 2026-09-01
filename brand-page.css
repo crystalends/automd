@@ -564,8 +564,9 @@
 }
 
 .form-field__control.brand-finder__control,
-.form-field--select.form-field__control.request-card__form-field-control {
+.form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 

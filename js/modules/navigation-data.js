@@ -8,7 +8,7 @@ export const vehicles = [
   { name: "JAC", image: "assets/car-logo-jac.png", width: 1672, height: 941, href: "cars.html#cars" },
   { name: "Sollers", image: "assets/car-logo-sollers.png", width: 1672, height: 941, href: "cars.html#cars" },
   { name: "Mercedes", image: "assets/car-logo-mercedes.png", width: 1672, height: 941, href: "cars.html#cars" },
-  { name: "Все автомобили", image: "assets/hero-vehicles.png", width: 1448, height: 1086, href: "cars.html", all: true, imageModifier: "all" },
+  { name: "Все автомобили", image: "assets/vehicle-menu-all.png", width: 1254, height: 1254, href: "cars.html", all: true, imageModifier: "all" },
 ];
 
 export const services = [

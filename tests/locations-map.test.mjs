@@ -22,3 +22,12 @@ test("location maps keep responsive content-driven sizing", () => {
   assert.match(styles, /\.locations__map\{height:100%;min-height:303px\}/);
   assert.match(styles, /@media \(max-width:767px\)[\s\S]*?\.locations__map\{grid-column:1\/-1;height:250px;min-height:250px/);
 });
+
+test("location map links use the shared red interactive state", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+
+  assert.match(
+    styles,
+    /\.location-card__link:hover,\s*\.location-card__link:focus-visible\s*\{[^}]*color:\s*var\(--red\)[^}]*box-shadow:\s*inset 0 -1px var\(--red\)/,
+  );
+});

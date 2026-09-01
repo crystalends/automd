@@ -20,7 +20,7 @@ test("vehicle dropdown reuses every local brand asset from the Figma menu", () =
     assert.match(source, new RegExp(`assets/car-logo-${brand}\\.png`));
   }
 
-  assert.match(source, /assets\/hero-vehicles\.png/);
+  assert.match(source, /assets\/vehicle-menu-all\.png", width: 1254, height: 1254/);
   assert.doesNotMatch(source, /figma\.com\/api\/mcp\/asset/);
 });
 
@@ -68,6 +68,8 @@ test("desktop dropdowns keep the Figma geometry and mobile fallback", () => {
   assert.doesNotMatch(styles, /\.vehicle-menu::before\{[^}]*background/);
   assert.doesNotMatch(styles, /\.vehicle-menu\{[^}]*(?:opacity|backdrop-filter|background:[^;}]*rgba)/s);
   assert.match(styles, /\.vehicle-menu__grid\{[^}]*grid-template-columns:repeat\(5,minmax\(0,1fr\)\)[^}]*grid-template-rows:repeat\(2,141px\)[^}]*gap:20px/s);
+  assert.match(styles, /\.vehicle-menu__image-frame--all\{[^}]*width:175px[^}]*height:105px/s);
+  assert.match(styles, /\.vehicle-menu__image--all\{[^}]*top:-38\.05%[^}]*left:-3\.55%[^}]*width:106\.67%[^}]*height:177\.78%/s);
   assert.match(styles, /\.vehicle-menu__item:hover \.vehicle-menu__label,[^{]+\{[^}]*border-bottom:1px solid var\(--blue\)[^}]*color:var\(--blue\)/s);
   assert.match(styles, /\.desktop-card-menu\{[^}]*top:calc\(100% \+ 10px\)[^}]*padding:40px[^}]*border:1px solid var\(--line\)[^}]*border-radius:20px[^}]*background-color:#fff/s);
   assert.match(styles, /\.desktop-card-menu--services\{height:352px\}/);

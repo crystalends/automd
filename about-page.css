@@ -350,7 +350,7 @@
 .about-process__item {
   position: relative;
   display: flex;
-  min-height: 84px;
+  height: 84px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -362,11 +362,16 @@
 }
 
 .about-process__item-value:is(span) {
-  flex: 0 0 auto;
+  flex: 0 0 26px;
   color: var(--red);
   font-family: Geologica, sans-serif;
   font-size: 20px;
   line-height: 1.2;
+}
+
+.about-process__item-text:is(span) {
+  min-width: 0;
+  flex: 1 0 0;
 }
 
 .about-page .business-offer {
@@ -669,8 +674,9 @@
   transform: rotate(90deg) scaleX(-1);
 }
 
-.form-field--select.form-field__control.request-card__form-field-control {
+.form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -1071,7 +1077,7 @@
   }
 
   .about-process__item-value:is(span) {
-    min-width: 28px;
+    flex-basis: 28px;
     font-size: 18px;
   }
 

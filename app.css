@@ -211,6 +211,15 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
   border-color: #fff;
 }
 
+/* Custom select arrows replace the browser marker in every shared form field. */
+.form-field--select .form-field__control:is(select) {
+  padding-right: 54px;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 .site-header{height:auto;min-height:110px}
 .site-header__meta{height:auto;min-height:44px;flex-basis:auto}
 .site-header__main{height:auto;min-height:46px;flex-basis:auto}
@@ -1161,8 +1170,9 @@ body:has(.request-dialog[open]) {
   transform: rotate(90deg) scaleX(-1);
 }
 
-.form-field--select.form-field__control.request-dialog__form-field-control {
+.form-field--select .form-field__control.request-dialog__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -1299,6 +1309,141 @@ body:has(.request-dialog[open]) {
   .request-dialog__submit {
     width: 169px;
   }
+}
+
+.location-card__link:hover,
+.location-card__link:focus-visible {
+  color: var(--red);
+  box-shadow: inset 0 -1px var(--red);
+}
+
+.promo-banner__slide--tires,
+.promo-banner__slide--all-promotions {
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 92% 16%, rgba(225, 17, 23, 0.14) 0 7%, transparent 7.2%),
+    radial-gradient(circle at 83% 82%, rgba(225, 17, 23, 0.08) 0 13%, transparent 13.2%),
+    linear-gradient(115deg, #fff 0 61%, #f4f6f8 61% 100%);
+}
+
+.promo-banner__slide--all-promotions {
+  background:
+    radial-gradient(circle at 86% 50%, rgba(45, 67, 187, 0.16) 0 17%, transparent 17.2%),
+    linear-gradient(115deg, #fff 0 61%, #edf1f8 61% 100%);
+}
+
+.promo-banner__slide--tires::before,
+.promo-banner__slide--all-promotions::before {
+  position: absolute;
+  top: 50%;
+  right: 9%;
+  width: clamp(110px, 16vw, 300px);
+  aspect-ratio: 1;
+  border: clamp(18px, 2.2vw, 42px) solid var(--red);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 clamp(6px, 0.7vw, 14px) #fff,
+    0 0 0 clamp(7px, 0.8vw, 16px) rgba(225, 17, 23, 0.16);
+  content: "";
+  transform: translateY(-50%);
+  transition: transform 0.45s ease;
+}
+
+.promo-banner__slide--all-promotions::before {
+  border-color: var(--blue);
+  box-shadow:
+    inset 0 0 0 clamp(6px, 0.7vw, 14px) #fff,
+    0 0 0 clamp(7px, 0.8vw, 16px) rgba(45, 67, 187, 0.14);
+}
+
+.promo-banner__slide--tires:hover::before,
+.promo-banner__slide--all-promotions:hover::before {
+  transform: translateY(-50%) scale(1.035);
+}
+
+.promo-banner__content--tires {
+  width: 68%;
+}
+
+.promo-banner__title--tires {
+  padding: 0.12em 0.25em;
+  background: var(--red);
+  color: #fff;
+}
+
+.promo-banner__text--tires {
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.promo-banner__features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+  color: var(--ink);
+  font-size: clamp(14px, 1vw, 18px);
+  line-height: 1.2;
+}
+
+.promo-banner__features > span::before {
+  margin-right: 10px;
+  color: var(--red);
+  content: "✓";
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .promo-banner__content--tires {
+    width: 72%;
+  }
+
+  .promo-banner__features {
+    display: none;
+  }
+
+  .promo-banner__title--tires {
+    padding: 0.1em 0.22em;
+  }
+
+  .promo-banner__slide--tires::before,
+  .promo-banner__slide--all-promotions::before {
+    right: 5%;
+    width: 74px;
+    border-width: 12px;
+    box-shadow:
+      inset 0 0 0 4px #fff,
+      0 0 0 5px rgba(225, 17, 23, 0.14);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .promo-banner__slide--tires::before,
+  .promo-banner__slide--all-promotions::before {
+    transition: none;
+  }
+}
+
+/* Figma 149:5078 uses AA Stetica Regular and an exact 278px CTA. */
+.site-footer {
+  font-weight: 400;
+}
+
+.site-footer__button {
+  width: 278px;
+  flex: 0 0 278px;
+}
+
+.site-footer__legal,
+.site-footer__developer {
+  letter-spacing: 0;
+}
+
+.vehicle-card__links-link:hover,
+.vehicle-card__links-link:focus-visible {
+  border-color: var(--red);
+  box-shadow: inset 0 -1px var(--red);
+  color: var(--red);
 }
 
 /* source: brand-page.css; scope: brand-page, business-page, services-page */
@@ -1868,8 +2013,9 @@ body:has(.request-dialog[open]) {
 }
 
 :where(body.brand-page, body.business-page, body.services-page) .form-field__control.brand-finder__control,
-:where(body.brand-page, body.business-page, body.services-page) .form-field--select.form-field__control.request-card__form-field-control {
+:where(body.brand-page, body.business-page, body.services-page) .form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -3454,7 +3600,7 @@ body:has(.request-dialog[open]) {
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
   position: relative;
   display: flex;
-  min-height: 84px;
+  height: 84px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -3466,11 +3612,16 @@ body:has(.request-dialog[open]) {
 }
 
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item-value:is(span) {
-  flex: 0 0 auto;
+  flex: 0 0 26px;
   color: var(--red);
   font-family: Geologica, sans-serif;
   font-size: 20px;
   line-height: 1.2;
+}
+
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item-text:is(span) {
+  min-width: 0;
+  flex: 1 0 0;
 }
 
 .about-page .business-offer {
@@ -3773,8 +3924,9 @@ body:has(.request-dialog[open]) {
   transform: rotate(90deg) scaleX(-1);
 }
 
-:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .form-field--select.form-field__control.request-card__form-field-control {
+:where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -4175,7 +4327,7 @@ body:has(.request-dialog[open]) {
   }
 
   :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item-value:is(span) {
-    min-width: 28px;
+    flex-basis: 28px;
     font-size: 18px;
   }
 
@@ -4888,8 +5040,9 @@ body:has(.request-dialog[open]) {
 }
 
 :where(body.branch-page) .form-field__control.brand-finder__control,
-:where(body.branch-page) .form-field--select.form-field__control.request-card__form-field-control {
+:where(body.branch-page) .form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 
@@ -9488,8 +9641,9 @@ html:has(.careers-page dialog[open]),
   transform: rotate(90deg) scaleX(-1);
 }
 
-:where(body.promotions-page) .form-field--select.form-field__control.request-card__form-field-control {
+:where(body.promotions-page) .form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 

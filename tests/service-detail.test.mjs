@@ -62,13 +62,16 @@ test("service detail uses the exact local Figma assets", () => {
     "brand-hero-wrench-mobile.png",
     "brand-hero-vehicle-mobile.png",
     "brand-model.png",
-    "promo-tires.png",
     "business.jpg",
     "benefits.jpg",
     "faq-request-pattern.png",
   ]) {
     assert.match(markup, new RegExp(`assets/${asset.replace(".", "\\.")}`));
   }
+
+
+  assert.match(markup, /class="promo-banner__slide promo-banner__slide--tires/);
+  assert.doesNotMatch(markup, /assets\/promo-tires\.png/);
 
   assert.match(markup, /class="brand-hero-scene hero-grid"/);
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));

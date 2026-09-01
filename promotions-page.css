@@ -448,8 +448,9 @@
   transform: rotate(90deg) scaleX(-1);
 }
 
-.form-field--select.form-field__control.request-card__form-field-control {
+.form-field--select .form-field__control.request-card__form-field-control {
   padding-right: 54px;
+  -webkit-appearance: none;
   appearance: none;
 }
 

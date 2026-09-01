@@ -107,7 +107,9 @@ test("model hero keeps the vehicle and wrench aligned between target widths", ()
 test("model page reuses the shared promo slider and business offer from Figma", () => {
   assert.equal((markup.match(/class="promo-banner__slide[^\"]*swiper-slide/g) ?? []).length, 3);
   assert.match(markup, /class="promo-banner__pagination swiper-pagination"/);
-  assert.match(markup, /src="assets\/promo-tires\.png"/);
+  assert.match(markup, /class="promo-banner__slide promo-banner__slide--tires/);
+  assert.match(markup, /href="promotion-detail\.html" aria-label="Подробнее об акции: шиномонтаж с диагностикой в подарок"/);
+  assert.doesNotMatch(markup, /assets\/promo-tires\.png/);
   assert.match(markup, /data-node-id="247:10282"/);
   assert.equal((markup.match(/class="business-offer__audience-item"/g) ?? []).length, 6);
   assert.equal((markup.match(/class="business-offer__check-icon"/g) ?? []).length, 6);

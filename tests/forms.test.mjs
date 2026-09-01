@@ -133,3 +133,21 @@ test("homepage finder selects use the Figma chevron instead of native controls",
   );
   assert.ok(existsSync(resolve(projectRoot, "assets/select-arrow.svg")));
 });
+
+test("all shared custom selects suppress the native browser arrow", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+
+  assert.match(
+    styles,
+    /\.form-field--select \.form-field__control:is\(select\)\s*\{[^}]*background-image:\s*none[^}]*-webkit-appearance:\s*none[^}]*-moz-appearance:\s*none[^}]*appearance:\s*none/s,
+  );
+});
+
+test("vehicle service links use the shared red interactive state", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+
+  assert.match(
+    styles,
+    /\.vehicle-card__links-link:hover,\s*\.vehicle-card__links-link:focus-visible\s*\{[^}]*border-color:\s*var\(--red\)[^}]*box-shadow:\s*inset 0 -1px var\(--red\)[^}]*color:\s*var\(--red\)/s,
+  );
+});
