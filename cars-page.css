@@ -18,8 +18,13 @@
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.cars-breadcrumb [aria-current="page"] {
+  color: var(--blue);
 }
 
 .cars-breadcrumb__link:hover {
@@ -237,7 +242,7 @@
 .cars-page .vehicle-card {
   display: flex;
   min-width: 0;
-  height: 350px;
+  height: auto;
   min-height: 350px;
   flex-direction: column;
   align-items: flex-start;
@@ -539,9 +544,8 @@
   }
 
   .cars-breadcrumb {
-    height: 12px;
+    min-height: 17px;
     margin-top: 10px;
-    font-size: 12px;
   }
 
   .cars-hero-scene {
@@ -674,7 +678,7 @@
 
   .cars-page .vehicle-card {
     width: 174px;
-    height: 272px;
+    height: auto;
     min-height: 272px;
     flex: 0 0 174px;
     gap: 10px;
@@ -806,22 +810,26 @@
   }
 
   .cars-page .team {
-    min-height: 947px;
+    min-height: 0;
   }
 
   .cars-page .team__intro {
     width: 100%;
-    min-height: 258px;
+    min-height: 0;
+  }
+
+  .cars-page .team-card {
+    min-height: 0;
   }
 
   .cars-page .business-offer {
-    min-height: 1041px;
+    min-height: 0;
     gap: 0;
     padding-left: 0;
   }
 
   .cars-page .business-offer__content {
-    min-height: 771px;
+    min-height: 0;
     padding: 20px;
   }
 
@@ -861,18 +869,6 @@
     flex: 0 0 auto;
     gap: 20px;
     padding: 19px;
-    background:
-      radial-gradient(
-        ellipse 400px 2800px at 98.5% 95.8%,
-        rgb(226, 16, 19) 0%,
-        rgb(155, 6, 8) 100%
-      );
-  }
-
-  .request-card__pattern {
-    inset: -1px auto auto -1px;
-    width: 358px;
-    height: 611px;
   }
 
   .request-card__heading {

@@ -7,6 +7,8 @@ import test from "node:test";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const markup = readFileSync(resolve(projectRoot, "cars.html"), "utf8");
 const pageStyles = readFileSync(resolve(projectRoot, "cars-page.css"), "utf8");
+const requestCardStyles = readFileSync(resolve(projectRoot, "request-card.css"), "utf8");
+const buildScript = readFileSync(resolve(projectRoot, "scripts/build-css.mjs"), "utf8");
 const sliderModule = readFileSync(resolve(projectRoot, "js/modules/sliders.js"), "utf8");
 
 test("cars page contains the Figma desktop sections", () => {
@@ -21,12 +23,22 @@ test("FAQ request section keeps the Figma structure and local pattern asset", ()
   assert.match(markup, /class="request-card__actions"/);
   assert.match(markup, /src="assets\/faq-request-pattern\.png"/);
   assert.match(markup, /srcset="assets\/faq-request-pattern-mobile\.png"/);
-  assert.match(pageStyles, /radial-gradient\(/);
   assert.ok(existsSync(resolve(projectRoot, "assets/faq-request-pattern-mobile.png")));
 });
 
+test("mobile request card reuses the shared project background", () => {
+  assert.match(requestCardStyles, /@media \(max-width: 767px\)/);
+  assert.match(requestCardStyles, /\.request-card\s*\{[^}]*background:\s*#9b0608/s);
+  assert.match(
+    requestCardStyles,
+    /\.request-card__pattern\s*\{[^}]*inset:\s*0[^}]*width:\s*100%[^}]*height:\s*100%/s,
+  );
+  assert.match(requestCardStyles, /\.request-card__pattern-image\s*\{[^}]*object-fit:\s*fill/s);
+  assert.ok(buildScript.indexOf('{ file: "request-card.css" }') < buildScript.indexOf('{ file: "breadcrumb.css" }'));
+});
+
 test("cars page implements the mobile Figma structure without a desktop width lock", () => {
-  assert.match(markup, /class="cars-breadcrumb layout-container"/);
+  assert.match(markup, /class="breadcrumb cars-breadcrumb layout-container"/);
   assert.equal((markup.match(/class="car-brands__dot(?: car-brands__dot--active)?"/g) ?? []).length, 5);
   assert.match(pageStyles, /@media \(max-width: 767px\)/);
   assert.match(pageStyles, /--container: calc\(100vw - 32px\)/);
@@ -35,6 +47,22 @@ test("cars page implements the mobile Figma structure without a desktop width lo
   assert.equal((markup.match(/class="cars-hero__visual-fade cars-hero__visual-fade--/g) ?? []).length, 4);
   assert.match(pageStyles, /\.cars-hero__visual\s*\{[^}]*position:\s*relative[^}]*display:\s*block[^}]*margin-top:\s*24px/s);
   assert.match(pageStyles, /\.cars-hero-scene__gear,[\s\S]*?\.cars-hero-scene__vehicles\s*\{[^}]*display:\s*none/s);
+});
+
+test("cars breadcrumb matches Figma node 215:16013", () => {
+  assert.match(markup, /class="breadcrumb cars-breadcrumb layout-container"/);
+  assert.match(
+    pageStyles,
+    /\.cars-breadcrumb\s*\{[^}]*gap:\s*6px[^}]*font-size:\s*14px[^}]*font-weight:\s*400[^}]*line-height:\s*1\.2/s,
+  );
+  assert.match(
+    pageStyles,
+    /\.cars-breadcrumb \[aria-current="page"\]\s*\{[^}]*color:\s*var\(--blue\)/s,
+  );
+  assert.match(
+    pageStyles,
+    /@media \(max-width: 767px\)[\s\S]*?\.cars-breadcrumb\s*\{[^}]*min-height:\s*17px/s,
+  );
 });
 
 test("mobile FAQ keeps its gaps while item heights follow wrapped content", () => {
@@ -47,6 +75,21 @@ test("mobile FAQ keeps its gaps while item heights follow wrapped content", () =
   assert.match(mobileStyles, /\.request-card__heading\s*\{[^}]*min-height:\s*0[^}]*gap:\s*10px/s);
   assert.match(mobileStyles, /\.request-card__fields\s*\{[^}]*min-height:\s*0[^}]*gap:\s*10px/s);
   assert.match(mobileStyles, /\.request-card__consent\s*\{[^}]*min-height:\s*0/s);
+});
+
+test("mobile team section follows its content without artificial empty space", () => {
+  assert.match(
+    pageStyles,
+    /@media \(max-width: 767px\)[\s\S]*?\.cars-page \.team\s*\{[^}]*min-height:\s*0/s,
+  );
+  assert.match(
+    pageStyles,
+    /@media \(max-width: 767px\)[\s\S]*?\.cars-page \.team__intro\s*\{[^}]*min-height:\s*0/s,
+  );
+  assert.match(
+    pageStyles,
+    /@media \(max-width: 767px\)[\s\S]*?\.cars-page \.team-card\s*\{[^}]*min-height:\s*0/s,
+  );
 });
 
 test("mobile car brand pagination is interactive", () => {

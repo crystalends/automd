@@ -1,0 +1,8 @@
+/* Shared mobile content-flow contract for the reusable business offer. */
+@media (max-width: 767px) {
+  .business-offer,
+  .business-offer__content {
+    height: auto;
+    min-height: 0;
+  }
+}

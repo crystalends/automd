@@ -72,8 +72,8 @@ test("desktop dropdowns keep the Figma geometry and mobile fallback", () => {
   assert.match(styles, /\.vehicle-menu__image--all\{[^}]*top:-38\.05%[^}]*left:-3\.55%[^}]*width:106\.67%[^}]*height:177\.78%/s);
   assert.match(styles, /\.vehicle-menu__item:hover \.vehicle-menu__label,[^{]+\{[^}]*border-bottom:1px solid var\(--blue\)[^}]*color:var\(--blue\)/s);
   assert.match(styles, /\.desktop-card-menu\{[^}]*top:calc\(100% \+ 10px\)[^}]*padding:40px[^}]*border:1px solid var\(--line\)[^}]*border-radius:20px[^}]*background-color:#fff/s);
-  assert.match(styles, /\.desktop-card-menu--services\{height:352px\}/);
-  assert.match(styles, /\.desktop-card-menu--company\{height:302px\}/);
+  assert.match(styles, /\.desktop-card-menu--services\{height:auto;min-height:352px\}/);
+  assert.match(styles, /\.desktop-card-menu--company\{height:auto;min-height:302px\}/);
   assert.match(styles, /\.desktop-card-menu__grid\{[^}]*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)[^}]*grid-template-rows:repeat\(2,minmax\(0,1fr\)\)[^}]*gap:20px/s);
   assert.match(styles, /\.desktop-card-menu__item\{[^}]*gap:20px[^}]*padding:20px[^}]*border:1px solid var\(--soft\)[^}]*border-radius:20px/s);
   assert.doesNotMatch(styles, /\.desktop-card-menu__item--selected/);

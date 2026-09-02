@@ -182,6 +182,9 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 .service-card.service-card--extra{height:142px;min-height:142px;border-color:var(--soft);background:transparent}.service-card--extra.service-card--extra-selected{border-color:var(--line);background:#fff}.service-card--extra .service-card__icon-box{position:relative;width:60px;height:60px;overflow:hidden;flex:0 0 60px;border-radius:10px}.service-card--extra .service-card__icon{position:absolute;max-width:none;height:auto;flex:none;border-radius:0;object-fit:initial}.service-card--extra .service-card__icon--tow{top:-6.87px;left:-6.342px;width:72.75px}.service-card--extra .service-card__icon--insurance{top:-7.092px;left:-6.792px;width:74.064px}.service-card--extra .service-card__icon--buyout{top:-3.516px;left:-3.258px;width:67.014px}.service-card--extra .service-card__content{display:flex;min-width:0;flex:1;flex-direction:column;align-items:center;gap:5px;line-height:1.2}.service-card--extra .service-card__title,.service-card--extra .service-card__text{width:100%;margin:0}.service-card--extra .service-card__title{white-space:nowrap}
 .extra-services__pagination{display:none}
 .benefits-slider{width:100%;min-height:0;flex:1 1 auto}.benefits-slider__slide{position:relative;display:flex;height:100%;align-items:flex-end;padding:20px;overflow:hidden;border-radius:var(--radius);user-select:none}.benefits-slider__image{position:absolute;inset:0;width:100%;height:100%;border-radius:var(--radius);object-fit:cover;pointer-events:none;-webkit-user-drag:none;user-select:none}.benefits-slider__stat{position:relative;z-index:1;display:flex;flex-direction:column;padding:10px 20px;border-radius:20px;background:#fff;pointer-events:none}.benefits-slider__stat-value{color:var(--ink);font-family:Geologica,sans-serif;font-size:32px;font-weight:500;line-height:1.2}.benefits-slider__stat-label{color:var(--muted);font-size:16px;line-height:1.2}.benefits-slider__pagination{position:static;display:flex;width:73px;height:8px;flex:0 0 8px;justify-content:center;gap:5px;transform:none}.benefits-slider__pagination .swiper-pagination-bullet{width:8px;height:8px;margin:0;background:var(--line);opacity:1}.reviews__pagination .swiper-pagination-bullet{width:6px;height:6px;margin:0;background:var(--line);opacity:1}.benefits-slider__pagination .swiper-pagination-bullet-active,.reviews__pagination .swiper-pagination-bullet-active{background:var(--blue)}
+.slider-navigation{position:absolute;z-index:20;inset:0;display:flex;align-items:center;justify-content:space-between;padding:clamp(10px,1.25vw,24px);pointer-events:none}.slider-navigation__button{position:relative;width:48px;height:48px;flex:0 0 48px;padding:0;border:1px solid rgba(227,227,227,.8);border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 8px 24px rgba(5,5,5,.12);color:var(--blue);cursor:pointer;opacity:0;pointer-events:none;transform:translateX(8px);transition:opacity .2s ease,transform .2s ease,background .2s ease}.slider-navigation__button--previous{transform:translateX(-8px)}.slider-navigation__button::before{position:absolute;top:50%;left:50%;width:10px;height:10px;border-top:2px solid currentColor;border-right:2px solid currentColor;content:""}.slider-navigation__button--previous::before{transform:translate(-35%,-50%) rotate(-135deg)}.slider-navigation__button--next::before{transform:translate(-65%,-50%) rotate(45deg)}.slider-navigation--visible .slider-navigation__button{opacity:1;pointer-events:auto;transform:translateX(0)}.slider-navigation__button:hover{background:#fff}.slider-navigation__button:focus-visible{outline:3px solid rgba(225,17,23,.35);outline-offset:3px}.slider-navigation__button.swiper-button-lock{display:none}.slider-navigation__button.swiper-button-disabled{cursor:default;opacity:.45}
+@media (hover:none),(pointer:coarse){.slider-navigation{display:none}}
+@media (prefers-reduced-motion:reduce){.slider-navigation__button{transition:none}}
 @media (max-width:1500px){.benefits{height:auto;min-height:541px}.benefits__visual{min-height:541px}}
 .reviews__slider{margin-top:20px;padding-bottom:16px}.reviews__slide{height:194px}.review-card{display:flex;width:100%;height:194px;flex-direction:column;gap:10px;padding:19px}.review-card__author{width:min(345px,100%);height:46px}.review-card__avatar{width:46px;height:46px;flex:0 0 46px}.review-card__author-info{display:flex;min-width:0;flex:1;flex-direction:column;gap:5px;line-height:1.2}.review-card__name,.review-card__vehicle{margin:0}.review-card__name{font-family:Geologica,sans-serif;font-size:20px;font-weight:400}.review-card__vehicle{color:var(--blue);font-size:14px}.review-card__text{display:-webkit-box;width:100%;height:76px;margin:0;overflow:hidden;line-height:1.2;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:4}.review-card__meta{display:flex;gap:10px;color:#a7a7a7;font-size:12px;line-height:1;white-space:nowrap}.reviews__pagination{bottom:0;left:50%;display:flex;justify-content:center;gap:7px;height:6px;transform:translateX(-50%)}
 .reviews__dot{width:6px;height:6px;flex:0 0 6px;padding:0;border:0;border-radius:50%;background:var(--line);cursor:pointer}.reviews__dot--active{background:var(--blue)}
@@ -249,6 +252,15 @@ h1,h2,h3,h4,p,li,a,button,label,summary{overflow-wrap:break-word}
 .review-card__author{height:auto;min-height:46px}
 .review-card__text{display:block;height:auto;overflow:visible;text-overflow:clip;-webkit-line-clamp:unset}
 @media (max-width:1500px){.hero__copy{width:620px}}
+
+/* Content menus keep their Figma height as a minimum and grow with copy. */
+.vehicle-menu{height:auto;min-height:382px}
+.vehicle-menu__grid{height:auto;grid-template-rows:repeat(2,minmax(141px,auto))}
+.vehicle-menu__item{height:auto;min-height:141px}
+.vehicle-menu__label{white-space:normal}
+.desktop-card-menu--services{height:auto;min-height:352px}
+.desktop-card-menu--company{height:auto;min-height:302px}
+.desktop-card-menu__grid{height:auto}
 
 /* Responsive controls */
 .visually-hidden{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;border:0;clip:rect(0 0 0 0);white-space:nowrap}
@@ -709,6 +721,7 @@ body:has(.mobile-menu[open]){
 
   .promo-banner{margin-top:32px}
   .promo-banner__slider,.promo-banner__image{border-radius:14px}
+  .promo-banner__slide{aspect-ratio:16/6}
   .promo-banner__content{width:62%;padding:12px}
   .promo-banner__title{font-size:clamp(15px,4.8vw,19px)}
   .promo-banner__text{display:none}
@@ -817,7 +830,7 @@ body:has(.mobile-menu[open]){
   .location-card__link{font-size:16px;line-height:1}
   .locations__map{grid-column:1/-1;height:250px;min-height:250px;border-radius:14px}
 
-  .booking{width:calc(100vw - 32px);height:auto;min-height:799px;gap:40px;margin-top:40px;margin-right:16px;margin-left:16px;padding:20px;overflow:visible}
+  .booking{width:calc(100vw - 32px);height:auto;min-height:799px;gap:40px;margin-top:40px;margin-right:16px;margin-left:16px;padding:20px;overflow:hidden}
   .booking__pattern--desktop{display:none}
   .booking__pattern--mobile{display:block;top:-1px;right:auto;bottom:auto;left:-1px;width:calc(100% + 2px);height:calc(100% + 2px);border-radius:20px;opacity:1;object-fit:fill;object-position:center}
   .booking__vehicle{display:none}
@@ -1439,11 +1452,32 @@ body:has(.request-dialog[open]) {
   letter-spacing: 0;
 }
 
+@media (max-width: 767px) {
+  .site-footer__intro {
+    justify-content: center;
+  }
+
+  .site-footer__description {
+    flex: 0 0 auto;
+    letter-spacing: 0;
+  }
+
+  .site-footer__button {
+    height: 56px;
+    min-height: 56px;
+    flex-basis: 56px;
+  }
+}
+
 .vehicle-card__links-link:hover,
 .vehicle-card__links-link:focus-visible {
   border-color: var(--red);
   box-shadow: inset 0 -1px var(--red);
   color: var(--red);
+}
+
+.team__copy {
+  display: none;
 }
 
 /* source: brand-page.css; scope: brand-page, business-page, services-page */
@@ -3600,7 +3634,7 @@ body:has(.request-dialog[open]) {
 :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-process__item {
   position: relative;
   display: flex;
-  height: 84px;
+  min-height: 84px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -4083,10 +4117,6 @@ body:has(.request-dialog[open]) {
 
   .about-page .site-header {
     z-index: 20;
-  }
-
-  :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .about-breadcrumb {
-    display: none;
   }
 
   :where(body.about-page, body.article-detail-page, body.articles-page, body.branch-page, body.business-page, body.careers-page, body.contacts-page, body.parts-page, body.prices-page, body.reviews-page, body.service-detail-page, body.services-page, body.tour-page, body.warranty-page) .commercial-hero-scene {
@@ -6807,7 +6837,7 @@ body:has(.request-dialog[open]) {
   }
 
   :where(body.service-detail-page, body.services-page) .promo-banner__slide.services-promo__slide {
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 7.5;
   }
 
   :where(body.service-detail-page, body.services-page) .popular-services__grid {
@@ -7070,8 +7100,13 @@ body:has(.request-dialog[open]) {
   align-items: center;
   gap: 6px;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+:where(body.cars-page) .cars-breadcrumb [aria-current="page"] {
+  color: var(--blue);
 }
 
 :where(body.cars-page) .cars-breadcrumb__link:hover {
@@ -7289,7 +7324,7 @@ body:has(.request-dialog[open]) {
 .cars-page .vehicle-card {
   display: flex;
   min-width: 0;
-  height: 350px;
+  height: auto;
   min-height: 350px;
   flex-direction: column;
   align-items: flex-start;
@@ -7591,9 +7626,8 @@ body:has(.request-dialog[open]) {
   }
 
   :where(body.cars-page) .cars-breadcrumb {
-    height: 12px;
+    min-height: 17px;
     margin-top: 10px;
-    font-size: 12px;
   }
 
   :where(body.cars-page) .cars-hero-scene {
@@ -7726,7 +7760,7 @@ body:has(.request-dialog[open]) {
 
   .cars-page .vehicle-card {
     width: 174px;
-    height: 272px;
+    height: auto;
     min-height: 272px;
     flex: 0 0 174px;
     gap: 10px;
@@ -7858,22 +7892,26 @@ body:has(.request-dialog[open]) {
   }
 
   .cars-page .team {
-    min-height: 947px;
+    min-height: 0;
   }
 
   .cars-page .team__intro {
     width: 100%;
-    min-height: 258px;
+    min-height: 0;
+  }
+
+  .cars-page .team-card {
+    min-height: 0;
   }
 
   .cars-page .business-offer {
-    min-height: 1041px;
+    min-height: 0;
     gap: 0;
     padding-left: 0;
   }
 
   .cars-page .business-offer__content {
-    min-height: 771px;
+    min-height: 0;
     padding: 20px;
   }
 
@@ -7913,18 +7951,6 @@ body:has(.request-dialog[open]) {
     flex: 0 0 auto;
     gap: 20px;
     padding: 19px;
-    background:
-      radial-gradient(
-        ellipse 400px 2800px at 98.5% 95.8%,
-        rgb(226, 16, 19) 0%,
-        rgb(155, 6, 8) 100%
-      );
-  }
-
-  :where(body.cars-page) .request-card__pattern {
-    inset: -1px auto auto -1px;
-    width: 358px;
-    height: 611px;
   }
 
   :where(body.cars-page) .request-card__heading {
@@ -8329,7 +8355,7 @@ html:has(.careers-page dialog[open]),
 
 :where(body.careers-page) .vacancy-card {
   display: grid;
-  height: 158px;
+  min-height: 158px;
   grid-template-columns: minmax(360px, 632px) minmax(0, 1fr);
   gap: 30px;
   align-items: center;
@@ -8341,7 +8367,7 @@ html:has(.careers-page dialog[open]),
 
 :where(body.careers-page) .vacancy-card__summary {
   display: flex;
-  height: 118px;
+  min-height: 118px;
   min-width: 0;
   flex-direction: column;
   gap: 10px;
@@ -12119,10 +12145,6 @@ html:has(.careers-page dialog[open]),
     z-index: 20;
   }
 
-  :where(body.branch-page) .branch-breadcrumb {
-    display: none;
-  }
-
   :where(body.branch-page) .branch-hero-scene {
     height: 720px;
   }
@@ -13003,10 +13025,6 @@ html:has(.careers-page dialog[open]),
 
   .contacts-page .site-header {
     z-index: 20;
-  }
-
-  :where(body.contacts-page) .contacts-breadcrumb {
-    display: none;
   }
 
   :where(body.contacts-page) .contacts-hero-scene {
@@ -14167,7 +14185,7 @@ html:has(.careers-page dialog[open]),
 :where(body.reviews-page) .rating-platform__summary {
   display: grid;
   min-width: 0;
-  height: 42px;
+  min-height: 42px;
   grid-template-columns: 40px auto minmax(0, 1fr);
   align-items: center;
   column-gap: 10px;
@@ -14623,7 +14641,7 @@ html:has(.careers-page dialog[open]),
   }
 
   :where(body.reviews-page) .rating-platform__summary {
-    height: 34px;
+    min-height: 34px;
     grid-template-columns: 32px auto minmax(0, 1fr);
     column-gap: 8px;
   }
@@ -16182,7 +16200,7 @@ html:has(.careers-page dialog[open]),
 
 :where(body.parts-page) .parts-category {
   display: flex;
-  height: 44px;
+  min-height: 44px;
   min-width: 0;
   align-items: center;
   gap: 10px;
@@ -17089,7 +17107,7 @@ html:has(.careers-page dialog[open]),
 
 :where(body.prices-page) .prices-hero {
   display: flex;
-  min-height: 624px;
+  min-height: 0;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 80px;
@@ -17120,7 +17138,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .prices-hero__title {
-  height: 140px;
+  min-height: 140px;
   font-family: Geologica, sans-serif;
   font-size: clamp(48px, 3.333vw, 64px);
   font-weight: 600;
@@ -17203,9 +17221,9 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .price-quote {
-  height: 601px;
+  height: auto;
   min-height: 601px;
-  margin-top: 0;
+  margin-top: var(--prices-section-gap);
   padding: 40px;
 }
 
@@ -17241,6 +17259,39 @@ html:has(.careers-page dialog[open]),
 
 :where(body.prices-page) .price-quote__bearing {
   animation: price-bearing-spin 24s linear infinite;
+}
+
+@media (min-width: 768px) {
+  :where(body.prices-page) .price-quote__artwork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1600 / 505;
+    pointer-events: none;
+  }
+
+  :where(body.prices-page) .price-quote__artwork .price-quote__vehicle,
+  :where(body.prices-page) .price-quote__artwork .price-quote__bearing {
+    top: -7.9208%;
+  }
+
+  :where(body.prices-page) .price-quote__artwork .price-quote__vehicle {
+    right: 0.5%;
+    width: 40.9262%;
+  }
+
+  :where(body.prices-page) .price-quote__artwork .price-quote__bearing {
+    right: -7.6345%;
+    width: 18.836%;
+  }
+
+  :where(body.prices-page) .price-quote__artwork .price-quote__bolt {
+    top: 66.7525%;
+    left: 56.2648%;
+    width: 12.4064%;
+  }
 }
 
 @keyframes price-bearing-spin {
@@ -17298,8 +17349,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .price-catalog__tab {
-  height: 32px;
-  min-height: 0;
+  min-height: 32px;
   padding: 0 0 10px;
   border: 0;
   border-bottom: 1px solid transparent;
@@ -17329,7 +17379,7 @@ html:has(.careers-page dialog[open]),
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 30px;
-  height: 42px;
+  min-height: 42px;
   align-items: center;
   padding: 9px 20px;
   border: 1px solid var(--line);
@@ -17352,7 +17402,7 @@ html:has(.careers-page dialog[open]),
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 :where(body.prices-page) .price-catalog__more {
@@ -17463,6 +17513,10 @@ html:has(.careers-page dialog[open]),
   opacity: 0.012;
 }
 
+:where(body.prices-page) .price-details__pattern--mobile {
+  display: none;
+}
+
 :where(body.prices-page) .price-details__parts-image {
   position: absolute;
   top: 200px;
@@ -17522,7 +17576,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .price-details__actions .price-details__secondary {
-  height: 46px;
+  min-height: 46px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
@@ -17544,7 +17598,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .business-offer--prices {
-  height: 620px;
+  height: auto;
   min-height: 620px;
   grid-template-columns: minmax(0, 1fr) calc((100% + 40px) * 0.4925);
   gap: 20px;
@@ -17563,7 +17617,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .business-offer--prices .business-offer__copy--desktop {
-  height: 98px;
+  min-height: 98px;
 }
 
 :where(body.prices-page) .business-offer--prices .business-offer__copy--mobile {
@@ -17582,7 +17636,7 @@ html:has(.careers-page dialog[open]),
 }
 
 :where(body.prices-page) .business-offer--prices .business-offer__features--desktop .business-offer__feature {
-  height: 29px;
+  height: auto;
   min-height: 29px;
   align-items: flex-start;
   padding-bottom: 5px;
@@ -17648,8 +17702,7 @@ html:has(.careers-page dialog[open]),
   .prices-page::before { height: 900px; background-position: 35% top; opacity: 0.7; }
   .prices-page .layout-container,
   :where(body.prices-page) .price-breadcrumb { width: auto; margin-right: 16px; margin-left: 16px; }
-  :where(body.prices-page) .price-breadcrumb { display: none; }
-  :where(body.prices-page) .prices-hero { min-height: 819px; padding-top: 62px; }
+  :where(body.prices-page) .prices-hero { min-height: 0; padding-top: 62px; }
   :where(body.prices-page) .prices-hero__inner { width: 100%; gap: 30px; }
   :where(body.prices-page) .prices-hero__content { width: 100%; }
   :where(body.prices-page) .prices-hero__title { height: auto; font-size: 40px; font-weight: 500; line-height: 1.05; letter-spacing: -0.4px; }
@@ -17659,16 +17712,17 @@ html:has(.careers-page dialog[open]),
   :where(body.prices-page) .prices-hero__benefits-item:is(li) { align-items: flex-start; }
   :where(body.prices-page) .prices-hero__button { width: 280px; }
 
-  :where(body.prices-page) .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: 62px; padding: 20px; }
+  :where(body.prices-page) .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: var(--prices-section-gap); padding: 20px; }
   :where(body.prices-page) .price-quote__heading--desktop,
   :where(body.prices-page) .price-quote__form--desktop { display: none; }
   :where(body.prices-page) .price-quote__heading { width: 100%; }
   :where(body.prices-page) .price-quote__heading--mobile { display: block; }
   :where(body.prices-page) .price-quote__form--mobile { display: flex; }
   :where(body.prices-page) .section-heading__title.price-quote__heading-title { font-size: 32px; font-weight: 500; }
+  :where(body.prices-page) .price-quote__artwork { inset: auto -17px -1px auto; width: calc(100% + 18px); height: auto; aspect-ratio: 374 / 799; }
   :where(body.prices-page) .price-quote__vehicle { display: none; }
-  :where(body.prices-page) .price-quote__bearing { top: 663px; right: auto; left: 240px; width: 197px; animation-duration: 2s; }
-  :where(body.prices-page) .price-quote__bolt { top: 705px; right: auto; left: 184px; width: 198px; }
+  :where(body.prices-page) .price-quote__bearing { inset: auto -16.8449% -7.6345% auto; width: 52.6738%; animation-duration: 2s; }
+  :where(body.prices-page) .price-quote__bolt { inset: auto -2.2069% -13.047% auto; width: 53.0091%; }
   :where(body.prices-page) .booking__pattern--mobile.price-quote__pattern { display: block; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); object-fit: fill; }
 
   :where(body.prices-page) .price-catalog__heading { width: 100%; min-height: 0; }
@@ -17698,15 +17752,32 @@ html:has(.careers-page dialog[open]),
   :where(body.prices-page) .price-details__chips { display: flex; flex-direction: column; margin-top: 41px; }
   :where(body.prices-page) .price-details__chip { min-height: 59px; padding: 20px; }
   :where(body.prices-page) .price-details__card--parts { min-height: 506px; align-items: flex-start; }
-  :where(body.prices-page) .price-details__pattern { display: none; }
-  :where(body.prices-page) .price-details__parts-image { inset: 0; width: 100%; height: 100%; content: url("assets/parts-hero-mobile-scene.png"); object-fit: cover; object-position: center; }
-  :where(body.prices-page) .price-details__parts-content { justify-content: flex-start; padding: 20px; }
+  :where(body.prices-page) .price-details__pattern--desktop { display: none; }
+  :where(body.prices-page) .price-details__pattern--mobile {
+    display: block;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    opacity: 1;
+    object-fit: fill;
+  }
+  :where(body.prices-page) .price-details__parts-image {
+    inset: auto -18.5393% -12.6984% auto;
+    width: 71.3483%;
+    height: auto;
+    aspect-ratio: 254 / 170;
+    object-fit: cover;
+    object-position: center;
+  }
+  :where(body.prices-page) .price-details__parts-content { justify-content: flex-start; padding: 19px; }
   :where(body.prices-page) .price-details__heading--parts { width: 100%; }
-  :where(body.prices-page) .price-details__actions { width: 100%; align-items: flex-start; margin-top: 20px; }
+  :where(body.prices-page) .price-details__heading--parts .price-details__title { line-height: 38px; }
+  :where(body.prices-page) .price-details__heading--parts .price-details__text { line-height: 19px; }
+  :where(body.prices-page) .price-details__actions { width: 316px; align-items: flex-start; margin-top: 40px; }
   :where(body.prices-page) .button.price-details__actions-button { width: 100%; min-height: 46px; padding: 14px 20px; }
   :where(body.prices-page) .price-details__secondary { display: inline-flex; width: 100%; min-height: 46px; align-items: center; justify-content: center; padding: 12px 20px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); }
 
-  :where(body.prices-page) .business-offer--prices { height: auto; min-height: 813px; gap: 0; padding-left: 0; }
+  :where(body.prices-page) .business-offer--prices { height: auto; min-height: 0; gap: 0; padding-left: 0; }
   :where(body.prices-page) .business-offer--prices .business-offer__content { gap: 20px; padding: 20px; }
   :where(body.prices-page) .business-offer--prices .business-offer__copy--desktop { display: none; height: auto; }
   :where(body.prices-page) .business-offer--prices .business-offer__copy--mobile { display: flex; }
@@ -17718,7 +17789,7 @@ html:has(.careers-page dialog[open]),
 
   .prices-page .benefits__visual { height: 296px; min-height: 296px; }
 
-  :where(body.prices-page) .price-seo { min-height: 672px; gap: 20px; }
+  :where(body.prices-page) .price-seo { min-height: 0; gap: 20px; }
   :where(body.prices-page) .price-seo__copy { gap: 20px; font-size: 16px; }
   .prices-page .site-footer { margin-top: 40px; }
 }
@@ -18389,10 +18460,6 @@ html:has(.careers-page dialog[open]),
     margin-left: 16px;
   }
 
-  :where(body.warranty-page) .warranty-breadcrumb {
-    display: none;
-  }
-
   :where(body.warranty-page) .warranty-hero {
     gap: 16px;
     margin-top: 40px;
@@ -19047,10 +19114,6 @@ html:has(.careers-page dialog[open]),
 @media (max-width: 767px) {
   .business-page {
     --business-section-gap: 40px;
-  }
-
-  :where(body.business-page) .business-breadcrumb {
-    display: none;
   }
 
   :where(body.business-page) .business-hero {
@@ -19970,5 +20033,84 @@ html:has(.careers-page dialog[open]),
 @media (prefers-reduced-motion: reduce) {
   .diagnostics-page {
     scroll-behavior: auto;
+  }
+}
+
+/* source: business-offer.css */
+/* Shared mobile content-flow contract for the reusable business offer. */
+@media (max-width: 767px) {
+  .business-offer,
+  .business-offer__content {
+    height: auto;
+    min-height: 0;
+  }
+}
+
+/* source: request-card.css */
+/* Shared request-card background contract. */
+@media (max-width: 767px) {
+  .request-card {
+    background: #9b0608;
+  }
+
+  .request-card__pattern {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .request-card__pattern-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+
+/* source: breadcrumb.css */
+/* Shared visual contract for breadcrumbs; page-specific classes keep layout offsets. */
+.breadcrumb {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 17px;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-family: "AA Stetica", Onest, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.breadcrumb > a {
+  color: inherit;
+}
+
+.breadcrumb > [aria-current="page"] {
+  color: var(--blue);
+}
+
+.breadcrumb > [aria-hidden="true"] {
+  color: var(--muted);
+}
+
+.breadcrumb > a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    min-height: 12px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1;
+    scrollbar-width: none;
+  }
+
+  .breadcrumb::-webkit-scrollbar {
+    display: none;
   }
 }

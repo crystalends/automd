@@ -47,6 +47,16 @@ test("services page reuses shared components and focused ESM", () => {
   assert.match(markup, /src="app\.js" defer/);
 });
 
+test("services promo keeps every shared slide", () => {
+  const promo = markup.match(/<section class="services-promo[\s\S]*?<\/section>/)?.[0] ?? "";
+
+  assert.equal((promo.match(/swiper-slide services-promo__slide/g) ?? []).length, 4);
+  for (const title of ["Закажи шиномонтаж", "Сервис для автопарков", "Начните с диагностики", "Все акции AutoMD"]) {
+    assert.match(promo, new RegExp(title));
+  }
+  assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.promo-banner__slide\.services-promo__slide\s*\{[^}]*aspect-ratio:\s*16 \/ 7\.5/s);
+});
+
 test("new services blocks preserve the Figma composition", () => {
   assert.equal((markup.match(/<article class="brand-service-card/g) ?? []).length, 6);
   assert.equal((markup.match(/class="popular-service-card(?: |")/g) ?? []).length, 9);

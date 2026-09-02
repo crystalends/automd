@@ -237,7 +237,7 @@ test("parts categories match the Figma grid, content, and icon", () => {
   assert.ok(existsSync(resolve(projectRoot, "assets/parts-category-check.svg")));
   assert.match(styles, /\.parts-categories\s*\{[^}]*gap:\s*20px/s);
   assert.match(styles, /\.parts-categories__list\s*\{[^}]*grid-template-columns:\s*repeat\(6,[^}]*gap:\s*20px/s);
-  assert.match(styles, /\.parts-category\s*\{[^}]*height:\s*44px[^}]*gap:\s*10px[^}]*padding:\s*10px/s);
+  assert.match(styles, /\.parts-category\s*\{[^}]*min-height:\s*44px[^}]*gap:\s*10px[^}]*padding:\s*10px/s);
   assert.match(styles, /\.parts-category__icon\s*\{[^}]*width:\s*24px[^}]*height:\s*24px/s);
 });
 

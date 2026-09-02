@@ -407,10 +407,6 @@
     z-index: 20;
   }
 
-  .branch-breadcrumb {
-    display: none;
-  }
-
   .branch-hero-scene {
     height: 720px;
   }

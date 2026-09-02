@@ -19,3 +19,15 @@ test("footer typography preserves Figma text widths and positions", () => {
   assert.match(styles, /\.site-footer\s*\{[^}]*font-weight:\s*400/s);
   assert.match(styles, /\.site-footer__legal,\s*\.site-footer__developer\s*\{[^}]*letter-spacing:\s*0/s);
 });
+
+test("mobile footer intro matches Figma node 346:22900", () => {
+  assert.match(
+    styles,
+    /@media \(max-width: 767px\)[\s\S]*?\.site-footer__intro\s*\{[^}]*justify-content:\s*center/s,
+  );
+  assert.match(styles, /\.site-footer__description\s*\{[^}]*flex:\s*0 0 auto[^}]*letter-spacing:\s*0/s);
+  assert.match(
+    styles,
+    /\.site-footer__button\s*\{[^}]*height:\s*56px[^}]*min-height:\s*56px[^}]*flex-basis:\s*56px/s,
+  );
+});

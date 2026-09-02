@@ -1,0 +1,18 @@
+/* Shared request-card background contract. */
+@media (max-width: 767px) {
+  .request-card {
+    background: #9b0608;
+  }
+
+  .request-card__pattern {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .request-card__pattern-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}

@@ -350,7 +350,7 @@
 .about-process__item {
   position: relative;
   display: flex;
-  height: 84px;
+  min-height: 84px;
   align-items: center;
   gap: 20px;
   padding: 20px;
@@ -833,10 +833,6 @@
 
   .about-page .site-header {
     z-index: 20;
-  }
-
-  .about-breadcrumb {
-    display: none;
   }
 
   .commercial-hero-scene {

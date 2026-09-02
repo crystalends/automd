@@ -415,7 +415,7 @@
 
 .parts-category {
   display: flex;
-  height: 44px;
+  min-height: 44px;
   min-width: 0;
   align-items: center;
   gap: 10px;

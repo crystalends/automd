@@ -48,9 +48,9 @@ test("business offer matches the dedicated Figma composition", () => {
   assert.equal((section.match(/<li class="business-offer__feature">/g) ?? []).length, 14);
   assert.doesNotMatch(section, /business-offer__button/);
   assert.match(section, /src="assets\/business\.jpg"/);
-  assert.match(styles, /\.business-offer--prices\s*\{[^}]*height:\s*620px[^}]*grid-template-columns:\s*minmax\(0, 1fr\) calc\(\(100% \+ 40px\) \* 0\.4925\)[^}]*gap:\s*20px[^}]*padding-left:\s*40px/s);
+  assert.match(styles, /\.business-offer--prices\s*\{[^}]*height:\s*auto[^}]*min-height:\s*620px[^}]*grid-template-columns:\s*minmax\(0, 1fr\) calc\(\(100% \+ 40px\) \* 0\.4925\)[^}]*gap:\s*20px[^}]*padding-left:\s*40px/s);
   assert.match(styles, /\.business-offer--prices \.business-offer__features--desktop\s*\{[^}]*flex-direction:\s*column[^}]*gap:\s*20px/s);
-  assert.match(styles, /\.business-offer--prices \.business-offer__features--desktop \.business-offer__feature\s*\{[^}]*height:\s*29px[^}]*border-bottom:\s*1px solid var\(--muted\)[^}]*font-size:\s*20px/s);
+  assert.match(styles, /\.business-offer--prices \.business-offer__features--desktop \.business-offer__feature\s*\{[^}]*height:\s*auto[^}]*min-height:\s*29px[^}]*border-bottom:\s*1px solid var\(--muted\)[^}]*font-size:\s*20px/s);
 });
 
 test("SEO copy matches the dedicated Figma composition", () => {
@@ -76,6 +76,7 @@ test("price details match the dedicated Figma composition", () => {
   assert.equal((section.match(/class="price-details__chip(?: price-details__chip--wide)?"/g) ?? []).length, 9);
   assert.match(section, /price-details__chip price-details__chip--wide/);
   assert.match(section, /src="assets\/prices-details-pattern\.png"/);
+  assert.match(section, /src="assets\/prices-details-mobile-pattern\.png"/);
   assert.match(section, /src="assets\/prices-parts\.png"/);
   assert.doesNotMatch(section, /price-details__parts-artwork|prices-details-card\.png/);
   const cardRule = styles.match(/\.price-details__card\s*\{[^}]*\}/)?.[0] ?? "";
@@ -107,15 +108,70 @@ test("desktop and mobile quote forms follow the two Figma variants", () => {
   assert.match(markup, /price-quote__heading--mobile[^]*Запишитесь на ремонт или консультацию/);
   assert.match(markup, /src="assets\/price-quote-vehicle\.png"/);
   assert.match(markup, /src="assets\/booking-bearing\.png"/);
+  assert.match(markup, /class="booking__artwork price-quote__artwork"/);
   assert.match(markup, /booking-form__field booking-form__field--wide[^>]*><span class="form-field__label booking-form__label">Услуга/);
   assert.match(markup, /booking__pattern booking__pattern--desktop price-quote__pattern/);
   assert.match(markup, /booking__pattern booking__pattern--mobile price-quote__pattern/);
   assert.match(styles, /\.price-quote__form--desktop\s*\{[^}]*width:\s*min\(885px, 60%\)[^}]*gap:\s*40px/s);
   assert.match(styles, /\.price-quote__fields--desktop\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/s);
+  assert.match(styles, /\.price-quote\s*\{[^}]*height:\s*auto[^}]*min-height:\s*601px/s);
   assert.match(styles, /\.booking-form__field--wide\.price-quote__field\s*\{[^}]*grid-column:\s*1 \/ -1/s);
   assert.match(styles, /\.price-quote__heading--mobile,[\s\S]*?display:\s*none/);
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.price-quote__form--mobile \{ display:\s*flex/);
   assert.match(styles, /@media \(max-width: 767px\)[\s\S]*?\.price-quote__heading \{ width:\s*100%/);
+});
+
+test("desktop quote artwork scales as one scene so the bolt stays beside the wheel", () => {
+  const artworkStyles = styles.match(/@media \(min-width: 768px\) \{[\s\S]*?\n\}\n\n@keyframes/)?.[0] ?? "";
+
+  assert.match(artworkStyles, /\.price-quote__artwork\s*\{[^}]*aspect-ratio:\s*1600 \/ 505/s);
+  assert.doesNotMatch(artworkStyles, /\.price-quote__artwork\s*\{[^}]*z-index/s);
+  assert.match(artworkStyles, /\.price-quote__artwork \.price-quote__vehicle\s*\{[^}]*width:\s*40\.9262%/s);
+  assert.match(artworkStyles, /\.price-quote__artwork \.price-quote__bolt\s*\{[^}]*top:\s*66\.7525%[^}]*left:\s*56\.2648%/s);
+  assert.doesNotMatch(artworkStyles, /top:\s*337\.1px/);
+});
+
+test("mobile quote parts stay anchored to the target scene's lower-right corner", () => {
+  assert.match(
+    styles,
+    /@media \(max-width: 767px\)[\s\S]*?\.price-quote__artwork \{[^}]*aspect-ratio:\s*374 \/ 799/s,
+  );
+  assert.match(styles, /\.price-quote__bearing \{ inset:\s*auto -16\.8449% -7\.6345% auto;[^}]*width:\s*52\.6738%/s);
+  assert.match(styles, /\.price-quote__bolt \{ inset:\s*auto -2\.2069% -13\.047% auto;[^}]*width:\s*53\.0091%/s);
+  assert.doesNotMatch(styles, /\.price-quote__bolt \{ top:\s*705px/);
+});
+
+test("mobile parts card reuses the Figma background and anchors its artwork", () => {
+  const mobileStyles = styles.match(/@media \(max-width: 767px\) \{[\s\S]*?\n\}/)?.[0] ?? "";
+
+  assert.match(mobileStyles, /\.price-details__card--parts \{[^}]*min-height:\s*506px/s);
+  assert.match(mobileStyles, /\.price-details__pattern--desktop \{ display:\s*none/);
+  assert.match(mobileStyles, /\.price-details__pattern--mobile \{[^}]*display:\s*block[^}]*inset:\s*-1px[^}]*width:\s*calc\(100% \+ 2px\)[^}]*height:\s*calc\(100% \+ 2px\)[^}]*opacity:\s*1/s);
+  assert.match(mobileStyles, /\.price-details__parts-image \{[^}]*inset:\s*auto -18\.5393% -12\.6984% auto[^}]*width:\s*71\.3483%[^}]*aspect-ratio:\s*254 \/ 170/s);
+  assert.match(mobileStyles, /\.price-details__parts-content \{[^}]*padding:\s*19px/s);
+  assert.match(mobileStyles, /\.price-details__heading--parts \.price-details__title \{ line-height:\s*38px/);
+  assert.match(mobileStyles, /\.price-details__heading--parts \.price-details__text \{ line-height:\s*19px/);
+  assert.match(mobileStyles, /\.price-details__actions \{[^}]*margin-top:\s*40px/s);
+  assert.doesNotMatch(mobileStyles, /parts-hero-mobile-scene\.png/);
+});
+
+test("price content keeps Figma target heights without clipping longer copy", () => {
+  assert.match(styles, /\.prices-hero\s*\{[^}]*min-height:\s*0/s);
+  assert.match(styles, /\.prices-hero__title\s*\{[^}]*min-height:\s*140px/s);
+  assert.doesNotMatch(styles, /\.prices-hero__title\s*\{[^}]*\n\s*height:\s*140px/s);
+  assert.match(styles, /\.price-quote\s*\{[^}]*margin-top:\s*var\(--prices-section-gap\)/s);
+  assert.match(
+    styles,
+    /@media \(max-width: 767px\)[\s\S]*?\.prices-hero \{ min-height:\s*0;[\s\S]*?\.price-quote \{[^}]*margin-top:\s*var\(--prices-section-gap\)/s,
+  );
+  assert.match(styles, /\.price-catalog__row\s*\{[^}]*min-height:\s*42px/s);
+  assert.doesNotMatch(styles, /\.price-catalog__row\s*\{[^}]*\n\s*height:\s*42px/s);
+  assert.match(styles, /\.business-offer--prices \.business-offer__copy--desktop\s*\{[^}]*min-height:\s*98px/s);
+  assert.match(
+    styles,
+    /@media \(max-width: 767px\)[\s\S]*?\.price-seo \{ min-height:\s*0; gap:\s*20px;/s,
+  );
+  assert.doesNotMatch(styles, /\.price-seo \{ min-height:\s*672px/);
 });
 
 test("prices layout is fluid and has content-driven mobile reflows", () => {

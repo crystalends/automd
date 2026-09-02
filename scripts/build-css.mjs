@@ -80,6 +80,9 @@ const sourceGroups = [
   { file: "warranty-page.css", scopes: ["warranty-page"] },
   { file: "business-page.css", scopes: ["business-page"] },
   { file: "diagnostics-page.css", scopes: ["diagnostics-page"] },
+  { file: "business-offer.css" },
+  { file: "request-card.css" },
+  { file: "breadcrumb.css" },
 ];
 
 const hasPageScope = (selector) =>

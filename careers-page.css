@@ -161,7 +161,7 @@ html:has(.careers-page dialog[open]),
 
 .vacancy-card {
   display: grid;
-  height: 158px;
+  min-height: 158px;
   grid-template-columns: minmax(360px, 632px) minmax(0, 1fr);
   gap: 30px;
   align-items: center;
@@ -173,7 +173,7 @@ html:has(.careers-page dialog[open]),
 
 .vacancy-card__summary {
   display: flex;
-  height: 118px;
+  min-height: 118px;
   min-width: 0;
   flex-direction: column;
   gap: 10px;

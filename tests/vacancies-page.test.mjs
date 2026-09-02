@@ -174,8 +174,8 @@ test("vacancy cards preserve the 1600px Figma geometry", () => {
   const markup = read("vacancies.html");
   const styles = read("careers-page.css");
 
-  assert.match(styles, /\.vacancy-card\s*\{[^}]*height:\s*158px;[^}]*grid-template-columns:\s*minmax\(360px, 632px\)[^}]*padding:\s*19px;/s);
-  assert.match(styles, /\.vacancy-card__summary\s*\{[^}]*height:\s*118px;/s);
+  assert.match(styles, /\.vacancy-card\s*\{[^}]*min-height:\s*158px;[^}]*grid-template-columns:\s*minmax\(360px, 632px\)[^}]*padding:\s*19px;/s);
+  assert.match(styles, /\.vacancy-card__summary\s*\{[^}]*min-height:\s*118px;/s);
   assert.match(styles, /\.vacancy-card__aside\s*\{[^}]*width:\s*731px;[^}]*justify-self:\s*end;/s);
   assert.match(styles, /\.vacancy-card__button\s*\{[^}]*width:\s*193px;/s);
   assert.match(styles, /\.vacancy-card__more-toggle\s*\{[^}]*width:\s*172px;[^}]*background:\s*transparent;/s);

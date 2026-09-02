@@ -25,8 +25,9 @@ test("mobile booking matches Figma node 339:22292 structure and spacing", () => 
   assert.match(styles, /\.booking-form__fields\{[^}]*gap:20px\}/);
 });
 
-test("mobile booking loops continuously and keeps its artwork against the viewport edge", () => {
+test("mobile booking loops continuously and clips its artwork to the card", () => {
   assert.match(styles, /@keyframes mobile-bearing-turn\{from\{--booking-bearing-rotation:0turn\}to\{--booking-bearing-rotation:1turn\}\}/);
+  assert.match(styles, /\.booking\{[^}]*min-height:799px[^}]*overflow:hidden\}/);
   assert.match(styles, /\.booking__bearing\{[^}]*top:663px[^}]*right:-63px[^}]*left:auto[^}]*width:197px[^}]*animation:mobile-bearing-turn 39\.123144s linear infinite\}/);
   assert.match(styles, /\.booking__artwork\{[^}]*inset:-1px -17px -1px -1px[^}]*overflow:hidden/);
   assert.match(styles, /@keyframes mobile-bolt-drift\{0%\{animation-timing-function:ease-in-out;translate:0 0\}50%,100%\{translate:0 -\.206px\}\}/);

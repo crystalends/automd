@@ -1,0 +1,47 @@
+/* Shared visual contract for breadcrumbs; page-specific classes keep layout offsets. */
+.breadcrumb {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 17px;
+  align-items: center;
+  gap: 6px;
+  color: var(--muted);
+  font-family: "AA Stetica", Onest, Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.breadcrumb > a {
+  color: inherit;
+}
+
+.breadcrumb > [aria-current="page"] {
+  color: var(--blue);
+}
+
+.breadcrumb > [aria-hidden="true"] {
+  color: var(--muted);
+}
+
+.breadcrumb > a:hover {
+  color: var(--red);
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    min-height: 12px;
+    overflow-x: auto;
+    font-size: 12px;
+    line-height: 1;
+    scrollbar-width: none;
+  }
+
+  .breadcrumb::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -171,7 +171,7 @@
 .rating-platform__summary {
   display: grid;
   min-width: 0;
-  height: 42px;
+  min-height: 42px;
   grid-template-columns: 40px auto minmax(0, 1fr);
   align-items: center;
   column-gap: 10px;
@@ -627,7 +627,7 @@
   }
 
   .rating-platform__summary {
-    height: 34px;
+    min-height: 34px;
     grid-template-columns: 32px auto minmax(0, 1fr);
     column-gap: 8px;
   }

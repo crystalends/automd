@@ -49,6 +49,57 @@ const bindKeyboardToFocus = (swiper, element) => {
   return swiper;
 };
 
+const createNavigationButton = (modifier, label) => {
+  const button = document.createElement("button");
+  button.className = `slider-navigation__button slider-navigation__button--${modifier}`;
+  button.type = "button";
+  button.setAttribute("aria-label", label);
+  return button;
+};
+
+const createSliderNavigation = (element) => {
+  const existingNavigation = element.querySelector(".slider-navigation");
+  if (existingNavigation) {
+    return {
+      prevEl: existingNavigation.querySelector(".slider-navigation__button--previous"),
+      nextEl: existingNavigation.querySelector(".slider-navigation__button--next"),
+    };
+  }
+
+  const navigation = document.createElement("div");
+  const previousButton = createNavigationButton("previous", "Предыдущий слайд");
+  const nextButton = createNavigationButton("next", "Следующий слайд");
+  let hovered = false;
+  let focused = false;
+
+  navigation.className = "slider-navigation";
+  navigation.append(previousButton, nextButton);
+  element.append(navigation);
+
+  const syncVisibility = () => {
+    navigation.classList.toggle("slider-navigation--visible", hovered || focused);
+  };
+
+  element.addEventListener("mouseenter", () => {
+    hovered = true;
+    syncVisibility();
+  });
+  element.addEventListener("mouseleave", () => {
+    hovered = false;
+    syncVisibility();
+  });
+  element.addEventListener("focusin", () => {
+    focused = true;
+    syncVisibility();
+  });
+  element.addEventListener("focusout", (event) => {
+    if (!element.contains(event.relatedTarget)) focused = false;
+    syncVisibility();
+  });
+
+  return { prevEl: previousButton, nextEl: nextButton };
+};
+
 const createExtraServicesCarousel = () => {
   const scroller = document.querySelector(".extra-services__grid");
   const dots = [...document.querySelectorAll(".extra-services__dot")];
@@ -146,6 +197,7 @@ const createCarBrandsCarousel = () => {
 const createBenefitsSliders = (Swiper) =>
   [...document.querySelectorAll(".benefits-slider")].map((element) => {
     const pagination = element.parentElement?.querySelector(".benefits-slider__pagination");
+    const navigation = createSliderNavigation(element);
     const swiper = new Swiper(element, {
       ...getCommonOptions(),
       slidesPerView: 1,
@@ -159,6 +211,7 @@ const createBenefitsSliders = (Swiper) =>
         el: pagination,
         clickable: true,
       },
+      navigation,
     });
     return bindKeyboardToFocus(swiper, element);
   });
@@ -168,6 +221,7 @@ const createPromoSlider = (Swiper) => {
   if (!element) return null;
 
   const pagination = element.parentElement?.querySelector(".promo-banner__pagination");
+  const navigation = createSliderNavigation(element);
   const swiper = new Swiper(element, {
     ...getCommonOptions(),
     slidesPerView: 1,
@@ -181,6 +235,7 @@ const createPromoSlider = (Swiper) => {
       el: pagination,
       clickable: true,
     },
+    navigation,
   });
 
   return bindKeyboardToFocus(swiper, element);
@@ -219,6 +274,7 @@ const createReviewsSlider = (Swiper) => {
   const element = document.querySelector(".reviews__slider");
   if (!element) return null;
 
+  const navigation = createSliderNavigation(element);
   const swiper = new Swiper(element, {
     ...getCommonOptions(),
     slidesPerView: "auto",
@@ -235,6 +291,7 @@ const createReviewsSlider = (Swiper) => {
         spaceBetween: 20,
       },
     },
+    navigation,
   });
   return bindKeyboardToFocus(bindReviewsPagination(swiper, element), element);
 };

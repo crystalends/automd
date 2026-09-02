@@ -39,9 +39,14 @@ test("shared slider module initializes every benefits carousel with its own clic
 
   const instances = [];
   const createElement = (pagination) => ({
+    children: [],
     parentElement: { querySelector: () => pagination },
     addEventListener() {},
+    append(child) {
+      this.children.push(child);
+    },
     contains: () => false,
+    querySelector: () => null,
   });
   const paginations = [{ id: "first-pagination" }, { id: "second-pagination" }];
   const elements = paginations.map(createElement);
@@ -60,6 +65,15 @@ test("shared slider module initializes every benefits carousel with its own clic
     matchMedia: () => ({ matches: true }),
   };
   globalThis.document = {
+    createElement: () => ({
+      children: [],
+      classList: { toggle() {} },
+      append(...children) {
+        this.children.push(...children);
+      },
+      querySelector: () => null,
+      setAttribute() {},
+    }),
     querySelector: (selector) => (selector === ".swiper" ? elements[0] : null),
     querySelectorAll: (selector) => (selector === ".benefits-slider" ? elements : []),
   };
@@ -72,4 +86,20 @@ test("shared slider module initializes every benefits carousel with its own clic
   assert.equal(instances[1].options.pagination.el, paginations[1]);
   assert.equal(instances[0].options.pagination.clickable, true);
   assert.equal(instances[1].options.pagination.clickable, true);
+  assert.match(instances[0].options.navigation.prevEl.className, /slider-navigation__button--previous/);
+  assert.match(instances[0].options.navigation.nextEl.className, /slider-navigation__button--next/);
+  assert.equal(elements[0].children[0].className, "slider-navigation");
+});
+
+test("slider arrows appear inside the carousel on hover and keyboard focus", () => {
+  const styles = readFileSync(resolve(projectRoot, "styles.css"), "utf8");
+  const source = readFileSync(resolve(projectRoot, "js/modules/sliders.js"), "utf8");
+
+  assert.match(source, /createSliderNavigation\(element\)/u);
+  assert.match(source, /classList\.toggle\("slider-navigation--visible", hovered \|\| focused\)/u);
+  assert.match(source, /addEventListener\("mouseenter"/u);
+  assert.match(source, /addEventListener\("focusin"/u);
+  assert.match(styles, /\.slider-navigation\{[^}]*position:absolute;[^}]*inset:0;[^}]*justify-content:space-between/su);
+  assert.match(styles, /\.slider-navigation--visible \.slider-navigation__button\{[^}]*opacity:1;[^}]*pointer-events:auto/su);
+  assert.match(styles, /@media \(hover:none\),\(pointer:coarse\)\{\.slider-navigation\{display:none\}\}/u);
 });

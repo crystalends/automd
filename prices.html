@@ -36,7 +36,7 @@
       </div>
     </header>
 
-    <nav class="price-breadcrumb layout-container" aria-label="Хлебные крошки"><a class="price-breadcrumb__link" href="index.html">Главная</a><span class="price-breadcrumb__separator" aria-hidden="true">&gt;</span><span aria-current="page">Цены</span></nav>
+    <nav class="breadcrumb price-breadcrumb layout-container" aria-label="Хлебные крошки"><a class="price-breadcrumb__link" href="index.html">Главная</a><span class="price-breadcrumb__separator" aria-hidden="true">&gt;</span><span aria-current="page">Цены</span></nav>
 
     <main id="top">
       <section class="prices-hero layout-container" aria-labelledby="prices-title">
@@ -53,9 +53,11 @@
       <section class="booking price-quote layout-container" id="quote" aria-labelledby="quote-title">
         <img class="booking__pattern booking__pattern--desktop price-quote__pattern" src="assets/booking-pattern.png" alt="" aria-hidden="true" width="752" height="505" />
         <img class="booking__pattern booking__pattern--mobile price-quote__pattern" src="assets/booking-pattern-mobile.png" alt="" aria-hidden="true" width="358" height="799" />
-        <img class="booking__vehicle price-quote__vehicle" src="assets/price-quote-vehicle.png" alt="" aria-hidden="true" width="1254" height="1254" />
-        <img class="booking__bearing price-quote__bearing" src="assets/booking-bearing.png" alt="" aria-hidden="true" width="1254" height="1254" />
-        <img class="booking__bolt price-quote__bolt" src="assets/booking-bolt.png" alt="" aria-hidden="true" width="1254" height="1254" />
+        <span class="booking__artwork price-quote__artwork" aria-hidden="true">
+          <img class="booking__vehicle price-quote__vehicle" src="assets/price-quote-vehicle.png" alt="" width="1254" height="1254" />
+          <img class="booking__bearing price-quote__bearing" src="assets/booking-bearing.png" alt="" width="1254" height="1254" />
+          <img class="booking__bolt price-quote__bolt" src="assets/booking-bolt.png" alt="" width="1254" height="1254" />
+        </span>
         <div class="section-heading booking__heading price-quote__heading price-quote__heading--desktop"><h2 class="section-heading__title price-quote__heading-title booking__heading-title" id="quote-title">Подберите цену под свой автомобиль</h2><p class="section-heading__text section-heading__text--large price-quote__heading-text booking__heading-text">Выберите марку, модель и услугу — мы покажем ориентировочную стоимость работ и поможем записаться в удобный техцентр.</p></div>
         <div class="section-heading booking__heading price-quote__heading price-quote__heading--mobile"><h2 class="section-heading__title price-quote__heading-title booking__heading-title">Запишитесь на ремонт или консультацию</h2><p class="section-heading__text section-heading__text--large price-quote__heading-text booking__heading-text">Оставьте контакты — мы уточним задачу, подскажем по стоимости и подберем удобное время для визита</p></div>
         <form class="booking-form price-quote__form price-quote__form--desktop" data-form="price">
@@ -102,7 +104,8 @@
           </ul>
         </article>
         <article class="price-details__card price-details__card--parts">
-          <img class="price-details__pattern" src="assets/prices-details-pattern.png" alt="" aria-hidden="true" width="790" height="589" />
+          <img class="price-details__pattern price-details__pattern--desktop" src="assets/prices-details-pattern.png" alt="" aria-hidden="true" width="790" height="589" />
+          <img class="price-details__pattern price-details__pattern--mobile" src="assets/prices-details-mobile-pattern.png" alt="" aria-hidden="true" width="358" height="506" />
           <img class="price-details__parts-image" src="assets/prices-parts.png" alt="Автомобильные запчасти для ремонта" loading="lazy" width="1536" height="1024" />
           <div class="price-details__parts-content">
             <div class="price-details__heading price-details__heading--parts">

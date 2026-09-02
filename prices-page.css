@@ -41,7 +41,7 @@
 
 .prices-hero {
   display: flex;
-  min-height: 624px;
+  min-height: 0;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 80px;
@@ -72,7 +72,7 @@
 }
 
 .prices-hero__title {
-  height: 140px;
+  min-height: 140px;
   font-family: Geologica, sans-serif;
   font-size: clamp(48px, 3.333vw, 64px);
   font-weight: 600;
@@ -155,9 +155,9 @@
 }
 
 .price-quote {
-  height: 601px;
+  height: auto;
   min-height: 601px;
-  margin-top: 0;
+  margin-top: var(--prices-section-gap);
   padding: 40px;
 }
 
@@ -193,6 +193,39 @@
 
 .price-quote__bearing {
   animation: price-bearing-spin 24s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .price-quote__artwork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1600 / 505;
+    pointer-events: none;
+  }
+
+  .price-quote__artwork .price-quote__vehicle,
+  .price-quote__artwork .price-quote__bearing {
+    top: -7.9208%;
+  }
+
+  .price-quote__artwork .price-quote__vehicle {
+    right: 0.5%;
+    width: 40.9262%;
+  }
+
+  .price-quote__artwork .price-quote__bearing {
+    right: -7.6345%;
+    width: 18.836%;
+  }
+
+  .price-quote__artwork .price-quote__bolt {
+    top: 66.7525%;
+    left: 56.2648%;
+    width: 12.4064%;
+  }
 }
 
 @keyframes price-bearing-spin {
@@ -250,8 +283,7 @@
 }
 
 .price-catalog__tab {
-  height: 32px;
-  min-height: 0;
+  min-height: 32px;
   padding: 0 0 10px;
   border: 0;
   border-bottom: 1px solid transparent;
@@ -281,7 +313,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 30px;
-  height: 42px;
+  min-height: 42px;
   align-items: center;
   padding: 9px 20px;
   border: 1px solid var(--line);
@@ -304,7 +336,7 @@
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .price-catalog__more {
@@ -415,6 +447,10 @@
   opacity: 0.012;
 }
 
+.price-details__pattern--mobile {
+  display: none;
+}
+
 .price-details__parts-image {
   position: absolute;
   top: 200px;
@@ -474,7 +510,7 @@
 }
 
 .price-details__actions .price-details__secondary {
-  height: 46px;
+  min-height: 46px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
@@ -496,7 +532,7 @@
 }
 
 .business-offer--prices {
-  height: 620px;
+  height: auto;
   min-height: 620px;
   grid-template-columns: minmax(0, 1fr) calc((100% + 40px) * 0.4925);
   gap: 20px;
@@ -515,7 +551,7 @@
 }
 
 .business-offer--prices .business-offer__copy--desktop {
-  height: 98px;
+  min-height: 98px;
 }
 
 .business-offer--prices .business-offer__copy--mobile {
@@ -534,7 +570,7 @@
 }
 
 .business-offer--prices .business-offer__features--desktop .business-offer__feature {
-  height: 29px;
+  height: auto;
   min-height: 29px;
   align-items: flex-start;
   padding-bottom: 5px;
@@ -600,8 +636,7 @@
   .prices-page::before { height: 900px; background-position: 35% top; opacity: 0.7; }
   .prices-page .layout-container,
   .price-breadcrumb { width: auto; margin-right: 16px; margin-left: 16px; }
-  .price-breadcrumb { display: none; }
-  .prices-hero { min-height: 819px; padding-top: 62px; }
+  .prices-hero { min-height: 0; padding-top: 62px; }
   .prices-hero__inner { width: 100%; gap: 30px; }
   .prices-hero__content { width: 100%; }
   .prices-hero__title { height: auto; font-size: 40px; font-weight: 500; line-height: 1.05; letter-spacing: -0.4px; }
@@ -611,16 +646,17 @@
   .prices-hero__benefits-item:is(li) { align-items: flex-start; }
   .prices-hero__button { width: 280px; }
 
-  .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: 62px; padding: 20px; }
+  .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: var(--prices-section-gap); padding: 20px; }
   .price-quote__heading--desktop,
   .price-quote__form--desktop { display: none; }
   .price-quote__heading { width: 100%; }
   .price-quote__heading--mobile { display: block; }
   .price-quote__form--mobile { display: flex; }
   .section-heading__title.price-quote__heading-title { font-size: 32px; font-weight: 500; }
+  .price-quote__artwork { inset: auto -17px -1px auto; width: calc(100% + 18px); height: auto; aspect-ratio: 374 / 799; }
   .price-quote__vehicle { display: none; }
-  .price-quote__bearing { top: 663px; right: auto; left: 240px; width: 197px; animation-duration: 2s; }
-  .price-quote__bolt { top: 705px; right: auto; left: 184px; width: 198px; }
+  .price-quote__bearing { inset: auto -16.8449% -7.6345% auto; width: 52.6738%; animation-duration: 2s; }
+  .price-quote__bolt { inset: auto -2.2069% -13.047% auto; width: 53.0091%; }
   .booking__pattern--mobile.price-quote__pattern { display: block; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); object-fit: fill; }
 
   .price-catalog__heading { width: 100%; min-height: 0; }
@@ -650,15 +686,32 @@
   .price-details__chips { display: flex; flex-direction: column; margin-top: 41px; }
   .price-details__chip { min-height: 59px; padding: 20px; }
   .price-details__card--parts { min-height: 506px; align-items: flex-start; }
-  .price-details__pattern { display: none; }
-  .price-details__parts-image { inset: 0; width: 100%; height: 100%; content: url("assets/parts-hero-mobile-scene.png"); object-fit: cover; object-position: center; }
-  .price-details__parts-content { justify-content: flex-start; padding: 20px; }
+  .price-details__pattern--desktop { display: none; }
+  .price-details__pattern--mobile {
+    display: block;
+    inset: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    opacity: 1;
+    object-fit: fill;
+  }
+  .price-details__parts-image {
+    inset: auto -18.5393% -12.6984% auto;
+    width: 71.3483%;
+    height: auto;
+    aspect-ratio: 254 / 170;
+    object-fit: cover;
+    object-position: center;
+  }
+  .price-details__parts-content { justify-content: flex-start; padding: 19px; }
   .price-details__heading--parts { width: 100%; }
-  .price-details__actions { width: 100%; align-items: flex-start; margin-top: 20px; }
+  .price-details__heading--parts .price-details__title { line-height: 38px; }
+  .price-details__heading--parts .price-details__text { line-height: 19px; }
+  .price-details__actions { width: 316px; align-items: flex-start; margin-top: 40px; }
   .button.price-details__actions-button { width: 100%; min-height: 46px; padding: 14px 20px; }
   .price-details__secondary { display: inline-flex; width: 100%; min-height: 46px; align-items: center; justify-content: center; padding: 12px 20px; border: 1px solid var(--red); border-radius: 10px; color: var(--red); }
 
-  .business-offer--prices { height: auto; min-height: 813px; gap: 0; padding-left: 0; }
+  .business-offer--prices { height: auto; min-height: 0; gap: 0; padding-left: 0; }
   .business-offer--prices .business-offer__content { gap: 20px; padding: 20px; }
   .business-offer--prices .business-offer__copy--desktop { display: none; height: auto; }
   .business-offer--prices .business-offer__copy--mobile { display: flex; }
@@ -670,7 +723,7 @@
 
   .prices-page .benefits__visual { height: 296px; min-height: 296px; }
 
-  .price-seo { min-height: 672px; gap: 20px; }
+  .price-seo { min-height: 0; gap: 20px; }
   .price-seo__copy { gap: 20px; font-size: 16px; }
   .prices-page .site-footer { margin-top: 40px; }
 }
