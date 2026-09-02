@@ -296,10 +296,6 @@
   min-height: 541px;
 }
 
-.cars-page .team {
-  min-height: 702px;
-}
-
 .cars-page .team__intro {
   width: min(66.25%, 1060px);
 }

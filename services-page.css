@@ -235,8 +235,8 @@
   background: transparent;
 }
 
-.popular-service-card--selected,
-.popular-service-card:hover {
+.popular-service-card:hover,
+.popular-service-card:focus-visible {
   border-color: var(--line);
   background: #fff;
 }

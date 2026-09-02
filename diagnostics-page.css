@@ -98,7 +98,6 @@
   background: transparent;
 }
 
-.diagnostics-type-card--selected,
 .diagnostics-type-card:hover {
   border-color: var(--line);
   background: #fff;

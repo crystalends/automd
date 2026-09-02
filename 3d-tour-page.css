@@ -253,10 +253,6 @@
 }
 
 @media (min-width: 1200px) {
-  .tour-page .team {
-    min-height: 702px;
-  }
-
   .tour-page .locations__layout,
   .tour-page .location-card {
     height: auto;
