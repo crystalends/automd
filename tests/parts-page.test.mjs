@@ -220,7 +220,7 @@ test("parts store promo matches the Figma desktop geometry and icon", () => {
   assert.ok(existsSync(resolve(projectRoot, "assets/parts-promo-check.svg")));
   assert.match(styles, /\.parts-promo\s*\{[^}]*min-height:\s*490px[^}]*grid-template-columns:[^;]*788px[^}]*padding-left:\s*40px/s);
   assert.match(styles, /\.parts-promo__content\s*\{[^}]*gap:\s*30px[^}]*padding:\s*60px 0/s);
-  assert.match(styles, /\.parts-promo__features-item:is\(li\)::before\s*\{[^}]*width:\s*24px[^}]*height:\s*24px[^}]*parts-promo-check\.svg/s);
+  assert.match(styles, /\.parts-promo__features-item::before\s*\{[^}]*width:\s*24px[^}]*height:\s*24px[^}]*parts-promo-check\.svg/s);
 });
 
 test("parts categories match the Figma grid, content, and icon", () => {
@@ -255,7 +255,7 @@ test("parts installation matches the Figma composition", () => {
   assert.match(styles, /\.parts-process\s*\{[^}]*grid-template-columns:\s*repeat\(2,[^}]*gap:\s*20px/s);
   assert.match(styles, /\.parts-process__item\s*\{[^}]*min-height:\s*84px[^}]*border-radius:\s*var\(--radius\)[^}]*background:\s*var\(--soft\)/s);
   assert.match(styles, /\.parts-process__pattern\s*\{[^}]*width:\s*195px[^}]*height:\s*84px/s);
-  assert.match(styles, /\.parts-process__item > span\s*\{[^}]*z-index:\s*1/s);
+  assert.match(styles, /\.parts-process__number,\s*\.parts-process__text\s*\{[^}]*z-index:\s*1/s);
   assert.match(styles, /\.parts-installation__image\s*\{[^}]*height:\s*518px/s);
 });
 

@@ -4,7 +4,7 @@
   padding-bottom: 30px;
 }
 
-.brand-page main,
+.brand-page .site-main,
 .brand-page .site-footer {
   position: relative;
   z-index: 2;
@@ -30,7 +30,7 @@
   gap: 10px;
 }
 
-.brand-section-heading__text:is(p) {
+.brand-section-heading__text {
   margin: 0;
   color: var(--muted);
   font-size: 18px;
@@ -289,7 +289,7 @@
   line-height: 1.2;
 }
 
-.brand-breadcrumb__link:is(a):hover {
+.brand-breadcrumb__link:hover {
   color: var(--red);
 }
 
@@ -334,7 +334,7 @@
   line-height: 1.2;
 }
 
-.brand-hero__description-text:is(p) {
+.brand-hero__description-text {
   margin: 0;
 }
 
@@ -500,7 +500,7 @@
   line-height: 1;
 }
 
-.brand-model-card__links-link:is(a) {
+.brand-model-card__links-link {
   padding: 0 5px 5px;
   border-bottom: 1px solid var(--blue);
   color: var(--blue);
@@ -529,7 +529,7 @@
   gap: 10px;
 }
 
-.brand-finder__heading-text:is(p) {
+.brand-finder__heading-text {
   margin: 0;
   color: var(--muted);
 }
@@ -592,7 +592,7 @@
   background: #fff;
 }
 
-.brand-promo__banner-image:is(img) {
+.brand-promo__banner-image {
   width: 100%;
   height: 100%;
   border-radius: var(--radius);
@@ -664,20 +664,20 @@
   gap: 10px;
 }
 
-.brand-service-card__heading-title:is(h3),
-.brand-service-card__heading-text:is(p),
-.brand-service-card__details-subtitle:is(h4) {
+.brand-service-card__heading-title,
+.brand-service-card__heading-text,
+.brand-service-card__details-subtitle {
   margin: 0;
 }
 
-.brand-service-card__heading-title:is(h3) {
+.brand-service-card__heading-title {
   font-family: Geologica, sans-serif;
   font-size: clamp(20px, 1.25vw, 24px);
   font-weight: 400;
   line-height: 1.2;
 }
 
-.brand-service-card__heading-text:is(p) {
+.brand-service-card__heading-text {
   color: var(--muted);
   font-size: clamp(14px, 0.938vw, 18px);
   line-height: 1.2;
@@ -690,14 +690,14 @@
   gap: 10px;
 }
 
-.brand-service-card__details-subtitle:is(h4) {
+.brand-service-card__details-subtitle {
   font-family: Geologica, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.brand-service-card__details-list:is(ul) {
+.brand-service-card__details-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
@@ -709,14 +709,14 @@
   list-style: none;
 }
 
-.brand-service-card__details-item:is(li) {
+.brand-service-card__details-item {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item:is(li)::before,
-.brand-parts__grid-item:is(li)::before {
+.brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item::before,
+.brand-parts__grid-item::before {
   width: 12px;
   height: 12px;
   flex: 0 0 12px;
@@ -729,24 +729,24 @@
   margin-top: auto;
 }
 
-.brand-service-card--links .brand-service-card__details-list:is(ul) {
+.brand-service-card--links .brand-service-card__details-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   color: var(--ink);
 }
 
-.brand-service-card--links .brand-service-card__details-item:is(li),
-.brand-service-card--links .brand-service-card__details-link:is(a) {
+.brand-service-card--links .brand-service-card__details-item,
+.brand-service-card--links .brand-service-card__details-link {
   width: 100%;
 }
 
-.brand-service-card--links .brand-service-card__details-link:is(a) {
+.brand-service-card--links .brand-service-card__details-link {
   position: relative;
   padding-right: 24px;
 }
 
-.brand-service-card--links .brand-service-card__details-link:is(a)::after {
+.brand-service-card--links .brand-service-card__details-link::after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -770,7 +770,7 @@
   list-style: none;
 }
 
-.brand-parts__grid-item:is(li) {
+.brand-parts__grid-item {
   display: flex;
   min-width: 0;
   min-height: 44px;
@@ -813,12 +813,12 @@
   background: var(--soft);
 }
 
-.brand-price-row__value:is(span) {
+.brand-price-row__value {
   min-width: 0;
   white-space: normal;
 }
 
-.brand-price-row__value:is(span):last-child {
+.brand-price-row__value:last-child {
   flex: 0 0 auto;
 }
 
@@ -1060,7 +1060,7 @@
   line-height: 1.2;
 }
 
-.brand-seo__copy-text:is(p) {
+.brand-seo__copy-text {
   margin: 0;
 }
 
@@ -1102,11 +1102,11 @@
     gap: 22px;
   }
 
-  .brand-service-card__details-list:is(ul) {
+  .brand-service-card__details-list {
     gap: 8px 12px;
   }
 
-  .brand-parts__grid-item:is(li) {
+  .brand-parts__grid-item {
     font-size: 15px;
   }
 
@@ -1125,7 +1125,7 @@
     padding-bottom: 0;
   }
 
-  .brand-page main {
+  .brand-page .site-main {
     z-index: auto;
   }
 
@@ -1148,7 +1148,7 @@
     gap: 10px;
   }
 
-  .brand-section-heading__text:is(p) {
+  .brand-section-heading__text {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -1326,7 +1326,7 @@
     text-align: center;
   }
 
-  .brand-model-card__links-link:is(a) {
+  .brand-model-card__links-link {
     width: 100%;
     padding: 0 5px 5px;
   }
@@ -1349,7 +1349,7 @@
     gap: 10px;
   }
 
-  .brand-finder__heading-text:is(p) {
+  .brand-finder__heading-text {
     font-size: 14px;
     line-height: 1.2;
   }
@@ -1450,22 +1450,22 @@
     padding: 10px 10px 20px;
   }
 
-  .brand-service-card__heading-title:is(h3) {
+  .brand-service-card__heading-title {
     font-size: 20px;
     line-height: 1.2;
   }
 
-  .brand-service-card__heading-text:is(p) {
+  .brand-service-card__heading-text {
     font-size: 16px;
     line-height: 1.2;
   }
 
-  .brand-service-card__details-subtitle:is(h4) {
+  .brand-service-card__details-subtitle {
     font-size: 18px;
   }
 
-  .brand-service-card__details-list:is(ul),
-  .brand-service-card--links .brand-service-card__details-list:is(ul) {
+  .brand-service-card__details-list,
+  .brand-service-card--links .brand-service-card__details-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1473,13 +1473,13 @@
     font-size: 14px;
   }
 
-  .brand-service-card__details-item:is(li) {
+  .brand-service-card__details-item {
     align-items: center;
     gap: 0;
   }
 
-  .brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item:is(li)::before,
-  .brand-parts__grid-item:is(li)::before {
+  .brand-service-card:not(.brand-service-card--links) .brand-service-card__details-item::before,
+  .brand-parts__grid-item::before {
     width: 24px;
     height: 24px;
     flex-basis: 24px;
@@ -1494,7 +1494,7 @@
     justify-content: flex-start;
   }
 
-  .brand-service-card--links .brand-service-card__details-list:is(ul) {
+  .brand-service-card--links .brand-service-card__details-list {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
@@ -1502,46 +1502,46 @@
     line-height: 1.2;
   }
 
-  .brand-service-card--links .brand-service-card__details-item:is(li),
-  .brand-service-card--links .brand-service-card__details-link:is(a) {
+  .brand-service-card--links .brand-service-card__details-item,
+  .brand-service-card--links .brand-service-card__details-link {
     width: 100%;
   }
 
-  .brand-service-card--links .brand-service-card__details-item:is(li) {
+  .brand-service-card--links .brand-service-card__details-item {
     display: flex;
     min-height: 24px;
     align-items: center;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(1) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(1) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(2) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(2) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(3) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(3) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(4) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(4) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(5) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(5) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(6) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(6) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li):nth-child(7) {
+  .brand-service-card--injectors .brand-service-card__details-item:nth-child(7) {
     flex: 0 0 auto;
   }
 
-  .brand-service-card:nth-child(5) .brand-service-card__details-item:is(li) {
+  .brand-service-card--injectors .brand-service-card__details-item {
     min-width: 0;
     white-space: normal;
   }
@@ -1582,7 +1582,7 @@
     margin: 20px 0;
   }
 
-  .brand-parts__grid-item:is(li) {
+  .brand-parts__grid-item {
     height: 37px;
     gap: 10px;
     padding: 6px 10px;
@@ -1615,11 +1615,11 @@
     line-height: 16.5px;
   }
 
-  .brand-price-row__value:is(span):first-child {
+  .brand-price-row__value:first-child {
     white-space: normal;
   }
 
-  .brand-price-row__value:is(span):last-child {
+  .brand-price-row__value:last-child {
     font-size: 16px;
     white-space: nowrap;
   }

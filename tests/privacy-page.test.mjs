@@ -43,8 +43,8 @@ test("privacy page uses exact local Figma assets and all resources resolve", () 
   const checkIcon = readFileSync(resolve(projectRoot, "assets/legal-check.svg"), "utf8");
 
   assert.match(styles, /assets\/legal-check\.svg/);
-  assert.match(styles, /\.legal-check-list__item:is\(li\)::before\s*\{[^}]*top:\s*0[^}]*left:\s*0[^}]*width:\s*24px[^}]*height:\s*24px[^}]*assets\/legal-check\.svg[^}]*background-size:\s*24px 24px/s);
-  assert.doesNotMatch(styles, /\.legal-check-list__item:is\(li\)::after/);
+  assert.match(styles, /\.legal-check-list__item::before\s*\{[^}]*top:\s*0[^}]*left:\s*0[^}]*width:\s*24px[^}]*height:\s*24px[^}]*assets\/legal-check\.svg[^}]*background-size:\s*24px 24px/s);
+  assert.doesNotMatch(styles, /\.legal-check-list__item::after/);
   assert.match(checkIcon, /viewBox="0 0 24 24"/);
   assert.match(checkIcon, /d="M8 12L11 15L16 9"/);
   assert.doesNotMatch(markup + styles, /figma\.com\/api\/mcp\/asset/);

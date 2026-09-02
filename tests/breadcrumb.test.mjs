@@ -22,6 +22,9 @@ test("every project breadcrumb uses the shared BEM block", () => {
     for (const breadcrumb of getBreadcrumbs(markup)) {
       breadcrumbCount += 1;
       assert.match(breadcrumb, /class="[^"]*\bbreadcrumb\b[^"]*"/, `${page}: missing breadcrumb block`);
+      assert.match(breadcrumb, /class="[^"]*\bbreadcrumb__link\b[^"]*"/, `${page}: missing breadcrumb link element`);
+      assert.match(breadcrumb, /class="[^"]*\bbreadcrumb__separator\b[^"]*"/, `${page}: missing breadcrumb separator element`);
+      assert.match(breadcrumb, /class="[^"]*\bbreadcrumb__current\b[^"]*"/, `${page}: missing breadcrumb current element`);
       assert.doesNotMatch(breadcrumb, />›</, `${page}: uses the old breadcrumb separator`);
     }
   }
@@ -36,10 +39,10 @@ test("shared breadcrumb visuals match the desktop Figma node 228:21715", () => {
   );
   assert.match(
     sharedStyles,
-    /\.breadcrumb > \[aria-current="page"\]\s*\{[^}]*color:\s*var\(--blue\)/s,
+    /\.breadcrumb__current\s*\{[^}]*color:\s*var\(--blue\)/s,
   );
-  assert.match(sharedStyles, /\.breadcrumb > \[aria-hidden="true"\]\s*\{[^}]*color:\s*var\(--muted\)/s);
-  assert.match(sharedStyles, /\.breadcrumb > a:hover\s*\{[^}]*color:\s*var\(--red\)/s);
+  assert.match(sharedStyles, /\.breadcrumb__separator\s*\{[^}]*color:\s*var\(--muted\)/s);
+  assert.match(sharedStyles, /\.breadcrumb__link:hover\s*\{[^}]*color:\s*var\(--red\)/s);
 });
 
 test("every mobile breadcrumb stays visible and matches Figma node 346:32913", () => {

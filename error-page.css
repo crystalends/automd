@@ -45,7 +45,7 @@
 }
 
 .error-page .site-header,
-.error-page main,
+.error-page .site-main,
 .error-page .site-footer {
   position: relative;
   z-index: 1;

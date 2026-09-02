@@ -6,7 +6,7 @@
 }
 
 .articles-page .site-header,
-.articles-page main,
+.articles-page .site-main,
 .articles-page .site-footer,
 .articles-breadcrumb {
   position: relative;
@@ -95,8 +95,8 @@
   line-height: 1.2;
 }
 
-.articles-hero__copy-text:is(p),
-.articles-seo__copy-text:is(p) {
+.articles-hero__copy-text,
+.articles-seo__copy-text {
   margin: 0;
 }
 

@@ -36,6 +36,7 @@ for (const file of htmlFiles) {
   check(localStyles.length === 1 && localStyles[0] === "app.css", `${file}: expected app.css to be the only stylesheet`);
   check(localScripts.length === 1 && localScripts[0] === "app.js", `${file}: expected app.js to be the only script`);
   check((markup.match(/<main\b/gu) ?? []).length === 1, `${file}: expected exactly one main element`);
+  check(/<main\b[^>]*class="[^"]*\bsite-main\b[^"]*"/u.test(markup), `${file}: main is missing the site-main block`);
   check((markup.match(/<h1\b/gu) ?? []).length === 1, `${file}: expected exactly one h1 element`);
   check(/<html\b[^>]*lang="ru"/u.test(markup), `${file}: missing lang=ru`);
 
@@ -101,14 +102,32 @@ for (const match of firstPartyCss.matchAll(/\.([a-zA-Z_][a-zA-Z0-9_-]*)/gu)) {
   check(bemClassPattern.test(match[1]), `CSS: invalid BEM class ${match[1]}`);
 }
 
-const structuralTagPattern = /\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?:(?:\[[^\]]+\]|:[a-z-]+(?:\([^)]*\))?))*\s+(a|b|button|h[1-6]|img|input|li|p|small|span|strong|summary|svg|ul)\b/gu;
-for (const match of firstPartyCss.matchAll(structuralTagPattern)) {
-  const richTextSelector = ["article-content", "legal-content"].includes(match[1])
-    && ["h2", "h3", "p"].includes(match[2]);
-  check(richTextSelector, `CSS: structural tag selector .${match[1]} ${match[2]} must use a BEM element class`);
+const htmlTagPattern = "[a-z][a-z0-9-]*";
+const tagQualifiedBemPattern = new RegExp(
+  `\\.([a-z][a-z0-9-]*(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?):is\\((${htmlTagPattern})\\)`,
+  "gu",
+);
+for (const match of firstPartyCss.matchAll(tagQualifiedBemPattern)) {
+  check(false, `CSS: BEM selector .${match[1]} must not be qualified with :is(${match[2]})`);
 }
 
-const classPairPattern = /(?=(\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)\s+\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?![a-z0-9_-])))/gu;
+const structuralTagPattern = new RegExp(
+  `\\.([a-z][a-z0-9-]*(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?:(?:\\[[^\\]]+\\]|:[a-z-]+(?:\\([^)]*\\))?))*(?:\\s*([>+~])\\s*|\\s+)(${htmlTagPattern})\\b`,
+  "gu",
+);
+for (const match of firstPartyCss.matchAll(structuralTagPattern)) {
+  const richTextSelector = !match[2]
+    && ["article-content", "legal-content"].includes(match[1])
+    && ["h2", "h3", "p"].includes(match[3]);
+  check(richTextSelector, `CSS: structural tag selector near .${match[1]} and ${match[3]} must use a BEM element class`);
+}
+
+const structuralAttributePattern = /\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)\s*[>+~]\s*\[/gu;
+for (const match of firstPartyCss.matchAll(structuralAttributePattern)) {
+  check(false, `CSS: structural attribute selector after .${match[1]} must use a BEM element class`);
+}
+
+const classPairPattern = /(?=(\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?:\s*[>+~]\s*|\s+)\.([a-z0-9-]+(?:__[a-z0-9-]+)?(?:--[a-z0-9-]+)?)(?![a-z0-9_-])))/gu;
 for (const match of firstPartyCss.matchAll(classPairPattern)) {
   const parent = match[2];
   const child = match[3];

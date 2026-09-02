@@ -159,7 +159,7 @@
   line-height: 22px;
 }
 
-.model-service-summary__copy-text:is(p) {
+.model-service-summary__copy-text {
   margin: 0;
 }
 
@@ -183,12 +183,12 @@
     aspect-ratio: auto;
   }
 
-  .model-service-detail-page .brand-section-heading__text.service-detail-parts__text:is(p),
+  .model-service-detail-page .brand-section-heading__text.service-detail-parts__text,
   .model-service-detail-page .brand-seo__copy.service-detail-seo__copy {
     line-height: 22px;
   }
 
-  .model-service-detail-page .service-detail-parts > .brand-outline-button {
+  .model-service-detail-page .service-detail-parts__button {
     padding-block: 14px;
   }
 

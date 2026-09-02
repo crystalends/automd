@@ -80,18 +80,18 @@ test("service process cards match the Figma node", () => {
   assert.equal((markup.match(/class="about-process__item-text"/g) ?? []).length, 8);
   assert.match(styles, /\.about-process__list\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)[^}]*gap:\s*20px/s);
   assert.match(styles, /\.about-process__item\s*\{[^}]*min-height:\s*84px[^}]*align-items:\s*center[^}]*gap:\s*20px[^}]*padding:\s*20px[^}]*border-radius:\s*20px[^}]*background:\s*#f6f6f6 url\("assets\/about-process-pattern\.png"\)[^}]*font-size:\s*18px/s);
-  assert.match(styles, /\.about-process__item-value:is\(span\)\s*\{[^}]*flex:\s*0 0 26px[^}]*font-family:\s*Geologica[^}]*font-size:\s*20px/s);
-  assert.match(styles, /\.about-process__item-text:is\(span\)\s*\{[^}]*min-width:\s*0[^}]*flex:\s*1 0 0/s);
+  assert.match(styles, /\.about-process__item-value\s*\{[^}]*flex:\s*0 0 26px[^}]*font-family:\s*Geologica[^}]*font-size:\s*20px/s);
+  assert.match(styles, /\.about-process__item-text\s*\{[^}]*min-width:\s*0[^}]*flex:\s*1 0 0/s);
   assert.ok(existsSync(resolve(projectRoot, "assets/about-process-pattern.png")));
 });
 
 test("decision and guarantees cards match Figma nodes 267:75531 and 267:72345", () => {
   assert.match(markup, /class="about-decision__pattern" src="assets\/service-assurance-pattern\.png"/);
   assert.match(styles, /\.about-decision__content\s*\{[^}]*width:\s*min\(614px, 100%\)[^}]*gap:\s*10px/s);
-  assert.match(styles, /\.about-decision__content-text:is\(p\)\s*\{[^}]*max-width:\s*614px[^}]*font-size:\s*16px/s);
+  assert.match(styles, /\.about-decision__content-text\s*\{[^}]*max-width:\s*614px[^}]*font-size:\s*16px/s);
   assert.match(styles, /\.about-decision__nut\s*\{[^}]*top:\s*227px[^}]*left:\s*479px[^}]*width:\s*437px[^}]*height:\s*437px/s);
   assert.match(styles, /\.about-guarantees__list\s*\{[^}]*gap:\s*10px 20px/s);
-  assert.match(styles, /\.about-guarantees__list-item:is\(li\)\s*\{[^}]*min-height:\s*59px[^}]*border-radius:\s*20px[^}]*service-assurance-item-pattern\.png/s);
+  assert.match(styles, /\.about-guarantees__list-item\s*\{[^}]*min-height:\s*59px[^}]*border-radius:\s*20px[^}]*service-assurance-item-pattern\.png/s);
   assert.match(styles, /\.about-button-secondary\.about-guarantees__about-button-secondary\s*\{[^}]*width:\s*172px[^}]*min-height:\s*46px/s);
 });
 

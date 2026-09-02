@@ -6,7 +6,7 @@
 }
 
 .article-detail-page .site-header,
-.article-detail-page main,
+.article-detail-page .site-main,
 .article-detail-page .site-footer,
 .article-detail-page .articles-breadcrumb {
   position: relative;
@@ -47,7 +47,7 @@
   border-bottom: 1px solid currentColor;
 }
 
-.article-hero__meta-link:is(a):hover {
+.article-hero__meta-link:hover {
   color: var(--red);
 }
 
@@ -171,7 +171,7 @@
   list-style: none;
 }
 
-.article-check-list__item:is(li) {
+.article-check-list__item {
   position: relative;
   min-height: 24px;
   padding: 2px 0 2px 24px;
@@ -179,7 +179,7 @@
   line-height: 1.2;
 }
 
-.article-check-list__item:is(li)::before {
+.article-check-list__item::before {
   position: absolute;
   top: 8px;
   left: 8px;
@@ -241,11 +241,11 @@
   counter-reset: article-toc;
 }
 
-.article-toc__list-item:is(li) {
+.article-toc__list-item {
   counter-increment: article-toc;
 }
 
-.article-toc__list-link:is(a) {
+.article-toc__list-link {
   display: flex;
   min-height: 39px;
   align-items: center;
@@ -257,13 +257,13 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.article-toc__list-link:is(a)::before {
+.article-toc__list-link::before {
   margin-right: 4px;
   content: counter(article-toc) ".";
 }
 
-.article-toc__list-link:is(a):hover,
-.article-toc__list-link:is(a):focus-visible {
+.article-toc__list-link:hover,
+.article-toc__list-link:focus-visible {
   color: var(--red);
   transform: translateX(3px);
 }
@@ -320,7 +320,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(280px, 34%);
   }
 
-  .article-toc__list-link:is(a) {
+  .article-toc__list-link {
     padding-inline: 14px;
   }
 }
@@ -408,7 +408,7 @@
     font-size: 16px;
   }
 
-  .article-check-list__item:is(li) {
+  .article-check-list__item {
     font-size: 15px;
   }
 
@@ -422,7 +422,7 @@
     border-radius: 16px;
   }
 
-  .article-toc__list-link:is(a) {
+  .article-toc__list-link {
     min-height: 44px;
     padding: 12px 14px;
   }
@@ -480,7 +480,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .article-toc__list-link:is(a) {
+  .article-toc__list-link {
     transition: none;
   }
 }

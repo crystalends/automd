@@ -3,7 +3,7 @@
   background: var(--paper);
 }
 
-.reviews-page main,
+.reviews-page .site-main,
 .reviews-page .site-header,
 .reviews-breadcrumb {
   position: relative;
@@ -75,7 +75,7 @@
 }
 
 .reviews-hero__title,
-.reviews-hero__copy-text:is(p),
+.reviews-hero__copy-text,
 .reviews-rating__title,
 .reviews-rating__description,
 .reviews-section-title,
@@ -285,7 +285,7 @@
   -webkit-line-clamp: unset;
 }
 
-.review-catalog [hidden] {
+.review-catalog__review-card[hidden] {
   display: none;
 }
 
@@ -397,8 +397,8 @@
   list-style: none;
 }
 
-.reviews-guide__list-item:is(li),
-.related-sections__links-link:is(a) {
+.reviews-guide__list-item,
+.related-sections__links-link {
   position: relative;
   display: flex;
   align-items: center;
@@ -408,7 +408,7 @@
   font-size: 16px;
 }
 
-.reviews-guide__list-item:is(li) {
+.reviews-guide__list-item {
   min-height: 59px;
   background: #fff url("assets/reviews-guide-pattern-right.png") right center / 190px 59px no-repeat;
 }
@@ -434,13 +434,13 @@
   margin-top: 20px;
 }
 
-.related-sections__links-link:is(a) {
+.related-sections__links-link {
   min-height: 64px;
   padding-right: 54px;
   background: var(--soft) url("assets/reviews-guide-pattern-left.png") left center / 195px 64px no-repeat;
 }
 
-.related-sections__links-link:is(a)::after {
+.related-sections__links-link::after {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -465,7 +465,7 @@
   line-height: 1.2;
 }
 
-.reviews-page .about-seo__copy-text:is(p) {
+.reviews-page .about-seo__copy-text {
   margin: 0;
 }
 
@@ -722,8 +722,8 @@
     margin-top: 16px;
   }
 
-  .reviews-guide__list-item:is(li),
-  .related-sections__links-link:is(a) {
+  .reviews-guide__list-item,
+  .related-sections__links-link {
     height: auto;
     min-height: 54px;
     padding: 16px;

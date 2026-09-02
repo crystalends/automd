@@ -6,7 +6,7 @@
 }
 
 .contacts-page .site-header,
-.contacts-page main,
+.contacts-page .site-main,
 .contacts-page .site-footer,
 .contacts-breadcrumb {
   position: relative;
@@ -76,7 +76,7 @@
   line-height: 1.2;
 }
 
-.contacts-hero__description-text:is(p) {
+.contacts-hero__description-text {
   margin: 0;
 }
 

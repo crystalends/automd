@@ -7,7 +7,7 @@
 }
 
 .cars-page .site-header,
-.cars-page main,
+.cars-page .site-main,
 .cars-page .site-footer {
   position: relative;
   z-index: 1;
@@ -21,10 +21,6 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
-}
-
-.cars-breadcrumb [aria-current="page"] {
-  color: var(--blue);
 }
 
 .cars-breadcrumb__link:hover {
@@ -183,7 +179,7 @@
   font-size: clamp(16px, 0.938vw, 18px);
 }
 
-.cars-hero__description-text:is(p) {
+.cars-hero__description-text {
   margin: 0;
 }
 
@@ -269,7 +265,7 @@
   line-height: 1;
 }
 
-.cars-page .vehicle-card__links-link:is(a) {
+.cars-page .vehicle-card__links-link {
   padding-right: 5px;
   padding-left: 5px;
 }
@@ -651,7 +647,7 @@
     margin-top: 40px;
   }
 
-  .car-brands > .section-heading__title {
+  .car-brands__title {
     width: 100%;
     font-size: 32px;
     font-weight: 500;
@@ -709,7 +705,7 @@
     line-height: 1;
   }
 
-  .cars-page .vehicle-card__links-link:is(a) {
+  .cars-page .vehicle-card__links-link {
     width: 100%;
     padding: 0 5px 5px;
     border: 0;
@@ -745,7 +741,7 @@
     margin-top: 40px;
   }
 
-  .cars-page__services > .section-heading__title {
+  .cars-page__services-title {
     line-height: 38px;
   }
 
@@ -1000,7 +996,7 @@
 }
 
 @media (max-width: 767px) {
-  .cars-page main {
+  .cars-page .site-main {
     z-index: auto;
   }
 

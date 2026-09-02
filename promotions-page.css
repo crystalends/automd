@@ -6,7 +6,7 @@
 }
 
 .promotions-page .site-header,
-.promotions-page main,
+.promotions-page .site-main,
 .promotions-page .site-footer,
 .promotions-breadcrumb {
   position: relative;
@@ -75,7 +75,7 @@
   line-height: 1.2;
 }
 
-.promotions-hero__description-text:is(p) {
+.promotions-hero__description-text {
   margin: 0;
 }
 
@@ -290,13 +290,13 @@
   list-style: none;
 }
 
-.special-offer-card__features-item:is(li) {
+.special-offer-card__features-item {
   display: flex;
   align-items: center;
   white-space: normal;
 }
 
-.special-offer-card__features-item:is(li)::before {
+.special-offer-card__features-item::before {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -520,7 +520,7 @@
   line-height: 1.2;
 }
 
-.promotions-seo__copy-text:is(p) {
+.promotions-seo__copy-text {
   margin: 0;
 }
 
@@ -765,7 +765,7 @@
     font-size: 14px;
   }
 
-  .special-offer-card__features-item:is(li) {
+  .special-offer-card__features-item {
     white-space: normal;
   }
 

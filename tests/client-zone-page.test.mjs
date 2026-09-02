@@ -61,7 +61,7 @@ test("client zone layout is fluid and scrollable on mobile", () => {
 
   assert.match(mobileStyles, /\.client-zone-amenities__grid\s*\{[^}]*display:\s*flex[^}]*overflow-x:\s*auto[^}]*scroll-snap-type:\s*x mandatory/s);
   assert.match(mobileStyles, /\.client-zone-card\s*\{[^}]*flex:\s*0 0 100%[^}]*scroll-snap-align:\s*start/s);
-  assert.match(mobileStyles, /\.client-zone-hero__benefits-item:is\(li\)\s*\{[^}]*width:\s*100%/s);
+  assert.match(mobileStyles, /\.client-zone-hero__benefits-item\s*\{[^}]*width:\s*100%/s);
 });
 
 test("Figma images are local and every local resource resolves", () => {

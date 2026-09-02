@@ -139,7 +139,7 @@ test("all shared custom selects suppress the native browser arrow", () => {
 
   assert.match(
     styles,
-    /\.form-field--select \.form-field__control:is\(select\)\s*\{[^}]*background-image:\s*none[^}]*-webkit-appearance:\s*none[^}]*-moz-appearance:\s*none[^}]*appearance:\s*none/s,
+    /\.form-field--select \.form-field__control\s*\{[^}]*background-image:\s*none[^}]*-webkit-appearance:\s*none[^}]*-moz-appearance:\s*none[^}]*appearance:\s*none/s,
   );
 });
 

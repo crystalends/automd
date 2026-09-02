@@ -59,8 +59,8 @@ test("reviews page implements responsive content-driven layouts", () => {
 test("reviews guide matches the Figma card geometry and visual variants", () => {
   assert.match(markup, /reviews-guide__card reviews-guide__card--related related-sections/);
   assert.match(styles, /\.reviews-guide__card--related\s*\{[^}]*background:\s*#fff[^}]*box-shadow:\s*inset 0 0 0 1px var\(--soft\)/s);
-  assert.match(styles, /\.reviews-guide__list-item:is\(li\)\s*\{[^}]*height:\s*59px[^}]*reviews-guide-pattern-right\.png/s);
-  assert.match(styles, /\.related-sections__links-link:is\(a\)\s*\{[^}]*height:\s*64px[^}]*reviews-guide-pattern-left\.png/s);
+  assert.match(styles, /\.reviews-guide__list-item\s*\{[^}]*height:\s*59px[^}]*reviews-guide-pattern-right\.png/s);
+  assert.match(styles, /\.related-sections__links-link\s*\{[^}]*height:\s*64px[^}]*reviews-guide-pattern-left\.png/s);
   assert.match(styles, /\.related-sections__button\s*\{[^}]*width:\s*265px/s);
   assert.match(styles, /border-radius:\s*var\(--radius\)/);
   for (const asset of ["reviews-guide-pattern-right.png", "reviews-guide-pattern-left.png", "reviews-guide-arrow.svg"]) {

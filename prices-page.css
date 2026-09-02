@@ -15,7 +15,7 @@
   pointer-events: none;
 }
 
-.prices-page main,
+.prices-page .site-main,
 .prices-page .site-header,
 .price-breadcrumb {
   position: relative;
@@ -60,14 +60,14 @@
 }
 
 .prices-hero__title,
-.prices-hero__copy-text:is(p),
+.prices-hero__copy-text,
 .price-catalog__title,
 .price-catalog__description,
 .price-catalog__note,
 .price-details__title,
 .price-details__text,
 .price-seo__title,
-.price-seo__copy-text:is(p) {
+.price-seo__copy-text {
   margin: 0;
 }
 
@@ -110,7 +110,7 @@
   list-style: none;
 }
 
-.prices-hero__benefits-item:is(li) {
+.prices-hero__benefits-item {
   display: flex;
   align-items: center;
   white-space: nowrap;
@@ -122,12 +122,12 @@
   flex: 0 0 24px;
 }
 
-.prices-hero__benefits-item:is(li):nth-child(1) { width: 323px; }
-.prices-hero__benefits-item:is(li):nth-child(2) { width: 327px; }
-.prices-hero__benefits-item:is(li):nth-child(3) { width: 306px; }
-.prices-hero__benefits-item:is(li):nth-child(4) { width: 257px; }
-.prices-hero__benefits-item:is(li):nth-child(5) { width: 395px; }
-.prices-hero__benefits-item:is(li):nth-child(6) { width: 210px; }
+.prices-hero__benefits-item--estimate { width: 323px; }
+.prices-hero__benefits-item--diagnostics { width: 327px; }
+.prices-hero__benefits-item--approval { width: 306px; }
+.prices-hero__benefits-item--parts { width: 257px; }
+.prices-hero__benefits-item--clients { width: 395px; }
+.prices-hero__benefits-item--calculation { width: 210px; }
 
 .business-offer--prices .business-offer__feature {
   display: flex;
@@ -332,7 +332,7 @@
   display: none;
 }
 
-.price-catalog__row-title:is(strong) {
+.price-catalog__row-title {
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -642,8 +642,8 @@
   .prices-hero__title { height: auto; font-size: 40px; font-weight: 500; line-height: 1.05; letter-spacing: -0.4px; }
   .prices-hero__copy { min-height: 0; margin-top: 20px; font-size: 16px; line-height: 1.2; }
   .prices-hero__benefits { min-height: 0; flex-direction: column; flex-wrap: nowrap; gap: 10px; font-size: 16px; }
-  .prices-hero__benefits-item:is(li):nth-child(n) { width: auto; }
-  .prices-hero__benefits-item:is(li) { align-items: flex-start; }
+  .prices-hero__benefits .prices-hero__benefits-item { width: auto; }
+  .prices-hero__benefits-item { align-items: flex-start; }
   .prices-hero__button { width: 280px; }
 
   .price-quote { display: flex; min-height: 799px; gap: 40px; margin-top: var(--prices-section-gap); padding: 20px; }
@@ -674,7 +674,7 @@
   .price-catalog__list { gap: 0; margin-top: 20px; border-top: 1px solid var(--line); }
   .price-catalog__row,
   .price-catalog__row:nth-child(odd) { height: auto; min-height: 49px; gap: 16px; padding: 1px 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; font-size: 14px; }
-  .price-catalog__row-title:is(strong) { font-family: Geologica, sans-serif; font-size: 16px; font-weight: 500; }
+  .price-catalog__row-title { font-family: Geologica, sans-serif; font-size: 16px; font-weight: 500; }
   .price-catalog__more { width: 202px; }
 
   .price-details { display: flex; flex-direction: column; gap: 20px; }

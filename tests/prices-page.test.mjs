@@ -37,8 +37,8 @@ test("prices hero matches the dedicated Figma composition", () => {
   assert.match(styles, /\.prices-hero__inner\s*\{[^}]*width:\s*min\(1195px, 75%\)[^}]*gap:\s*40px/s);
   assert.match(styles, /\.prices-hero__content\s*\{[^}]*min-height:\s*253px/s);
   assert.match(styles, /\.prices-hero__benefits\s*\{[^}]*display:\s*flex[^}]*min-height:\s*58px[^}]*gap:\s*10px 20px/s);
-  assert.match(styles, /\.prices-hero__benefits-item:is\(li\):nth-child\(1\) \{ width:\s*323px/);
-  assert.match(styles, /\.prices-hero__benefits-item:is\(li\):nth-child\(6\) \{ width:\s*210px/);
+  assert.match(styles, /\.prices-hero__benefits-item--estimate \{ width:\s*323px/);
+  assert.match(styles, /\.prices-hero__benefits-item--calculation \{ width:\s*210px/);
   assert.match(styles, /\.prices-hero__button\s*\{[^}]*width:\s*280px[^}]*margin:\s*0/s);
 });
 

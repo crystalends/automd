@@ -16,19 +16,19 @@
   white-space: nowrap;
 }
 
-.breadcrumb > a {
+.breadcrumb__link {
   color: inherit;
 }
 
-.breadcrumb > [aria-current="page"] {
+.breadcrumb__current {
   color: var(--blue);
 }
 
-.breadcrumb > [aria-hidden="true"] {
+.breadcrumb__separator {
   color: var(--muted);
 }
 
-.breadcrumb > a:hover {
+.breadcrumb__link:hover {
   color: var(--red);
 }
 

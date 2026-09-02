@@ -3,7 +3,7 @@
   background: var(--paper);
 }
 
-.services-page main {
+.services-page .site-main {
   position: relative;
   z-index: 1;
 }
@@ -162,7 +162,7 @@
 }
 
 .services-hero__title,
-.services-hero__description-text:is(p) {
+.services-hero__description-text {
   margin: 0;
 }
 
@@ -259,14 +259,14 @@
   text-align: center;
 }
 
-.popular-service-card__content-title:is(strong) {
+.popular-service-card__content-title {
   font-family: Geologica, sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.popular-service-card__content-description:is(small) {
+.popular-service-card__content-description {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
@@ -319,7 +319,7 @@
   gap: 10px;
 }
 
-.service-prices__heading-text:is(p) {
+.service-prices__heading-text {
   width: min(1060px, 100%);
   margin: 0;
   color: var(--muted);
@@ -352,7 +352,7 @@
   background: var(--soft);
 }
 
-.service-price-list__item-title:is(strong) {
+.service-price-list__item-title {
   flex: 0 0 auto;
   font-weight: 400;
   white-space: nowrap;
@@ -400,7 +400,7 @@
     width: min(680px, 48%);
   }
 
-  .popular-service-card__content-title:is(strong) {
+  .popular-service-card__content-title {
     font-size: 20px;
   }
 }
@@ -556,11 +556,11 @@
     scroll-snap-align: start;
   }
 
-  .popular-service-card__content-title:is(strong) {
+  .popular-service-card__content-title {
     font-size: 18px;
   }
 
-  .popular-service-card__content-description:is(small) {
+  .popular-service-card__content-description {
     font-size: 12px;
   }
 
@@ -595,7 +595,7 @@
     align-items: stretch;
   }
 
-  .service-prices__heading-text:is(p) {
+  .service-prices__heading-text {
     font-size: 16px;
   }
 
@@ -606,7 +606,7 @@
     font-size: 14px;
   }
 
-  .service-price-list__item-value:is(span) {
+  .service-price-list__item-value {
     min-width: 0;
   }
 
@@ -662,7 +662,7 @@
 }
 
 @media (max-width: 991px) {
-  .services-page main {
+  .services-page .site-main {
     z-index: auto;
   }
 

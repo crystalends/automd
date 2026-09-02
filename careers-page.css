@@ -4,13 +4,13 @@
   background: var(--paper);
 }
 
-.careers-page main {
+.careers-page .site-main {
   position: relative;
   z-index: 1;
 }
 
-html:has(.careers-page dialog[open]),
-.careers-page:has(dialog[open]) {
+html:has(.careers-page .vacancy-detail-dialog[open], .careers-page .career-dialog[open]),
+.careers-page:has(.vacancy-detail-dialog[open], .career-dialog[open]) {
   overflow: hidden;
 }
 
@@ -96,8 +96,8 @@ html:has(.careers-page dialog[open]),
 }
 
 .careers-hero__title,
-.careers-hero__copy-text:is(p),
-.careers-conditions__copy-text:is(p) {
+.careers-hero__copy-text,
+.careers-conditions__copy-text {
   margin: 0;
 }
 
@@ -302,7 +302,7 @@ html:has(.careers-page dialog[open]),
   place-items: center;
 }
 
-.vacancy-detail-dialog__close-image:is(img) {
+.vacancy-detail-dialog__close-image {
   width: 24px;
   height: 24px;
 }
@@ -357,7 +357,7 @@ html:has(.careers-page dialog[open]),
   line-height: 1.2;
 }
 
-.vacancy-detail-dialog__location-image:is(img) {
+.vacancy-detail-dialog__location-image {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
@@ -408,23 +408,23 @@ html:has(.careers-page dialog[open]),
   counter-reset: vacancy-skill;
 }
 
-.vacancy-detail-dialog__numbered-list-item:is(li) {
+.vacancy-detail-dialog__numbered-list-item {
   display: flex;
   gap: 4px;
   counter-increment: vacancy-skill;
 }
 
-.vacancy-detail-dialog__numbered-list-item:is(li)::before {
+.vacancy-detail-dialog__numbered-list-item::before {
   flex: 0 0 auto;
   content: counter(vacancy-skill) ".";
 }
 
-.vacancy-detail-dialog__requirements-item:is(li) {
+.vacancy-detail-dialog__requirements-item {
   display: flex;
   gap: 4px;
 }
 
-.vacancy-detail-dialog__requirements-item:is(li)::before {
+.vacancy-detail-dialog__requirements-item::before {
   flex: 0 0 auto;
   content: "-";
 }
@@ -437,12 +437,12 @@ html:has(.careers-page dialog[open]),
   gap: 10px;
 }
 
-.vacancy-detail-dialog__conditions-item:is(li) {
+.vacancy-detail-dialog__conditions-item {
   display: flex;
   align-items: center;
 }
 
-.vacancy-detail-dialog__conditions-image:is(img) {
+.vacancy-detail-dialog__conditions-image {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
@@ -682,7 +682,7 @@ html:has(.careers-page dialog[open]),
   grid-column: 1 / -1;
 }
 
-.career-dialog__field-input:is(input)[type="file"] {
+.career-dialog__field-input[type="file"] {
   height: auto;
   min-height: 56px;
   padding-block: 14px;
@@ -921,7 +921,7 @@ html:has(.careers-page dialog[open]),
     font-size: 18px;
   }
 
-  .vacancy-detail-dialog__conditions-item:is(li) {
+  .vacancy-detail-dialog__conditions-item {
     align-items: flex-start;
   }
 

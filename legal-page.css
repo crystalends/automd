@@ -5,7 +5,7 @@
 }
 
 .legal-page .site-header,
-.legal-page main,
+.legal-page .site-main,
 .legal-page .site-footer,
 .legal-page .articles-breadcrumb {
   position: relative;
@@ -131,7 +131,7 @@
   list-style: none;
 }
 
-.legal-check-list__item:is(li) {
+.legal-check-list__item {
   position: relative;
   min-height: 24px;
   padding: 2px 0 2px 24px;
@@ -139,13 +139,13 @@
   line-height: 1.2;
 }
 
-.legal-check-list__item:is(li)::before {
+.legal-check-list__item::before {
   position: absolute;
   background-repeat: no-repeat;
   content: "";
 }
 
-.legal-check-list__item:is(li)::before {
+.legal-check-list__item::before {
   top: 0;
   left: 0;
   width: 24px;
@@ -220,7 +220,7 @@
     font-size: 30px;
   }
 
-  .legal-check-list__item:is(li) {
+  .legal-check-list__item {
     font-size: 15px;
   }
 

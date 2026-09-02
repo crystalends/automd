@@ -19,7 +19,7 @@ JavaScript source stays split into focused ES modules under `js/modules`. `scrip
 
 CSS classes follow `block`, `block__element`, `block--modifier` and `block__element--modifier`. A modifier must always be used together with its base class. Cross-block composition uses BEM mixes on the same DOM node instead of location-dependent selectors. `layout-container` is the shared layout utility block.
 
-Structural component content must have explicit element classes. Tag selectors are reserved for the `article-content` and `legal-content` rich-text blocks, whose markup may be supplied without presentation classes. Page root selectors remain as zero-runtime namespaces for the single scoped CSS bundle; Swiper and dynamically generated navigation keep their documented integration selectors.
+Structural component content must have explicit element classes, and component CSS must target those classes without tag qualification or tag-dependent and cross-block DOM combinators. Tag selectors are reserved for the `article-content` and `legal-content` rich-text blocks, whose markup may be supplied without presentation classes. Page root selectors remain as zero-runtime namespaces for the single scoped CSS bundle; Swiper and dynamically generated navigation keep their documented integration selectors.
 
 ## Assets
 

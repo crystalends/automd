@@ -55,10 +55,7 @@ test("cars breadcrumb matches Figma node 215:16013", () => {
     pageStyles,
     /\.cars-breadcrumb\s*\{[^}]*gap:\s*6px[^}]*font-size:\s*14px[^}]*font-weight:\s*400[^}]*line-height:\s*1\.2/s,
   );
-  assert.match(
-    pageStyles,
-    /\.cars-breadcrumb \[aria-current="page"\]\s*\{[^}]*color:\s*var\(--blue\)/s,
-  );
+  assert.match(markup, /class="breadcrumb__current" aria-current="page"/);
   assert.match(
     pageStyles,
     /@media \(max-width: 767px\)[\s\S]*?\.cars-breadcrumb\s*\{[^}]*min-height:\s*17px/s,

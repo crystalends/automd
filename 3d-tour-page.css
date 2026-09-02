@@ -4,7 +4,7 @@
   background: var(--paper);
 }
 
-.tour-page main,
+.tour-page .site-main,
 .tour-page .site-header,
 .tour-page .site-footer,
 .tour-breadcrumb {
@@ -110,7 +110,7 @@
 }
 
 .tour-hero__title,
-.tour-hero__description-text:is(p),
+.tour-hero__description-text,
 .virtual-tour__title,
 .virtual-tour__description {
   margin: 0;

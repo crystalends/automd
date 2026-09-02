@@ -2,7 +2,7 @@
   --diagnostics-section-gap: clamp(72px, 5.208vw, 100px);
 }
 
-.diagnostics-page main {
+.diagnostics-page .site-main {
   position: relative;
   z-index: 2;
 }
@@ -120,19 +120,19 @@
   text-align: center;
 }
 
-.diagnostics-type-card__title:is(h3),
-.diagnostics-type-card__text:is(p) {
+.diagnostics-type-card__title,
+.diagnostics-type-card__text {
   margin: 0;
 }
 
-.diagnostics-type-card__title:is(h3) {
+.diagnostics-type-card__title {
   font-family: Geologica, sans-serif;
   font-size: clamp(19px, 1.25vw, 24px);
   font-weight: 400;
   line-height: 1.2;
 }
 
-.diagnostics-type-card__text:is(p) {
+.diagnostics-type-card__text {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
@@ -161,11 +161,11 @@
   line-height: 22px;
 }
 
-.diagnostics-need__copy-text:is(p) {
+.diagnostics-need__copy-text {
   margin: 0;
 }
 
-.diagnostics-need__button:is(a) {
+.diagnostics-need__button {
   width: 304px;
 }
 
@@ -197,7 +197,7 @@
   pointer-events: none;
 }
 
-.diagnostics-need__signs-item:is(li) {
+.diagnostics-need__signs-item {
   position: relative;
   z-index: 1;
   display: flex;
@@ -209,7 +209,7 @@
   white-space: nowrap;
 }
 
-.diagnostics-need__signs-item:is(li)::before {
+.diagnostics-need__signs-item::before {
   width: 16px;
   aspect-ratio: 1;
   flex: 0 0 16px;
@@ -232,7 +232,7 @@
   list-style: none;
 }
 
-.diagnostics-process__grid-item:is(li) {
+.diagnostics-process__grid-item {
   position: relative;
   display: flex;
   min-width: 0;
@@ -247,7 +247,7 @@
   line-height: 22px;
 }
 
-.diagnostics-process__grid-item:is(li)::after {
+.diagnostics-process__grid-item::after {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -259,13 +259,13 @@
   pointer-events: none;
 }
 
-.diagnostics-process__grid-value:is(span),
-.diagnostics-process__grid-text:is(span) {
+.diagnostics-process__grid-value,
+.diagnostics-process__grid-text {
   position: relative;
   z-index: 1;
 }
 
-.diagnostics-process__grid-value:is(span) {
+.diagnostics-process__grid-value {
   flex: 0 0 auto;
   color: var(--red);
   font-family: Geologica, sans-serif;
@@ -273,7 +273,7 @@
   line-height: 24px;
 }
 
-.diagnostics-process__grid-text:is(span) {
+.diagnostics-process__grid-text {
   min-width: 0;
   flex: 1;
 }
@@ -312,7 +312,7 @@
   border-radius: 10px;
 }
 
-.diagnostics-vehicle-card__image:is(img) {
+.diagnostics-vehicle-card__image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -323,7 +323,7 @@
   pointer-events: none;
 }
 
-.diagnostics-vehicle-card__title:is(h3) {
+.diagnostics-vehicle-card__title {
   margin: 0;
   font-family: Geologica, sans-serif;
   font-size: clamp(19px, 1.25vw, 24px);
@@ -343,7 +343,7 @@
   flex: 1 1 0;
 }
 
-.diagnostics-vehicle-card--all .diagnostics-vehicle-card__image:is(img) {
+.diagnostics-vehicle-card--all .diagnostics-vehicle-card__image {
   top: 5.04%;
   left: -3.33%;
   width: 106.19%;
@@ -352,7 +352,7 @@
   object-fit: fill;
 }
 
-.diagnostics-vehicle-card__value:is(span) {
+.diagnostics-vehicle-card__value {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -363,7 +363,7 @@
   white-space: nowrap;
 }
 
-.diagnostics-vehicle-card__arrow:is(img) {
+.diagnostics-vehicle-card__arrow {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
@@ -387,7 +387,7 @@
   gap: 10px 20px;
 }
 
-.diagnostics-parts__tags-link:is(a) {
+.diagnostics-parts__tags-link {
   padding: 10px 20px;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -412,7 +412,7 @@
   gap: 10px;
 }
 
-.related-services__heading-text:is(p) {
+.related-services__heading-text {
   margin: 0;
   color: var(--muted);
   font-size: 16px;
@@ -437,14 +437,14 @@
   background: #fff;
 }
 
-.related-service-card__image:is(img) {
+.related-service-card__image {
   width: 60px;
   aspect-ratio: 1;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.related-service-card > span {
+.related-service-card__content {
   display: flex;
   min-width: 0;
   flex-direction: column;
@@ -453,20 +453,20 @@
   text-align: center;
 }
 
-.related-service-card__title:is(strong) {
+.related-service-card__title {
   font-family: Geologica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
 }
 
-.related-service-card__description:is(small) {
+.related-service-card__description {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.2;
 }
 
-.related-service-card__arrow:is(b) {
+.related-service-card__arrow {
   color: var(--muted);
   font-family: Geologica, sans-serif;
   font-size: 24px;
@@ -522,7 +522,7 @@
     width: 54px;
   }
 
-  .diagnostics-type-card__title:is(h3) {
+  .diagnostics-type-card__title {
     font-size: 19px;
   }
 
@@ -687,18 +687,18 @@
     row-gap: 10px;
   }
 
-  .diagnostics-need__signs-item:is(li) {
+  .diagnostics-need__signs-item {
     width: 100%;
     font-size: 16px;
     line-height: 1.2;
     white-space: normal;
   }
 
-  .diagnostics-need__button:is(a) {
+  .diagnostics-need__button {
     width: 100%;
   }
 
-  .diagnostics-process__grid-item:is(li) {
+  .diagnostics-process__grid-item {
     font-size: 16px;
   }
 
@@ -706,7 +706,7 @@
     padding-bottom: 20px;
   }
 
-  .diagnostics-parts__tags-link:is(a) {
+  .diagnostics-parts__tags-link {
     text-align: left;
   }
 
@@ -721,7 +721,7 @@
     padding: 10px;
   }
 
-  .related-service-card > span {
+  .related-service-card__content {
     align-items: flex-start;
     text-align: left;
   }
@@ -756,11 +756,11 @@
   }
 
   .diagnostics-type-card__image,
-  .related-service-card__image:is(img) {
+  .related-service-card__image {
     width: 48px;
   }
 
-  .related-service-card__arrow:is(b) {
+  .related-service-card__arrow {
     display: none;
   }
 }
