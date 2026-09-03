@@ -77,6 +77,11 @@ test("model service detail keeps all Figma assets local", () => {
   assert.doesNotMatch(markup, /assets\/promo-tires\.png/);
 
   assert.match(markup, /class="brand-hero-scene model-service-hero-scene hero-grid"/);
+  assert.equal((markup.match(/class="model-service-hero-scene__glow /g) ?? []).length, 4);
+  assert.match(markup, /assets\/model-hero-glow-middle\.svg/);
+  assert.match(markup, /class="model-service-hero-scene__vehicle" data-node-id="253:10747"/);
+  assert.doesNotMatch(markup, /model-service-hero-scene__(?:wrench|accent)/);
+  assert.match(styles, /\.model-service-hero-scene__vehicle-image\s*\{[^}]*top:\s*-6\.41%[^}]*left:\s*4\.38%[^}]*width:\s*95\.62%[^}]*height:\s*112\.82%/s);
   assert.ok(existsSync(resolve(projectRoot, "assets/hero-pattern.png")));
 
   assert.doesNotMatch(markup, /figma\.com\/api\/mcp\/asset/);

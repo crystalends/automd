@@ -632,6 +632,7 @@
 .brand-service-card {
   display: grid;
   min-width: 0;
+  height: 364px;
   min-height: 364px;
   grid-template-columns: clamp(180px, 15.625vw, 250px) minmax(0, 1fr);
   gap: 20px;

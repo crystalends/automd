@@ -60,6 +60,13 @@ test("business page has fluid, content-driven layouts", () => {
   assert.match(styles, /\.business-audience\s*\{[^}]*margin-top:\s*0/s);
   assert.doesNotMatch(styles, /min-width:\s*1920px/);
 
+  const sharedAutoHeightRule = styles.match(/\.business-page \.vehicle-card,[\s\S]*?\}/)?.[0] ?? "";
+  assert.doesNotMatch(
+    sharedAutoHeightRule,
+    /brand-service-card/,
+    "desktop service cards must keep the fixed 364px Figma geometry",
+  );
+
   for (const selector of [
     "business-audience-card",
     "work-mode-card",

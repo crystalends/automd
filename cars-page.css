@@ -116,17 +116,29 @@
 
 .cars-hero-scene__vehicle-light {
   z-index: 3;
-  top: 338.762px;
-  left: 71.991vw;
-  width: 22.699vw;
-  height: 14.334vw;
+  top: 338.807px;
+  left: 70.625vw;
+  display: flex;
+  width: 20.469vw;
+  height: 14.329vw;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
+}
+
+.cars-hero-scene__vehicle-light-shape {
+  position: relative;
+  width: 90.55%;
+  height: 70.96%;
+  flex: none;
   transform: rotate(13.96deg) skewX(-0.17deg);
 }
 
 .cars-hero-scene__vehicle-light-image {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: -20.49% -11.24%;
+  width: 122.48%;
+  height: 140.98%;
   max-width: none;
 }
 

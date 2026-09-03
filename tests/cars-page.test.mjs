@@ -112,11 +112,13 @@ test("desktop lighting reproduces Figma group 298:25359", () => {
   }
 
   assert.match(markup, /class="cars-hero-scene__vehicle-light" data-node-id="227:16146"/);
+  assert.match(markup, /class="cars-hero-scene__vehicle-light-shape"/);
   assert.match(markup, /src="assets\/cars-hero-vehicle-light\.svg"/);
   assert.match(pageStyles, /\.cars-hero-scene__glow--7\s*\{[^}]*rotate\(20\.67deg\)/s);
   assert.match(pageStyles, /\.cars-hero-scene__glow--8\s*\{[^}]*rotate\(-1\.15deg\)/s);
   assert.match(pageStyles, /\.cars-hero-scene__glow--6\s*\{[^}]*rotate\(-20\.46deg\)/s);
-  assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*rotate\(13\.96deg\)/s);
+  assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*left:\s*70\.625vw[^}]*width:\s*20\.469vw/s);
+  assert.match(pageStyles, /\.cars-hero-scene__vehicle-light-shape\s*\{[^}]*rotate\(13\.96deg\)/s);
   assert.match(pageStyles, /\.cars-hero-scene__gear\s*\{[^}]*z-index:\s*2/s);
   assert.match(pageStyles, /\.cars-hero-scene__vehicle-light\s*\{[^}]*z-index:\s*3/s);
   assert.match(pageStyles, /\.cars-hero-scene__vehicles\s*\{[^}]*z-index:\s*4/s);

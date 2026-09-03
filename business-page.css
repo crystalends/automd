@@ -181,9 +181,7 @@
 }
 
 .business-page .vehicle-card,
-.business-page .team-card,
-.business-page .brand-service-card,
-.business-page .brand-service-card__image {
+.business-page .team-card {
   height: auto;
   min-height: 0;
 }
@@ -617,6 +615,8 @@
 
   .business-page .brand-service-card {
     width: min(88vw, 355px);
+    height: auto;
+    min-height: 0;
     flex: 0 0 min(88vw, 355px);
     grid-template-columns: 1fr;
     scroll-snap-align: start;
@@ -624,6 +624,8 @@
 
   .business-page .brand-service-card__image {
     width: 100%;
+    height: auto;
+    min-height: 0;
     aspect-ratio: 355 / 230;
   }
 
